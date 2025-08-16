@@ -171,7 +171,7 @@
     <div class="stats-container">
         <h3>📈 Most Used Languages</h3>
         <div class="language-stats-widget">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=anuraghazra&layout=donut" alt="Language Stats" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SahooShuvranshu&layout=donut&theme=neon" alt="Language Stats" />
         </div>
     </div>
 </div>
@@ -326,10 +326,31 @@
     
     .skills-grid {
         gap: 0;
+        justify-content: center;
     }
     
     .skill-badge img {
         margin: 0.5px;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .github-stats-widget img,
+    .language-stats-widget img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .stats-container {
+        padding: 12px;
+    }
+    
+    .category-header h3 {
+        font-size: 13px;
+    }
+    
+    .category-header p {
+        font-size: 9px;
     }
 }
 
@@ -350,12 +371,39 @@
         font-size: 14px;
     }
     
+    .category-header p {
+        font-size: 8px;
+    }
+    
     .skills-grid {
         gap: 0;
+        justify-content: center;
     }
     
     .skill-badge img {
         margin: 0.5px;
+        max-width: 95%;
+        height: auto;
+    }
+    
+    .stats-container {
+        padding: 8px;
+    }
+    
+    .stats-container h3 {
+        font-size: 14px;
+    }
+    
+    .github-stats-widget,
+    .language-stats-widget {
+        padding: 4px;
+    }
+    
+    .github-stats-widget img,
+    .language-stats-widget img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 2px;
     }
 }
 </style>
