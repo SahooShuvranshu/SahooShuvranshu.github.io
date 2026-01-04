@@ -1,0 +1,74 @@
+{
+  "certificates": [
+    {
+      "title": "Build A Secure Google Cloud Network",
+      "issuer": "Google Cloud",
+      "date": "December 2025",
+      "image": "media/certificates/Build%20A%20Secure%20Google%20Cloud%20Network.png",
+      "verified": true
+    },
+    {
+      "title": "Building Bad Participation",
+      "issuer": "Program Organization",
+      "date": "November 2025",
+      "image": "media/certificates/Building%20Bad%20Participation.jpg",
+      "verified": true
+    },
+    {
+      "title": "Cyber Job Simulation",
+      "issuer": "Deloitte",
+      "date": "October 2025",
+      "image": "media/certificates/Deloitte%20-%20Cyber%20Job%20Simulation.jpg",
+      "verified": true
+    },
+    {
+      "title": "Develop Your Google Cloud Network",
+      "issuer": "Google Cloud",
+      "date": "September 2025",
+      "image": "media/certificates/Develop%20Your%20Google%20Cloud%20Network.jpg",
+      "verified": true
+    },
+    {
+      "title": "Get Started With Sensitive Data Protection",
+      "issuer": "Google Cloud",
+      "date": "August 2025",
+      "image": "media/certificates/Get%20Started%20With%20Sensitive%20Data%20Protection.jpg",
+      "verified": true
+    },
+    {
+      "title": "Python (Basic)",
+      "issuer": "HackerRank",
+      "date": "July 2025",
+      "image": "media/certificates/HackerRank%20Python(Basic).jpg",
+      "verified": true
+    },
+    {
+      "title": "Introduction To Google Workspace With Gemini",
+      "issuer": "Google Cloud",
+      "date": "June 2025",
+      "image": "media/certificates/Introduction%20To%20Google%20Workspace%20With%20Gemini.jpg",
+      "verified": true
+    },
+    {
+      "title": "Workshop On AI And ML",
+      "issuer": "NIT (National Institute of Technology)",
+      "date": "May 2025",
+      "image": "media/certificates/NIT%20Workshop%20On%20AI%20And%20ML.jpg",
+      "verified": true
+    }
+  ],
+  "awards": [
+    {
+      "title": "Sample Award Title",
+      "icon": "🥇",
+      "description": "Brief description of the award and what it was for. Include relevant details about the achievement.",
+      "date": "[Add Date]"
+    },
+    {
+      "title": "Another Achievement",
+      "icon": "🏅",
+      "description": "Description of another notable award or recognition received.",
+      "date": "[Add Date]"
+    }
+  ]
+}

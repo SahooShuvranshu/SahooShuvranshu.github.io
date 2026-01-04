@@ -1,0 +1,406 @@
+<!-- ========================================
+     📝 EDIT DATA HERE - Easy to modify!
+     ======================================== -->
+<script>
+// GALLERY DATA - Edit this array to add/remove images
+const galleryData = [
+    {
+        image: "media/gallery/Shuvranshu.jpeg",
+        alt: "Shuvranshu",
+        caption: "Portrait"
+    },
+    {
+        image: "media/gallery/image_1567bae6-98e7-4588-befc-78606bca91b820260102_174007.jpg",
+        alt: "Gallery Image",
+        caption: "Memory"
+    },
+    {
+        image: "media/gallery/image_237e036d-ca55-4a31-a724-1d3b09f9213e20260102_174010.jpg",
+        alt: "Gallery Image",
+        caption: "Moment"
+    },
+    {
+        image: "media/gallery/image_a09dbfe5-1adb-4df0-aa07-83e5e4e5658220260102_173956.jpg",
+        alt: "Gallery Image",
+        caption: "Snapshot"
+    },
+    {
+        image: "media/gallery/image_d71c4bcf-6cfd-40d0-adc2-a9a8760c895620260102_173950.jpg",
+        alt: "Gallery Image",
+        caption: "Vibe"
+    }
+];
+</script>
+
+<!-- ========================================
+     🎨 STYLES & DISPLAY CODE BELOW
+     ======================================== -->
+<style>
+    /* Discord Retro Theme - Gallery */
+    .discord-about-card {
+        background-color: #2f3136;
+        border-radius: 0;
+        margin-bottom: 16px;
+        border: 2px solid #40444b;
+        overflow: hidden;
+        box-shadow: 4px 4px 0 #18191c;
+    }
+
+    .card-header {
+        background-color: #202225;
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 2px solid #18191c;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 1px;
+    }
+
+    .header-icon {
+        font-size: 16px;
+    }
+
+    .header-title {
+        color: #8e9297;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    .gallery-grid {
+        column-count: 3;
+        column-gap: 12px;
+    }
+
+    @media (max-width: 768px) {
+        .gallery-grid {
+            column-count: 2;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gallery-grid {
+            column-count: 1;
+        }
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+        cursor: pointer;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        background-color: #40444b;
+        border: 2px solid #202225;
+        box-shadow: 2px 2px 0 #18191c;
+        margin-bottom: 12px;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        display: inline-block;
+        width: 100%;
+    }
+
+    .gallery-item:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px 0 #18191c;
+        z-index: 10;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        vertical-align: middle;
+    }
+
+    .gallery-caption {
+        background: #202225;
+        color: #ffffff;
+        padding: 8px 10px;
+        font-size: 12px;
+        font-weight: 600;
+        border-top: 2px solid #40444b;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 0.5px;
+        text-align: center;
+    }
+
+    /* Lightbox Viewer */
+    .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 0.2s ease;
+    }
+
+    .lightbox.active {
+        display: flex;
+    }
+
+    .lightbox-content {
+        position: relative;
+        max-width: 90%;
+        max-height: 90%;
+        background-color: #2f3136;
+        border-radius: 0;
+        overflow: hidden;
+        border: 2px solid #40444b;
+        box-shadow: 6px 6px 0 #18191c;
+    }
+
+    .lightbox-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 85vh;
+        object-fit: contain;
+    }
+
+    .lightbox-caption {
+        background-color: #202225;
+        color: #ffffff;
+        padding: 12px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 0.5px;
+        border-top: 2px solid #40444b;
+    }
+
+    .lightbox-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background-color: #202225;
+        color: #ffffff;
+        border: 2px solid #40444b;
+        border-radius: 0;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 22px;
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        z-index: 1001;
+        transition: all 0.2s ease;
+        box-shadow: 3px 3px 0 #18191c;
+    }
+
+    .lightbox-close:hover {
+        background-color: #40444b;
+        transform: translate(-2px, -2px);
+        box-shadow: 5px 5px 0 #18191c;
+    }
+
+    .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #202225;
+        color: #ffffff;
+        border: 2px solid #40444b;
+        border-radius: 0;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 24px;
+        font-family: 'Courier New', monospace;
+        font-weight: bold;
+        transition: all 0.2s ease;
+        z-index: 1001;
+        box-shadow: 3px 3px 0 #18191c;
+    }
+
+    .lightbox-nav:hover {
+        background-color: #40444b;
+        transform: translateY(-50%) translate(-2px, -2px);
+        box-shadow: 5px 5px 0 #18191c;
+    }
+
+    .lightbox-prev {
+        left: 16px;
+    }
+
+    .lightbox-next {
+        right: 16px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+        .gallery-grid {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-auto-rows: 150px;
+            gap: 10px;
+        }
+
+        .gallery-caption {
+            font-size: 12px;
+            padding: 8px;
+        }
+
+        .lightbox-nav {
+            width: 36px;
+            height: 36px;
+            font-size: 18px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 120px;
+            gap: 8px;
+        }
+
+        .gallery-caption {
+            font-size: 11px;
+            padding: 6px;
+        }
+
+        .lightbox-close {
+            width: 32px;
+            height: 32px;
+            font-size: 18px;
+            top: 12px;
+            right: 12px;
+        }
+
+        .lightbox-nav {
+            width: 32px;
+            height: 32px;
+            font-size: 16px;
+        }
+
+        .lightbox-prev {
+            left: 12px;
+        }
+
+        .lightbox-next {
+            right: 12px;
+        }
+    }
+</style>
+
+<!-- ========================================
+     🖼️ GALLERY SECTION
+     ======================================== -->
+<div class="discord-about-card">
+    <div class="card-header">
+        <span class="header-icon">🖼️</span>
+        <span class="header-title">PHOTO GALLERY</span>
+    </div>
+    <div class="card-content">
+        <div id="galleryGrid" class="gallery-grid"></div>
+    </div>
+</div>
+
+<!-- Lightbox Viewer -->
+<div id="lightbox" class="lightbox">
+    <div class="lightbox-close" onclick="closeLightbox()">×</div>
+    <div class="lightbox-nav lightbox-prev" onclick="changeImage(-1)">‹</div>
+    <div class="lightbox-nav lightbox-next" onclick="changeImage(1)">›</div>
+    <div class="lightbox-content">
+        <img id="lightboxImage" class="lightbox-image" src="" alt="">
+        <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+</div>
+
+<!-- ========================================
+     📦 JAVASCRIPT - Auto-generates content
+     ======================================== -->
+<script>
+(function() {
+    let currentImageIndex = 0;
+
+    // Render Gallery
+    const galleryGrid = document.getElementById('galleryGrid');
+    if (!galleryGrid) return;
+    
+    galleryData.forEach((item, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        
+        galleryItem.innerHTML = `
+            <img src="${item.image}" alt="${item.alt}" loading="lazy">
+            <div class="gallery-caption">${item.caption}</div>
+        `;
+        
+        galleryItem.addEventListener('click', () => openLightbox(index));
+        galleryGrid.appendChild(galleryItem);
+    });
+
+    // Lightbox Functions - Exposed to global scope for onclick handlers
+    window.openLightbox = function(index) {
+        currentImageIndex = index;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        
+        lightboxImage.src = galleryData[index].image;
+        lightboxImage.alt = galleryData[index].alt;
+        lightboxCaption.textContent = galleryData[index].caption;
+        
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeLightbox = function() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    };
+
+    window.changeImage = function(direction) {
+        currentImageIndex += direction;
+        
+        if (currentImageIndex < 0) {
+            currentImageIndex = galleryData.length - 1;
+        } else if (currentImageIndex >= galleryData.length) {
+            currentImageIndex = 0;
+        }
+        
+        const lightboxImage = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+        
+        lightboxImage.src = galleryData[currentImageIndex].image;
+        lightboxImage.alt = galleryData[currentImageIndex].alt;
+        lightboxCaption.textContent = galleryData[currentImageIndex].caption;
+    };
+
+    // Close lightbox on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') window.closeLightbox();
+        if (e.key === 'ArrowLeft') window.changeImage(-1);
+        if (e.key === 'ArrowRight') window.changeImage(1);
+    });
+
+    // Close lightbox on background click
+    document.getElementById('lightbox').addEventListener('click', (e) => {
+        if (e.target.id === 'lightbox') window.closeLightbox();
+    });
+})();
+</script>

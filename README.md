@@ -14,6 +14,7 @@ A modern, Discord-themed personal portfolio website showcasing my skills, projec
 - [Setup & Installation](#setup--installation)
 - [Pages Overview](#pages-overview)
 - [Customization Guide](#customization-guide)
+- [Security](#security)
 - [Social Links](#social-links)
 - [License](#license)
 
@@ -25,9 +26,13 @@ A modern, Discord-themed personal portfolio website showcasing my skills, projec
 - 📱 **Fully Responsive** - Works seamlessly on desktop, tablet, and mobile devices
 - ⚡ **Fast & Lightweight** - No framework bloat, vanilla JavaScript only
 - 🎯 **Multi-Page Navigation** - Tabs for About Me, Skills, Projects, Services, and Blog
+- 📬 **Dedicated Contact Page** - Professional contact page with multiple contact methods
+- 🖼️ **Image Gallery** - Interactive lightbox gallery with keyboard navigation
 - 🌐 **Embedded Blogspot** - Integrated blog section with direct Blogspot feed
 - 🔗 **Social Media Integration** - Links to all major social platforms
 - 📊 **Dynamic Content Loading** - Pages load dynamically without full page refresh
+- 🚫 **Custom 404 Page** - User-friendly error page with navigation
+- 🔒 **Security Policy** - Comprehensive security guidelines and vulnerability reporting
 - ♿ **Accessible** - Semantic HTML and ARIA labels for better accessibility
 - 🚀 **GitHub Pages Ready** - Hosted on GitHub Pages with custom domain support
 
@@ -38,15 +43,21 @@ A modern, Discord-themed personal portfolio website showcasing my skills, projec
 ```
 SahooShuvranshu.github.io/
 ├── index.html              # Main portfolio page
+├── contact.html            # Dedicated contact page
+├── 404.html               # Custom 404 error page
 ├── README.md              # Project documentation
+├── SECURITY.md            # Security policy and vulnerability reporting
 ├── LICENSE                # License file
 ├── CNAME                  # Custom domain configuration
+├── media/                 # Images and media files
+│   └── Shuvranshu.jpg     # Profile image
 └── pages/
     ├── about.html         # About Me section
     ├── skills.html        # Skills & Technologies
     ├── projects.html      # Project Portfolio
     ├── services.html      # Services Offered
-    └── blog.html          # Blog Section (Blogspot embed)
+    ├── blog.html          # Blog Section (Blogspot embed)
+    └── gallery.html       # Image gallery with lightbox
 ```
 
 ---
@@ -203,7 +214,19 @@ if (resumeBtn) {
 
 ---
 
-## 🔗 Social Links
+## � Security
+
+This project takes security seriously. If you discover a security vulnerability:
+
+1. **DO NOT** create a public GitHub issue
+2. Read the [SECURITY.md](SECURITY.md) file for reporting guidelines
+3. Email security concerns to: [sahooshuvranshusekhar@gmail.com](mailto:sahooshuvranshusekhar@gmail.com)
+
+For more details, see the [Security Policy](SECURITY.md).
+
+---
+
+## �🔗 Social Links
 
 Connect with me on:
 
@@ -249,8 +272,11 @@ To use a custom domain:
 
 ## 📝 Features to Consider
 
+- [x] Custom 404 page
+- [x] Contact page with multiple methods
+- [x] Image gallery with lightbox
+- [x] Security policy documentation
 - [ ] Dark mode toggle
-- [ ] Contact form
 - [ ] Project filtering by category
 - [ ] Search functionality
 - [ ] Analytics integration
@@ -284,4 +310,4 @@ If you have questions or want to collaborate, feel free to:
 
 ---
 
-**Made with ❤️ | Last Updated: October 2025**
+**Made with ❤️ | Last Updated: January 2026**

@@ -1,0 +1,70 @@
+{
+  "projects": [
+    {
+      "title": "Youth Times",
+      "description": "Youth Times is a student-led online newspaper platform that empowers young writers to share campus stories, opinions, and news. Built with Flask, HTML/CSS, and flexible database support.",
+      "banner": "media/projects/youth-times-banner.jpg",
+      "bannerGradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      "bannerEmoji": "📰",
+      "status": "live",
+      "sourceCode": "https://github.com/SahooShuvranshu/Youth-Times-Website",
+      "liveDemo": "https://youthtimes.social",
+      "techStack": ["Flask", "HTML/CSS", "Python", "Database"]
+    },
+    {
+      "title": "Spotify Live Banner",
+      "description": "A real-time, customizable Python/Flask web service that displays the current Spotify song you are listening to as a banner image, perfect for GitHub profile READMEs.",
+      "banner": "media/projects/spotify-banner.jpg",
+      "bannerGradient": "linear-gradient(135deg, #1DB954 0%, #191414 100%)",
+      "bannerEmoji": "🎵",
+      "status": "live",
+      "sourceCode": "https://github.com/SahooShuvranshu/Spotify-Live-Banner",
+      "liveDemo": "https://spotify-live-banner.vercel.app/?scan=true",
+      "techStack": ["Python", "Flask", "Spotify API", "Vercel"]
+    },
+    {
+      "title": "Spotify Refresh Token Generator",
+      "description": "A simple, self-hostable Flask app to get Spotify Refresh Tokens for your website, bot, or other projects. Handles the auth flow for you.",
+      "banner": "media/projects/spotify-token-banner.jpg",
+      "bannerGradient": "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      "bannerEmoji": "🎰",
+      "status": "live",
+      "sourceCode": "https://github.com/SahooShuvranshu/Spotify-Refresh-Token-Generator",
+      "liveDemo": "https://spotify-refresh-token-generator.onrender.com/",
+      "techStack": ["Python", "Flask", "OAuth", "Spotify API"]
+    },
+    {
+      "title": "Coming Soon...",
+      "description": "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
+      "banner": "",
+      "bannerGradient": "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+      "bannerEmoji": "💡",
+      "status": "soon",
+      "sourceCode": "#",
+      "liveDemo": "#",
+      "techStack": ["Technology", "Stack", "Here"]
+    },
+    {
+      "title": "Coming Soon...",
+      "description": "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
+      "banner": "",
+      "bannerGradient": "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
+      "bannerEmoji": "🚀",
+      "status": "soon",
+      "sourceCode": "#",
+      "liveDemo": "#",
+      "techStack": ["Technology", "Stack", "Here"]
+    },
+    {
+      "title": "Coming Soon...",
+      "description": "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
+      "banner": "",
+      "bannerGradient": "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+      "bannerEmoji": "✨",
+      "status": "soon",
+      "sourceCode": "#",
+      "liveDemo": "#",
+      "techStack": ["Technology", "Stack", "Here"]
+    }
+  ]
+}

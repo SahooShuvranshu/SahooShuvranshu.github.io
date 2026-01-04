@@ -1,146 +1,496 @@
-<div class="discord-section-title">Featured Projects</div>
-<div class="discord-projects-grid">
-    <div class="discord-project-card">
-        <div class="discord-project-header">
-            <h3>Youth Times 📰</h3>
-            <span class="discord-project-status">🟢 Live</span>
-        </div>
-        <p>Youth Times Is A Student-Led Online Newspaper Platform That Empowers Young Writers To Share Campus Stories, Opinions, And News. Built With Flask, HTML/CSS, And Flexible Database Support, It Offers Article Submission, User Login, And A Clean, Responsive Interface For Digital Journalism.</p>
-        
-        <div style="display: flex; gap: 10px; margin: 14px 0; flex-wrap: wrap;">
-            <a href="https://github.com/SahooShuvranshu/Youth-Times-Website" target="_blank" rel="noopener noreferrer" style="background-color: #5865f2; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; transition: background-color 0.2s;">
-                📂 Source Code
-            </a>
-            <a href="https://youthtimes.social" target="_blank" rel="noopener noreferrer" style="background-color: #3ba55c; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; transition: background-color 0.2s;">
-                🌐 Live Demo
-            </a>
-        </div>
-        
-        <div class="discord-project-tech">
-            <span>Flask</span>
-            <span>HTML/CSS</span>
-            <span>Python</span>
-            <span>Database</span>
-        </div>
-    </div>
+<!-- ========================================
+     📝 EDIT DATA HERE - Easy to modify!
+     ======================================== -->
+<script>
+// PROJECTS DATA - Edit this array to add/remove projects
+const projectsData = [
+    {
+        title: "Youth Times",
+        description: "Youth Times is a student-led online newspaper platform that empowers young writers to share campus stories, opinions, and news. Built with Flask, HTML/CSS, and flexible database support.",
+        category: "WEB_APPLICATION",
+        bannerGradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+        bannerEmoji: "📰",
+        status: "active",
+        year: "2024",
+        sourceCode: "https://github.com/SahooShuvranshu/Youth-Times-Website",
+        liveDemo: "https://youthtimes.social",
+        techStack: ["Flask", "HTML/CSS", "Python", "Database"]
+    },
+    {
+        title: "Spotify Live Banner",
+        description: "A real-time, customizable Python/Flask web service that displays the current Spotify song you are listening to as a banner image, perfect for GitHub profile READMEs.",
+        category: "API_SERVICE",
+        bannerGradient: "linear-gradient(135deg, #1DB954 0%, #191414 100%)",
+        bannerEmoji: "🎵",
+        status: "active",
+        year: "2024",
+        sourceCode: "https://github.com/SahooShuvranshu/Spotify-Live-Banner",
+        liveDemo: "https://spotify-live-banner.vercel.app/?scan=true",
+        techStack: ["Python", "Flask", "Spotify API", "Vercel"]
+    },
+    {
+        title: "Spotify Refresh Token Generator",
+        description: "A simple, self-hostable Flask app to get Spotify Refresh Tokens for your website, bot, or other projects. Handles the auth flow for you.",
+        category: "UTILITY",
+        bannerGradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+        bannerEmoji: "🎰",
+        status: "active",
+        year: "2024",
+        sourceCode: "https://github.com/SahooShuvranshu/Spotify-Refresh-Token-Generator",
+        liveDemo: "https://spotify-refresh-token-generator.onrender.com/",
+        techStack: ["Python", "Flask", "OAuth", "Spotify API"]
+    },
+    {
+        title: "Coming Soon...",
+        description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
+        category: "DEVELOPMENT",
+        bannerGradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
+        bannerEmoji: "💡",
+        status: "paused",
+        year: "2025",
+        sourceCode: "#",
+        liveDemo: "#",
+        techStack: ["Technology", "Stack", "Here"]
+    },
+    {
+        title: "Coming Soon...",
+        description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
+        category: "EXPERIMENTAL",
+        bannerGradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
+        bannerEmoji: "🚀",
+        status: "paused",
+        year: "2025",
+        sourceCode: "#",
+        liveDemo: "#",
+        techStack: ["Technology", "Stack", "Here"]
+    },
+    {
+        title: "Coming Soon...",
+        description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
+        category: "PROTOTYPE",
+        bannerGradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
+        bannerEmoji: "✨",
+        status: "archived",
+        year: "2023",
+        sourceCode: "#",
+        liveDemo: "#",
+        techStack: ["Technology", "Stack", "Here"]
+    }
+];
+</script>
 
-    <div class="discord-project-card">
-        <div class="discord-project-header">
-            <h3>Spotify Live Banner 🎵</h3>
-            <span class="discord-project-status">🟢 Live</span>
-        </div>
-        <p style="color: #72767d;">A Real-time, Customizable Python/Flask web service that displays the current Spotify song you are listening to as a banner image, perfect for GitHub profile readmes. Easily deployable on Vercel.</p>
-        
-        <div style="display: flex; gap: 10px; margin: 14px 0; flex-wrap: wrap;">
-            <a href="https://github.com/SahooShuvranshu/Spotify-Live-Banner" style="background-color: #5865f2; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                📂 Source Code
-            </a>
-            <a href="https://spotify-live-banner.vercel.app/?scan=true" style="background-color: #3ba55c; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                🌐 Live Demo
-            </a>
-        </div>
-        
-        <div class="discord-project-tech">
-            <span>Python</span>
-            <span>Flask</span>
-            <span>Github</span>
-            <span>Spotify API</span>
-        </div>
-    </div>
+<!-- ========================================
+     🎨 STYLES & DISPLAY CODE BELOW
+     ======================================== -->
+<style>
+    /* Retro Header */
+    .retro-header {
+        background-color: #202225;
+        border: 2px solid #40444b;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 0 #18191c;
+    }
 
-    <div class="discord-project-card">
-        <div class="discord-project-header">
-            <h3>Spotify Refresh Token Generator 🎰</h3>
-            <span class="discord-project-status">🟢 Live</span>
-        </div>
-        <p style="color: #72767d;">​A simple, self-hostable Flask app to get Spotify Refresh Tokens for your website, bot, or other projects. Handles the auth flow for you.</p>
-        
-        <div style="display: flex; gap: 10px; margin: 14px 0; flex-wrap: wrap;">
-            <a href="https://github.com/SahooShuvranshu/Spotify-Refresh-Token-Generator" style="background-color: #5865f2; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                📂 Source Code
-            </a>
-            <a href="https://spotify-refresh-token-generator.onrender.com/" style="background-color: #3ba55c; color: white; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                🌐 Live Demo
-            </a>
-        </div>
-        
-        <div class="discord-project-tech">
-            <span>Python</span>
-            <span>Flask</span>
-            <span>OAuth</span>
-            <span>Spotify API</span>
-        </div>
-    </div>
+    .retro-header-top {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 14px;
+        background: linear-gradient(to bottom, #2f3136 0%, #202225 100%);
+        border-bottom: 1px solid #40444b;
+    }
 
-    <!-- Blank Project Template 3 -->
-    <div class="discord-project-card">
-        <div class="discord-project-header">
-            <h3>Coming Soon...</h3>
-            <span class="discord-project-status">⏳ Soon</span>
-        </div>
-        <p style="color: #72767d;">Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.</p>
-        
-        <div style="display: flex; gap: 10px; margin: 14px 0; flex-wrap: wrap;">
-            <a href="#" style="background-color: #40444b; color: #b9bbbe; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                📂 Source Code
-            </a>
-            <a href="#" style="background-color: #40444b; color: #b9bbbe; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                🌐 Live Demo
-            </a>
-        </div>
-        
-        <div class="discord-project-tech">
-            <span>Technology</span>
-            <span>Stack</span>
-            <span>Here</span>
-        </div>
-    </div>
+    .retro-icon {
+        font-size: 18px;
+    }
 
-    <!-- Blank Project Template 4 -->
-    <div class="discord-project-card">
-        <div class="discord-project-header">
-            <h3>Coming Soon...</h3>
-            <span class="discord-project-status">⏳ Soon</span>
-        </div>
-        <p style="color: #72767d;">Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.</p>
-        
-        <div style="display: flex; gap: 10px; margin: 14px 0; flex-wrap: wrap;">
-            <a href="#" style="background-color: #40444b; color: #b9bbbe; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                📂 Source Code
-            </a>
-            <a href="#" style="background-color: #40444b; color: #b9bbbe; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                🌐 Live Demo
-            </a>
-        </div>
-        
-        <div class="discord-project-tech">
-            <span>Technology</span>
-            <span>Stack</span>
-            <span>Here</span>
-        </div>
-    </div>
+    .retro-title {
+        color: #00b0f4;
+        font-size: 13px;
+        font-weight: 700;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 1px;
+        flex: 1;
+    }
 
-    <!-- Blank Project Template 5 -->
-    <div class="discord-project-card">
-        <div class="discord-project-header">
-            <h3>Coming Soon...</h3>
-            <span class="discord-project-status">⏳ Soon</span>
-        </div>
-        <p style="color: #72767d;">Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.</p>
+    .retro-version {
+        color: #8e9297;
+        font-size: 10px;
+        font-family: 'Courier New', monospace;
+        background-color: #18191c;
+        padding: 2px 6px;
+        border-radius: 2px;
+        border: 1px solid #40444b;
+    }
+
+    .retro-header-line {
+        height: 4px;
+        background: repeating-linear-gradient(
+            90deg,
+            #5865f2 0px,
+            #5865f2 10px,
+            #3ba55c 10px,
+            #3ba55c 20px,
+            #faa61a 20px,
+            #faa61a 30px,
+            #ed4245 30px,
+            #ed4245 40px
+        );
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    /* Retro Project Card */
+    .project-card {
+        background-color: #2f3136;
+        border: 2px solid #40444b;
+        border-radius: 0;
+        overflow: hidden;
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+        box-shadow: 4px 4px 0 #18191c;
+        position: relative;
+    }
+
+    .project-card:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 6px 6px 0 #18191c;
+    }
+
+    .project-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: repeating-linear-gradient(
+            90deg,
+            #40444b 0px,
+            #40444b 4px,
+            transparent 4px,
+            transparent 8px
+        );
+    }
+
+    /* Retro Banner */
+    .project-banner {
+        width: 100%;
+        height: 140px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        position: relative;
+        border-bottom: 3px solid #18191c;
+    }
+
+    .project-banner::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: repeating-linear-gradient(
+            90deg,
+            #ffffff20 0px,
+            #ffffff20 2px,
+            transparent 2px,
+            transparent 4px
+        );
+    }
+
+    /* Project Header Bar */
+    .project-header-bar {
+        background-color: #202225;
+        padding: 8px 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        border-bottom: 2px solid #18191c;
+        font-family: 'Courier New', monospace;
+    }
+
+    .project-category {
+        color: #00b0f4;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+    }
+
+    .project-year {
+        color: #8e9297;
+        font-size: 10px;
+        background-color: #18191c;
+        padding: 2px 6px;
+        border: 1px solid #40444b;
+    }
+
+    /* Content */
+    .project-content {
+        padding: 14px;
+    }
+
+    .project-title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .project-title {
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.3;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .project-status {
+        padding: 4px 8px;
+        font-size: 9px;
+        font-weight: 700;
+        white-space: nowrap;
+        flex-shrink: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-family: 'Courier New', monospace;
+        border: 2px solid;
+    }
+
+    .project-status.active {
+        background-color: #3ba55c;
+        border-color: #2d7d46;
+        color: #ffffff;
+    }
+
+    .project-status.paused {
+        background-color: #faa61a;
+        border-color: #c77d0a;
+        color: #ffffff;
+    }
+
+    .project-status.archived {
+        background-color: #ed4245;
+        border-color: #a12d2f;
+        color: #ffffff;
+    }
+
+    .project-description {
+        color: #dcddde;
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 14px;
+        border-left: 3px solid #40444b;
+        padding-left: 10px;
+    }
+
+    .project-links {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 14px;
+        flex-wrap: wrap;
+    }
+
+    .project-link {
+        background-color: #40444b;
+        color: #ffffff;
+        padding: 8px 12px;
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        transition: all 0.15s;
+        border: 2px solid #202225;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-family: 'Courier New', monospace;
+        box-shadow: 2px 2px 0 #18191c;
+    }
+
+    .project-link:hover {
+        background-color: #4f545c;
+        transform: translate(-1px, -1px);
+        box-shadow: 3px 3px 0 #18191c;
+    }
+
+    .project-link.demo {
+        background-color: #5865f2;
+        border-color: #4752c4;
+    }
+
+    .project-link.demo:hover {
+        background-color: #4752c4;
+    }
+
+    .project-link.disabled {
+        background-color: #2f3136;
+        color: #72767d;
+        cursor: not-allowed;
+        pointer-events: none;
+        border-color: #202225;
+        box-shadow: 1px 1px 0 #18191c;
+    }
+
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding-top: 10px;
+        border-top: 2px dashed #40444b;
+    }
+
+    .project-tech span {
+        background-color: #202225;
+        color: #b9bbbe;
+        padding: 4px 8px;
+        font-size: 10px;
+        font-weight: 600;
+        border: 1px solid #40444b;
+        font-family: 'Courier New', monospace;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+    }
+
+    @media (max-width: 768px) {
+        .projects-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .project-banner {
+            height: 120px;
+            font-size: 40px;
+        }
+
+        .project-content {
+            padding: 12px;
+        }
+
+        .project-title {
+            font-size: 15px;
+        }
+
+        .retro-title {
+            font-size: 11px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .project-card {
+            box-shadow: 3px 3px 0 #18191c;
+        }
+
+        .project-card:hover {
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0 #18191c;
+        }
+
+        .project-banner {
+            height: 100px;
+            font-size: 36px;
+        }
+
+        .project-content {
+            padding: 10px;
+        }
+
+        .project-title {
+            font-size: 14px;
+        }
+
+        .project-description {
+            font-size: 12px;
+        }
         
-        <div style="display: flex; gap: 10px; margin: 14px 0; flex-wrap: wrap;">
-            <a href="#" style="background-color: #40444b; color: #b9bbbe; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                📂 Source Code
-            </a>
-            <a href="#" style="background-color: #40444b; color: #b9bbbe; padding: 8px 14px; border-radius: 6px; text-decoration: none; font-size: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 4px; cursor: not-allowed;">
-                🌐 Live Demo
-            </a>
-        </div>
+        .project-link {
+            font-size: 10px;
+            padding: 6px 10px;
+        }
+
+        .retro-header-top {
+            padding: 8px 10px;
+        }
+
+        .retro-title {
+            font-size: 10px;
+        }
+    }
+</style>
+
+<div class="projects-grid" id="projects-container"></div>
+
+<script>
+// Load Projects - wrapped to ensure DOM is ready
+(function() {
+    const projectsContainer = document.getElementById('projects-container');
+    if (!projectsContainer) {
+        console.error('Projects container not found');
+        return;
+    }
+    
+    projectsData.forEach(project => {
+        const card = document.createElement('div');
+        card.className = 'project-card';
         
-        <div class="discord-project-tech">
-            <span>Technology</span>
-            <span>Stack</span>
-            <span>Here</span>
-        </div>
-    </div>
-</div>
+        // Determine status
+        const statusClass = project.status || 'active';
+        const statusText = {
+            'active': '● ACTIVE',
+            'paused': '◐ PAUSED',
+            'archived': '○ ARCHIVED'
+        }[statusClass] || '● ACTIVE';
+        
+        // Build tech stack
+        const techStack = project.techStack.map(tech => `<span>${tech}</span>`).join('');
+        
+        // Determine link classes
+        const linkClass = (project.status === 'paused' || project.status === 'archived') ? 'disabled' : '';
+        
+        card.innerHTML = `
+            <div class="project-banner" style="background: ${project.bannerGradient};">
+                ${project.bannerEmoji}
+            </div>
+            <div class="project-header-bar">
+                <span class="project-category">${project.category}</span>
+                <span class="project-year">${project.year}</span>
+            </div>
+            <div class="project-content">
+                <div class="project-title-row">
+                    <div class="project-title">${project.title}</div>
+                    <span class="project-status ${statusClass}">${statusText}</span>
+                </div>
+                <div class="project-description">
+                    ${project.description}
+                </div>
+                <div class="project-links">
+                    <a href="${project.sourceCode}" target="_blank" class="project-link ${linkClass}">
+                        📂 Code
+                    </a>
+                    <a href="${project.liveDemo}" target="_blank" class="project-link demo ${linkClass}">
+                        🌐 Demo
+                    </a>
+                </div>
+                <div class="project-tech">
+                    ${techStack}
+                </div>
+            </div>
+        `;
+        projectsContainer.appendChild(card);
+    });
+})();
+</script>

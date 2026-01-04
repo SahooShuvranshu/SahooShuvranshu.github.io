@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Shuvranshu Portfolio</title>
+    <meta name="description" content="Oops! The page you're looking for doesn't exist.">
+    <link rel="icon" type="image/x-icon" href="/media/Shuvranshu.jpeg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #36393f;
+            background-image: url('https://i.pinimg.com/originals/c1/fc/9d/c1fc9d7f6ae08d56f2b84e81799790a5.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .error-container {
+            background-color: #2f3136;
+            border-radius: 0;
+            max-width: 600px;
+            width: 90vw;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 6px 6px 0 #18191c;
+            border: 2px solid #40444b;
+        }
+
+        @media (max-width: 768px) {
+            .error-container {
+                padding: 30px 20px;
+                box-shadow: 4px 4px 0 #18191c;
+            }
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: 700;
+            color: #5865f2;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 4px 4px 0 #18191c;
+            line-height: 1;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 80px;
+                text-shadow: 3px 3px 0 #18191c;
+            }
+        }
+
+        .error-emoji {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .error-title {
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .error-title {
+                font-size: 24px;
+            }
+        }
+
+        .error-message {
+            color: #b9bbbe;
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 768px) {
+            .error-message {
+                font-size: 14px;
+                margin-bottom: 24px;
+            }
+        }
+
+        .button-container {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .error-button {
+            background-color: #5865f2;
+            color: white;
+            border: 2px solid #4752c4;
+            border-radius: 0;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 3px 3px 0 #18191c;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+        }
+
+        .error-button:hover {
+            background-color: #4752c4;
+            transform: translate(-1px, -1px);
+            box-shadow: 4px 4px 0 #18191c;
+        }
+
+        .error-button.secondary {
+            background-color: #3ba55c;
+            border-color: #2d7d46;
+        }
+
+        .error-button.secondary:hover {
+            background-color: #2d7d46;
+        }
+
+        .error-button.tertiary {
+            background-color: #faa61a;
+            border-color: #e89112;
+        }
+
+        .error-button.tertiary:hover {
+            background-color: #e89112;
+        }
+
+        .helpful-links {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 2px solid #40444b;
+        }
+
+        .helpful-links h3 {
+            color: #8e9297;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .quick-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .quick-link {
+            color: #00b0f4;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 6px 12px;
+            background-color: #202225;
+            border: 2px solid #40444b;
+            border-radius: 0;
+            transition: all 0.15s ease;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .quick-link:hover {
+            background-color: #40444b;
+            transform: translate(-1px, -1px);
+            box-shadow: 2px 2px 0 #18191c;
+        }
+
+        @media (max-width: 480px) {
+            .error-button {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+            
+            .quick-link {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="error-container">
+        <div class="error-emoji">🔍</div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-message">
+            Oops! The page you're looking for seems to have wandered off into the digital void. 
+            Don't worry though, you can navigate back to safety using the buttons below!
+        </p>
+        
+        <div class="button-container">
+            <a href="/index.html" class="error-button">
+                <span>🏠</span>
+                <span>GO HOME</span>
+            </a>
+            <a href="javascript:history.back()" class="error-button secondary">
+                <span>←</span>
+                <span>GO BACK</span>
+            </a>
+            <a href="/blog" class="error-button tertiary">
+                <span>📝</span>
+                <span>GO TO BLOG</span>
+            </a>
+        </div>
+
+        <div class="helpful-links">
+            <h3>Quick Links</h3>
+            <div class="quick-links">
+                <a href="/index.html" class="quick-link">Home</a>
+                <a href="/index.html#about" class="quick-link">About</a>
+                <a href="/index.html#projects" class="quick-link">Projects</a>
+                <a href="/index.html#skills" class="quick-link">Skills</a>
+                <a href="/blog" class="quick-link">Blog</a>
+                <a href="/contact.html" class="quick-link">Contact</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

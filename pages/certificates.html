@@ -1,0 +1,357 @@
+<!-- ========================================
+     📝 EDIT DATA HERE - Easy to modify!
+     ======================================== -->
+<script>
+// CERTIFICATES DATA - Edit this array to add/remove certificates
+const certificatesData = [
+    {
+        title: "Build A Secure Google Cloud Network",
+        issuer: "Google Cloud",
+        date: "December 2025",
+        image: "media/certificates/Build%20A%20Secure%20Google%20Cloud%20Network.png",
+        verified: true
+    },
+    {
+        title: "Building Bad Participation",
+        issuer: "Program Organization",
+        date: "November 2025",
+        image: "media/certificates/Building%20Bad%20Participation.jpg",
+        verified: true
+    },
+    {
+        title: "Cyber Job Simulation",
+        issuer: "Deloitte",
+        date: "October 2025",
+        image: "media/certificates/Deloitte%20-%20Cyber%20Job%20Simulation.jpg",
+        verified: true
+    },
+    {
+        title: "Develop Your Google Cloud Network",
+        issuer: "Google Cloud",
+        date: "September 2025",
+        image: "media/certificates/Develop%20Your%20Google%20Cloud%20Network.jpg",
+        verified: true
+    },
+    {
+        title: "Get Started With Sensitive Data Protection",
+        issuer: "Google Cloud",
+        date: "August 2025",
+        image: "media/certificates/Get%20Started%20With%20Sensitive%20Data%20Protection.jpg",
+        verified: true
+    },
+    {
+        title: "Python (Basic)",
+        issuer: "HackerRank",
+        date: "July 2025",
+        image: "media/certificates/HackerRank%20Python(Basic).jpg",
+        verified: true
+    },
+    {
+        title: "Introduction To Google Workspace With Gemini",
+        issuer: "Google Cloud",
+        date: "June 2025",
+        image: "media/certificates/Introduction%20To%20Google%20Workspace%20With%20Gemini.jpg",
+        verified: true
+    },
+    {
+        title: "Workshop On AI And ML",
+        issuer: "NIT (National Institute of Technology)",
+        date: "May 2025",
+        image: "media/certificates/NIT%20Workshop%20On%20AI%20And%20ML.jpg",
+        verified: true
+    }
+];
+
+// AWARDS DATA - Edit this array to add/remove awards
+const awardsData = [
+    {
+        title: "Sample Award Title",
+        icon: "🥇",
+        description: "Brief description of the award and what it was for. Include relevant details about the achievement.",
+        date: "[Add Date]"
+    },
+    {
+        title: "Another Achievement",
+        icon: "🏅",
+        description: "Description of another notable award or recognition received.",
+        date: "[Add Date]"
+    }
+];
+</script>
+
+<!-- ========================================
+     🎨 STYLES & DISPLAY CODE BELOW
+     ======================================== -->
+<style>
+    /* Discord Retro Theme - Certificates Section */
+    .discord-about-card {
+        background-color: #2f3136;
+        border-radius: 0;
+        margin-bottom: 16px;
+        border: 2px solid #40444b;
+        overflow: hidden;
+        box-shadow: 4px 4px 0 #18191c;
+    }
+
+    .card-header {
+        background-color: #202225;
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 2px solid #18191c;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 1px;
+    }
+
+    .header-icon {
+        font-size: 16px;
+    }
+
+    .header-title {
+        color: #8e9297;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    .certificates-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .certificate-card {
+        background-color: #40444b;
+        border-radius: 0;
+        border: 2px solid #202225;
+        box-shadow: 2px 2px 0 #18191c;
+        overflow: hidden;
+        border: 1px solid #202225;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .certificate-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .certificate-banner {
+        width: 100%;
+        height: auto;
+        display: block;
+        background-color: #202225;
+        border-bottom: 2px solid #202225;
+    }
+
+    .certificate-content {
+        padding: 14px;
+    }
+
+    .certificate-title {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        line-height: 1.3;
+    }
+
+    .certificate-issuer {
+        color: #b9bbbe;
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .certificate-date {
+        color: #8e9297;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .certificate-verified {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 10px;
+        color: #3ba55c;
+        margin-top: 6px;
+        font-weight: 600;
+    }
+
+    /* Awards Section */
+    .award-item {
+        display: flex;
+        gap: 12px;
+        padding: 12px;
+        background-color: #40444b;
+        border-radius: 4px;
+        margin-bottom: 12px;
+        transition: background-color 0.2s ease;
+        border-left: 3px solid #faa61a;
+    }
+
+    .award-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .award-item:hover {
+        background-color: #4f545c;
+    }
+
+    .award-icon {
+        font-size: 32px;
+        min-width: 40px;
+        text-align: center;
+        line-height: 1;
+    }
+
+    .award-details {
+        flex: 1;
+    }
+
+    .award-title {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    .award-description {
+        color: #dcddde;
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 6px;
+    }
+
+    .award-date {
+        color: #8e9297;
+        font-size: 11px;
+    }
+
+    @media (max-width: 768px) {
+        .certificates-grid {
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+
+        .certificate-content {
+            padding: 12px;
+        }
+
+        .certificate-title {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .certificate-content {
+            padding: 10px;
+        }
+
+        .certificate-title {
+            font-size: 12px;
+        }
+
+        .certificate-issuer {
+            font-size: 11px;
+        }
+
+        .certificate-date {
+            font-size: 10px;
+        }
+
+        .award-icon {
+            font-size: 28px;
+            min-width: 36px;
+        }
+
+        .award-title {
+            font-size: 13px;
+        }
+
+        .award-description {
+            font-size: 12px;
+        }
+    }
+</style>
+
+<!-- ========================================
+     📜 CERTIFICATES SECTION
+     ======================================== -->
+<div class="discord-about-card">
+    <div class="card-header">
+        <span class="header-icon">��</span>
+        <span class="header-title">CERTIFICATES</span>
+    </div>
+    <div class="card-content">
+        <div id="certificatesGrid" class="certificates-grid"></div>
+    </div>
+</div>
+
+<!-- ========================================
+     🏆 AWARDS SECTION
+     ======================================== -->
+<div class="discord-about-card">
+    <div class="card-header">
+        <span class="header-icon">🏆</span>
+        <span class="header-title">AWARDS & ACHIEVEMENTS</span>
+    </div>
+    <div class="card-content">
+        <div id="awardsContainer"></div>
+    </div>
+</div>
+
+<!-- ========================================
+     📦 JAVASCRIPT - Auto-generates content
+     ======================================== -->
+<script>
+(function() {
+// Render Certificates
+const certificatesGrid = document.getElementById('certificatesGrid');
+if (!certificatesGrid) return;
+
+certificatesData.forEach(cert => {
+    const certCard = document.createElement('div');
+    certCard.className = 'certificate-card';
+    
+    certCard.innerHTML = `
+        <img src="${cert.image}" alt="${cert.title}" class="certificate-banner" loading="lazy">
+        <div class="certificate-content">
+            <div class="certificate-title">${cert.title}</div>
+            <div class="certificate-issuer">${cert.issuer}</div>
+            <div class="certificate-date">�� ${cert.date}</div>
+            ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+        </div>
+    `;
+    
+    certificatesGrid.appendChild(certCard);
+});
+
+// Render Awards
+const awardsContainer = document.getElementById('awardsContainer');
+if (!awardsContainer) return;
+
+awardsData.forEach(award => {
+    const awardItem = document.createElement('div');
+    awardItem.className = 'award-item';
+    
+    awardItem.innerHTML = `
+        <div class="award-icon">${award.icon}</div>
+        <div class="award-details">
+            <div class="award-title">${award.title}</div>
+            <div class="award-description">${award.description}</div>
+            <div class="award-date">${award.date}</div>
+        </div>
+    `;
+    
+    awardsContainer.appendChild(awardItem);
+});
+})();
+</script>

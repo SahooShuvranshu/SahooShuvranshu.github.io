@@ -1,0 +1,29 @@
+{
+  "gallery": [
+    {
+      "image": "media/gallery/Shuvranshu.jpeg",
+      "alt": "Shuvranshu",
+      "caption": ""
+    },
+    {
+      "image": "media/gallery/image_1567bae6-98e7-4588-befc-78606bca91b820260102_174007.jpg",
+      "alt": "Gallery Image",
+      "caption": ""
+    },
+    {
+      "image": "media/gallery/image_237e036d-ca55-4a31-a724-1d3b09f9213e20260102_174010.jpg",
+      "alt": "Gallery Image",
+      "caption": ""
+    },
+    {
+      "image": "media/gallery/image_a09dbfe5-1adb-4df0-aa07-83e5e4e5658220260102_173956.jpg",
+      "alt": "Gallery Image",
+      "caption": ""
+    },
+    {
+      "image": "media/gallery/image_d71c4bcf-6cfd-40d0-adc2-a9a8760c895620260102_173950.jpg",
+      "alt": "Gallery Image",
+      "caption": ""
+    }
+  ]
+}
