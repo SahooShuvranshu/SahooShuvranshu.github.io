@@ -1,6 +1,74 @@
-<!-- ========================================
-     📝 EDIT DATA HERE - Easy to modify!
-     ======================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Shuvranshu Sekhar Sahoo</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore projects by Shuvranshu Sekhar Sahoo including Youth Times newspaper platform, Spotify Live Banner, and various web applications built with Flask, Python, and JavaScript.">
+    <meta name="keywords" content="Projects, Web Development, Youth Times, Spotify API, Flask Projects, Python Projects, Web Applications, Portfolio Projects">
+    <meta name="author" content="Shuvranshu Sekhar Sahoo">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sahooshuvranshu.me/pages/projects.html">
+    <meta property="og:title" content="Projects | Shuvranshu Sekhar Sahoo">
+    <meta property="og:description" content="Explore projects including Youth Times newspaper platform, Spotify Live Banner, and various web applications built with Flask, Python, and JavaScript.">
+    <meta property="og:image" content="https://sahooshuvranshu.me/media/Shuvranshu.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sahooshuvranshu.me/pages/projects.html">
+    <meta name="twitter:title" content="Projects | Shuvranshu Sekhar Sahoo">
+    <meta name="twitter:description" content="Web applications and tools including Youth Times, Spotify Live Banner, and more.">
+    <meta name="twitter:image" content="https://sahooshuvranshu.me/media/Shuvranshu.jpeg">
+    
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #36393f;
+            background-image: url('https://i.pinimg.com/originals/c1/fc/9d/c1fc9d7f6ae08d56f2b84e81799790a5.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
 <script>
 // PROJECTS DATA - Edit this array to add/remove projects
 const projectsData = [
@@ -8,8 +76,7 @@ const projectsData = [
         title: "Youth Times",
         description: "Youth Times is a student-led online newspaper platform that empowers young writers to share campus stories, opinions, and news. Built with Flask, HTML/CSS, and flexible database support.",
         category: "WEB_APPLICATION",
-        bannerGradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-        bannerEmoji: "📰",
+        bannerImage: "media/projects/youth-times.jpg",
         status: "active",
         year: "2024",
         sourceCode: "https://github.com/SahooShuvranshu/Youth-Times-Website",
@@ -20,8 +87,7 @@ const projectsData = [
         title: "Spotify Live Banner",
         description: "A real-time, customizable Python/Flask web service that displays the current Spotify song you are listening to as a banner image, perfect for GitHub profile READMEs.",
         category: "API_SERVICE",
-        bannerGradient: "linear-gradient(135deg, #1DB954 0%, #191414 100%)",
-        bannerEmoji: "🎵",
+        bannerImage: "media/projects/spotify-banner.jpg",
         status: "active",
         year: "2024",
         sourceCode: "https://github.com/SahooShuvranshu/Spotify-Live-Banner",
@@ -32,8 +98,7 @@ const projectsData = [
         title: "Spotify Refresh Token Generator",
         description: "A simple, self-hostable Flask app to get Spotify Refresh Tokens for your website, bot, or other projects. Handles the auth flow for you.",
         category: "UTILITY",
-        bannerGradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-        bannerEmoji: "🎰",
+        bannerImage: "media/projects/spotify-token.jpg",
         status: "active",
         year: "2024",
         sourceCode: "https://github.com/SahooShuvranshu/Spotify-Refresh-Token-Generator",
@@ -44,8 +109,7 @@ const projectsData = [
         title: "Coming Soon...",
         description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
         category: "DEVELOPMENT",
-        bannerGradient: "linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)",
-        bannerEmoji: "💡",
+        bannerImage: "",
         status: "paused",
         year: "2025",
         sourceCode: "#",
@@ -56,8 +120,7 @@ const projectsData = [
         title: "Coming Soon...",
         description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
         category: "EXPERIMENTAL",
-        bannerGradient: "linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)",
-        bannerEmoji: "🚀",
+        bannerImage: "",
         status: "paused",
         year: "2025",
         sourceCode: "#",
@@ -68,8 +131,7 @@ const projectsData = [
         title: "Coming Soon...",
         description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
         category: "PROTOTYPE",
-        bannerGradient: "linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%)",
-        bannerEmoji: "✨",
+        bannerImage: "",
         status: "archived",
         year: "2023",
         sourceCode: "#",
@@ -183,14 +245,23 @@ const projectsData = [
     .project-banner {
         width: 100%;
         height: 140px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #2f3136;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: 48px;
         position: relative;
         border-bottom: 3px solid #18191c;
+        overflow: hidden;
+    }
+
+    .project-banner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 
     .project-banner::after {
@@ -461,9 +532,14 @@ const projectsData = [
         // Determine link classes
         const linkClass = (project.status === 'paused' || project.status === 'archived') ? 'disabled' : '';
         
+        // Build banner content
+        const bannerContent = project.bannerImage 
+            ? `<img src="${project.bannerImage}" alt="${project.title}" loading="lazy">`
+            : '';
+        
         card.innerHTML = `
-            <div class="project-banner" style="background: ${project.bannerGradient};">
-                ${project.bannerEmoji}
+            <div class="project-banner">
+                ${bannerContent}
             </div>
             <div class="project-header-bar">
                 <span class="project-category">${project.category}</span>
@@ -494,3 +570,7 @@ const projectsData = [
     });
 })();
 </script>
+
+    </div>
+</body>
+</html>

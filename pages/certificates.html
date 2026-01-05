@@ -1,3 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates | Shuvranshu Sekhar Sahoo</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="View certificates and awards earned by Shuvranshu Sekhar Sahoo. Including certifications from Google Cloud, Deloitte, HackerRank, and more in cloud computing, cybersecurity, and programming.">
+    <meta name="keywords" content="Certificates, Awards, Google Cloud, Deloitte, HackerRank, Python Certification, Cloud Computing, Cybersecurity, Achievements">
+    <meta name="author" content="Shuvranshu Sekhar Sahoo">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sahooshuvranshu.me/pages/certificates.html">
+    <meta property="og:title" content="Certificates & Awards | Shuvranshu Sekhar Sahoo">
+    <meta property="og:description" content="View certificates and awards earned by Shuvranshu Sekhar Sahoo. Including certifications from Google Cloud, Deloitte, HackerRank, and more.">
+    <meta property="og:image" content="https://sahooshuvranshu.me/media/Shuvranshu.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sahooshuvranshu.me/pages/certificates.html">
+    <meta name="twitter:title" content="Certificates & Awards | Shuvranshu Sekhar Sahoo">
+    <meta name="twitter:description" content="Professional certificates from Google Cloud, Deloitte, HackerRank, and more.">
+    <meta name="twitter:image" content="https://sahooshuvranshu.me/media/Shuvranshu.jpeg">
+    
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #36393f;
+            background-image: url('https://i.pinimg.com/originals/c1/fc/9d/c1fc9d7f6ae08d56f2b84e81799790a5.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
 <!-- ========================================
      📝 EDIT DATA HERE - Easy to modify!
      ======================================== -->
@@ -30,13 +101,6 @@ const certificatesData = [
         issuer: "Google Cloud",
         date: "September 2025",
         image: "media/certificates/Develop%20Your%20Google%20Cloud%20Network.jpg",
-        verified: true
-    },
-    {
-        title: "Get Started With Sensitive Data Protection",
-        issuer: "Google Cloud",
-        date: "August 2025",
-        image: "media/certificates/Get%20Started%20With%20Sensitive%20Data%20Protection.jpg",
         verified: true
     },
     {
@@ -287,7 +351,7 @@ const awardsData = [
      ======================================== -->
 <div class="discord-about-card">
     <div class="card-header">
-        <span class="header-icon">��</span>
+        <span class="header-icon">📜</span>
         <span class="header-title">CERTIFICATES</span>
     </div>
     <div class="card-content">
@@ -326,7 +390,7 @@ certificatesData.forEach(cert => {
         <div class="certificate-content">
             <div class="certificate-title">${cert.title}</div>
             <div class="certificate-issuer">${cert.issuer}</div>
-            <div class="certificate-date">�� ${cert.date}</div>
+            <div class="certificate-date">📅 ${cert.date}</div>
             ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
         </div>
     `;
@@ -355,3 +419,7 @@ awardsData.forEach(award => {
 });
 })();
 </script>
+
+    </div>
+</body>
+</html>
