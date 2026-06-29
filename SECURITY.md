@@ -1,4 +1,13 @@
+<div align="center">
+
 # 🛡️ Security Policy
+
+[![🛡️ Security](https://img.shields.io/badge/🛡️%20security-active-43B581?style=for-the-badge&logo=securityscorecard&logoColor=white)](#security-policy)
+[![🚨 Reports](https://img.shields.io/badge/🚨%20reports-private%20only-ED4245?style=for-the-badge&logo=github&logoColor=white)](#found-a-vulnerability-heres-what-to-do)
+[![⏱️ Response](https://img.shields.io/badge/⏱️%20response-24--48%20hours-FEE75C?style=for-the-badge&logo=gmail&logoColor=black)](#what-happens-next-timeline)
+[![🔒 Disclosure](https://img.shields.io/badge/🔒%20disclosure-responsible-5865F2?style=for-the-badge&logo=lock&logoColor=white)](#critical-rule-dont-go-public-yet)
+
+</div>
 
 > **Making the web safer, one commit at a time.** If you've found a security issue, you're already a hero! Let's work together to fix it. 🦸‍♂️
 
