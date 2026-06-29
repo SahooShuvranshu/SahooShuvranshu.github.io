@@ -69,79 +69,7 @@
 </head>
 <body>
     <div class="container">
-<!-- ========================================
-     📝 EDIT DATA HERE - Easy to modify!
-     ======================================== -->
-<script>
-// CERTIFICATES DATA - Edit this array to add/remove certificates
-const certificatesData = [
-    {
-        title: "Build A Secure Google Cloud Network",
-        issuer: "Google Cloud",
-        date: "December 2025",
-        image: "media/certificates/Build%20A%20Secure%20Google%20Cloud%20Network.png",
-        verified: true
-    },
-    {
-        title: "Building Bad Participation",
-        issuer: "Program Organization",
-        date: "November 2025",
-        image: "media/certificates/Building%20Bad%20Participation.jpg",
-        verified: true
-    },
-    {
-        title: "Cyber Job Simulation",
-        issuer: "Deloitte",
-        date: "October 2025",
-        image: "media/certificates/Deloitte%20-%20Cyber%20Job%20Simulation.jpg",
-        verified: true
-    },
-    {
-        title: "Develop Your Google Cloud Network",
-        issuer: "Google Cloud",
-        date: "September 2025",
-        image: "media/certificates/Develop%20Your%20Google%20Cloud%20Network.jpg",
-        verified: true
-    },
-    {
-        title: "Python (Basic)",
-        issuer: "HackerRank",
-        date: "July 2025",
-        image: "media/certificates/HackerRank%20Python(Basic).jpg",
-        verified: true
-    },
-    {
-        title: "Introduction To Google Workspace With Gemini",
-        issuer: "Google Cloud",
-        date: "June 2025",
-        image: "media/certificates/Introduction%20To%20Google%20Workspace%20With%20Gemini.jpg",
-        verified: true
-    },
-    {
-        title: "Workshop On AI And ML",
-        issuer: "NIT (National Institute of Technology)",
-        date: "May 2025",
-        image: "media/certificates/NIT%20Workshop%20On%20AI%20And%20ML.jpg",
-        verified: true
-    }
-];
-
-// AWARDS DATA - Edit this array to add/remove awards
-const awardsData = [
-    {
-        title: "Sample Award Title",
-        icon: "🥇",
-        description: "Brief description of the award and what it was for. Include relevant details about the achievement.",
-        date: "[Add Date]"
-    },
-    {
-        title: "Another Achievement",
-        icon: "🏅",
-        description: "Description of another notable award or recognition received.",
-        date: "[Add Date]"
-    }
-];
-</script>
+<!-- Data is fetched dynamically from media/certificates/certificates.json -->
 
 <!-- ========================================
      🎨 STYLES & DISPLAY CODE BELOW
@@ -196,13 +124,22 @@ const awardsData = [
         border: 2px solid #202225;
         box-shadow: 2px 2px 0 #18191c;
         overflow: hidden;
-        border: 1px solid #202225;
         transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
     }
 
     .certificate-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .placeholder-coming-soon {
+        cursor: default !important;
+    }
+
+    .placeholder-coming-soon:hover {
+        transform: none !important;
+        box-shadow: 2px 2px 0 #18191c !important;
     }
 
     .certificate-banner {
@@ -249,55 +186,7 @@ const awardsData = [
         font-weight: 600;
     }
 
-    /* Awards Section */
-    .award-item {
-        display: flex;
-        gap: 12px;
-        padding: 12px;
-        background-color: #40444b;
-        border-radius: 4px;
-        margin-bottom: 12px;
-        transition: background-color 0.2s ease;
-        border-left: 3px solid #faa61a;
-    }
-
-    .award-item:last-child {
-        margin-bottom: 0;
-    }
-
-    .award-item:hover {
-        background-color: #4f545c;
-    }
-
-    .award-icon {
-        font-size: 32px;
-        min-width: 40px;
-        text-align: center;
-        line-height: 1;
-    }
-
-    .award-details {
-        flex: 1;
-    }
-
-    .award-title {
-        color: #ffffff;
-        font-size: 14px;
-        font-weight: 600;
-        margin-bottom: 6px;
-    }
-
-    .award-description {
-        color: #dcddde;
-        font-size: 13px;
-        line-height: 1.5;
-        margin-bottom: 6px;
-    }
-
-    .award-date {
-        color: #8e9297;
-        font-size: 11px;
-    }
+    /* Awards styles are unified with certificate cards */
 
     @media (max-width: 768px) {
         .certificates-grid {
@@ -330,21 +219,206 @@ const awardsData = [
         .certificate-date {
             font-size: 10px;
         }
+    }
 
-        .award-icon {
-            font-size: 28px;
-            min-width: 36px;
+    .certificate-id {
+        color: #8e9297;
+        font-size: 11px;
+        margin-top: 6px;
+        font-family: monospace;
+        background-color: #202225;
+        padding: 2px 6px;
+        border-radius: 4px;
+        width: fit-content;
+        border: 1px solid #18191c;
+    }
+
+    /* Preview Modal Styles */
+    .preview-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+    }
+
+    .preview-modal.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(4px);
+    }
+
+    .modal-container {
+        position: relative;
+        width: 90%;
+        max-width: 900px;
+        background-color: #2f3136;
+        border: 2px solid #40444b;
+        box-shadow: 8px 8px 0 #18191c;
+        z-index: 10001;
+        overflow: hidden;
+        animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes modalScale {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #b9bbbe;
+        font-size: 32px;
+        cursor: pointer;
+        z-index: 10002;
+        line-height: 1;
+        transition: color 0.2s ease;
+    }
+
+    .modal-close:hover {
+        color: #ffffff;
+    }
+
+    .modal-content-wrapper {
+        display: flex;
+        flex-direction: row;
+        max-height: 80vh;
+    }
+
+    .modal-image-pane {
+        flex: 1.4;
+        background-color: #18191c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        border-right: 2px solid #40444b;
+    }
+
+    .modal-image-pane img {
+        max-width: 100%;
+        max-height: 60vh;
+        object-fit: contain;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-details-pane {
+        flex: 1;
+        padding: 32px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow-y: auto;
+    }
+
+    .modal-details-pane h3 {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        line-height: 1.3;
+        border-bottom: 2px solid #40444b;
+        padding-bottom: 12px;
+    }
+
+    .modal-meta-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .meta-label {
+        color: #b9bbbe;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .meta-value {
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    .font-mono {
+        font-family: monospace;
+        background-color: #202225;
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid #40444b;
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .text-green {
+        color: #3ba55d;
+        font-weight: 600;
+    }
+
+    /* Responsive preview modal */
+    @media (max-width: 768px) {
+        .modal-content-wrapper {
+            flex-direction: column;
+            max-height: 90vh;
         }
 
-        .award-title {
-            font-size: 13px;
+        .modal-image-pane {
+            border-right: none;
+            border-bottom: 2px solid #40444b;
+            padding: 16px;
         }
 
-        .award-description {
-            font-size: 12px;
+        .modal-image-pane img {
+            max-height: 35vh;
+        }
+
+        .modal-details-pane {
+            padding: 20px;
+        }
+
+        .modal-details-pane h3 {
+            font-size: 16px;
+            margin-bottom: 16px;
         }
     }
 </style>
+
+<!-- ========================================
+     🏆 AWARDS SECTION
+     ======================================== -->
+<div class="discord-about-card">
+    <div class="card-header">
+        <span class="header-icon">🏆</span>
+        <span class="header-title">AWARDS & ACHIEVEMENTS</span>
+    </div>
+    <div class="card-content">
+        <div id="awardsGrid" class="certificates-grid"></div>
+    </div>
+</div>
 
 <!-- ========================================
      📜 CERTIFICATES SECTION
@@ -360,15 +434,42 @@ const awardsData = [
 </div>
 
 <!-- ========================================
-     🏆 AWARDS SECTION
+     🔍 LIGHTBOX PREVIEW MODAL
      ======================================== -->
-<div class="discord-about-card">
-    <div class="card-header">
-        <span class="header-icon">🏆</span>
-        <span class="header-title">AWARDS & ACHIEVEMENTS</span>
-    </div>
-    <div class="card-content">
-        <div id="awardsContainer"></div>
+<div id="previewModal" class="preview-modal">
+    <div class="modal-overlay" onclick="closePreview()"></div>
+    <div class="modal-container">
+        <button class="modal-close" onclick="closePreview()">×</button>
+        <div class="modal-content-wrapper">
+            <div class="modal-image-pane">
+                <img id="modalImage" src="" alt="Preview">
+            </div>
+            <div class="modal-details-pane">
+                <h3 id="modalTitle">Certificate Title</h3>
+                <div class="modal-meta-section">
+                    <div id="modalIssuerContainer" class="meta-item">
+                        <span class="meta-label">Issued By</span>
+                        <span id="modalIssuer" class="meta-value">Issuer Name</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Date</span>
+                        <span id="modalDate" class="meta-value">Date</span>
+                    </div>
+                    <div id="modalIdContainer" class="meta-item">
+                        <span class="meta-label">Credential ID</span>
+                        <span id="modalId" class="meta-value font-mono">ID</span>
+                    </div>
+                    <div id="modalVerifiedContainer" class="meta-item">
+                        <span class="meta-label">Status</span>
+                        <span id="modalVerified" class="meta-value text-green">✓ Verified</span>
+                    </div>
+                    <div id="modalDescriptionContainer" class="meta-item">
+                        <span class="meta-label">Description</span>
+                        <span id="modalDescription" class="meta-value">Description text</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -377,46 +478,187 @@ const awardsData = [
      ======================================== -->
 <script>
 (function() {
-// Render Certificates
-const certificatesGrid = document.getElementById('certificatesGrid');
-if (!certificatesGrid) return;
+    const certificatesGrid = document.getElementById('certificatesGrid');
+    const awardsGrid = document.getElementById('awardsGrid');
+    
+    // Resilient path detection
+    const isSubdir = window.location.pathname.includes('/pages/');
+    const certJsonUrl = isSubdir ? '../media/certificates/certificates.json' : 'media/certificates/certificates.json';
+    const awardsJsonUrl = isSubdir ? '../media/awards/awards.json' : 'media/awards/awards.json';
+    const basePath = isSubdir ? '../' : '';
+        
+    // Fetch Certificates
+    fetch(certJsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (certificatesGrid && data.certificates) {
+                // Add the permanent empty placeholder card at the beginning
+                const placeholderCard = document.createElement('div');
+                placeholderCard.className = 'certificate-card placeholder-coming-soon';
+                placeholderCard.innerHTML = `
+                    <img src="${basePath}media/certificates/placeholder.svg" alt="More certificates to come" class="certificate-banner" loading="lazy">
+                    <div class="certificate-content">
+                        <div class="certificate-title">More Certificates to Come</div>
+                        <div class="certificate-issuer">Continuous Learning</div>
+                        <div class="certificate-date">📅 Ongoing</div>
+                    </div>
+                `;
+                certificatesGrid.appendChild(placeholderCard);
 
-certificatesData.forEach(cert => {
-    const certCard = document.createElement('div');
-    certCard.className = 'certificate-card';
-    
-    certCard.innerHTML = `
-        <img src="${cert.image}" alt="${cert.title}" class="certificate-banner" loading="lazy">
-        <div class="certificate-content">
-            <div class="certificate-title">${cert.title}</div>
-            <div class="certificate-issuer">${cert.issuer}</div>
-            <div class="certificate-date">📅 ${cert.date}</div>
-            ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
-        </div>
-    `;
-    
-    certificatesGrid.appendChild(certCard);
-});
+                data.certificates.forEach(cert => {
+                    const certCard = document.createElement('div');
+                    certCard.className = 'certificate-card';
+                    
+                    // Adjust path if loaded standalone
+                    const certImage = isSubdir && !cert.image.startsWith('http') ? '../' + cert.image : cert.image;
+                    
+                    certCard.innerHTML = `
+                        <img src="${certImage}" alt="${cert.title}" class="certificate-banner" loading="lazy">
+                        <div class="certificate-content">
+                            <div class="certificate-title">${cert.title}</div>
+                            <div class="certificate-issuer">${cert.issuer}</div>
+                            <div class="certificate-date">📅 ${cert.date}</div>
+                            ${cert.credentialId ? `<div class="certificate-id">ID: ${cert.credentialId}</div>` : ''}
+                            ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                        </div>
+                    `;
+                    
+                    // Click event to open preview modal
+                    certCard.addEventListener('click', () => {
+                        openPreview(cert.title, cert.issuer, cert.date, certImage, cert.credentialId, cert.verified, cert.description);
+                    });
+                    
+                    certificatesGrid.appendChild(certCard);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching certificates data:', error);
+        });
 
-// Render Awards
-const awardsContainer = document.getElementById('awardsContainer');
-if (!awardsContainer) return;
+    // Fetch Awards
+    fetch(awardsJsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (awardsGrid && data.awards) {
+                // Add the permanent empty placeholder card at the beginning
+                const placeholderAwardCard = document.createElement('div');
+                placeholderAwardCard.className = 'certificate-card placeholder-coming-soon';
+                placeholderAwardCard.innerHTML = `
+                    <img src="${basePath}media/awards/placeholder.svg" alt="More awards to come" class="certificate-banner" loading="lazy">
+                    <div class="certificate-content">
+                        <div class="certificate-title">Coming Soon</div>
+                        <div class="certificate-issuer">More achievements and awards will be listed here soon.</div>
+                        <div class="certificate-date">📅 Ongoing</div>
+                    </div>
+                `;
+                awardsGrid.appendChild(placeholderAwardCard);
 
-awardsData.forEach(award => {
-    const awardItem = document.createElement('div');
-    awardItem.className = 'award-item';
+                data.awards.forEach(award => {
+                    const awardCard = document.createElement('div');
+                    awardCard.className = 'certificate-card';
+                    
+                    // Adjust path if loaded standalone
+                    const awardImage = isSubdir && !award.image.startsWith('http') ? '../' + award.image : award.image;
+                    
+                    awardCard.innerHTML = `
+                        <img src="${awardImage}" alt="${award.title}" class="certificate-banner" loading="lazy">
+                        <div class="certificate-content">
+                            <div class="certificate-title">${award.title}</div>
+                            <div class="certificate-issuer">${award.description}</div>
+                            <div class="certificate-date">📅 ${award.date}</div>
+                        </div>
+                    `;
+                    
+                    // Click event to open preview modal
+                    awardCard.addEventListener('click', () => {
+                        openPreview(award.title, "Award & Achievement", award.date, awardImage, null, false, award.description);
+                    });
+                    
+                    awardsGrid.appendChild(awardCard);
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching awards data:', error);
+        });
+
+    // Preview functions exposed to window object for onclick handler
+    window.openPreview = function(title, issuer, date, image, id, verified, description) {
+        const modal = document.getElementById('previewModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalIssuer = document.getElementById('modalIssuer');
+        const modalIssuerContainer = document.getElementById('modalIssuerContainer');
+        const modalDate = document.getElementById('modalDate');
+        const modalImage = document.getElementById('modalImage');
+        const modalId = document.getElementById('modalId');
+        const modalIdContainer = document.getElementById('modalIdContainer');
+        const modalVerified = document.getElementById('modalVerified');
+        const modalVerifiedContainer = document.getElementById('modalVerifiedContainer');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalDescriptionContainer = document.getElementById('modalDescriptionContainer');
+        
+        if (!modal) return;
+        
+        modalTitle.textContent = title;
+        modalDate.textContent = date;
+        modalImage.src = image;
+        
+        if (issuer) {
+            modalIssuer.textContent = issuer;
+            modalIssuerContainer.style.display = 'flex';
+        } else {
+            modalIssuerContainer.style.display = 'none';
+        }
+        
+        if (id) {
+            modalId.textContent = id;
+            modalIdContainer.style.display = 'flex';
+        } else {
+            modalIdContainer.style.display = 'none';
+        }
+        
+        if (verified) {
+            modalVerifiedContainer.style.display = 'flex';
+        } else {
+            modalVerifiedContainer.style.display = 'none';
+        }
+
+        if (description) {
+            modalDescription.textContent = description;
+            modalDescriptionContainer.style.display = 'flex';
+        } else {
+            modalDescriptionContainer.style.display = 'none';
+        }
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
     
-    awardItem.innerHTML = `
-        <div class="award-icon">${award.icon}</div>
-        <div class="award-details">
-            <div class="award-title">${award.title}</div>
-            <div class="award-description">${award.description}</div>
-            <div class="award-date">${award.date}</div>
-        </div>
-    `;
-    
-    awardsContainer.appendChild(awardItem);
-});
+    window.closePreview = function() {
+        const modal = document.getElementById('previewModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            window.closePreview();
+        }
+    });
 })();
 </script>
 

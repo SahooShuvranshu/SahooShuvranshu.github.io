@@ -53,10 +53,472 @@
             margin: 0 auto;
         }
 
+        /* Discord About Card Box Grouping */
+        .discord-about-card {
+            background-color: #2f3136;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            border: 2px solid #40444b;
+            overflow: hidden;
+            box-shadow: 4px 4px 0 #18191c;
+        }
+
+        .card-header {
+            background-color: #202225;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #18191c;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+
+        .header-icon {
+            font-size: 16px;
+        }
+
+        .header-title {
+            color: #8e9297;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            padding: 20px 16px;
+        }
+
+        /* GitHub Stats Section */
+        .github-stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 16px;
+        }
+
+        .discord-stats-card {
+            background-color: #40444b;
+            border-radius: 0;
+            overflow: hidden;
+            border: 2px solid #202225;
+            box-shadow: 2px 2px 0 #18191c;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .discord-stats-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 #18191c;
+        }
+
+        .stats-header {
+            background-color: #202225;
+            padding: 10px 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 2px solid #202225;
+        }
+
+        .stats-icon {
+            font-size: 16px;
+        }
+
+        .stats-title {
+            color: #b9bbbe;
+            font-size: 11px;
+            font-weight: 700;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .stats-content {
+            padding: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stats-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Skills Wrapper */
+        .discord-skills-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .discord-skill-box {
+            background-color: #40444b;
+            border-radius: 0;
+            padding: 16px;
+            border: 2px solid #202225;
+            box-shadow: 2px 2px 0 #18191c;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .discord-skill-box:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 #18191c;
+        }
+
+        .skill-box-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #202225;
+        }
+
+        .skill-emoji {
+            font-size: 20px;
+        }
+
+        .skill-title {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-items img {
+            height: 20px;
+            display: block;
+            transition: all 0.15s ease;
+        }
+
+        .skill-items img:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+
+        /* Commission Info Box */
+        .commission-info-box {
+            background-color: #40444b;
+            border-radius: 0;
+            padding: 20px;
+            border: 2px solid #5865f2; /* Discord Blurple */
+            margin-bottom: 20px;
+            box-shadow: 2px 2px 0 #18191c;
+        }
+
+        .commission-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .commission-icon {
+            font-size: 24px;
+        }
+
+        .commission-header h3 {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .commission-intro {
+            color: #dcddde;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* Services Grid */
+        .discord-services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .discord-service-box {
+            background-color: #40444b;
+            border-radius: 0;
+            padding: 20px;
+            border: 2px solid #202225;
+            transition: all 0.15s ease;
+            box-shadow: 2px 2px 0 #18191c;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .discord-service-box:hover {
+            border-color: #5865f2;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 #18191c;
+        }
+
+        .service-icon-wrapper {
+            text-align: center;
+            margin-bottom: 12px;
+        }
+
+        .service-emoji {
+            font-size: 40px;
+        }
+
+        .service-name {
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .service-desc {
+            color: #b9bbbe;
+            font-size: 13px;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 16px;
+            flex-grow: 1;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            justify-content: center;
+        }
+
+        .service-tags .tag {
+            padding: 3px 6px;
+            border-radius: 0;
+            font-size: 9px;
+            border: 1.5px solid;
+            font-weight: 700;
+            transition: all 0.15s ease;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .service-tags .tag:hover {
+            transform: translate(-1px, -1px);
+            filter: brightness(1.15);
+            box-shadow: 2px 2px 0 #18191c;
+        }
+
+        /* Color variations for tags */
+        .service-tags .tag:nth-child(1) { background-color: rgba(88, 101, 242, 0.15); color: #5865f2; border-color: #5865f2; }
+        .service-tags .tag:nth-child(2) { background-color: rgba(59, 165, 92, 0.15); color: #3ba55c; border-color: #3ba55c; }
+        .service-tags .tag:nth-child(3) { background-color: rgba(250, 166, 26, 0.15); color: #faa61a; border-color: #faa61a; }
+        .service-tags .tag:nth-child(4) { background-color: rgba(235, 69, 158, 0.15); color: #eb459e; border-color: #eb459e; }
+        .service-tags .tag:nth-child(5) { background-color: rgba(0, 176, 244, 0.15); color: #00b0f4; border-color: #00b0f4; }
+        .service-tags .tag:nth-child(6) { background-color: rgba(114, 137, 218, 0.15); color: #7289da; border-color: #7289da; }
+
+        /* Commission CTA */
+        .commission-cta {
+            background-color: #202225;
+            border-radius: 4px;
+            padding: 20px;
+            border: 2px solid #40444b;
+            margin-top: 24px;
+            text-align: center;
+            box-shadow: 3px 3px 0 #18191c;
+        }
+
+        .cta-text {
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .cta-contact {
+            color: #b9bbbe;
+            font-size: 14px;
+        }
+
+        .email-link,
+        .discord-link {
+            color: #00b0f4;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.15s ease;
+        }
+
+        .email-link:hover,
+        .discord-link:hover {
+            color: #00b0f4;
+            text-decoration: underline;
+        }
+
+        /* Preview Modal Styles */
+        .preview-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .preview-modal.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-container {
+            position: relative;
+            width: 90%;
+            max-width: 600px;
+            background-color: #2f3136;
+            border: 2px solid #40444b;
+            box-shadow: 8px 8px 0 #18191c;
+            z-index: 10001;
+            overflow: hidden;
+            animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes modalScale {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: #b9bbbe;
+            font-size: 32px;
+            cursor: pointer;
+            z-index: 10002;
+            line-height: 1;
+            transition: color 0.2s ease;
+        }
+
+        .modal-close:hover {
+            color: #ffffff;
+        }
+
+        .modal-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            max-height: 90vh;
+        }
+
+        .modal-banner-pane {
+            width: 100%;
+            height: 140px;
+            background-color: #202225;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #40444b;
+        }
+
+        .modal-project-banner-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            color: #ffffff;
+        }
+
+        .modal-details-pane {
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .modal-details-pane h3 {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+            border-bottom: 2px solid #40444b;
+            padding-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .modal-meta-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .meta-label {
+            color: #b9bbbe;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .meta-value {
+            color: #ffffff;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .meta-value a {
+            color: #00b0f4;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .meta-value a:hover {
+            text-decoration: underline;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             body {
                 padding: 30px 15px;
+            }
+
+            .github-stats-container,
+            .discord-skills-wrapper,
+            .discord-services-container {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -64,508 +526,364 @@
             body {
                 padding: 20px 10px;
             }
+
+            .discord-skill-box,
+            .discord-service-box {
+                padding: 12px;
+            }
+
+            .modal-banner-pane {
+                height: 100px;
+            }
+
+            .modal-details-pane {
+                padding: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-<!-- GitHub Stats Section -->
-<div class="github-stats-container">
-    <div class="discord-stats-card">
-        <div class="stats-header">
-            <span class="stats-icon">📊</span>
-            <span class="stats-title">GitHub Profile Statistics</span>
+        
+        <!-- ========================================
+             📊 GITHUB STATS CONTAINER BOX
+             ======================================== -->
+        <div class="discord-about-card">
+            <div class="card-header">
+                <span class="header-icon">📊</span>
+                <span class="header-title">GitHub Statistics</span>
+            </div>
+            <div class="card-content">
+                <div class="github-stats-container">
+                    <div class="discord-stats-card">
+                        <div class="stats-header">
+                            <span class="stats-icon">📊</span>
+                            <span class="stats-title">Profile Stats</span>
+                        </div>
+                        <div class="stats-content">
+                            <img src="https://github-readme-stats.vercel.app/api?username=SahooShuvranshu&show_icons=true&theme=discord_old_blurple&hide_border=true&bg_color=2f3136&title_color=7289da&icon_color=7289da&text_color=dcddde" alt="GitHub Stats" />
+                        </div>
+                    </div>
+                    
+                    <div class="discord-stats-card">
+                        <div class="stats-header">
+                            <span class="stats-icon">📈</span>
+                            <span class="stats-title">Most Used Languages</span>
+                        </div>
+                        <div class="stats-content">
+                            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SahooShuvranshu&layout=compact&theme=discord_old_blurple&hide_border=true&bg_color=2f3136&title_color=7289da&text_color=dcddde" alt="Language Stats" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="stats-content">
-            <img src="https://github-readme-stats.vercel.app/api?username=SahooShuvranshu&show_icons=true&theme=discord_old_blurple&hide_border=true&bg_color=2f3136&title_color=7289da&icon_color=7289da&text_color=dcddde" alt="GitHub Stats" />
+
+        <!-- ========================================
+             🛠️ SKILLS CONTAINER BOX
+             ======================================== -->
+        <div class="discord-about-card" style="margin-top: 24px;">
+            <div class="card-header">
+                <span class="header-icon">🛠️</span>
+                <span class="header-title">Skills & Technologies</span>
+            </div>
+            <div class="card-content">
+                <div class="discord-skills-wrapper">
+                    <!-- Frontend -->
+                    <div class="discord-skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-emoji">🎨</span>
+                            <span class="skill-title">Frontend Development</span>
+                        </div>
+                        <div class="skill-items">
+                            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+                            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+                            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+                            <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+                            <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+                            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="discord-skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-emoji">⚙️</span>
+                            <span class="skill-title">Backend Development</span>
+                        </div>
+                        <div class="skill-items">
+                            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+                            <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
+                            <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express.js">
+                            <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C">
+                            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div class="discord-skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-emoji">🗄️</span>
+                            <span class="skill-title">Databases</span>
+                        </div>
+                        <div class="skill-items">
+                            <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                            <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+                            <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+                            <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+                        </div>
+                    </div>
+
+                    <!-- Dev Tools -->
+                    <div class="discord-skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-emoji">🛠️</span>
+                            <span class="skill-title">Development Tools</span>
+                        </div>
+                        <div class="skill-items">
+                            <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VS Code">
+                            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+                            <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+                            <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
+                            <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
+                            <img src="https://img.shields.io/badge/Terminal-4D4D4D?style=for-the-badge&logo=windows%20terminal&logoColor=white" alt="Terminal">
+                        </div>
+                    </div>
+
+                    <!-- Bot Development -->
+                    <div class="discord-skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-emoji">🤖</span>
+                            <span class="skill-title">Bot Development</span>
+                        </div>
+                        <div class="skill-items">
+                            <img src="https://img.shields.io/badge/Discord_Bot-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Bot">
+                            <img src="https://img.shields.io/badge/Telegram_Bot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Bot">
+                            <img src="https://img.shields.io/badge/Automation-FF6B6B?style=for-the-badge&logo=automation&logoColor=white" alt="Automation">
+                            <img src="https://img.shields.io/badge/API-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="API Integration">
+                        </div>
+                    </div>
+
+                    <!-- Web Technologies -->
+                    <div class="discord-skill-box">
+                        <div class="skill-box-header">
+                            <span class="skill-emoji">🌐</span>
+                            <span class="skill-title">Web Technologies</span>
+                        </div>
+                        <div class="skill-items">
+                            <img src="https://img.shields.io/badge/REST_API-02569B?style=for-the-badge&logo=rest&logoColor=white" alt="REST API">
+                            <img src="https://img.shields.io/badge/JSON-5E5C5C?style=for-the-badge&logo=json&logoColor=white" alt="JSON">
+                            <img src="https://img.shields.io/badge/AJAX-1572B6?style=for-the-badge&logo=ajax&logoColor=white" alt="AJAX">
+                            <img src="https://img.shields.io/badge/Responsive-38B2AC?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================
+             💼 SERVICES & COMMISSIONS CONTAINER BOX
+             ======================================== -->
+        <div class="discord-about-card" style="margin-top: 24px;">
+            <div class="card-header">
+                <span class="header-icon">💼</span>
+                <span class="header-title">Freelance Services</span>
+            </div>
+            <div class="card-content">
+                <div class="commission-info-box">
+                    <div class="commission-header">
+                        <span class="commission-icon">💼</span>
+                        <h3>Available for Freelance Work</h3>
+                    </div>
+                    <p class="commission-intro">I'm currently accepting commissions for web development, bot development, and design projects. Let's bring your ideas to life!</p>
+                </div>
+                
+                <div class="discord-services-container">
+                    <!-- Web Development -->
+                    <div class="discord-service-box" onclick="openServicePreview('Web Development', '🌐', 'Full-stack web applications, responsive websites, and custom web solutions tailored to your needs.', '• Fully responsive web layouts<br>• Custom RESTful API integration<br>• Database schemas and architecture design<br>• High performance frontend-to-backend integrations', ['HTML5', 'CSS3', 'JavaScript', 'React', 'Node.js', 'Flask', 'PostgreSQL', 'MongoDB'], 'linear-gradient(135deg, #5865f2 0%, #202225 100%)')">
+                        <div class="service-icon-wrapper">
+                            <span class="service-emoji">🌐</span>
+                        </div>
+                        <h3 class="service-name">Web Development</h3>
+                        <p class="service-desc">Full-stack web applications, responsive websites, and custom web solutions tailored to your needs.</p>
+                        <div class="service-tags">
+                            <span class="tag">Frontend</span>
+                            <span class="tag">Backend APIs</span>
+                            <span class="tag">Databases</span>
+                            <span class="tag">Deployment</span>
+                        </div>
+                    </div>
+
+                    <!-- AI & LLM Integration -->
+                    <div class="discord-service-box" onclick="openServicePreview('AI & LLM Integration', '🧠', 'Build LLM-powered applications, AI chat agents, and custom prompt/RAG automation systems.', '• OpenAI & Gemini API pipelines<br>• Retrieval-Augmented Generation (RAG)<br>• Vector database indexing & search<br>• Semantic search & agentic workflow tools', ['Gemini API', 'OpenAI API', 'LangChain', 'Python', 'Vector DB', 'Prompt Eng'], 'linear-gradient(135deg, #7a22ff 0%, #202225 100%)')">
+                        <div class="service-icon-wrapper">
+                            <span class="service-emoji">🧠</span>
+                        </div>
+                        <h3 class="service-name">AI & LLM Integration</h3>
+                        <p class="service-desc">LLM chat agents, prompt pipelines, and Gemini/OpenAI integrations to add intelligence to your apps.</p>
+                        <div class="service-tags">
+                            <span class="tag">Generative AI</span>
+                            <span class="tag">Gemini API</span>
+                            <span class="tag">RAG Pipelines</span>
+                            <span class="tag">Agentic Apps</span>
+                        </div>
+                    </div>
+
+                    <!-- Bot Development -->
+                    <div class="discord-service-box" onclick="openServicePreview('Bot Development', '🤖', 'Custom Discord and Telegram bots with advanced features, automation, and seamless integrations.', '• Custom slash commands and message routing<br>• User data collection and database states<br>• Third-party webhooks and API triggers<br>• Scheduled tasks and background daemon support', ['Discord API', 'Telegram API', 'Python', 'Node.js', 'FastAPI', 'SQLite'], 'linear-gradient(135deg, #57f287 0%, #202225 100%)')">
+                        <div class="service-icon-wrapper">
+                            <span class="service-emoji">🤖</span>
+                        </div>
+                        <h3 class="service-name">Bot Development</h3>
+                        <p class="service-desc">Custom Discord and Telegram bots with advanced features, automation, and seamless integrations.</p>
+                        <div class="service-tags">
+                            <span class="tag">Discord Bots</span>
+                            <span class="tag">Telegram Bots</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Scraping & Automation -->
+                    <div class="discord-service-box" onclick="openServicePreview('Web Scraping & Automation', '⚡', 'Automate data collection, dynamic web content scrapers, and database ETL pipelines.', '• Custom BeautifulSoup & Selenium scrapers<br>• Headless browser flows (Puppeteer/Selenium)<br>• Automated CSV/JSON/SQL database reports<br>• Crontab / Scheduler automated pipeline tasks', ['BeautifulSoup', 'Selenium', 'Python', 'Automation', 'ETL Pipelines', 'JSON'], 'linear-gradient(135deg, #faa61a 0%, #202225 100%)')">
+                        <div class="service-icon-wrapper">
+                            <span class="service-emoji">⚡</span>
+                        </div>
+                        <h3 class="service-name">Web Scraping & Automation</h3>
+                        <p class="service-desc">Automate repetitive data collection, scheduled scripts, web scrapers, and database pipelines.</p>
+                        <div class="service-tags">
+                            <span class="tag">Scraping</span>
+                            <span class="tag">Automation</span>
+                            <span class="tag">ETL Pipelines</span>
+                            <span class="tag">Data Extraction</span>
+                        </div>
+                    </div>
+
+                    <!-- UI/UX Design -->
+                    <div class="discord-service-box" onclick="openServicePreview('UI/UX Design', '🎨', 'Modern, user-friendly interfaces and stunning visual designs that make your project stand out.', '• Interactive wireframes and visual flows<br>• Brand identity and logo custom designs<br>• Prototyping and clickable mockups<br>• Cohesive color styles and typography setups', ['Figma', 'CSS3', 'Tailwind CSS', 'Bootstrap', 'Brand Design'], 'linear-gradient(135deg, #fee75c 0%, #202225 100%)')">
+                        <div class="service-icon-wrapper">
+                            <span class="service-emoji">🎨</span>
+                        </div>
+                        <h3 class="service-name">UI/UX Design</h3>
+                        <p class="service-desc">Modern, user-friendly interfaces and stunning visual designs that make your project stand out.</p>
+                        <div class="service-tags">
+                            <span class="tag">Web Design</span>
+                            <span class="tag">Logo Design</span>
+                            <span class="tag">Brand Identity</span>
+                            <span class="tag">Prototyping</span>
+                        </div>
+                    </div>
+
+                    <!-- Consulting & Support -->
+                    <div class="discord-service-box" onclick="openServicePreview('Consulting & Support', '🛠️', 'Technical consulting, code reviews, bug fixes, and ongoing maintenance for your projects.', '• Surgery on bugs and code audits<br>• Performance diagnostics and speed boosts<br>• Ongoing code maintenance and support<br>• Deployment support and pipeline guidance', ['Git', 'Postman', 'Debugging', 'Optimization', 'Terminal'], 'linear-gradient(135deg, #eb459e 0%, #202225 100%)')">
+                        <div class="service-icon-wrapper">
+                            <span class="service-emoji">🛠️</span>
+                        </div>
+                        <h3 class="service-name">Consulting & Support</h3>
+                        <p class="service-desc">Technical consulting, code reviews, bug fixes, and ongoing maintenance for your projects.</p>
+                        <div class="service-tags">
+                            <span class="tag">Code Review</span>
+                            <span class="tag">Bug Fixes</span>
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="commission-cta">
+                    <p class="cta-text">Interested in working together?</p>
+                    <p class="cta-contact">📧 Contact me via <a href="mailto:sahooshuvranshusekhar@gmail.com" class="email-link">email</a> or reach out on <a href="https://discord.com/users/879695880528216075" class="discord-link" target="_blank">Discord</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ========================================
+         🔍 SERVICE PREVIEW MODAL
+         ======================================== -->
+    <div id="servicePreviewModal" class="preview-modal">
+        <div class="modal-overlay" onclick="closeServicePreview()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeServicePreview()">×</button>
+            <div class="modal-content-wrapper">
+                <div class="modal-banner-pane" id="modalServiceBanner">
+                    <div id="modalServiceEmoji" class="modal-project-banner-container">
+                        🌐
+                    </div>
+                </div>
+                <div class="modal-details-pane">
+                    <h3 id="modalServiceTitle">Service Name</h3>
+                    <div class="modal-meta-section">
+                        <div class="meta-item">
+                            <span class="meta-label">Overview</span>
+                            <span id="modalServiceDesc" class="meta-value">Description text</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Deliverables & Highlights</span>
+                            <span id="modalServiceDeliverables" class="meta-value">Deliverables list</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Technologies Covered</span>
+                            <div id="modalServiceTags" class="service-tags" style="justify-content: flex-start; margin-top: 4px;">
+                                <!-- Dynamically injected tags -->
+                            </div>
+                        </div>
+                        <div class="meta-item" style="margin-top: 8px; border-top: 2px solid #40444b; padding-top: 16px;">
+                            <span class="meta-label">Commission Call</span>
+                            <a href="https://discord.com/users/879695880528216075" target="_blank" class="discord-link" style="font-size: 14px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+                                💬 Get a custom quote on Discord
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <div class="discord-stats-card">
-        <div class="stats-header">
-            <span class="stats-icon">📈</span>
-            <span class="stats-title">Most Used Languages</span>
-        </div>
-        <div class="stats-content">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SahooShuvranshu&layout=compact&theme=discord_old_blurple&hide_border=true&bg_color=2f3136&title_color=7289da&text_color=dcddde" alt="Language Stats" />
-        </div>
-    </div>
-</div>
 
-<!-- Skills Categories -->
-<div class="discord-skills-wrapper">
-    <!-- Frontend -->
-    <div class="discord-skill-box">
-        <div class="skill-box-header">
-            <span class="skill-emoji">🎨</span>
-            <span class="skill-title">Frontend Development</span>
-        </div>
-        <div class="skill-items">
-            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
-            <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
-            <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
-            <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
-            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
-        </div>
-    </div>
-
-    <!-- Backend -->
-    <div class="discord-skill-box">
-        <div class="skill-box-header">
-            <span class="skill-emoji">⚙️</span>
-            <span class="skill-title">Backend Development</span>
-        </div>
-        <div class="skill-items">
-            <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
-            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
-            <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js">
-            <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white" alt="Express.js">
-            <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C">
-            <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-        </div>
-    </div>
-
-    <!-- Databases -->
-    <div class="discord-skill-box">
-        <div class="skill-box-header">
-            <span class="skill-emoji">🗄️</span>
-            <span class="skill-title">Databases</span>
-        </div>
-        <div class="skill-items">
-            <img src="https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-            <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-            <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-            <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
-        </div>
-    </div>
-
-    <!-- Dev Tools -->
-    <div class="discord-skill-box">
-        <div class="skill-box-header">
-            <span class="skill-emoji">🛠️</span>
-            <span class="skill-title">Development Tools</span>
-        </div>
-        <div class="skill-items">
-            <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VS Code">
-            <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
-            <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
-            <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma">
-            <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman">
-            <img src="https://img.shields.io/badge/Terminal-4D4D4D?style=for-the-badge&logo=windows%20terminal&logoColor=white" alt="Terminal">
-        </div>
-    </div>
-
-    <!-- Bot Development -->
-    <div class="discord-skill-box">
-        <div class="skill-box-header">
-            <span class="skill-emoji">🤖</span>
-            <span class="skill-title">Bot Development</span>
-        </div>
-        <div class="skill-items">
-            <img src="https://img.shields.io/badge/Discord_Bot-7289DA?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Bot">
-            <img src="https://img.shields.io/badge/Telegram_Bot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Bot">
-            <img src="https://img.shields.io/badge/Automation-FF6B6B?style=for-the-badge&logo=automation&logoColor=white" alt="Automation">
-            <img src="https://img.shields.io/badge/API-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="API Integration">
-        </div>
-    </div>
-
-    <!-- Web Technologies -->
-    <div class="discord-skill-box">
-        <div class="skill-box-header">
-            <span class="skill-emoji">🌐</span>
-            <span class="skill-title">Web Technologies</span>
-        </div>
-        <div class="skill-items">
-            <img src="https://img.shields.io/badge/REST_API-02569B?style=for-the-badge&logo=rest&logoColor=white" alt="REST API">
-            <img src="https://img.shields.io/badge/JSON-5E5C5C?style=for-the-badge&logo=json&logoColor=white" alt="JSON">
-            <img src="https://img.shields.io/badge/AJAX-1572B6?style=for-the-badge&logo=ajax&logoColor=white" alt="AJAX">
-            <img src="https://img.shields.io/badge/Responsive-38B2AC?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design">
-        </div>
-    </div>
-</div>
-
-<!-- Commission Info Section -->
-<div class="discord-section-title" style="margin-top: 30px;">Open for Commissions</div>
-<div class="commission-info-box">
-    <div class="commission-header">
-        <span class="commission-icon">💼</span>
-        <h3>Available for Freelance Work</h3>
-    </div>
-    <p class="commission-intro">I'm currently accepting commissions for web development, bot development, and design projects. Let's bring your ideas to life!</p>
-</div>
-
-<div class="discord-services-container">
-    <div class="discord-service-box">
-        <div class="service-icon-wrapper">
-            <span class="service-emoji">🌐</span>
-        </div>
-        <h3 class="service-name">Web Development</h3>
-        <p class="service-desc">Full-stack web applications, responsive websites, and custom web solutions tailored to your needs.</p>
-        <div class="service-tags">
-            <span class="tag">Frontend Development</span>
-            <span class="tag">Backend APIs</span>
-            <span class="tag">Database Design</span>
-            <span class="tag">Deployment</span>
-        </div>
-    </div>
-
-    <div class="discord-service-box">
-        <div class="service-icon-wrapper">
-            <span class="service-emoji">🤖</span>
-        </div>
-        <h3 class="service-name">Bot Development</h3>
-        <p class="service-desc">Custom Discord and Telegram bots with advanced features, automation, and seamless integrations.</p>
-        <div class="service-tags">
-            <span class="tag">Discord Bots</span>
-            <span class="tag">Telegram Bots</span>
-            <span class="tag">Custom Commands</span>
-            <span class="tag">API Integration</span>
-        </div>
-    </div>
-
-    <div class="discord-service-box">
-        <div class="service-icon-wrapper">
-            <span class="service-emoji">🎨</span>
-        </div>
-        <h3 class="service-name">UI/UX Design</h3>
-        <p class="service-desc">Modern, user-friendly interfaces and stunning visual designs that make your project stand out.</p>
-        <div class="service-tags">
-            <span class="tag">Web Design</span>
-            <span class="tag">Logo Design</span>
-            <span class="tag">Brand Identity</span>
-            <span class="tag">Prototyping</span>
-        </div>
-    </div>
-
-    <div class="discord-service-box">
-        <div class="service-icon-wrapper">
-            <span class="service-emoji">⚡</span>
-        </div>
-        <h3 class="service-name">Consulting & Support</h3>
-        <p class="service-desc">Technical consulting, code reviews, bug fixes, and ongoing maintenance for your projects.</p>
-        <div class="service-tags">
-            <span class="tag">Code Review</span>
-            <span class="tag">Bug Fixes</span>
-            <span class="tag">Optimization</span>
-            <span class="tag">Maintenance</span>
-        </div>
-    </div>
-</div>
-
-<div class="commission-cta">
-    <p class="cta-text">Interested in working together?</p>
-    <p class="cta-contact">📧 Contact me via <a href="mailto:your.email@example.com" class="email-link">email</a> or reach out on <a href="https://discord.com/users/yourid" class="discord-link" target="_blank">Discord</a></p>
-</div>
-
-<style>
-/* Discord Section Title */
-.discord-section-title {
-    color: #ffffff;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 12px;
-    color: #8e9297;
-}
-
-/* GitHub Stats Container */
-.github-stats-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
-    margin-bottom: 20px;
-}
-
-.discord-stats-card {
-    background-color: #2f3136;
-    border-radius: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 2px solid #40444b;
-    box-shadow: 3px 3px 0 #18191c;
-}
-
-.stats-header {
-    background-color: #202225;
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    border-bottom: 2px solid #40444b;
-}
-
-.stats-icon {
-    font-size: 16px;
-}
-
-.stats-title {
-    color: #dcddde;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 0.5px;
-}
-
-.stats-content {
-    padding: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.stats-content img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* Skills Wrapper */
-.discord-skills-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 16px;
-    margin-bottom: 20px;
-}
-
-.discord-skill-box {
-    background-color: #2f3136;
-    border-radius: 0;
-    padding: 16px;
-    border: 2px solid #40444b;
-    box-shadow: 3px 3px 0 #18191c;
-}
-
-.skill-box-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #40444b;
-}
-
-.skill-emoji {
-    font-size: 20px;
-}
-
-.skill-title {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 600;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 0.5px;
-}
-
-.skill-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-}
-
-.skill-items img {
-    height: auto;
-    display: block;
-    transition: all 0.15s ease;
-}
-
-.skill-items img:hover {
-    transform: translateY(-2px);
-    filter: brightness(1.1);
-}
-
-/* Services Container */
-.discord-services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-}
-
-/* Commission Info Box */
-.commission-info-box {
-    background-color: #2f3136;
-    border-radius: 0;
-    padding: 20px;
-    border: 2px solid #7289da;
-    margin-bottom: 20px;
-    box-shadow: 3px 3px 0 #18191c;
-}
-
-.commission-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 12px;
-}
-
-.commission-icon {
-    font-size: 28px;
-}
-
-.commission-header h3 {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 600;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 0.5px;
-}
-
-.commission-intro {
-    color: #dcddde;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-/* Commission CTA */
-.commission-cta {
-    background-color: #2f3136;
-    border-radius: 0;
-    padding: 20px;
-    border: 2px solid #40444b;
-    margin-top: 20px;
-    text-align: center;
-    box-shadow: 3px 3px 0 #18191c;
-}
-
-.cta-text {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.cta-contact {
-    color: #b9bbbe;
-    font-size: 14px;
-}
-
-.email-link,
-.discord-link {
-    color: #7289da;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.15s ease;
-}
-
-.email-link:hover,
-.discord-link:hover {
-    color: #5b6eae;
-    text-decoration: underline;
-}
-
-/* Services Container */
-.discord-services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
-}
-
-.discord-service-box {
-    background-color: #2f3136;
-    border-radius: 0;
-    padding: 20px;
-    border: 2px solid #40444b;
-    transition: all 0.15s ease;
-    box-shadow: 3px 3px 0 #18191c;
-}
-
-.discord-service-box:hover {
-    border-color: #7289da;
-    transform: translate(-1px, -1px);
-    box-shadow: 4px 4px 0 #18191c;
-}
-
-.service-icon-wrapper {
-    text-align: center;
-    margin-bottom: 12px;
-}
-
-.service-emoji {
-    font-size: 48px;
-}
-
-.service-name {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 8px;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 0.5px;
-}
-
-.service-desc {
-    color: #b9bbbe;
-    font-size: 13px;
-    line-height: 1.5;
-    text-align: center;
-    margin-bottom: 12px;
-}
-
-.service-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    justify-content: center;
-}
-
-.service-tags .tag {
-    padding: 4px 8px;
-    border-radius: 0;
-    font-size: 11px;
-    border: 2px solid;
-    font-weight: 500;
-    transition: all 0.15s ease;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.service-tags .tag:hover {
-    transform: translate(-1px, -1px);
-    filter: brightness(1.15);
-    box-shadow: 2px 2px 0 #18191c;
-}
-
-/* Color variations for tags */
-.service-tags .tag:nth-child(1) { background-color: #5865f2; color: #ffffff; border-color: #4752c4; }
-.service-tags .tag:nth-child(2) { background-color: #57f287; color: #000000; border-color: #3ba55c; }
-.service-tags .tag:nth-child(3) { background-color: #fee75c; color: #000000; border-color: #faa61a; }
-.service-tags .tag:nth-child(4) { background-color: #eb459e; color: #ffffff; border-color: #d03682; }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .github-stats-container {
-        grid-template-columns: 1fr;
+    <script>
+    function openServicePreview(title, emoji, desc, deliverables, tagsArray, bannerGradient) {
+        const modal = document.getElementById('servicePreviewModal');
+        const modalTitle = document.getElementById('modalServiceTitle');
+        const modalEmoji = document.getElementById('modalServiceEmoji');
+        const modalDesc = document.getElementById('modalServiceDesc');
+        const modalDeliverables = document.getElementById('modalServiceDeliverables');
+        const modalTags = document.getElementById('modalServiceTags');
+        const modalBanner = document.getElementById('modalServiceBanner');
+        
+        if (!modal) return;
+        
+        modalTitle.textContent = title;
+        modalEmoji.textContent = emoji;
+        modalDesc.textContent = desc;
+        modalDeliverables.innerHTML = deliverables;
+        modalBanner.style.background = bannerGradient;
+        
+        // Dynamically build tech tags inside the modal
+        let tagsHtml = '';
+        tagsArray.forEach(tag => {
+            tagsHtml += `<span class="tag" style="background-color: rgba(255,255,255,0.05); color: #dcddde; border-color: #40444b;">${tag}</span>`;
+        });
+        modalTags.innerHTML = tagsHtml;
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
     }
     
-    .discord-skills-wrapper {
-        grid-template-columns: 1fr;
+    function closeServicePreview() {
+        const modal = document.getElementById('servicePreviewModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
     }
     
-    .discord-services-container {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 480px) {
-    .discord-skill-box,
-    .discord-service-box {
-        padding: 12px;
-    }
-    
-    .skill-title,
-    .service-name {
-        font-size: 13px;
-    }
-    
-    .service-emoji {
-        font-size: 40px;
-    }
-}
-</style>
-
-    </div>
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeServicePreview();
+        }
+    });
+    </script>
 </body>
 </html>

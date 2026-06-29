@@ -1,18 +1,10 @@
 {
   "awards": [
     {
-      "title": "Sample Award Title",
-      "icon": "🥇",
-      "description": "Brief description of the award and what it was for. Include relevant details about the achievement.",
-      "date": "[Add Date]",
-      "image": ""
-    },
-    {
-      "title": "Another Achievement",
-      "icon": "🏅",
-      "description": "Description of another notable award or recognition received.",
-      "date": "[Add Date]",
-      "image": ""
+      "title": "Placeholder Award",
+      "description": "Description of the award or recognition received.",
+      "image": "media/awards/placeholder.svg",
+      "date": "Pending"
     }
   ]
 }

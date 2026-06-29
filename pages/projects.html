@@ -69,77 +69,7 @@
 </head>
 <body>
     <div class="container">
-<script>
-// PROJECTS DATA - Edit this array to add/remove projects
-const projectsData = [
-    {
-        title: "Youth Times",
-        description: "Youth Times is a student-led online newspaper platform that empowers young writers to share campus stories, opinions, and news. Built with Flask, HTML/CSS, and flexible database support.",
-        category: "WEB_APPLICATION",
-        bannerImage: "media/projects/youth-times.jpg",
-        status: "active",
-        year: "2024",
-        sourceCode: "https://github.com/SahooShuvranshu/Youth-Times-Website",
-        liveDemo: "https://youthtimes.social",
-        techStack: ["Flask", "HTML/CSS", "Python", "Database"]
-    },
-    {
-        title: "Spotify Live Banner",
-        description: "A real-time, customizable Python/Flask web service that displays the current Spotify song you are listening to as a banner image, perfect for GitHub profile READMEs.",
-        category: "API_SERVICE",
-        bannerImage: "media/projects/spotify-banner.jpg",
-        status: "active",
-        year: "2024",
-        sourceCode: "https://github.com/SahooShuvranshu/Spotify-Live-Banner",
-        liveDemo: "https://spotify-live-banner.vercel.app/?scan=true",
-        techStack: ["Python", "Flask", "Spotify API", "Vercel"]
-    },
-    {
-        title: "Spotify Refresh Token Generator",
-        description: "A simple, self-hostable Flask app to get Spotify Refresh Tokens for your website, bot, or other projects. Handles the auth flow for you.",
-        category: "UTILITY",
-        bannerImage: "media/projects/spotify-token.jpg",
-        status: "active",
-        year: "2024",
-        sourceCode: "https://github.com/SahooShuvranshu/Spotify-Refresh-Token-Generator",
-        liveDemo: "https://spotify-refresh-token-generator.onrender.com/",
-        techStack: ["Python", "Flask", "OAuth", "Spotify API"]
-    },
-    {
-        title: "Coming Soon...",
-        description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
-        category: "DEVELOPMENT",
-        bannerImage: "",
-        status: "paused",
-        year: "2025",
-        sourceCode: "#",
-        liveDemo: "#",
-        techStack: ["Technology", "Stack", "Here"]
-    },
-    {
-        title: "Coming Soon...",
-        description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
-        category: "EXPERIMENTAL",
-        bannerImage: "",
-        status: "paused",
-        year: "2025",
-        sourceCode: "#",
-        liveDemo: "#",
-        techStack: ["Technology", "Stack", "Here"]
-    },
-    {
-        title: "Coming Soon...",
-        description: "Add your next amazing project here. Include a brief description of what it does, the technologies you used, and why it's special.",
-        category: "PROTOTYPE",
-        bannerImage: "",
-        status: "archived",
-        year: "2023",
-        sourceCode: "#",
-        liveDemo: "#",
-        techStack: ["Technology", "Stack", "Here"]
-    }
-];
-</script>
+<!-- Data is fetched dynamically from media/projects/projects.json -->
 
 <!-- ========================================
      🎨 STYLES & DISPLAY CODE BELOW
@@ -437,6 +367,202 @@ const projectsData = [
         letter-spacing: 0.3px;
     }
 
+    /* Status dot & pulsing animation */
+    .status-dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 6px;
+    }
+
+    .status-dot.active {
+        background-color: #43b581;
+        box-shadow: 0 0 8px #43b581;
+        animation: pulseStatus 2s infinite;
+    }
+
+    .status-dot.paused {
+        background-color: #faa61a;
+    }
+
+    .status-dot.archived {
+        background-color: #f04747;
+    }
+
+    @keyframes pulseStatus {
+        0% { box-shadow: 0 0 0 0 rgba(67, 181, 129, 0.7); }
+        70% { box-shadow: 0 0 0 6px rgba(67, 181, 129, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(67, 181, 129, 0); }
+    }
+
+    .project-card {
+        cursor: pointer;
+    }
+
+    .project-card.placeholder-coming-soon {
+        cursor: default !important;
+    }
+
+    .project-card.placeholder-coming-soon:hover {
+        transform: none !important;
+        box-shadow: 4px 4px 0 #18191c !important;
+    }
+
+    /* Fallback banner layout */
+    .project-banner-fallback {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+        color: #ffffff;
+    }
+
+    /* Preview Modal Styles */
+    .preview-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+    }
+
+    .preview-modal.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(4px);
+    }
+
+    .modal-container {
+        position: relative;
+        width: 90%;
+        max-width: 650px;
+        background-color: #2f3136;
+        border: 2px solid #40444b;
+        box-shadow: 8px 8px 0 #18191c;
+        z-index: 10001;
+        overflow: hidden;
+        animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes modalScale {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #b9bbbe;
+        font-size: 32px;
+        cursor: pointer;
+        z-index: 10002;
+        line-height: 1;
+        transition: color 0.2s ease;
+    }
+
+    .modal-close:hover {
+        color: #ffffff;
+    }
+
+    .modal-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-height: 90vh;
+    }
+
+    .modal-image-pane {
+        width: 100%;
+        height: 250px;
+        background-color: #18191c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid #40444b;
+    }
+
+    .modal-project-banner-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: #202225;
+    }
+
+    .modal-project-banner-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .modal-details-pane {
+        padding: 24px;
+        overflow-y: auto;
+    }
+
+    .modal-details-pane h3 {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        line-height: 1.3;
+        border-bottom: 2px solid #40444b;
+        padding-bottom: 12px;
+    }
+
+    .modal-meta-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .meta-label {
+        color: #b9bbbe;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .meta-value {
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    @media (max-width: 480px) {
+        .modal-image-pane {
+            height: 180px;
+        }
+        .modal-details-pane {
+            padding: 16px;
+        }
+    }
+
     @media (max-width: 768px) {
         .projects-grid {
             grid-template-columns: 1fr;
@@ -503,10 +629,56 @@ const projectsData = [
     }
 </style>
 
+<!-- Projects Grid Container -->
 <div class="projects-grid" id="projects-container"></div>
 
+<!-- ========================================
+     🔍 PROJECT PREVIEW MODAL
+     ======================================== -->
+<div id="projectPreviewModal" class="preview-modal">
+    <div class="modal-overlay" onclick="closeProjectPreview()"></div>
+    <div class="modal-container">
+        <button class="modal-close" onclick="closeProjectPreview()">×</button>
+        <div class="modal-content-wrapper">
+            <div class="modal-image-pane">
+                <div id="modalProjectBanner" class="modal-project-banner-container">
+                    <!-- Dynamically injected banner -->
+                </div>
+            </div>
+            <div class="modal-details-pane">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                    <span id="modalProjectYear" class="project-year">Year</span>
+                </div>
+                <h3 id="modalProjectTitle">Project Title</h3>
+                <div class="modal-meta-section">
+                    <div class="meta-item">
+                        <span class="meta-label">Status</span>
+                        <span id="modalProjectStatus" class="project-status">Status</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Description</span>
+                        <span id="modalProjectDescription" class="meta-value">Description text</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Links</span>
+                        <div class="project-links" style="margin-bottom: 0;">
+                            <a id="modalProjectSource" href="#" target="_blank" class="project-link">📂 Code</a>
+                            <a id="modalProjectLive" href="#" target="_blank" class="project-link demo">🌐 Demo</a>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Tech Stack</span>
+                        <div id="modalProjectTech" class="project-tech" style="border-top: none; padding-top: 0;">
+                            <!-- Tech tags -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
-// Load Projects - wrapped to ensure DOM is ready
 (function() {
     const projectsContainer = document.getElementById('projects-container');
     if (!projectsContainer) {
@@ -514,59 +686,206 @@ const projectsData = [
         return;
     }
     
-    projectsData.forEach(project => {
-        const card = document.createElement('div');
-        card.className = 'project-card';
+    // Resilient path detection
+    const isSubdir = window.location.pathname.includes('/pages/');
+    const jsonUrl = isSubdir ? '../media/projects/projects.json' : 'media/projects/projects.json';
+    const basePath = isSubdir ? '../' : '';
+    
+    // Render projects list
+    function renderProjects(projects) {
+        projectsContainer.innerHTML = '';
         
-        // Determine status
-        const statusClass = project.status || 'active';
-        const statusText = {
-            'active': '● ACTIVE',
-            'paused': '◐ PAUSED',
-            'archived': '○ ARCHIVED'
-        }[statusClass] || '● ACTIVE';
-        
-        // Build tech stack
-        const techStack = project.techStack.map(tech => `<span>${tech}</span>`).join('');
-        
-        // Determine link classes
-        const linkClass = (project.status === 'paused' || project.status === 'archived') ? 'disabled' : '';
-        
-        // Build banner content
-        const bannerContent = project.bannerImage 
-            ? `<img src="${project.bannerImage}" alt="${project.title}" loading="lazy">`
-            : '';
-        
-        card.innerHTML = `
+        // 1. Add permanent Coming Soon placeholder card first
+        const placeholderCard = document.createElement('div');
+        placeholderCard.className = 'project-card placeholder-coming-soon';
+        placeholderCard.innerHTML = `
             <div class="project-banner">
-                ${bannerContent}
+                <img src="${basePath}media/projects/placeholder.svg" alt="Coming Soon" loading="lazy">
             </div>
-            <div class="project-header-bar">
-                <span class="project-category">${project.category}</span>
-                <span class="project-year">${project.year}</span>
+            <div class="project-header-bar" style="justify-content: flex-end;">
+                <span class="project-year">2026</span>
             </div>
             <div class="project-content">
                 <div class="project-title-row">
-                    <div class="project-title">${project.title}</div>
-                    <span class="project-status ${statusClass}">${statusText}</span>
+                    <div class="project-title">Coming Soon...</div>
+                    <span class="project-status active">
+                        <span class="status-dot active"></span>ONGOING
+                    </span>
                 </div>
                 <div class="project-description">
-                    ${project.description}
+                    Currently working on exciting new applications, developer utilities, and open source projects. Check back soon for updates!
                 </div>
                 <div class="project-links">
-                    <a href="${project.sourceCode}" target="_blank" class="project-link ${linkClass}">
+                    <a href="#" class="project-link disabled" onclick="return false;">
                         📂 Code
                     </a>
-                    <a href="${project.liveDemo}" target="_blank" class="project-link demo ${linkClass}">
+                    <a href="#" class="project-link demo disabled" onclick="return false;">
                         🌐 Demo
                     </a>
                 </div>
                 <div class="project-tech">
-                    ${techStack}
+                    <span>AI</span><span>Fullstack</span><span>Web3</span>
                 </div>
             </div>
         `;
-        projectsContainer.appendChild(card);
+        projectsContainer.appendChild(placeholderCard);
+
+        // 2. Render JSON Projects
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            
+            const statusClass = project.status || 'active';
+            const statusText = {
+                'active': 'ACTIVE',
+                'paused': 'PAUSED',
+                'archived': 'ARCHIVED'
+            }[statusClass] || 'ACTIVE';
+            
+            const techStack = project.techStack.map(tech => `<span>${tech}</span>`).join('');
+            const linkClass = (project.status === 'paused' || project.status === 'archived') ? 'disabled' : '';
+            
+            // Adjust paths dynamically for subdirectories
+            const bannerImage = project.bannerImage && !project.bannerImage.startsWith('http') 
+                ? (isSubdir ? '../' + project.bannerImage : project.bannerImage)
+                : project.bannerImage;
+                
+            // Fallback to gradient & emoji if banner image is missing or empty
+            const bannerContent = bannerImage 
+                ? `<img src="${bannerImage}" alt="${project.title}" loading="lazy">`
+                : `<div class="project-banner-fallback" style="background: ${project.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)'}">${project.bannerEmoji || '🚀'}</div>`;
+            
+            card.innerHTML = `
+                <div class="project-banner">
+                    ${bannerContent}
+                </div>
+                <div class="project-header-bar" style="justify-content: flex-end;">
+                    <span class="project-year">${project.year}</span>
+                </div>
+                <div class="project-content">
+                    <div class="project-title-row">
+                        <div class="project-title">${project.title}</div>
+                        <span class="project-status ${statusClass}">
+                            <span class="status-dot ${statusClass}"></span>${statusText}
+                        </span>
+                    </div>
+                    <div class="project-description">
+                        ${project.description}
+                    </div>
+                    <div class="project-links">
+                        <a href="${project.sourceCode}" target="_blank" class="project-link ${linkClass}">
+                            📂 Code
+                        </a>
+                        <a href="${project.liveDemo}" target="_blank" class="project-link demo ${linkClass}">
+                            🌐 Demo
+                        </a>
+                    </div>
+                    <div class="project-tech">
+                        ${techStack}
+                    </div>
+                </div>
+            `;
+            
+            // Card click listener for Preview modal
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('.project-links') || e.target.closest('a')) {
+                    return;
+                }
+                openProjectPreview(project, bannerImage);
+            });
+
+            projectsContainer.appendChild(card);
+        });
+    }
+
+    // Fetch projects
+    fetch(jsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.projects) {
+                renderProjects(data.projects);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching projects data:', error);
+        });
+
+    // Lightbox modal preview function
+    window.openProjectPreview = function(project, resolvedBanner) {
+        const modal = document.getElementById('projectPreviewModal');
+        const modalTitle = document.getElementById('modalProjectTitle');
+        const modalDescription = document.getElementById('modalProjectDescription');
+        const modalYear = document.getElementById('modalProjectYear');
+        const modalStatus = document.getElementById('modalProjectStatus');
+        const modalSource = document.getElementById('modalProjectSource');
+        const modalLive = document.getElementById('modalProjectLive');
+        const modalTech = document.getElementById('modalProjectTech');
+        const modalBanner = document.getElementById('modalProjectBanner');
+
+        if (!modal) return;
+
+        modalTitle.textContent = project.title;
+        modalDescription.textContent = project.description;
+        modalYear.textContent = project.year;
+
+        // Render banner or fallback in modal
+        if (resolvedBanner) {
+            modalBanner.innerHTML = `<img src="${resolvedBanner}" alt="${project.title}">`;
+        } else {
+            modalBanner.innerHTML = `<div class="project-banner-fallback" style="background: ${project.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)'}">${project.bannerEmoji || '🚀'}</div>`;
+        }
+
+        // Render Status
+        const statusText = {
+            'active': 'ACTIVE',
+            'paused': 'PAUSED',
+            'archived': 'ARCHIVED'
+        }[project.status] || 'ACTIVE';
+        
+        modalStatus.className = `project-status ${project.status}`;
+        modalStatus.innerHTML = `<span class="status-dot ${project.status}"></span>${statusText}`;
+
+        // Render Tech tags
+        modalTech.innerHTML = project.techStack.map(tech => `<span>${tech}</span>`).join('');
+
+        // Link setups
+        const disabled = (project.status === 'paused' || project.status === 'archived');
+        modalSource.href = project.sourceCode;
+        if (disabled) {
+            modalSource.classList.add('disabled');
+        } else {
+            modalSource.classList.remove('disabled');
+        }
+
+        modalLive.href = project.liveDemo;
+        if (disabled) {
+            modalLive.classList.add('disabled');
+        } else {
+            modalLive.classList.remove('disabled');
+        }
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+
+    window.closeProjectPreview = function() {
+        const modal = document.getElementById('projectPreviewModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            window.closeProjectPreview();
+        }
     });
 })();
 </script>

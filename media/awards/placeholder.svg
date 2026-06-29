@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="420" viewBox="0 0 600 420">
+    <rect width="100%" height="100%" fill="#2f3136"/>
+    <!-- Elegant Border -->
+    <rect x="15" y="15" width="570" height="390" fill="none" stroke="#4f545c" stroke-width="4" rx="8"/>
+    <rect x="25" y="25" width="550" height="370" fill="none" stroke="#faa61a" stroke-width="2" rx="4" stroke-dasharray="8 4"/>
+    
+    <!-- Trophy Icon / Watermark -->
+    <g transform="translate(300, 180) scale(1.5)">
+        <!-- Trophy Cup -->
+        <path d="M-15,-20 L15,-20 L12,5 C10,15 -10,15 -12,5 Z" fill="#202225" stroke="#faa61a" stroke-width="2.5"/>
+        <!-- Handles -->
+        <path d="M-15,-10 C-25,-10 -25,0 -12,0" fill="none" stroke="#4f545c" stroke-width="2"/>
+        <path d="M15,-10 C25,-10 25,0 12,0" fill="none" stroke="#4f545c" stroke-width="2"/>
+        <!-- Base -->
+        <path d="M-3,14 L3,14 L5,22 L-5,22 Z" fill="#202225" stroke="#4f545c" stroke-width="2"/>
+        <rect x="-12" y="22" width="24" height="6" fill="#202225" stroke="#4f545c" stroke-width="2"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="50%" y="280" dominant-baseline="middle" text-anchor="middle" font-family="'Whitney', 'Helvetica Neue', Helvetica, sans-serif" font-size="20" font-weight="600" fill="#ffffff">COMING SOON</text>
+    <text x="50%" y="315" dominant-baseline="middle" text-anchor="middle" font-family="'Whitney', 'Helvetica Neue', Helvetica, sans-serif" font-size="14" fill="#b9bbbe">Awaiting award details...</text>
+</svg>

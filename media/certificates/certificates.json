@@ -1,74 +1,139 @@
 {
   "certificates": [
     {
-      "title": "Build A Secure Google Cloud Network",
+      "title": "Gen AI Academy 2.0 - Graduate",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Graduate.png",
+      "credentialId": "H2S-GA2-GRAD-7089",
+      "description": "Successfully graduated from the Gen AI Academy 2.0 program by completing the required curriculum.",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - AI-ML Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - AI-ML Learning Track.png",
+      "credentialId": "H2S-GA2-AIML-3921",
+      "description": "Completed specialized training in AI/ML model deployment, Prompt Engineering, and machine learning pipelines.",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Data Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Data Learning Track.png",
+      "credentialId": "H2S-GA2-DATA-1108",
+      "description": "Completed core modules on big data engineering, data warehouses, and database management.",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - DevOps Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - DevOps Learning Track.png",
+      "credentialId": "H2S-GA2-DVOP-8824",
+      "description": "Learned continuous integration, deployment pipelines, infrastructure as code, and cloud monitoring tools.",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Network Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Network Learning Track.png",
+      "credentialId": "H2S-GA2-NETW-5412",
+      "description": "Covered cloud networking architectures, firewall configurations, DNS, load balancing, and network security.",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Security Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Secuirty Learning Track.png",
+      "credentialId": "H2S-GA2-SECU-6091",
+      "description": "Gained competency in identifying vulnerabilities, cloud security policies, and identity and access management.",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Serverless Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Serverless Running Track.png",
+      "credentialId": "H2S-GA2-SRVL-2753",
+      "description": "Learned functions-as-a-service architectures, API Gateway integrations, and event-driven computing model applications.",
+      "verified": true
+    },
+    {
+      "title": "AI Fluency - Framework & Foundations",
+      "issuer": "Anthropic",
+      "date": "2025",
+      "image": "media/certificates/AI fluency - Framework & Foundations - Certificate Of Completion.jpg",
+      "credentialId": "",
+      "description": "Completed a foundational course covering AI frameworks, terminology, and practical implementation concepts.",
+      "verified": true
+    },
+    {
+      "title": "Build With AI Agent Builder Camp",
+      "issuer": "GeeksForGeeks / Google For Developers",
+      "date": "2025",
+      "image": "media/certificates/Build With AI Agent Builder Camp - Certifcate Of Participation.png",
+      "credentialId": "",
+      "description": "Participated in an intensive hands-on camp focused on building AI agents using Google's Agent Builder platform.",
+      "verified": true
+    },
+    {
+      "title": "Building Bad - Certificate of Participation",
+      "issuer": "GDG KIIT, Bhubaneswar",
+      "date": "2025",
+      "image": "media/certificates/Building Bad - Certificate Of Participation.png",
+      "credentialId": "",
+      "description": "Participated in the Building Bad hackathon/event, collaborating on creative and technical challenges.",
+      "verified": true
+    },
+    {
+      "title": "Claude 101",
+      "issuer": "Anthropic",
+      "date": "2025",
+      "image": "media/certificates/Claude 101 - Certificate Of Completion.jpg",
+      "credentialId": "",
+      "description": "Completed the introductory course on Claude, Anthropic's AI assistant, covering capabilities, prompting strategies, and responsible use.",
+      "verified": true
+    },
+    {
+      "title": "ESDP AI & ML Internship",
+      "issuer": "Central Tool Room & Training Centre (MSME) Government of India",
+      "date": "2025",
+      "image": "media/certificates/ESDP AI & ML Internship - Certificate Of Participation.jpg",
+      "credentialId": "",
+      "description": "Participated in an AI & ML internship program focusing on practical machine learning and deep learning applications.",
+      "verified": true
+    },
+    {
+      "title": "Introduction to Google Workspace with Gemini",
       "issuer": "Google Cloud",
-      "date": "December 2025",
-      "image": "media/certificates/Build%20A%20Secure%20Google%20Cloud%20Network.png",
+      "date": "2025",
+      "image": "media/certificates/Introduction To Google Workspace With Gemini Badge.png",
+      "credentialId": "",
+      "description": "Earned the Google Workspace with Gemini badge by completing modules on AI-powered productivity tools within Google Workspace.",
       "verified": true
     },
     {
-      "title": "Building Bad Participation",
-      "issuer": "Program Organization",
-      "date": "November 2025",
-      "image": "media/certificates/Building%20Bad%20Participation.jpg",
+      "title": "ODSIC 2026 - Certificate of Participation",
+      "issuer": "Trident Group of Institutions, Bhubaneswar",
+      "date": "2026",
+      "image": "media/certificates/ODSIC 2026 - Certificate Of Participation.jpg",
+      "credentialId": "",
+      "description": "Participated in ODSIC 2026, an open data and student innovation challenge showcasing data-driven solutions.",
       "verified": true
     },
     {
-      "title": "Cyber Job Simulation",
-      "issuer": "Deloitte",
-      "date": "October 2025",
-      "image": "media/certificates/Deloitte%20-%20Cyber%20Job%20Simulation.jpg",
+      "title": "Soft Skills Course - Complete Professional Development Training",
+      "issuer": "GeeksForgeeks",
+      "date": "2025",
+      "image": "media/certificates/Soft Skills Course Online – Complete Professional Development Training.jpg",
+      "credentialId": "",
+      "description": "Completed a comprehensive soft skills training program covering communication, leadership, time management, and professional etiquette.",
       "verified": true
-    },
-    {
-      "title": "Develop Your Google Cloud Network",
-      "issuer": "Google Cloud",
-      "date": "September 2025",
-      "image": "media/certificates/Develop%20Your%20Google%20Cloud%20Network.jpg",
-      "verified": true
-    },
-    {
-      "title": "Get Started With Sensitive Data Protection",
-      "issuer": "Google Cloud",
-      "date": "August 2025",
-      "image": "media/certificates/Get%20Started%20With%20Sensitive%20Data%20Protection.jpg",
-      "verified": true
-    },
-    {
-      "title": "Python (Basic)",
-      "issuer": "HackerRank",
-      "date": "July 2025",
-      "image": "media/certificates/HackerRank%20Python(Basic).jpg",
-      "verified": true
-    },
-    {
-      "title": "Introduction To Google Workspace With Gemini",
-      "issuer": "Google Cloud",
-      "date": "June 2025",
-      "image": "media/certificates/Introduction%20To%20Google%20Workspace%20With%20Gemini.jpg",
-      "verified": true
-    },
-    {
-      "title": "Workshop On AI And ML",
-      "issuer": "NIT (National Institute of Technology)",
-      "date": "May 2025",
-      "image": "media/certificates/NIT%20Workshop%20On%20AI%20And%20ML.jpg",
-      "verified": true
-    }
-  ],
-  "awards": [
-    {
-      "title": "Sample Award Title",
-      "icon": "🥇",
-      "description": "Brief description of the award and what it was for. Include relevant details about the achievement.",
-      "date": "[Add Date]"
-    },
-    {
-      "title": "Another Achievement",
-      "icon": "🏅",
-      "description": "Description of another notable award or recognition received.",
-      "date": "[Add Date]"
     }
   ]
 }
