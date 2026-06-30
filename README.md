@@ -409,8 +409,8 @@ Give a ⭐️ if this project helped you or you like it!
 **Connect with me across the digital universe!** 🌐
 
 [![Website](https://img.shields.io/badge/Portfolio-sahooshuvranshu.me-5865F2?style=for-the-badge&logo=google-chrome&logoColor=white)](https://sahooshuvranshu.me)
-[![Blog](https://img.shields.io/badge/Blog-sahooshuvranshu.me/blog-5865F2?style=for-the-badge&logo=blogger&logoColor=white)](https://sahooshuvranshu.me/blog)
-[![LinkHub](https://img.shields.io/badge/LinkHub-sahooshuvranshu-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://linktr.ee/sahooshuvranshu)
+[![Blog](https://img.shields.io/badge/Blog-sahooshuvranshu.github.io/blog-5865F2?style=for-the-badge&logo=blogger&logoColor=white)](https://sahooshuvranshu.github.io/blog/)
+[![Socials](https://img.shields.io/badge/Socials-Hub-39E09B?style=for-the-badge&logo=linktree&logoColor=white)](https://sahooshuvranshu.github.io/socials/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sahooshuvranshu-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sahooshuvranshu/)
 [![GitHub](https://img.shields.io/badge/GitHub-SahooShuvranshu-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SahooShuvranshu)
 [![Bluesky](https://img.shields.io/badge/Bluesky-sahooshuvranshu.me-1185FE?style=for-the-badge&logo=bluesky&logoColor=white)](https://bsky.app/profile/sahooshuvranshu.me)
@@ -427,8 +427,8 @@ Give a ⭐️ if this project helped you or you like it!
 | Platform | Username | Link |
 |----------|----------|------|
 | 🌐 **Website** | sahooshuvranshu.me | [Visit](https://sahooshuvranshu.me) |
-| � **Blog** | sahooshuvranshu.me/blog | [Read](https://sahooshuvranshu.me/blog) |
-| 🔗 **LinkHub** | sahooshuvranshu | [Links](https://linktr.ee/sahooshuvranshu) |
+| 📝 **Blog** | sahooshuvranshu.github.io/blog | [Read](https://sahooshuvranshu.github.io/blog/) |
+| 🔗 **Socials** | sahooshuvranshu | [Links](https://sahooshuvranshu.github.io/socials/) |
 | 👔 **LinkedIn** | sahooshuvranshu | [Connect](https://www.linkedin.com/in/sahooshuvranshu/) |
 | 💼 **GitHub** | @SahooShuvranshu | [Follow](https://github.com/SahooShuvranshu) |
 | 🦋 **Bluesky** | sahooshuvranshu.me | [Follow](https://bsky.app/profile/sahooshuvranshu.me) |
