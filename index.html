@@ -514,29 +514,7 @@
             box-shadow: 3px 3px 0 #18191c;
         }
 
-        .discord-resume-btn {
-            background-color: #5865f2;
-            color: white;
-            border: 2px solid #4752c4;
-            border-radius: 0;
-            padding: 8px 12px;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.15s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 2px 2px 0 #18191c;
-            font-family: 'Courier New', Courier, monospace;
-            letter-spacing: 0.5px;
-        }
 
-        .discord-resume-btn:hover {
-            background-color: #4752c4;
-            transform: translate(-1px, -1px);
-            box-shadow: 3px 3px 0 #18191c;
-        }
 
         .discord-social-tree-btn {
             background-color: #5865f2;
@@ -612,7 +590,6 @@
             }
 
             .discord-contact-btn,
-            .discord-resume-btn,
             .discord-social-tree-btn,
             .discord-blog-btn {
                 position: static !important;
@@ -648,7 +625,6 @@
             }
 
             .discord-contact-btn,
-            .discord-resume-btn,
             .discord-social-tree-btn,
             .discord-blog-btn {
                 font-size: 11px;
@@ -1165,9 +1141,6 @@
                 <button class="discord-blog-btn" title="View Blog">
                     Blog
                 </button>
-                <button class="discord-resume-btn" title="Download Resume">
-                    Resume
-                </button>
                 <button class="discord-contact-btn" title="Contact Me">Contact</button>
             </div>
 
@@ -1363,13 +1336,7 @@
                 });
             }
 
-            // Resume button functionality
-            const resumeBtn = document.querySelector('.discord-resume-btn');
-            if (resumeBtn) {
-                resumeBtn.addEventListener('click', function () {
-                    window.open('https://sahooshuvranshu.github.io/media/resume.pdf', '_blank');
-                });
-            }
+
 
             // Socials button functionality (linktree)
             const socialTreeBtn = document.querySelector('.discord-social-tree-btn');

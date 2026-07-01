@@ -1,48 +1,35 @@
-<div align="center">
+# Contributor Covenant Code of Conduct
 
-# Code of Conduct
+## Our Pledge
 
-[![🛡️ Status](https://img.shields.io/badge/🛡️%20status-active-43B581?style=for-the-badge&logo=github&logoColor=white)](#code-of-conduct)
-[![🤝 Respect](https://img.shields.io/badge/🤝%20community-respectful-5865F2?style=for-the-badge&logo=githubsponsors&logoColor=white)](#expected-behavior)
-[![🍴 Personal Use](https://img.shields.io/badge/🍴%20forks-personal%20use%20welcome-FEE75C?style=for-the-badge&logo=gitfork&logoColor=black)](#repository-contribution-policy)
-[![🚫 PR Policy](https://img.shields.io/badge/🚫%20pull%20requests-not%20accepted-ED4245?style=for-the-badge&logo=git&logoColor=white)](#repository-contribution-policy)
+We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, caste, color, religion, or sexual identity and orientation.
 
-> **Keep it respectful, helpful, and focused.** This is a personal portfolio project, so please use it kindly and responsibly.
+We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
 
-</div>
+## Our Standards
 
----
+Examples of behavior that contributes to a positive environment for our community include:
+* Demonstrating empathy and kindness toward other people
+* Being respectful of differing opinions, viewpoints, and experiences
+* Giving and gracefully accepting constructive feedback
+* Accepting responsibility and apologizing to those affected by our mistakes, and learning from the experience
+* Focusing on what is best for the overall community
 
-## 🤝 Our Pledge
+Examples of unacceptable behavior include:
+* The use of sexualized language or imagery, and unwelcome sexual attention or advances
+* Trolling, insulting or derogatory comments, and personal or political attacks
+* Public or private harassment
+* Publishing others' private information, such as a physical or email address, without their explicit permission
+* Other conduct which could reasonably be considered inappropriate in a professional setting
 
-Everyone who visits, uses, forks, or discusses this project is expected to act respectfully and constructively.
+## Enforcement Responsibilities
 
-## ✅ Expected Behavior
+Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior they deem inappropriate, threatening, offensive, or harmful.
 
-- Be respectful of others' time, identity, experience, and opinions.
-- Keep discussions relevant to this repository and its public website.
-- Give credit where appropriate if you reuse ideas, design patterns, or code.
-- Report security concerns privately using the guidance in `SECURITY.md`.
-- Use this project for personal learning, reference, or your own adaptation.
+## Scope
 
-## 🚫 Unacceptable Behavior
+This Code of Conduct applies within all community spaces, and also applies when an individual is officially representing the community in public spaces.
 
-- Harassment, insults, discrimination, threats, or personal attacks.
-- Spam, trolling, or disruptive comments.
-- Publishing private information without permission.
-- Opening pull requests or attempting to merge changes into this repository.
-- Presenting this project, its content, or its identity as your own without meaningful changes and proper attribution.
+## Contact Information
 
-## 🍴 Repository Contribution Policy
-
-This is a personal portfolio repository. You may use it for yourself, learn from it, fork it, and adapt it for your own personal site, but please do not open pull requests or request merges into this repository.
-
-If you find a serious bug or security issue, report it through the appropriate private or public channel described in the project documentation. Security issues should follow `SECURITY.md`.
-
-## 🛠️ Enforcement
-
-The repository owner may delete comments, close issues, block users, or take other reasonable action to keep the project space respectful and focused.
-
-## 📌 Scope
-
-This Code of Conduct applies to repository discussions, issues, forks that directly reference this project, and any related communication channels used for this project.
+Vulnerability reports, harassment, or other code of conduct concerns can be reported directly to the maintainer at [sahooshuvranshusekhar@gmail.com](mailto:sahooshuvranshusekhar@gmail.com).
