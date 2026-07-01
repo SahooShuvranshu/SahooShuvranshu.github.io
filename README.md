@@ -6,6 +6,16 @@
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 [![License](https://img.shields.io/github/license/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=github&logoColor=white&color=yellow)](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/stargazers)
+[![Forks](https://img.shields.io/github/forks/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=github&logoColor=white&color=blue)](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/network/members)
+[![Issues](https://img.shields.io/github/issues/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=github&logoColor=white&color=red)](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/pulls)
+[![Last Commit](https://img.shields.io/github/last-commit/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=github&logoColor=white&color=orange)](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io)
+[![Repo Size](https://img.shields.io/github/repo-size/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=github&logoColor=white&color=blueviolet)](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io)
+[![Languages](https://img.shields.io/github/languages/count/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=github&logoColor=white&color=informational)](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io)
+<br>
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 **A modern, Discord-themed personal portfolio website showcasing skills, projects, and achievements.**
 
