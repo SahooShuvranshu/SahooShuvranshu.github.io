@@ -148,8 +148,11 @@
                 <span class="header-icon">💻</span>
                 <span class="header-title">ACTIVITY</span>
             </div>
-            <div class="card-content" style="padding: 12px; display: flex; justify-content: center; background-color: #202225;">
-                <img src="https://lanyard.cnrad.dev/api/879695880528216075?animated=false&showDisplayName=true&hideSpotify=true&hideDiscrim=true&hideStatus=true&hideTag=true" alt="Discord Rich Presence" style="width: 100%; max-width: 400px; display: block; border-radius: 4px;" />
+            <div class="card-content"
+                style="padding: 12px; display: flex; justify-content: center; background-color: #202225;">
+                <img src="https://lanyard.cnrad.dev/api/879695880528216075?showDisplayName=true&hideSpotify=true&hideDiscrim=true&hideStatus=true&hideTag=true&hideTimestamp=true"
+                    alt="Discord Rich Presence"
+                    style="width: 100%; max-width: 400px; display: block; border-radius: 4px;" />
             </div>
         </div>
 
@@ -235,14 +238,37 @@
             }
 
             @keyframes wave {
-                0% { transform: rotate(0deg); }
-                10% { transform: rotate(14deg); }
-                20% { transform: rotate(-8deg); }
-                30% { transform: rotate(14deg); }
-                40% { transform: rotate(-4deg); }
-                50% { transform: rotate(10deg); }
-                60% { transform: rotate(0deg); }
-                100% { transform: rotate(0deg); }
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                10% {
+                    transform: rotate(14deg);
+                }
+
+                20% {
+                    transform: rotate(-8deg);
+                }
+
+                30% {
+                    transform: rotate(14deg);
+                }
+
+                40% {
+                    transform: rotate(-4deg);
+                }
+
+                50% {
+                    transform: rotate(10deg);
+                }
+
+                60% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(0deg);
+                }
             }
 
             .user-intro {
