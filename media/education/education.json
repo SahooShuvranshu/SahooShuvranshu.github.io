@@ -27,6 +27,32 @@
       "description": "Built data visualization dashboards and performed statistical analysis. Created automated reporting systems using Python and Power BI."
     },
     {
+      "title": "AI & ML Intern",
+      "organization": "Central Tool Room & Training Centre, Bhubaneswar",
+      "link": "https://www.cttc.gov.in/",
+      "label": "Central Tool Room & Training Centre, Bhubaneswar",
+      "dateRange": "Jun 2026 - Jun 2026",
+      "fullDate": "📅 June 2026 - June 2026",
+      "status": "completed",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDNM0WK9gNrUkJwpQ_I7F7MHL1AqlrZ18TLsol5PV9HpJJhgzh-VtuOT0&s=10",
+      "bannerGradient": "linear-gradient(135deg, #86bc25 0%, #171717 100%)",
+      "bannerEmoji": "📊",
+      "description": "Built data visualization dashboards and performed statistical analysis. Created automated reporting systems using Python and Power BI."
+    },
+    {
+      "title": "Campus Mantri",
+      "organization": "GeeksForGeeks",
+      "link": "https://www.geeksforgeeks.org/",
+      "label": "GeeksForGeeks",
+      "dateRange": "Oct 2025 - Jan 2026",
+      "fullDate": "📅 October 2025 - January 2026",
+      "status": "completed",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOBXOaR1bmoRbAOYQwi_vHtykN2PWI169FoRv-O8dt2CrFnX1fHRwdJeVz&s=10",
+      "bannerGradient": "linear-gradient(135deg, #86bc25 0%, #171717 100%)",
+      "bannerEmoji": "📊",
+      "description": "Built data visualization dashboards and performed statistical analysis. Created automated reporting systems using Python and Power BI."
+    },
+    {
       "title": "Cyber Job Simulation Participant",
       "organization": "Deloitte Australia",
       "link": "https://www2.deloitte.com/au/en.html",
@@ -40,10 +66,10 @@
       "description": "<strong>Deloitte Australia Cyber Job Simulation on Forage</strong><br>• <strong>Log Analysis:</strong> Analyzed web server activity logs to identify anomalies and potential security threats.<br>• <strong>Incident Response:</strong> Assisted a simulated client in mitigating the impact of a cyber security breach.<br>• <strong>Threat Detection:</strong> Evaluated user activity patterns to pinpoint suspicious behavior and reported findings to management."
     },
     {
-      "title": "AI & ML Intern",
-      "organization": "CTTC Bhubaneswar",
-      "link": "https://www.cttcbbsr.com/",
-      "label": "CTTC (MSME) Gov of India",
+      "title": "ESDP AI & ML Trainee",
+      "organization": "Central Tool Room & Training Centre, Bhubaneswar",
+      "link": "https://www.cttc.gov.in/",
+      "label": "Central Tool Room & Training Centre, Bhubaneswar",
       "dateRange": "Sep 2025 - Oct 2025",
       "fullDate": "📅 September 2025 - October 2025",
       "status": "completed",
@@ -54,9 +80,9 @@
     },
     {
       "title": "Python & AI Intern",
-      "organization": "OKCL",
-      "link": "https://www.okcl.in/",
-      "label": "OKCL",
+      "organization": "Odisha Knowledge Corporation Limited, Bhubaneswar",
+      "link": "https://okcl.org/",
+      "label": "Odisha Knowledge Corporation Limited, Bhubaneswar",
       "dateRange": "Jun 2025 - Jul 2025",
       "fullDate": "📅 June 2025 - July 2025",
       "status": "completed",
@@ -69,9 +95,9 @@
   "education": [
     {
       "title": "B.Tech in Computer Science (Lateral Entry)",
-      "organization": "Nilachala Polytechnic College of Engineering",
-      "link": "https://www.nilachalpolytechnic.ac.in/",
-      "label": "Nilachala Polytechnic",
+      "organization": "Nilachala Polytechnic College of Engineering, Bhubaneswar",
+      "link": "https://nilachalpolytechnic.ac.in/",
+      "label": "Nilachala Polytechnic College of Engineering, Bhubaneswar",
       "dateRange": "Aug 2026 - Present",
       "fullDate": "📅 August 2026 - Present",
       "status": "ongoing",
@@ -82,9 +108,9 @@
     },
     {
       "title": "Diploma in Computer Science",
-      "organization": "Nilachala Polytechnic College of Engineering",
-      "link": "https://www.nilachalpolytechnic.ac.in/",
-      "label": "Nilachala Polytechnic",
+      "organization": "Nilachala Polytechnic College of Engineering, Bhubaneswar",
+      "link": "https://nilachalpolytechnic.ac.in/",
+      "label": "Nilachala Polytechnic College of Engineering, Bhubaneswar",
       "dateRange": "Aug 2023 - May 2026",
       "fullDate": "📅 August 2023 - May 2026",
       "status": "completed",
@@ -96,13 +122,13 @@
     {
       "title": "Secondary School Education (Class 1-10)",
       "organization": "DAV Public School, Rourkela",
-      "link": "https://www.davrourkela.com/",
+      "link": "https://davrkl.org/",
       "label": "DAV Public School, Rourkela",
-      "dateRange": "2013 - 2023",
-      "fullDate": "📅 2013 - 2023",
+      "dateRange": "Mar 2013 -  April 2023",
+      "fullDate": "📅 March 2013 - April 2023",
       "status": "completed",
       "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5EvBpAGe_WKmbhQclH6Kl82DCCDxoaBjmr9wKruU2wHS_MxicOQvitmY&s=10",
-      "bannerGradient": "linear-gradient(135deg, #faa61a 0%, #202225 100%)",
+      "bannerGradient": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu7JrUtB8uun7b8L4jJ517RZ8tX1b5YD8BO_p9xEeJQh6IkOf7Iy1Ck_A&s=10 ",
       "bannerEmoji": "🏫",
       "description": "Completed foundational education from Class 1 to 10 at DAV Public School, Rourkela, following CBSE curriculum. Developed strong foundation in Science, Mathematics, and English. Participated in various academic competitions and extracurricular activities. Built core concepts that laid groundwork for technical education."
     }

@@ -630,13 +630,19 @@
                         return;
                     }
                     const modalSubtitleHtml = `<a href="${item.link}" target="_blank">${item.organization}</a>`;
+                    
+                    let bannerSource = item.bannerImage || item.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)';
+                    if (bannerSource && !bannerSource.startsWith('http') && (bannerSource.startsWith('/') || bannerSource.startsWith('media/'))) {
+                        bannerSource = isSubdir ? '../' + bannerSource : bannerSource;
+                    }
+
                     openEduPreview(
                         item.title,
                         modalSubtitleHtml,
                         item.fullDate,
                         item.description,
                         logoSrc,
-                        item.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)',
+                        bannerSource,
                         item.bannerEmoji || '🚀',
                         isEducation
                     );
@@ -696,8 +702,18 @@
             modalLogo.style.display = 'none';
         }
         
-        // Inject dynamic banner content (gradient and emoji) only on preview
-        bannerContent.innerHTML = `<div class="project-banner-fallback" style="background: ${bannerGradient}">${bannerEmoji}</div>`;
+        // Inject dynamic banner content (gradient or image) only on preview
+        const isUrl = (str) => {
+            if (!str) return false;
+            const cleanStr = str.trim();
+            return cleanStr.startsWith('http://') || cleanStr.startsWith('https://') || cleanStr.startsWith('/') || cleanStr.startsWith('media/');
+        };
+
+        if (isUrl(bannerGradient)) {
+            bannerContent.innerHTML = `<img src="${bannerGradient.trim()}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover;">`;
+        } else {
+            bannerContent.innerHTML = `<div class="project-banner-fallback" style="background: ${bannerGradient}">${bannerEmoji}</div>`;
+        }
         
         if (isEducation) {
             typeLabel.textContent = 'Institution';
