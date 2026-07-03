@@ -631,7 +631,7 @@
                     }
                     const modalSubtitleHtml = `<a href="${item.link}" target="_blank">${item.organization}</a>`;
                     
-                    let bannerSource = item.bannerImage || item.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)';
+                    let bannerSource = item.bannerImage || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)';
                     if (bannerSource && !bannerSource.startsWith('http') && (bannerSource.startsWith('/') || bannerSource.startsWith('media/'))) {
                         bannerSource = isSubdir ? '../' + bannerSource : bannerSource;
                     }
@@ -643,7 +643,6 @@
                         item.description,
                         logoSrc,
                         bannerSource,
-                        item.bannerEmoji || '🚀',
                         isEducation
                     );
                 });
@@ -678,7 +677,7 @@
             });
     })();
 
-    function openEduPreview(title, subtitleHtml, date, descHtml, logoSrc, bannerGradient, bannerEmoji, isEducation) {
+    function openEduPreview(title, subtitleHtml, date, descHtml, logoSrc, bannerImage, isEducation) {
         const modal = document.getElementById('educationPreviewModal');
         const modalTitle = document.getElementById('modalEduTitle');
         const modalSubtitle = document.getElementById('modalEduSubtitle');
@@ -709,10 +708,10 @@
             return cleanStr.startsWith('http://') || cleanStr.startsWith('https://') || cleanStr.startsWith('/') || cleanStr.startsWith('media/');
         };
 
-        if (isUrl(bannerGradient)) {
-            bannerContent.innerHTML = `<img src="${bannerGradient.trim()}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover;">`;
+        if (isUrl(bannerImage)) {
+            bannerContent.innerHTML = `<img src="${bannerImage.trim()}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover;">`;
         } else {
-            bannerContent.innerHTML = `<div class="project-banner-fallback" style="background: ${bannerGradient}">${bannerEmoji}</div>`;
+            bannerContent.innerHTML = `<div class="project-banner-fallback" style="background: ${bannerImage}"></div>`;
         }
         
         if (isEducation) {
