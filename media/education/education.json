@@ -1,0 +1,110 @@
+{
+  "work": [
+    {
+      "title": "Technology Consulting Intern",
+      "organization": "Deloitte",
+      "link": "https://www2.deloitte.com/",
+      "label": "Deloitte (Australia)",
+      "dateRange": "Oct 2025 - Jan 2026",
+      "fullDate": "📅 October 2025 - January 2026",
+      "status": "completed",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOBXOaR1bmoRbAOYQwi_vHtykN2PWI169FoRv-O8dt2CrFnX1fHRwdJeVz&s=10",
+      "bannerGradient": "linear-gradient(135deg, #86bc25 0%, #171717 100%)",
+      "bannerEmoji": "💡",
+      "description": "Assisted in technology strategy development for Fortune 500 clients. Conducted market research and feasibility studies."
+    },
+    {
+      "title": "Data Analytics Intern",
+      "organization": "Deloitte",
+      "link": "https://www2.deloitte.com/",
+      "label": "Deloitte (Australia)",
+      "dateRange": "Oct 2025 - Jan 2026",
+      "fullDate": "📅 October 2025 - January 2026",
+      "status": "completed",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOBXOaR1bmoRbAOYQwi_vHtykN2PWI169FoRv-O8dt2CrFnX1fHRwdJeVz&s=10",
+      "bannerGradient": "linear-gradient(135deg, #86bc25 0%, #171717 100%)",
+      "bannerEmoji": "📊",
+      "description": "Built data visualization dashboards and performed statistical analysis. Created automated reporting systems using Python and Power BI."
+    },
+    {
+      "title": "Cyber Job Simulation Participant",
+      "organization": "Deloitte Australia",
+      "link": "https://www2.deloitte.com/au/en.html",
+      "label": "Deloitte Australia",
+      "dateRange": "Oct 2025 - Jan 2026",
+      "fullDate": "📅 October 2025 - January 2026",
+      "status": "completed",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOBXOaR1bmoRbAOYQwi_vHtykN2PWI169FoRv-O8dt2CrFnX1fHRwdJeVz&s=10",
+      "bannerGradient": "linear-gradient(135deg, #86bc25 0%, #171717 100%)",
+      "bannerEmoji": "🛡️",
+      "description": "<strong>Deloitte Australia Cyber Job Simulation on Forage</strong><br>• <strong>Log Analysis:</strong> Analyzed web server activity logs to identify anomalies and potential security threats.<br>• <strong>Incident Response:</strong> Assisted a simulated client in mitigating the impact of a cyber security breach.<br>• <strong>Threat Detection:</strong> Evaluated user activity patterns to pinpoint suspicious behavior and reported findings to management."
+    },
+    {
+      "title": "AI & ML Intern",
+      "organization": "CTTC Bhubaneswar",
+      "link": "https://www.cttcbbsr.com/",
+      "label": "CTTC (MSME) Gov of India",
+      "dateRange": "Sep 2025 - Oct 2025",
+      "fullDate": "📅 September 2025 - October 2025",
+      "status": "completed",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDNM0WK9gNrUkJwpQ_I7F7MHL1AqlrZ18TLsol5PV9HpJJhgzh-VtuOT0&s=10",
+      "bannerGradient": "linear-gradient(135deg, #ff5f6d 0%, #ffc371 100%)",
+      "bannerEmoji": "🤖",
+      "description": "Developed machine learning algorithms, trained models, and evaluated accuracy. Assisted in building predictive models using Python, TensorFlow, and scikit-learn."
+    },
+    {
+      "title": "Python & AI Intern",
+      "organization": "OKCL",
+      "link": "https://www.okcl.in/",
+      "label": "OKCL",
+      "dateRange": "Jun 2025 - Jul 2025",
+      "fullDate": "📅 June 2025 - July 2025",
+      "status": "completed",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFDDoz-jP2_mFTcgwHcXxH5gQBXxnHz5Dqb0bTtNbbQ1ZvvGqMgxuhoLg&s=10",
+      "bannerGradient": "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
+      "bannerEmoji": "🐍",
+      "description": "Worked on a real-time project titled <strong>\"News Scraper using Python Programming (Youth Times)\"</strong>, focused on extracting news articles from live websites using web scraping techniques.<br>• Built a custom scraper using Python and BeautifulSoup<br>• Parsed and organized structured data from news sources<br>• Applied backend logic for automation and data processing<br>• Strengthened debugging, data handling, and script optimization skills<br>This internship offered valuable hands-on experience in backend scripting and working with real-world data pipelines."
+    }
+  ],
+  "education": [
+    {
+      "title": "B.Tech in Computer Science (Lateral Entry)",
+      "organization": "Nilachala Polytechnic College of Engineering",
+      "link": "https://www.nilachalpolytechnic.ac.in/",
+      "label": "Nilachala Polytechnic",
+      "dateRange": "Aug 2026 - Present",
+      "fullDate": "📅 August 2026 - Present",
+      "status": "ongoing",
+      "logo": "https://cdn-prod.mybharats.in/organization/DL-ns-70bcafd3-854a-4faa-b1a3-5d313df6e060_LOGO.jpg",
+      "bannerGradient": "linear-gradient(135deg, #5865f2 0%, #2f3136 100%)",
+      "bannerEmoji": "🎓",
+      "description": "Starting lateral entry Bachelor of Technology in Computer Science directly as a second-year student from August 2026 at Nilachala Polytechnic College of Engineering, Bhubaneswar. Gaining advanced training and core academic concepts in software engineering, programming structures, database management systems, and cybersecurity."
+    },
+    {
+      "title": "Diploma in Computer Science",
+      "organization": "Nilachala Polytechnic College of Engineering",
+      "link": "https://www.nilachalpolytechnic.ac.in/",
+      "label": "Nilachala Polytechnic",
+      "dateRange": "Aug 2023 - May 2026",
+      "fullDate": "📅 August 2023 - May 2026",
+      "status": "completed",
+      "logo": "https://cdn-prod.mybharats.in/organization/DL-ns-70bcafd3-854a-4faa-b1a3-5d313df6e060_LOGO.jpg",
+      "bannerGradient": "linear-gradient(135deg, #00b0f4 0%, #202225 100%)",
+      "bannerEmoji": "💻",
+      "description": "Completed three-year Diploma program in Computer Science at Nilachala Polytechnic College of Engineering, Bhubaneswar in May 2026. Gaining comprehensive knowledge in programming languages (C, C++, Java, Python), database management systems, web development, software engineering principles, and cybersecurity fundamentals. Hands-on experience with practical projects and laboratory work."
+    },
+    {
+      "title": "Secondary School Education (Class 1-10)",
+      "organization": "DAV Public School, Rourkela",
+      "link": "https://www.davrourkela.com/",
+      "label": "DAV Public School, Rourkela",
+      "dateRange": "2013 - 2023",
+      "fullDate": "📅 2013 - 2023",
+      "status": "completed",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5EvBpAGe_WKmbhQclH6Kl82DCCDxoaBjmr9wKruU2wHS_MxicOQvitmY&s=10",
+      "bannerGradient": "linear-gradient(135deg, #faa61a 0%, #202225 100%)",
+      "bannerEmoji": "🏫",
+      "description": "Completed foundational education from Class 1 to 10 at DAV Public School, Rourkela, following CBSE curriculum. Developed strong foundation in Science, Mathematics, and English. Participated in various academic competitions and extracurricular activities. Built core concepts that laid groundwork for technical education."
+    }
+  ]
+}
