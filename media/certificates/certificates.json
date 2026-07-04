@@ -1,120 +1,53 @@
 {
   "certificates": [
     {
-      "title": "Gen AI Academy 2.0 - Graduate",
-      "issuer": "Hack2skill",
+      "title": "AI & ML Internship",
+      "issuer": "Central Tool Room & Training Centre (MSME) Government of India",
       "date": "June 2026",
-      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Graduate.png",
-      "credentialId": "H2S-GA2-GRAD-7089",
-      "description": "Successfully graduated from the Gen AI Academy 2.0 program by completing the required curriculum.",
-      "verified": true
-    },
-    {
-      "title": "Gen AI Academy 2.0 - AI-ML Learning Track",
-      "issuer": "Hack2skill",
-      "date": "June 2026",
-      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - AI-ML Learning Track.png",
-      "credentialId": "H2S-GA2-AIML-3921",
-      "description": "Completed specialized training in AI/ML model deployment, Prompt Engineering, and machine learning pipelines.",
-      "verified": true
-    },
-    {
-      "title": "Gen AI Academy 2.0 - Data Learning Track",
-      "issuer": "Hack2skill",
-      "date": "June 2026",
-      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Data Learning Track.png",
-      "credentialId": "H2S-GA2-DATA-1108",
-      "description": "Completed core modules on big data engineering, data warehouses, and database management.",
-      "verified": true
-    },
-    {
-      "title": "Gen AI Academy 2.0 - DevOps Learning Track",
-      "issuer": "Hack2skill",
-      "date": "June 2026",
-      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - DevOps Learning Track.png",
-      "credentialId": "H2S-GA2-DVOP-8824",
-      "description": "Learned continuous integration, deployment pipelines, infrastructure as code, and cloud monitoring tools.",
-      "verified": true
-    },
-    {
-      "title": "Gen AI Academy 2.0 - Network Learning Track",
-      "issuer": "Hack2skill",
-      "date": "June 2026",
-      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Network Learning Track.png",
-      "credentialId": "H2S-GA2-NETW-5412",
-      "description": "Covered cloud networking architectures, firewall configurations, DNS, load balancing, and network security.",
-      "verified": true
-    },
-    {
-      "title": "Gen AI Academy 2.0 - Security Learning Track",
-      "issuer": "Hack2skill",
-      "date": "June 2026",
-      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Secuirty Learning Track.png",
-      "credentialId": "H2S-GA2-SECU-6091",
-      "description": "Gained competency in identifying vulnerabilities, cloud security policies, and identity and access management.",
-      "verified": true
-    },
-    {
-      "title": "Gen AI Academy 2.0 - Serverless Learning Track",
-      "issuer": "Hack2skill",
-      "date": "June 2026",
-      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Serverless Running Track.png",
-      "credentialId": "H2S-GA2-SRVL-2753",
-      "description": "Learned functions-as-a-service architectures, API Gateway integrations, and event-driven computing model applications.",
-      "verified": true
-    },
-    {
-      "title": "AI Fluency - Framework & Foundations",
-      "issuer": "Anthropic",
-      "date": "2025",
-      "image": "media/certificates/AI fluency - Framework & Foundations - Certificate Of Completion.jpg",
-      "credentialId": "",
-      "description": "Completed a foundational course covering AI frameworks, terminology, and practical implementation concepts.",
+      "image": "media/certificates/AI & ML Internship - Certificate Of Completion.jpg",
+      "credentialId": "4444756",
+      "credentialUrl": "",
+      "description": "Successfully completed a one-month Industrial Training in Artificial Intelligence & Machine Learning at Central Tool Room & Training Centre (CTTC), Bhubaneswar, under the Ministry of MSME, Government of India.\n\n• Completed intensive training in Python programming for AI & Machine Learning.\n• Gained hands-on experience with Supervised and Unsupervised Machine Learning techniques.\n• Learned Natural Language Processing (NLP), Computer Vision, and Deep Learning using Keras.\n• Developed a Face Recognition Attendance System as part of the practical project work.\n• Received industrial software training with exposure to real-world engineering and production environments.\n• Strengthened problem-solving, analytical thinking, and practical AI/ML implementation skills through hands-on sessions.\n\nSuccessfully completed the training from 1 June 2026 to 30 June 2026 and was awarded the official Course Completion Certificate and Industrial Training Completion Letter by CTTC, Bhubaneswar.",
       "verified": true
     },
     {
       "title": "Build With AI Agent Builder Camp",
       "issuer": "GeeksForGeeks / Google For Developers",
-      "date": "2025",
+      "date": "2026",
       "image": "media/certificates/Build With AI Agent Builder Camp - Certifcate Of Participation.png",
       "credentialId": "",
+      "credentialUrl": "",
       "description": "Participated in an intensive hands-on camp focused on building AI agents using Google's Agent Builder platform.",
       "verified": true
     },
     {
-      "title": "Building Bad - Certificate of Participation",
-      "issuer": "GDG KIIT, Bhubaneswar",
-      "date": "2025",
-      "image": "media/certificates/Building Bad - Certificate Of Participation.png",
-      "credentialId": "",
-      "description": "Participated in the Building Bad hackathon/event, collaborating on creative and technical challenges.",
+      "title": "Soft Skills Course - Complete Professional Development Training",
+      "issuer": "GeeksForgeeks",
+      "date": "2026",
+      "image": "media/certificates/Soft Skills Course Online – Complete Professional Development Training.jpg",
+      "credentialId": "f313df43a0653e8f89436f8d562d5c3e",
+      "credentialUrl": "https://media.geeksforgeeks.org/courses/certificates/f313df43a0653e8f89436f8d562d5c3e.pdf",
+      "description": "Certificate of completion for a Soft Skills and Professional Development course by GeeksforGeeks, covering communication, teamwork, and career readiness skills essential for professional growth.\n\nThis training program strengthened key interpersonal and professional skills, including:\n• Effective communication, active listening, and public speaking techniques\n• Collaborative teamwork, conflict resolution, and cross-functional cooperation\n• Time management, productivity strategies, and goals prioritization\n• Professional workspace etiquette, networking, and leadership development\n• Resume building, interview preparation, and overall career readiness.",
+      "verified": true
+    },
+    {
+      "title": "AI Fluency - Framework & Foundations",
+      "issuer": "Anthropic",
+      "date": "2026",
+      "image": "media/certificates/AI fluency - Framework & Foundations - Certificate Of Completion.jpg",
+      "credentialId": "3sqyzdofezat",
+      "credentialUrl": "https://verify.skilljar.com/c/3sqyzdofezat",
+      "description": "Completed the “AI Fluency: Framework & Foundations” certification by Anthropic. This program covered core AI concepts, practical frameworks, and foundational understanding of modern AI systems. Gained insights into how AI models work, their real-world applications, and responsible usage. This certification strengthens my ability to understand and work with AI-driven technologies.\n\nKey areas of focus include:\n• Core architectures of Large Language Models (LLMs) and generative AI systems\n• Practical prompt design methodologies and prompting frameworks\n• Identifying and utilizing AI use cases for personal and organization workflows\n• Understanding AI safety, bias mitigation, and responsible deployment ethics\n• Core AI/ML terminology, terminology standards, and capability baselines.",
       "verified": true
     },
     {
       "title": "Claude 101",
       "issuer": "Anthropic",
-      "date": "2025",
+      "date": "2026",
       "image": "media/certificates/Claude 101 - Certificate Of Completion.jpg",
-      "credentialId": "",
-      "description": "Completed the introductory course on Claude, Anthropic's AI assistant, covering capabilities, prompting strategies, and responsible use.",
-      "verified": true
-    },
-    {
-      "title": "ESDP AI & ML Internship",
-      "issuer": "Central Tool Room & Training Centre (MSME) Government of India",
-      "date": "2025",
-      "image": "media/certificates/ESDP AI & ML Internship - Certificate Of Participation.jpg",
-      "credentialId": "",
-      "description": "Participated in an AI & ML internship program focusing on practical machine learning and deep learning applications.",
-      "verified": true
-    },
-    {
-      "title": "Introduction to Google Workspace with Gemini",
-      "issuer": "Google Cloud",
-      "date": "2025",
-      "image": "media/certificates/Introduction To Google Workspace With Gemini Badge.png",
-      "credentialId": "",
-      "description": "Earned the Google Workspace with Gemini badge by completing modules on AI-powered productivity tools within Google Workspace.",
+      "credentialId": "nin9i7gamstp",
+      "credentialUrl": "https://verify.skilljar.com/c/nin9i7gamstp",
+      "description": "Certificate awarded for completing “Claude 101” by Anthropic, demonstrating foundational knowledge in AI systems, prompt engineering, and effective interaction with large language models.\n\nThis training program covered:\n• Overview of Claude's capabilities, context windows, and model variants\n• Core prompt engineering principles (clarity, XML tags, system prompts, role prompting)\n• Structuring inputs and data payloads for optimal Claude model responses\n• Designing complex instruction pipelines and multi-turn conversational agents\n• Adhering to Anthropic's guidelines for safety, honesty, and alignment in AI deployment.",
       "verified": true
     },
     {
@@ -123,16 +56,148 @@
       "date": "2026",
       "image": "media/certificates/ODSIC 2026 - Certificate Of Participation.jpg",
       "credentialId": "",
-      "description": "Participated in ODSIC 2026, an open data and student innovation challenge showcasing data-driven solutions.",
+      "credentialUrl": "",
+      "description": "Participated in the Odisha Diploma Students Innovative Projects Competition (ODSIC 2026) organized by Trident Group of Institutions, Bhubaneswar in association with UltraTech Cement Ltd.\n\nPresented a project titled “Smart City Solution”, focusing on innovative approaches to address real-world urban challenges. Gained hands-on experience in problem-solving, teamwork, and technical presentation while interacting with students and industry professionals.\n\nKey project highlights and competition takeaways:\n• Designed and developed key components of the \"Smart City Solution\" prototype\n• Addressed urban challenges including traffic management, waste automation, and energy efficiency\n• Engaged in technical design reviews and presented project deliverables to evaluation panels\n• Strengthened collaborative team collaboration, research, and client-facing presentation skills",
       "verified": true
     },
     {
-      "title": "Soft Skills Course - Complete Professional Development Training",
-      "issuer": "GeeksForgeeks",
+      "title": "MongoDB Overview",
+      "issuer": "MongoDB Inc.",
+      "date": "2026",
+      "image": "media/certificates/MongoDB Overview - Proof Of Completion.jpg",
+      "credentialId": "MDB54mk12xtt0",
+      "credentialUrl": "https://learn.mongodb.com/c/5X9s-QPGR7-nozSxa4JZiQ",
+      "description": "Successfully completed the course “MongoDB Overview: Core Concepts and Architecture” offered by MongoDB, Inc. on March 03, 2026.\n\nThis certification strengthened my understanding of:\n• NoSQL database fundamentals\n• Document-based data modeling\n• MongoDB architecture\n• Core concepts of scalable database systems\n\nThis course enhanced my foundation in backend development and modern database technologies.",
+      "verified": true
+    },
+    {
+      "title": "ESDP AI & ML Trainee",
+      "issuer": "Central Tool Room & Training Centre (MSME) Government of India",
+      "date": "2026",
+      "image": "media/certificates/ESDP AI & ML Trainee - Certificate Of Participation.jpg",
+      "credentialId": "63794/E-SDP/2025-26/14",
+      "credentialUrl": "",
+      "description": "Successfully completed the Entrepreneurship-cum-Skill Development Programme (E-SDP) in Artificial Intelligence & Machine Learning at Central Tool Room & Training Centre (CTTC), Bhubaneswar, under the Ministry of MSME, Government of India.\n\n• Learned Python programming, Machine Learning, and Deep Learning fundamentals.\n• Explored Generative AI, Agentic AI, and practical AI/ML applications.\n• Worked on industry-oriented learning activities and practical implementations.\n• Strengthened analytical thinking, problem-solving, and technical development skills.\n• Gained exposure to entrepreneurship and innovation-driven technology development.\n\nThis programme provided valuable hands-on learning in Artificial Intelligence and Machine Learning while strengthening my practical skills and understanding of emerging technologies.",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Graduate",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Graduate.png",
+      "credentialId": "2025H2S10GENAI-C300374",
+      "credentialUrl": "",
+      "description": "Official graduation certificate for the Gen AI Academy 2.0. Validates comprehensive expertise in designing and deploying scalable AI solutions using Vertex AI, Gemini APIs, BigQuery ML, and AI Agents.\n\nGraduation requirements met include:\n• Mastery across multiple tech tracks (AI-ML, Data, DevOps, Networking, Security, Serverless)\n• Designing scalable LLM systems and fine-tuning models on Google Cloud Vertex AI\n• Developing custom AI agents, prompt templates, and conversational interface pipelines\n• Integrating database ETL workflows with BigQuery ML predictive intelligence\n• Demonstrating core understanding of modern cloud engineering and serverless orchestration.",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - AI-ML Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - AI-ML Learning Track.png",
+      "credentialId": "2025H2S10GENAI-AIML300028",
+      "credentialUrl": "",
+      "description": "Validates Machine Learning capabilities. Skills include data preparation with Dataprep and Dataproc (Apache Spark), and implementing ML APIs (Vision, Natural Language, Document AI).\n\nKey skills and technologies covered:\n• Building and orchestrating ML pipelines on Google Cloud\n• Data preprocessing and engineering using Cloud Dataprep and Dataproc (Spark)\n• Implementing pre-trained machine learning APIs (Cloud Vision, Natural Language, Document AI)\n• Prompt engineering concepts, LLM parameters tuning, and model deployment strategies",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Data Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Data Learning Track.png",
+      "credentialId": "2025H2S10GENAI-DA300025",
+      "credentialUrl": "",
+      "description": "Validates data engineering expertise. Covers Streaming Analytics using Pub/Sub and Dataflow, securely sharing data, and analyzing large datasets with BigQuery.\n\nKey areas of focus include:\n• Implementing streaming data analytics pipelines with Cloud Pub/Sub and Cloud Dataflow (Apache Beam)\n• Configuring secure data sharing datasets and authorized view controls\n• Storing, partitioning, and querying massive enterprise datasets using Google Cloud BigQuery\n• Optimizing SQL transformations and ELT/ETL database integration workflows",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - DevOps Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - DevOps Learning Track.png",
+      "credentialId": "2025H2S10GENAI-DE300027",
+      "credentialUrl": "",
+      "description": "Validates proficiency in automation and operations. Skills include building CI/CD pipelines with Cloud Build and Cloud Deploy, managing Artifact Registry, and orchestrating Kubernetes workloads.\n\nKey skills and tools covered:\n• Building and setting up automated CI/CD build runs with Cloud Build\n• Configuring progressive delivery and canary releases using Cloud Deploy\n• Storing and versioning docker container images in Artifact Registry\n• Orchestrating container workloads and multi-node clusters using Google Kubernetes Engine (GKE)",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Network Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Network Learning Track.png",
+      "credentialId": "2025H2S10GENAI-NE300020",
+      "credentialUrl": "",
+      "description": "Validates skills in cloud infrastructure. Covers designing VPC networks, managing Compute Engine instances, implementing IAM roles, and deploying secure applications on Kubernetes (GKE).\n\nKey areas of focus include:\n• Designing VPC subnets, custom route tables, and firewall rules in Google Cloud\n• Launching, monitoring, and scale management of virtual machines using Compute Engine\n• Configuring granular IAM security policies, service account bounds, and cloud resource hierarchy\n• Deploying containerized microservices and configuring ingress routing in GKE clusters",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Security Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Secuirty Learning Track.png",
+      "credentialId": "2025H2S10GENAI-SE300018",
+      "credentialUrl": "",
+      "description": "Validates cloud security skills. Covers Sensitive Data Protection using the DLP API, configuring secure Cloud Storage, managing IAM access controls, and implementing data governance with Dataplex.\n\nKey skills and tools covered:\n• Implementing Cloud DLP API to identify, mask, and redact sensitive personal information\n• Securing Google Cloud Storage buckets and resources with fine-grained access policies\n• Designing IAM structures, role-based controls, and service account privileges\n• Setting up data governance frameworks and metadata catalogs using Google Cloud Dataplex",
+      "verified": true
+    },
+    {
+      "title": "Gen AI Academy 2.0 - Serverless Learning Track",
+      "issuer": "Hack2skill",
+      "date": "June 2026",
+      "image": "media/certificates/Hack2skill Certificate - Gen AI Academy 2.0 - Serverless Running Track.png",
+      "credentialId": "2025H2S10GENAI-SR300017",
+      "credentialUrl": "",
+      "description": "Validates mastery of serverless architectures. Skills include deploying Cloud Run services, building apps with Firebase and Firestore, and automating workflows using Cloud Build and Pub/Sub integrations.\n\nKey skills and technologies covered:\n• Packaging and deploying containerized serverless microservices on Cloud Run\n• Integrating database and authentication client logic using Firebase and Firestore\n• Building automated serverless workflow triggers with Cloud Build pipelines\n• Setting up asynchronous, event-driven decoupled systems with Cloud Pub/Sub",
+      "verified": true
+    },
+    {
+      "title": "Deloitte Australia - Cyber Job Simulation",
+      "issuer": "Deloitte Australia",
+      "date": "January 2026",
+      "image": "media/certificates/Deloitte Australia - Cyber Job Simulation.jpg",
+      "credentialId": "mS8m8MLJ4gJQmAhgR",
+      "credentialUrl": "https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_68ef74ab66fc511ffd85cc33_1767281557941_completion_certificate.pdf",
+      "description": "Successfully completed the Deloitte Australia Cyber Job Simulation on Forage, gaining practical exposure to enterprise cybersecurity workflows and security analysis in a simulated business environment.\n\n• Analyzed web server activity logs to identify anomalies and potential security threats.\n• Assisted in simulated incident response and cyber breach mitigation scenarios.\n• Evaluated user activity patterns to detect suspicious behavior and report findings.\n• Strengthened understanding of cybersecurity operations, threat detection, and risk assessment.\n• Developed analytical thinking through practical security investigation exercises.\n\nThis experience enhanced my cybersecurity knowledge and provided valuable insight into enterprise security operations, incident response, and threat analysis.",
+      "verified": true
+    },
+    {
+      "title": "HackerRank Python (Basic) Certificate",
+      "issuer": "HackerRank",
+      "date": "January 2026",
+      "image": "media/certificates/HackerRank - Python (Basic) - Certificate Of Accomlishment.png",
+      "credentialId": "3789193a153a",
+      "credentialUrl": "https://www.hackerrank.com/certificates/3789193a153a",
+      "description": "Certificate of Accomplishment awarded to Shuvranshu Sekhar Sahoo for passing the Python (Basic) skill test on January 1, 2026.\n\nThis assessment covers core Python programming concepts and structures:\n• Scalar types and operators\n• Control flow and loops\n• Standard data structures (Lists, Tuples, Dictionaries, Sets)\n• Basic object-oriented programming concepts\n• File handling, exception handling, and built-in functions\n\nDemonstrates solid foundational knowledge and problem-solving skills in Python programming.",
+      "verified": true
+    },
+    {
+      "title": "Introduction to Google Workspace with Gemini",
+      "issuer": "Google Cloud",
       "date": "2025",
-      "image": "media/certificates/Soft Skills Course Online – Complete Professional Development Training.jpg",
+      "image": "media/certificates/Introduction To Google Workspace With Gemini Badge.png",
+      "credentialId": "20666525",
+      "credentialUrl": "https://www.skills.google/public_profiles/383381bf-a1ff-4ab7-8948-8a447f9ad5c3/badges/20666525",
+      "description": "Google Cloud Completion Badge for the \"Introduction to Google Workspace with Gemini\" course. Validates foundational knowledge of integrating and using Gemini AI features across Google Workspace applications.\n\nKey skills and areas covered include:\n• Using Gemini in Google Docs to draft, rewrite, and summarize content\n• Integrating AI-driven insights and formula assistance in Google Sheets\n• Generating custom visuals and slide layouts in Google Slides using Gemini\n• Drafting responsive email replies in Gmail using AI assistance\n• Utilizing Google Workspace AI features to improve daily productivity and workflow automation.",
+      "verified": true
+    },
+    {
+      "title": "Building Bad - Certificate of Participation",
+      "issuer": "GDG KIIT, Bhubaneswar",
+      "date": "2025",
+      "image": "media/certificates/Building Bad - Certificate Of Participation.png",
       "credentialId": "",
-      "description": "Completed a comprehensive soft skills training program covering communication, leadership, time management, and professional etiquette.",
+      "credentialUrl": "https://gdg.community.dev/events/details/google-gdg-on-campus-kalinga-institute-of-industrial-technology-bhubaneswar-india-presents-building-bad/",
+      "description": "Participated in the Building Bad hackathon/event, collaborating on creative and technical challenges.",
+      "verified": true
+    },
+    {
+      "title": "Workshop on Artificial Intelligence (AI) and Machine Learning",
+      "issuer": "Foundation for Technology & Business Incubation (FTBI), NIT Rourkela",
+      "date": "2022",
+      "image": "media/certificates/FTBI - Workshop on Artificial Intelligence (AI) and Machine Learning.jpg",
+      "credentialId": "",
+      "credentialUrl": "",
+      "description": "Completed a 3-day intensive workshop on Artificial Intelligence and Machine Learning at the National Institute of Technology (NIT), Rourkela.\n\n• Gained foundational knowledge of AI/ML concepts and their real-world applications.\n\n• Participated in hands-on sessions organized by the Foundation for Technology and Business Incubation (FTBI).\n\n• Explored the intersection of technology and business innovation under the guidance of industry experts.",
       "verified": true
     }
   ]

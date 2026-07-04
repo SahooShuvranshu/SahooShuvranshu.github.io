@@ -113,12 +113,19 @@
     }
 
     .certificates-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        gap: 16px;
+    }
+
+    .masonry-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
         gap: 16px;
     }
 
     .certificate-card {
+        width: 100%;
         background-color: #40444b;
         border-radius: 0;
         border: 2px solid #202225;
@@ -186,11 +193,15 @@
         font-weight: 600;
     }
 
+    .certificate-footer {
+        margin-top: auto;
+    }
+
     /* Awards styles are unified with certificate cards */
 
     @media (max-width: 768px) {
         .certificates-grid {
-            grid-template-columns: 1fr;
+            flex-direction: column;
             gap: 14px;
         }
 
@@ -325,7 +336,7 @@
         padding: 32px 24px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         overflow-y: auto;
     }
 
@@ -362,6 +373,7 @@
     .meta-value {
         color: #ffffff;
         font-size: 14px;
+        white-space: pre-wrap;
     }
 
     .font-mono {
@@ -377,6 +389,33 @@
     .text-green {
         color: #3ba55d;
         font-weight: 600;
+    }
+
+    .meta-value-link {
+        color: #00b0f4;
+        font-size: 11px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: rgba(0, 176, 244, 0.08);
+        border: 1px solid rgba(0, 176, 244, 0.25);
+        padding: 5px 10px;
+        border-radius: 12px;
+        width: fit-content;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-top: 2px;
+    }
+    .meta-value-link:hover {
+        background-color: #00b0f4;
+        color: #ffffff;
+        border-color: #00b0f4;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 176, 244, 0.2);
+    }
+    .meta-value-link:active {
+        transform: translateY(0);
     }
 
     /* Responsive preview modal */
@@ -459,6 +498,10 @@
                         <span class="meta-label">Credential ID</span>
                         <span id="modalId" class="meta-value font-mono">ID</span>
                     </div>
+                    <div id="modalCredentialUrlContainer" class="meta-item">
+                        <span class="meta-label">Verification Link</span>
+                        <a id="modalCredentialUrl" href="" target="_blank" class="meta-value-link">Verify Credential ↗</a>
+                    </div>
                     <div id="modalVerifiedContainer" class="meta-item">
                         <span class="meta-label">Status</span>
                         <span id="modalVerified" class="meta-value text-green">✓ Verified</span>
@@ -497,6 +540,8 @@
         })
         .then(data => {
             if (certificatesGrid && data.certificates) {
+                const isMobile = window.innerWidth <= 768;
+                
                 // Add the permanent empty placeholder card at the beginning
                 const placeholderCard = document.createElement('div');
                 placeholderCard.className = 'certificate-card placeholder-coming-soon';
@@ -505,36 +550,81 @@
                     <div class="certificate-content">
                         <div class="certificate-title">More Certificates to Come</div>
                         <div class="certificate-issuer">Continuous Learning</div>
-                        <div class="certificate-date">📅 Ongoing</div>
+                        <div class="certificate-footer">
+                            <div class="certificate-date">📅 Ongoing</div>
+                        </div>
                     </div>
                 `;
-                certificatesGrid.appendChild(placeholderCard);
 
-                data.certificates.forEach(cert => {
-                    const certCard = document.createElement('div');
-                    certCard.className = 'certificate-card';
-                    
-                    // Adjust path if loaded standalone
-                    const certImage = isSubdir && !cert.image.startsWith('http') ? '../' + cert.image : cert.image;
-                    
-                    certCard.innerHTML = `
-                        <img src="${certImage}" alt="${cert.title}" class="certificate-banner" loading="lazy">
-                        <div class="certificate-content">
-                            <div class="certificate-title">${cert.title}</div>
-                            <div class="certificate-issuer">${cert.issuer}</div>
-                            <div class="certificate-date">📅 ${cert.date}</div>
-                            ${cert.credentialId ? `<div class="certificate-id">ID: ${cert.credentialId}</div>` : ''}
-                            ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
-                        </div>
-                    `;
-                    
-                    // Click event to open preview modal
-                    certCard.addEventListener('click', () => {
-                        openPreview(cert.title, cert.issuer, cert.date, certImage, cert.credentialId, cert.verified, cert.description);
+                if (isMobile) {
+                    certificatesGrid.appendChild(placeholderCard);
+                    data.certificates.forEach(cert => {
+                        const certCard = document.createElement('div');
+                        certCard.className = 'certificate-card';
+                        
+                        const certImage = isSubdir && !cert.image.startsWith('http') ? '../' + cert.image : cert.image;
+                        
+                        certCard.innerHTML = `
+                            <img src="${certImage}" alt="${cert.title}" class="certificate-banner" loading="lazy">
+                            <div class="certificate-content">
+                                <div class="certificate-title">${cert.title}</div>
+                                <div class="certificate-issuer">${cert.issuer}</div>
+                                <div class="certificate-footer">
+                                    <div class="certificate-date">📅 ${cert.date}</div>
+                                    ${cert.credentialId ? `<div class="certificate-id">ID: ${cert.credentialId}</div>` : ''}
+                                    ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        certCard.addEventListener('click', () => {
+                            openPreview(cert.title, cert.issuer, cert.date, certImage, cert.credentialId, cert.verified, cert.description, cert.credentialUrl);
+                        });
+                        
+                        certificatesGrid.appendChild(certCard);
                     });
+                } else {
+                    const col1 = document.createElement('div');
+                    col1.className = 'masonry-col';
+                    const col2 = document.createElement('div');
+                    col2.className = 'masonry-col';
                     
-                    certificatesGrid.appendChild(certCard);
-                });
+                    certificatesGrid.appendChild(col1);
+                    certificatesGrid.appendChild(col2);
+                    
+                    col1.appendChild(placeholderCard);
+                    
+                    data.certificates.forEach((cert, index) => {
+                        const certCard = document.createElement('div');
+                        certCard.className = 'certificate-card';
+                        
+                        const certImage = isSubdir && !cert.image.startsWith('http') ? '../' + cert.image : cert.image;
+                        
+                        certCard.innerHTML = `
+                            <img src="${certImage}" alt="${cert.title}" class="certificate-banner" loading="lazy">
+                            <div class="certificate-content">
+                                <div class="certificate-title">${cert.title}</div>
+                                <div class="certificate-issuer">${cert.issuer}</div>
+                                <div class="certificate-footer">
+                                    <div class="certificate-date">📅 ${cert.date}</div>
+                                    ${cert.credentialId ? `<div class="certificate-id">ID: ${cert.credentialId}</div>` : ''}
+                                    ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        certCard.addEventListener('click', () => {
+                            openPreview(cert.title, cert.issuer, cert.date, certImage, cert.credentialId, cert.verified, cert.description, cert.credentialUrl);
+                        });
+                        
+                        // Interleave columns to keep years ordered horizontally (top of page first)
+                        if (index % 2 === 0) {
+                            col2.appendChild(certCard);
+                        } else {
+                            col1.appendChild(certCard);
+                        }
+                    });
+                }
             }
         })
         .catch(error => {
@@ -551,6 +641,8 @@
         })
         .then(data => {
             if (awardsGrid && data.awards) {
+                const isMobile = window.innerWidth <= 768;
+                
                 // Add the permanent empty placeholder card at the beginning
                 const placeholderAwardCard = document.createElement('div');
                 placeholderAwardCard.className = 'certificate-card placeholder-coming-soon';
@@ -559,34 +651,79 @@
                     <div class="certificate-content">
                         <div class="certificate-title">Coming Soon</div>
                         <div class="certificate-issuer">More achievements and awards will be listed here soon.</div>
-                        <div class="certificate-date">📅 Ongoing</div>
+                        <div class="certificate-footer">
+                            <div class="certificate-date">📅 Ongoing</div>
+                        </div>
                     </div>
                 `;
-                awardsGrid.appendChild(placeholderAwardCard);
 
-                data.awards.forEach(award => {
-                    const awardCard = document.createElement('div');
-                    awardCard.className = 'certificate-card';
-                    
-                    // Adjust path if loaded standalone
-                    const awardImage = isSubdir && !award.image.startsWith('http') ? '../' + award.image : award.image;
-                    
-                    awardCard.innerHTML = `
-                        <img src="${awardImage}" alt="${award.title}" class="certificate-banner" loading="lazy">
-                        <div class="certificate-content">
-                            <div class="certificate-title">${award.title}</div>
-                            <div class="certificate-issuer">${award.description}</div>
-                            <div class="certificate-date">📅 ${award.date}</div>
-                        </div>
-                    `;
-                    
-                    // Click event to open preview modal
-                    awardCard.addEventListener('click', () => {
-                        openPreview(award.title, "Award & Achievement", award.date, awardImage, null, false, award.description);
+                if (isMobile) {
+                    awardsGrid.appendChild(placeholderAwardCard);
+                    data.awards.forEach(award => {
+                        const awardCard = document.createElement('div');
+                        awardCard.className = 'certificate-card';
+                        
+                        const awardImage = isSubdir && !award.image.startsWith('http') ? '../' + award.image : award.image;
+                        
+                        awardCard.innerHTML = `
+                            <img src="${awardImage}" alt="${award.title}" class="certificate-banner" loading="lazy">
+                            <div class="certificate-content">
+                                <div class="certificate-title">${award.title}</div>
+                                <div class="certificate-issuer">${award.issuer}</div>
+                                <div class="certificate-footer">
+                                    <div class="certificate-date">📅 ${award.date}</div>
+                                    ${award.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        awardCard.addEventListener('click', () => {
+                            openPreview(award.title, award.issuer, award.date, awardImage, null, award.verified, award.description, award.credentialUrl);
+                        });
+                        
+                        awardsGrid.appendChild(awardCard);
                     });
+                } else {
+                    const col1 = document.createElement('div');
+                    col1.className = 'masonry-col';
+                    const col2 = document.createElement('div');
+                    col2.className = 'masonry-col';
                     
-                    awardsGrid.appendChild(awardCard);
-                });
+                    awardsGrid.appendChild(col1);
+                    awardsGrid.appendChild(col2);
+                    
+                    col1.appendChild(placeholderAwardCard);
+                    
+                    data.awards.forEach((award, index) => {
+                        const awardCard = document.createElement('div');
+                        awardCard.className = 'certificate-card';
+                        
+                        const awardImage = isSubdir && !award.image.startsWith('http') ? '../' + award.image : award.image;
+                        
+                        awardCard.innerHTML = `
+                            <img src="${awardImage}" alt="${award.title}" class="certificate-banner" loading="lazy">
+                            <div class="certificate-content">
+                                <div class="certificate-title">${award.title}</div>
+                                <div class="certificate-issuer">${award.issuer}</div>
+                                <div class="certificate-footer">
+                                    <div class="certificate-date">📅 ${award.date}</div>
+                                    ${award.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        awardCard.addEventListener('click', () => {
+                            openPreview(award.title, award.issuer, award.date, awardImage, null, award.verified, award.description, award.credentialUrl);
+                        });
+                        
+                        // Interleave columns to keep years ordered horizontally (top of page first)
+                        if (index % 2 === 0) {
+                            col2.appendChild(awardCard);
+                        } else {
+                            col1.appendChild(awardCard);
+                        }
+                    });
+                }
             }
         })
         .catch(error => {
@@ -594,7 +731,7 @@
         });
 
     // Preview functions exposed to window object for onclick handler
-    window.openPreview = function(title, issuer, date, image, id, verified, description) {
+    window.openPreview = function(title, issuer, date, image, id, verified, description, credentialUrl) {
         const modal = document.getElementById('previewModal');
         const modalTitle = document.getElementById('modalTitle');
         const modalIssuer = document.getElementById('modalIssuer');
@@ -603,6 +740,8 @@
         const modalImage = document.getElementById('modalImage');
         const modalId = document.getElementById('modalId');
         const modalIdContainer = document.getElementById('modalIdContainer');
+        const modalCredentialUrl = document.getElementById('modalCredentialUrl');
+        const modalCredentialUrlContainer = document.getElementById('modalCredentialUrlContainer');
         const modalVerified = document.getElementById('modalVerified');
         const modalVerifiedContainer = document.getElementById('modalVerifiedContainer');
         const modalDescription = document.getElementById('modalDescription');
@@ -627,13 +766,20 @@
         } else {
             modalIdContainer.style.display = 'none';
         }
+
+        if (credentialUrl) {
+            modalCredentialUrl.href = credentialUrl;
+            modalCredentialUrlContainer.style.display = 'flex';
+        } else {
+            modalCredentialUrlContainer.style.display = 'none';
+        }
         
-        if (verified) {
+        if (verified === true || verified === 'true' || verified) {
             modalVerifiedContainer.style.display = 'flex';
         } else {
             modalVerifiedContainer.style.display = 'none';
         }
-
+        
         if (description) {
             modalDescription.textContent = description;
             modalDescriptionContainer.style.display = 'flex';

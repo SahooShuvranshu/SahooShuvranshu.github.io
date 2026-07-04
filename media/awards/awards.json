@@ -1,10 +1,20 @@
 {
   "awards": [
     {
-      "title": "Placeholder Award",
-      "description": "Description of the award or recognition received.",
-      "image": "media/awards/placeholder.svg",
-      "date": "Pending"
+      "title": "1st Prize – Debate Competition",
+      "issuer": "Nilachala Polytechnic College of Engineering, Bhubaneswar",
+      "date": "2022",
+      "image": "media/awards/1st Prize – Debate Competition  Annual Fest 2026.jpg",
+      "description": "Awarded 1st Prize in the Debate Competition during Annual Fest 2026 organized by Nilachala Polytechnic College of Engineering, Bhubaneswar.\nThis experience strengthened my public speaking, communication, critical thinking, and confidence in presenting ideas effectively.",
+      "verified": true
+    },
+    {
+      "title": "NCC 'A' Certificate (Grade B)",
+      "issuer": "Ministry of Defence, Government of India",
+      "date": "2026",
+      "image": "media/awards/NCC 'A' Certificate (Grade B).jpg",
+      "description": "Awarded the NCC 'A' Certificate (Grade 'B') under the authority of the Ministry of Defence, Government of India.\n\n• Completed rigorous training with the 9 (O) BN NCC, Rourkela unit.\n• Demonstrated discipline, leadership, and teamwork skills\n• Successfully passed the written and practical examinations authorized by the Directorate of NCC, Odisha.",
+      "verified": true
     }
   ]
 }
