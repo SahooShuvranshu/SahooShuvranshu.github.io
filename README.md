@@ -2,7 +2,7 @@
 
 # 🚀 Shuvranshu Sekhar Sahoo - Portfolio
 
-[![Website](https://img.shields.io/website?url=https%3A%2F%2Fsahooshuvranshu.github.io&up_message=online&down_message=offline&style=for-the-badge&logo=vercel&logoColor=white&label=Portfolio)](https://sahooshuvranshu.github.io)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fsahooshuvranshu.is-a.dev&up_message=online&down_message=offline&style=for-the-badge&logo=vercel&logoColor=white&label=Portfolio)](https://sahooshuvranshu.is-a.dev)
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://pages.github.com/)
 [![License](https://img.shields.io/github/license/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/SahooShuvranshu/SahooShuvranshu.github.io?style=for-the-badge&logo=github&logoColor=white&color=yellow)](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/stargazers)
@@ -19,7 +19,7 @@
 
 **A modern, Discord-themed personal portfolio website showcasing skills, projects, and achievements.**
 
-[🌐 Live Demo](https://sahooshuvranshu.github.io) • [🐛 Report Bug](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/issues) • [✨ Request Feature](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/issues)
+[🌐 Live Demo](https://sahooshuvranshu.is-a.dev) • [🐛 Report Bug](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/issues) • [✨ Request Feature](https://github.com/SahooShuvranshu/SahooShuvranshu.github.io/issues)
 
 </div>
 
@@ -132,9 +132,9 @@ Contributions are welcome! Please check out [CONTRIBUTING.md](CONTRIBUTING.md) a
 
 ## 🔗 Social Links
 
-* **Portfolio**: [sahooshuvranshu.github.io](https://sahooshuvranshu.github.io)
-* **Blog**: [sahooshuvranshu.github.io/blog](https://sahooshuvranshu.github.io/blog/)
-* **Socials**: [sahooshuvranshu.github.io/socials](https://sahooshuvranshu.github.io/socials/)
+* **Portfolio**: [sahooshuvranshu.is-a.dev](https://sahooshuvranshu.is-a.dev)
+* **Blog**: [sahooshuvranshu.is-a.dev/blog](https://sahooshuvranshu.is-a.dev/blog/)
+* **Socials**: [sahooshuvranshu.is-a.dev/socials](https://sahooshuvranshu.is-a.dev/socials/)
 * **GitHub**: [@SahooShuvranshu](https://github.com/SahooShuvranshu)
 * **LinkedIn**: [sahooshuvranshu](https://www.linkedin.com/in/sahooshuvranshu/)
 * **Email**: [sahooshuvranshusekhar@gmail.com](mailto:sahooshuvranshusekhar@gmail.com)
