@@ -27,54 +27,8 @@
     <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
+    <link rel="stylesheet" href="../css/discord-retro.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #36393f;
-            background-image: url('https://i.pinimg.com/originals/c1/fc/9d/c1fc9d7f6ae08d56f2b84e81799790a5.gif');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 30px 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 20px 10px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-<!-- Data is fetched dynamically from media/projects/projects.json -->
-
-<!-- ========================================
-     🎨 STYLES & DISPLAY CODE BELOW
-     ======================================== -->
-<style>
     /* Retro Header */
     .retro-header {
         background-color: #202225;
@@ -627,10 +581,127 @@
             font-size: 10px;
         }
     }
-</style>
+    </style>
+</head>
+<body class="discord-main-body">
+    <!-- Discord UI Portfolio -->
+    <div class="discord-container">
+        <!-- Banner -->
+        <div class="discord-banner"></div>
 
-<!-- Projects Grid Container -->
-<div class="projects-grid" id="projects-container"></div>
+        <!-- Profile Section -->
+        <div class="discord-profile">
+            <div class="discord-buttons-container">
+                <a href="../socials/" class="discord-social-tree-btn" title="My Socials">Socials</a>
+                <a href="https://sahooshuvranshu.is-a.dev/blog" class="discord-blog-btn" title="View Blog">Blog</a>
+                <a href="../contact.html" class="discord-contact-btn" title="Contact Me">Contact</a>
+            </div>
+
+            <!-- Avatar -->
+            <img src="https://avatars.githubusercontent.com/u/70892515?v=4" alt="Profile Avatar" class="discord-avatar">
+
+            <!-- Username -->
+            <div class="discord-username">
+                Shuvranshu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
+                <div class="discord-verified-badge-animated" title="Verified Account">
+                    <img src="../images/badges/Verified.svg"
+                        alt="Verified" style="width: 100%; height: 100%; display: block;">
+                </div>
+            </div>
+
+            <!-- Badges -->
+            <div class="discord-badges">
+                <!-- Discord Nitro Badge -->
+                <div class="discord-badge discord-badge-nitro" title="Discord Nitro">
+                    <img src="../images/badges/discordnitro.svg" width="22" height="22" alt="Nitro">
+                </div>
+
+                <!-- HypeSquad Balance Badge -->
+                <div class="discord-badge discord-badge-hypesquad" title="HypeSquad Balance">
+                    <img src="../images/badges/hypesquadbalance.svg" width="22" height="22" alt="HypeSquad Balance">
+                </div>
+
+                <!-- Active Developer Badge -->
+                <div class="discord-badge discord-badge-active-dev" title="Active Developer">
+                    <img src="../images/badges/activedeveloper.svg" width="22" height="22" alt="Active Developer">
+                </div>
+
+                <!-- Early Supporter Badge -->
+                <div class="discord-badge discord-badge-early-supporter" title="Early Supporter">
+                    <img src="../images/badges/discordearlysupporter.svg" width="22" height="22" alt="Early Supporter">
+                </div>
+
+                <!-- Bug Hunter Tier 1 Badge -->
+                <div class="discord-badge discord-badge-bug-hunter" title="Discord Bug Hunter (Tier 1)">
+                    <img src="../images/badges/discordbughunter1.svg" width="22" height="22" alt="Bug Hunter Tier 1">
+                </div>
+
+                <!-- Completed a Quest Badge -->
+                <div class="discord-badge discord-badge-quest" title="Completed a Quest">
+                    <img src="../images/badges/quest.png" width="22" height="22" alt="Completed a Quest">
+                </div>
+
+                <!-- Orbs Apprentice Badge -->
+                <div class="discord-badge discord-badge-orbs" title="Orbs Apprentice">
+                    <img src="../images/badges/orb.svg" width="22" height="22" alt="Orbs Apprentice">
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <div class="discord-tabs">
+                <a href="../index.html" class="discord-tab">About</a>
+                <a href="skills.html" class="discord-tab">Skills</a>
+                <a href="education.html" class="discord-tab">Education</a>
+                <a href="projects.html" class="discord-tab active">Projects</a>
+                <a href="certificates.html" class="discord-tab">Certificates</a>
+            </div>
+
+            <!-- Content Container -->
+            <div class="discord-section" id="content-container">
+                <!-- Projects Grid Container -->
+                <div class="projects-grid" id="projects-container"></div>
+            </div>
+
+            <!-- Discord Footer -->
+            <div class="discord-footer">
+                <div class="discord-footer-content">
+                    <div class="discord-footer-text">
+                        Designed with Retro Discord Aesthetic
+                    </div>
+                    <div class="discord-footer-links">
+                        <a href="https://github.com/SahooShuvranshu/SahooShuvranshu.github.io" target="_blank"
+                            class="discord-footer-link" title="View Source Code">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            Source Code
+                        </a>
+                        <span class="discord-footer-divider">•</span>
+                        <a href="https://github.com/SahooShuvranshu" target="_blank" class="discord-footer-link"
+                            title="GitHub Profile">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 0H4v24h16V0zM6 21v-2h2v2H6zm0-5v-2h2v2H6zm0-5V9h2v2H6zm0-5V4h2v2H6zm5 15v-5h2v5h-2zm0-7V9h2v2h-2zm0-5V4h2v2h-2zm7 12v-2h-2v2h2zm0-5v-2h-2v2h2zm0-5V9h-2v2h2zm0-5V4h-2v2h2z" />
+                            </svg>
+                            Projects
+                        </a>
+                        <span class="discord-footer-divider">•</span>
+                        <a href="mailto:sahooshuvranshusekhar@gmail.com" class="discord-footer-link" title="Email Me">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            Contact
+                        </a>
+                    </div>
+                    <div class="discord-footer-tagline">
+                        © 2026 All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- ========================================
      🔍 PROJECT PREVIEW MODAL
@@ -890,6 +961,5 @@
 })();
 </script>
 
-    </div>
 </body>
 </html>

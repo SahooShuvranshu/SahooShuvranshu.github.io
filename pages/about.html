@@ -4,26 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Shuvranshu Sekhar Sahoo</title>
 
-    <!-- SEO Meta Tags -->
+    <title>About | Shuvranshu Sekhar Sahoo</title>
     <meta name="description"
         content="Learn more about Shuvranshu Sekhar Sahoo - Full Stack Developer, Bot Developer, and Designer. Passionate about web development, backend APIs, and creating innovative solutions.">
     <meta name="keywords"
         content="Shuvranshu Sekhar Sahoo, Full Stack Developer, Web Developer, Bot Development, Python Developer, JavaScript, Portfolio, About">
     <meta name="author" content="Shuvranshu Sekhar Sahoo">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/pages/about.html">
     <meta property="og:title" content="About | Shuvranshu Sekhar Sahoo">
     <meta property="og:description"
-        content="Learn more about Shuvranshu Sekhar Sahoo - Full Stack Developer, Bot Developer, and Designer. Passionate about web development, backend APIs, and creating innovative solutions.">
+        content="Learn more about Shuvranshu Sekhar Sahoo - Full Stack Developer, Bot Developer, and Designer.">
     <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/pages/about.html">
     <meta name="twitter:title" content="About | Shuvranshu Sekhar Sahoo">
@@ -32,445 +29,405 @@
     <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
 
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
+    <link rel="stylesheet" href="../css/discord-retro.css">
+
     <style>
-        * {
+        /* About Page Specific Styles */
+        .discord-user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #2f3136;
+            padding: 16px;
+            border-radius: 0;
+            margin-bottom: 16px;
+            border: 2px solid #40444b;
+            box-shadow: 4px 4px 0 #18191c;
+        }
+
+        .user-badge {
+            font-size: 48px;
+            min-width: 60px;
+            text-align: center;
+            animation: wave 2s ease-in-out infinite;
+            transform-origin: 70% 70%;
+            display: inline-block;
+        }
+
+        @keyframes wave {
+            0% { transform: rotate(0deg); }
+            10% { transform: rotate(14deg); }
+            20% { transform: rotate(-8deg); }
+            30% { transform: rotate(14deg); }
+            40% { transform: rotate(-4deg); }
+            50% { transform: rotate(10deg); }
+            60% { transform: rotate(0deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .user-intro {
+            flex: 1;
+        }
+
+        .user-name {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .user-tagline {
+            color: #b9bbbe;
+            font-size: 13px;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
-        body {
-            background-color: #36393f;
-            background-image: url('https://i.pinimg.com/originals/c1/fc/9d/c1fc9d7f6ae08d56f2b84e81799790a5.gif');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        .card-content p {
+            color: #dcddde;
+            font-size: 14px;
+            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            padding: 40px 20px;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+        .activity-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        /* Responsive Design */
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px;
+            background-color: #40444b;
+            border-radius: 0;
+            border: 2px solid #202225;
+            box-shadow: 2px 2px 0 #18191c;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        .activity-item:hover {
+            background-color: #4f545c;
+            transform: translateX(4px);
+        }
+
+        .activity-icon {
+            font-size: 32px;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        .activity-details {
+            flex: 1;
+        }
+
+        .activity-name {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .activity-desc {
+            color: #b9bbbe;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .spotify-widget {
+            display: flex;
+            justify-content: center;
+        }
+
+        .spotify-widget img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0;
+        }
+
         @media (max-width: 768px) {
-            body {
-                padding: 30px 15px;
+            .discord-user-info {
+                padding: 12px;
+            }
+
+            .user-badge {
+                font-size: 42px;
+                min-width: 50px;
+            }
+
+            .user-name {
+                font-size: 16px;
+            }
+
+            .user-tagline {
+                font-size: 12px;
+            }
+
+            .activity-icon {
+                font-size: 28px;
+                min-width: 36px;
             }
         }
 
         @media (max-width: 480px) {
-            body {
-                padding: 20px 10px;
+            .discord-user-info {
+                flex-direction: row;
+                align-items: center;
+                text-align: left;
+                padding: 10px;
+            }
+
+            .user-badge {
+                font-size: 36px;
+                align-self: flex-start;
+            }
+
+            .user-intro {
+                text-align: left;
+            }
+
+            .user-name {
+                font-size: 15px;
+            }
+
+            .user-tagline {
+                font-size: 11px;
+            }
+
+            .activity-icon {
+                font-size: 26px;
+                min-width: 32px;
+            }
+
+            .activity-name {
+                font-size: 13px;
+            }
+
+            .activity-desc {
+                font-size: 11px;
+            }
+
+            .card-content {
+                padding: 12px;
+            }
+
+            .card-header {
+                padding: 8px 10px;
             }
         }
     </style>
 </head>
 
-<body>
-    <div class="container">
-        <!-- User Info Section -->
-        <div class="discord-user-info">
-            <div class="user-badge">👋</div>
-            <div class="user-intro">
-                <h2 class="user-name">Shuvranshu Sekhar Sahoo</h2>
-                <p class="user-tagline">aka Crystal • Full Stack Developer & Designer</p>
-            </div>
-        </div>
+<body class="discord-main-body">
+    <!-- Discord UI Portfolio -->
+    <div class="discord-container">
+        <!-- Banner -->
+        <div class="discord-banner"></div>
 
-        <!-- About Description -->
-        <div class="discord-about-card">
-            <div class="card-header">
-                <span class="header-icon">📝</span>
-                <span class="header-title">BIO</span>
+        <!-- Profile Section -->
+        <div class="discord-profile">
+            <div class="discord-buttons-container">
+                <a href="../socials/" class="discord-social-tree-btn" title="My Socials">Socials</a>
+                <a href="https://sahooshuvranshu.is-a.dev/blog" class="discord-blog-btn" title="View Blog">Blog</a>
+                <a href="../contact.html" class="discord-contact-btn" title="Contact Me">Contact</a>
             </div>
-            <div class="card-content">
-                <p>Hey there! I'm a passionate developer who thrives on crafting innovative solutions and bringing ideas
-                    to life through code. From sleek web interfaces to powerful backend systems, I love building things
-                    that make a difference. When I'm not coding, you'll find me exploring new tech, contributing to
-                    open-source, or jamming to some good music. 🚀✨</p>
-            </div>
-        </div>
 
-        <!-- Activity Section -->
-        <div class="discord-about-card">
-            <div class="card-header">
-                <span class="header-icon">⚡</span>
-                <span class="header-title">WHAT I DO</span>
+            <!-- Avatar -->
+            <img src="https://avatars.githubusercontent.com/u/70892515?v=4" alt="Profile Avatar" class="discord-avatar">
+
+            <!-- Username -->
+            <div class="discord-username">
+                Shuvranshu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
+                <div class="discord-verified-badge-animated" title="Verified Account">
+                    <img src="../images/badges/Verified.svg"
+                        alt="Verified" style="width: 100%; height: 100%; display: block;">
+                </div>
             </div>
-            <div class="card-content">
-                <div class="activity-grid">
-                    <div class="activity-item">
-                        <div class="activity-icon">🌐</div>
-                        <div class="activity-details">
-                            <div class="activity-name">Web Development</div>
-                            <div class="activity-desc">Building modern, responsive web applications and high-performance full-stack web solutions using React, Node.js, and Flask.</div>
+
+            <!-- Badges -->
+            <div class="discord-badges">
+                <!-- Discord Nitro Badge -->
+                <div class="discord-badge discord-badge-nitro" title="Discord Nitro">
+                    <img src="../images/badges/discordnitro.svg" width="22" height="22" alt="Nitro">
+                </div>
+
+                <!-- HypeSquad Balance Badge -->
+                <div class="discord-badge discord-badge-hypesquad" title="HypeSquad Balance">
+                    <img src="../images/badges/hypesquadbalance.svg" width="22" height="22" alt="HypeSquad Balance">
+                </div>
+
+                <!-- Active Developer Badge -->
+                <div class="discord-badge discord-badge-active-dev" title="Active Developer">
+                    <img src="../images/badges/activedeveloper.svg" width="22" height="22" alt="Active Developer">
+                </div>
+
+                <!-- Early Supporter Badge -->
+                <div class="discord-badge discord-badge-early-supporter" title="Early Supporter">
+                    <img src="../images/badges/discordearlysupporter.svg" width="22" height="22" alt="Early Supporter">
+                </div>
+
+                <!-- Bug Hunter Tier 1 Badge -->
+                <div class="discord-badge discord-badge-bug-hunter" title="Discord Bug Hunter (Tier 1)">
+                    <img src="../images/badges/discordbughunter1.svg" width="22" height="22" alt="Bug Hunter Tier 1">
+                </div>
+
+                <!-- Completed a Quest Badge -->
+                <div class="discord-badge discord-badge-quest" title="Completed a Quest">
+                    <img src="../images/badges/quest.png" width="22" height="22" alt="Completed a Quest">
+                </div>
+
+                <!-- Orbs Apprentice Badge -->
+                <div class="discord-badge discord-badge-orbs" title="Orbs Apprentice">
+                    <img src="../images/badges/orb.svg" width="22" height="22" alt="Orbs Apprentice">
+                </div>
+            </div>
+
+            <!-- Navigation Tabs -->
+            <div class="discord-tabs">
+                <a href="../index.html" class="discord-tab active">About</a>
+                <a href="skills.html" class="discord-tab">Skills</a>
+                <a href="education.html" class="discord-tab">Education</a>
+                <a href="projects.html" class="discord-tab">Projects</a>
+                <a href="certificates.html" class="discord-tab">Certificates</a>
+            </div>
+
+            <!-- Content Container (Static About Content) -->
+            <div class="discord-section" id="content-container">
+                <!-- User Info Section -->
+                <div class="discord-user-info">
+                    <div class="user-badge">👋</div>
+                    <div class="user-intro">
+                        <h2 class="user-name">Shuvranshu Sekhar Sahoo</h2>
+                        <p class="user-tagline">aka Crystal • Full Stack Developer & Designer</p>
+                    </div>
+                </div>
+
+                <!-- About Description -->
+                <div class="discord-about-card">
+                    <div class="card-header">
+                        <span class="header-icon">📝</span>
+                        <span class="header-title">BIO</span>
+                    </div>
+                    <div class="card-content">
+                        <p>Hey there! I'm a passionate developer who thrives on crafting innovative solutions and bringing ideas
+                            to life through code. From sleek web interfaces to powerful backend systems, I love building things
+                            that make a difference. When I'm not coding, you'll find me exploring new tech, contributing to
+                            open-source, or jamming to some good music. 🚀✨</p>
+                    </div>
+                </div>
+
+                <!-- Activity Section -->
+                <div class="discord-about-card">
+                    <div class="card-header">
+                        <span class="header-icon">⚡</span>
+                        <span class="header-title">WHAT I DO</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="activity-grid">
+                            <div class="activity-item">
+                                <div class="activity-icon">🌐</div>
+                                <div class="activity-details">
+                                    <div class="activity-name">Web Development</div>
+                                    <div class="activity-desc">Building modern, responsive web applications and high-performance full-stack web solutions using React, Node.js, and Flask.</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon">🤖</div>
+                                <div class="activity-details">
+                                    <div class="activity-name">Bot Development</div>
+                                    <div class="activity-desc">Creating advanced Discord & Telegram bots featuring command frameworks, real-time event systems, and custom database states.</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon">🧠</div>
+                                <div class="activity-details">
+                                    <div class="activity-name">AI & LLM Integration</div>
+                                    <div class="activity-desc">Integrating Gemini & OpenAI API models, building RAG systems, and designing agentic pipelines to add intelligence to apps.</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon">⚡</div>
+                                <div class="activity-details">
+                                    <div class="activity-name">Web Scraping & Automation</div>
+                                    <div class="activity-desc">Developing custom BeautifulSoup/Selenium scrapers, scheduled automation scripts, and database ETL pipeline tasks.</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="activity-item">
-                        <div class="activity-icon">🤖</div>
-                        <div class="activity-details">
-                            <div class="activity-name">Bot Development</div>
-                            <div class="activity-desc">Creating advanced Discord & Telegram bots featuring command frameworks, real-time event systems, and custom database states.</div>
-                        </div>
+                <!-- VS Code Activity -->
+                <div class="discord-about-card">
+                    <div class="card-header">
+                        <span class="header-icon">💻</span>
+                        <span class="header-title">ACTIVITY</span>
                     </div>
-
-                    <div class="activity-item">
-                        <div class="activity-icon">🧠</div>
-                        <div class="activity-details">
-                            <div class="activity-name">AI & LLM Integration</div>
-                            <div class="activity-desc">Integrating Gemini & OpenAI API models, building RAG systems, and designing agentic pipelines to add intelligence to apps.</div>
-                        </div>
+                    <div class="card-content"
+                        style="padding: 12px; display: flex; justify-content: center; background-color: #202225;">
+                        <img src="https://lanyard.cnrad.dev/api/879695880528216075?showDisplayName=true&hideSpotify=true&hideDiscrim=true&hideStatus=true&hideTag=true&hideTimestamp=true"
+                            alt="Discord Rich Presence"
+                            style="width: 100%; max-width: 400px; display: block; border-radius: 0;" />
                     </div>
+                </div>
 
-                    <div class="activity-item">
-                        <div class="activity-icon">⚡</div>
-                        <div class="activity-details">
-                            <div class="activity-name">Web Scraping & Automation</div>
-                            <div class="activity-desc">Developing custom BeautifulSoup/Selenium scrapers, scheduled automation scripts, and database ETL pipeline tasks.</div>
+                <!-- Spotify Activity -->
+                <div class="discord-about-card">
+                    <div class="card-header">
+                        <span class="header-icon">🎵</span>
+                        <span class="header-title">SPOTIFY ACTIVITY</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="spotify-widget">
+                            <img src="https://spotify-live-banner.vercel.app/?recently_playing=true&blur=true&eq_color=rainbow&theme=dark"
+                                alt="Spotify Activity" />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- VS Code Activity -->
-        <div class="discord-about-card">
-            <div class="card-header">
-                <span class="header-icon">💻</span>
-                <span class="header-title">ACTIVITY</span>
-            </div>
-            <div class="card-content"
-                style="padding: 12px; display: flex; justify-content: center; background-color: #202225;">
-                <img src="https://lanyard.cnrad.dev/api/879695880528216075?showDisplayName=true&hideSpotify=true&hideDiscrim=true&hideStatus=true&hideTag=true&hideTimestamp=true"
-                    alt="Discord Rich Presence"
-                    style="width: 100%; max-width: 400px; display: block; border-radius: 4px;" />
-            </div>
-        </div>
-
-        <!-- Spotify Activity (Keep this!) -->
-        <div class="discord-about-card">
-            <div class="card-header">
-                <span class="header-icon">🎵</span>
-                <span class="header-title">SPOTIFY ACTIVITY</span>
-            </div>
-            <div class="card-content">
-                <div class="spotify-widget">
-                    <img src="https://spotify-live-banner.vercel.app/?recently_playing=true&blur=true&eq_color=rainbow&theme=dark"
-                        alt="Spotify Activity" />
+            <!-- Footer -->
+            <div class="discord-footer">
+                <div class="discord-footer-content">
+                    <div class="discord-footer-text">
+                        Made with 💜 and ☕ by <span class="discord-footer-highlight">Shuvranshu Sekhar Sahoo</span>
+                    </div>
+                    <div class="discord-footer-links">
+                        <a href="https://github.com/SahooShuvranshu/SahooShuvranshu.github.io" target="_blank"
+                            class="discord-footer-link" title="View Source Code">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            Source Code
+                        </a>
+                        <span class="discord-footer-divider">•</span>
+                        <a href="https://github.com/SahooShuvranshu" target="_blank" class="discord-footer-link"
+                            title="GitHub Profile">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 0H4v24h16V0zM6 21v-2h2v2H6zm0-5v-2h2v2H6zm0-5V9h2v2H6zm0-5V4h2v2H6zm5 15v-5h2v5h-2zm0-7V9h2v2h-2zm0-5V4h2v2h-2zm7 12v-2h-2v2h2zm0-5v-2h-2v2h2zm0-5V9h-2v2h2zm0-5V4h-2v2h2z" />
+                            </svg>
+                            Projects
+                        </a>
+                        <span class="discord-footer-divider">•</span>
+                        <a href="mailto:sahooshuvranshusekhar@gmail.com" class="discord-footer-link" title="Email Me">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                            </svg>
+                            Contact
+                        </a>
+                    </div>
+                    <div class="discord-footer-tagline">
+                        © 2026 All rights reserved.
+                    </div>
                 </div>
             </div>
         </div>
-
-        <style>
-            /* Unified Container Card Styles */
-            .discord-user-info {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                background-color: #2f3136;
-                padding: 16px;
-                border-radius: 4px;
-                margin-bottom: 16px;
-                border: 2px solid #40444b;
-                box-shadow: 4px 4px 0 #18191c;
-            }
-
-            .discord-about-card {
-                background-color: #2f3136;
-                border-radius: 4px;
-                margin-bottom: 16px;
-                border: 2px solid #40444b;
-                box-shadow: 4px 4px 0 #18191c;
-                overflow: hidden;
-            }
-
-            .card-header {
-                background-color: #202225;
-                padding: 10px 12px;
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                border-bottom: 2px solid #18191c;
-                font-family: 'Courier New', monospace;
-                letter-spacing: 1px;
-            }
-
-            .header-icon {
-                font-size: 16px;
-            }
-
-            .header-title {
-                color: #8e9297;
-                font-size: 11px;
-                font-weight: 700;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-            }
-
-            .card-content {
-                padding: 16px;
-            }
-
-            .card-content p {
-                color: #dcddde;
-                font-size: 14px;
-                line-height: 1.6;
-                margin: 0;
-            }
-
-            /* Intro Badge & Waving Animation */
-            .user-badge {
-                font-size: 48px;
-                min-width: 60px;
-                text-align: center;
-                animation: wave 2s ease-in-out infinite;
-                transform-origin: 70% 70%;
-                display: inline-block;
-            }
-
-            @keyframes wave {
-                0% {
-                    transform: rotate(0deg);
-                }
-
-                10% {
-                    transform: rotate(14deg);
-                }
-
-                20% {
-                    transform: rotate(-8deg);
-                }
-
-                30% {
-                    transform: rotate(14deg);
-                }
-
-                40% {
-                    transform: rotate(-4deg);
-                }
-
-                50% {
-                    transform: rotate(10deg);
-                }
-
-                60% {
-                    transform: rotate(0deg);
-                }
-
-                100% {
-                    transform: rotate(0deg);
-                }
-            }
-
-            .user-intro {
-                flex: 1;
-            }
-
-            .user-name {
-                color: #ffffff;
-                font-size: 18px;
-                font-weight: 700;
-                margin-bottom: 4px;
-            }
-
-            .user-tagline {
-                color: #b9bbbe;
-                font-size: 13px;
-                margin: 0;
-            }
-
-            /* Activity Grid & Hover Effects */
-            .activity-grid {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .activity-item {
-                display: flex;
-                align-items: flex-start;
-                gap: 12px;
-                padding: 10px;
-                background-color: #40444b;
-                border-radius: 4px;
-                border: 2px solid #202225;
-                box-shadow: 2px 2px 0 #18191c;
-                transition: transform 0.15s ease, background-color 0.15s ease;
-            }
-
-            .activity-item:hover {
-                background-color: #4f545c;
-                transform: translateX(4px);
-            }
-
-            .activity-icon {
-                font-size: 32px;
-                min-width: 40px;
-                text-align: center;
-            }
-
-            .activity-details {
-                flex: 1;
-            }
-
-            .activity-name {
-                color: #ffffff;
-                font-size: 14px;
-                font-weight: 600;
-                margin-bottom: 4px;
-            }
-
-            .activity-desc {
-                color: #b9bbbe;
-                font-size: 12px;
-                line-height: 1.4;
-            }
-
-            /* Spotify Widget */
-            .spotify-widget {
-                display: flex;
-                justify-content: center;
-            }
-
-            .spotify-widget img {
-                max-width: 100%;
-                height: auto;
-                border-radius: 6px;
-            }
-
-
-
-            /* Responsive Design */
-            @media (max-width: 768px) {
-                .discord-user-info {
-                    padding: 12px;
-                }
-
-                .user-badge {
-                    font-size: 42px;
-                    min-width: 50px;
-                }
-
-                .user-name {
-                    font-size: 16px;
-                }
-
-                .user-tagline {
-                    font-size: 12px;
-                }
-
-                .activity-icon {
-                    font-size: 28px;
-                    min-width: 36px;
-                }
-
-                .rp-icon {
-                    width: 50px;
-                    height: 50px;
-                }
-
-                .rp-small-icon {
-                    width: 20px;
-                    height: 20px;
-                    font-size: 10px;
-                }
-
-                .rp-name {
-                    font-size: 13px;
-                }
-
-                .rp-state,
-                .rp-info {
-                    font-size: 12px;
-                }
-            }
-
-            @media (max-width: 480px) {
-                .discord-user-info {
-                    flex-direction: row;
-                    align-items: center;
-                    text-align: left;
-                    padding: 10px;
-                }
-
-                .user-badge {
-                    font-size: 36px;
-                    align-self: flex-start;
-                }
-
-                .user-intro {
-                    text-align: left;
-                }
-
-                .user-name {
-                    font-size: 15px;
-                }
-
-                .user-tagline {
-                    font-size: 11px;
-                }
-
-                .activity-icon {
-                    font-size: 26px;
-                    min-width: 32px;
-                }
-
-                .activity-name {
-                    font-size: 13px;
-                }
-
-                .activity-desc {
-                    font-size: 11px;
-                }
-
-                .rich-presence {
-                    padding: 12px;
-                    gap: 10px;
-                }
-
-                .rp-icon {
-                    width: 45px;
-                    height: 45px;
-                }
-
-                .rp-small-icon {
-                    width: 18px;
-                    height: 18px;
-                    font-size: 9px;
-                    bottom: -3px;
-                    right: -3px;
-                }
-
-                .rp-name {
-                    font-size: 12px;
-                }
-
-                .rp-state {
-                    font-size: 11px;
-                }
-
-                .rp-info {
-                    font-size: 11px;
-                }
-
-                .card-content {
-                    padding: 12px;
-                }
-
-                .card-header {
-                    padding: 8px 10px;
-                }
-            }
-        </style>
-
     </div>
 </body>
 
