@@ -852,17 +852,11 @@
                         <span class="embed-field-label">Tech Stack</span>
                         <span class="embed-field-value">Python, Scikit-Learn, Pandas, LLMs</span>
                     </div>
-                    <div class="embed-field">
-                        <span class="embed-field-label">Repository</span>
-                        <span class="embed-field-value">
-                            <a href="https://github.com/SahooShuvranshu" target="_blank" style="color: #00b0f4; text-decoration: none;">@SahooShuvranshu ↗</a>
-                        </span>
-                    </div>
                 </div>
                 <div class="embed-actions">
                     <div class="embed-links">
                         <a href="https://github.com/SahooShuvranshu" target="_blank" class="embed-link-btn github">
-                            📂 View GitHub Profile
+                            📂 Source Code
                         </a>
                     </div>
                     <div class="discord-reactions-row">
@@ -895,7 +889,6 @@
 
             const catLabel = categoryLabels[project.category] || project.category || 'SHOWCASE';
             const techList = (project.techStack || []).join(', ');
-            const repoClean = project.sourceCode ? project.sourceCode.replace('https://github.com/', '') : 'GitHub';
 
             const reactions = defaultReactions[project.title] || { '❤️': 5, '🚀': 5, '⭐': 5 };
 
@@ -917,12 +910,6 @@
                     <div class="embed-field">
                         <span class="embed-field-label">Tech Stack</span>
                         <span class="embed-field-value">${techList}</span>
-                    </div>
-                    <div class="embed-field">
-                        <span class="embed-field-label">Repository</span>
-                        <span class="embed-field-value">
-                            <a href="${project.sourceCode}" target="_blank" style="color: #00b0f4; text-decoration: none;">${repoClean} ↗</a>
-                        </span>
                     </div>
                 </div>
                 <div class="embed-actions">
