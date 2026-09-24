@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Shuvranshu Sekhar Sahoo</title>
+    <title>Shuvransu Sekhar Sahoo | Data Scientist - Projects</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore projects by Shuvranshu Sekhar Sahoo including Youth Times newspaper platform, Spotify Live Banner, and various web applications built with Flask, Python, and JavaScript.">
-    <meta name="keywords" content="Projects, Web Development, Youth Times, Spotify API, Flask Projects, Python Projects, Web Applications, Portfolio Projects">
-    <meta name="author" content="Shuvranshu Sekhar Sahoo">
+    <meta name="description" content="Explore projects by Shuvransu Sekhar Sahoo - Data Scientist, ML practitioner, and developer. Youth Times online newspaper, Spotify Live Banner, ML pipelines, and developer utilities.">
+    <meta name="keywords" content="Shuvransu Sekhar Sahoo, Data Scientist, Projects, Machine Learning, Python, Flask, Spotify API, Web Development, Portfolio">
+    <meta name="author" content="Shuvransu Sekhar Sahoo">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/pages/projects.html">
-    <meta property="og:title" content="Projects | Shuvranshu Sekhar Sahoo">
-    <meta property="og:description" content="Explore projects including Youth Times newspaper platform, Spotify Live Banner, and various web applications built with Flask, Python, and JavaScript.">
+    <meta property="og:title" content="Shuvransu Sekhar Sahoo | Data Scientist - Projects">
+    <meta property="og:description" content="Explore projects including Youth Times newspaper platform, Spotify Live Banner, and web applications built with Python, Flask, and JavaScript.">
     <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -22,8 +22,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/pages/projects.html">
-    <meta name="twitter:title" content="Projects | Shuvranshu Sekhar Sahoo">
-    <meta name="twitter:description" content="Web applications and tools including Youth Times, Spotify Live Banner, and more.">
+    <meta name="twitter:title" content="Shuvransu Sekhar Sahoo | Data Scientist - Projects">
+    <meta name="twitter:description" content="Explore projects including Youth Times newspaper platform, Spotify Live Banner, and intelligent web applications.">
     <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
@@ -602,7 +602,7 @@
 
             <!-- Username -->
             <div class="discord-username">
-                Shuvranshu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
+                Shuvransu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
                 <div class="discord-verified-badge-animated" title="Verified Account">
                     <img src="../images/badges/Verified.svg"
                         alt="Verified" style="width: 100%; height: 100%; display: block;">
@@ -656,10 +656,34 @@
                 <a href="certificates.html" class="discord-tab">Certificates</a>
             </div>
 
-            <!-- Content Container -->
+            <!-- Content Container (Forum & Bot Embeds Design) -->
             <div class="discord-section" id="content-container">
-                <!-- Projects Grid Container -->
-                <div class="projects-grid" id="projects-container"></div>
+                <!-- Channel Header -->
+                <div class="discord-channel-header">
+                    <div class="channel-title">
+                        <span class="channel-hash">#</span>
+                        <span class="channel-name">showcase-projects</span>
+                        <span class="channel-divider"></span>
+                        <span class="channel-topic">Curated repository showcase • Live web apps, bot backends & data services</span>
+                    </div>
+                </div>
+
+                <!-- Controls Bar: Search & Category Filters -->
+                <div class="discord-controls-bar">
+                    <div class="discord-search-box">
+                        <span class="discord-search-icon">🔍</span>
+                        <input type="text" id="projectSearchInput" class="discord-search-input" placeholder="Search projects or technologies...">
+                    </div>
+                    <div class="discord-filter-tags">
+                        <button class="discord-filter-tag active" data-filter="all"># all <span class="count-badge" id="count-all">0</span></button>
+                        <button class="discord-filter-tag" data-filter="WEB_APPLICATION"># web-apps <span class="count-badge" id="count-web-apps">0</span></button>
+                        <button class="discord-filter-tag" data-filter="API_SERVICE"># api-services <span class="count-badge" id="count-api-bots">0</span></button>
+                        <button class="discord-filter-tag" data-filter="UTILITY"># utilities <span class="count-badge" id="count-utilities">0</span></button>
+                    </div>
+                </div>
+
+                <!-- Projects Feed (Discord Bot Embed Cards) -->
+                <div id="projects-feed" class="projects-feed-container"></div>
             </div>
 
             <!-- Discord Footer -->
@@ -703,261 +727,270 @@
         </div>
     </div>
 
-<!-- ========================================
-     🔍 PROJECT PREVIEW MODAL
-     ======================================== -->
-<div id="projectPreviewModal" class="preview-modal">
-    <div class="modal-overlay" onclick="closeProjectPreview()"></div>
-    <div class="modal-container">
-        <button class="modal-close" onclick="closeProjectPreview()">×</button>
-        <div class="modal-content-wrapper">
-            <div class="modal-image-pane">
-                <div id="modalProjectBanner" class="modal-project-banner-container">
-                    <!-- Dynamically injected banner -->
-                </div>
-            </div>
-            <div class="modal-details-pane">
-                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                    <span id="modalProjectYear" class="project-year">Year</span>
-                </div>
-                <h3 id="modalProjectTitle">Project Title</h3>
-                <div class="modal-meta-section">
-                    <div class="meta-item">
-                        <span class="meta-label">Status</span>
-                        <span id="modalProjectStatus" class="project-status">Status</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Description</span>
-                        <span id="modalProjectDescription" class="meta-value">Description text</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Links</span>
-                        <div class="project-links" style="margin-bottom: 0;">
-                            <a id="modalProjectSource" href="#" target="_blank" class="project-link">📂 Code</a>
-                            <a id="modalProjectLive" href="#" target="_blank" class="project-link demo">🌐 Demo</a>
-                        </div>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Tech Stack</span>
-                        <div id="modalProjectTech" class="project-tech" style="border-top: none; padding-top: 0;">
-                            <!-- Tech tags -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script>
 (function() {
-    const projectsContainer = document.getElementById('projects-container');
-    if (!projectsContainer) {
-        console.error('Projects container not found');
-        return;
-    }
-    
+    const projectsFeed = document.getElementById('projects-feed');
+    const searchInput = document.getElementById('projectSearchInput');
+    const filterButtons = document.querySelectorAll('.discord-filter-tag');
+
+    if (!projectsFeed) return;
+
+    let allProjects = [];
+    let currentFilter = 'all';
+    let currentQuery = '';
+
     // Resilient path detection
     const isSubdir = window.location.pathname.includes('/pages/');
     const jsonUrl = isSubdir ? '../media/projects/projects.json' : 'media/projects/projects.json';
-    const basePath = isSubdir ? '../' : '';
-    
-    // Render projects list
-    function renderProjects(projects) {
-        projectsContainer.innerHTML = '';
-        
-        // 1. Add permanent Coming Soon placeholder card first
-        const placeholderCard = document.createElement('div');
-        placeholderCard.className = 'project-card placeholder-coming-soon';
-        placeholderCard.innerHTML = `
-            <div class="project-banner">
-                <img src="${basePath}media/projects/placeholder.svg" alt="Coming Soon" loading="lazy">
-            </div>
-            <div class="project-header-bar" style="justify-content: flex-end;">
-                <span class="project-year">2026</span>
-            </div>
-            <div class="project-content">
-                <div class="project-title-row">
-                    <div class="project-title">Coming Soon...</div>
-                    <span class="project-status active">
-                        <span class="status-dot active"></span>ONGOING
-                    </span>
-                </div>
-                <div class="project-description">
-                    Currently working on exciting new applications, developer utilities, and open source projects. Check back soon for updates!
-                </div>
-                <div class="project-links">
-                    <a href="#" class="project-link disabled" onclick="return false;">
-                        📂 Code
-                    </a>
-                    <a href="#" class="project-link demo disabled" onclick="return false;">
-                        🌐 Demo
-                    </a>
-                </div>
-                <div class="project-tech">
-                    <span>AI</span><span>Fullstack</span><span>Web3</span>
-                </div>
-            </div>
-        `;
-        projectsContainer.appendChild(placeholderCard);
 
-        // 2. Render JSON Projects
-        projects.forEach(project => {
-            const card = document.createElement('div');
-            card.className = 'project-card';
+    // Embed colors mapped by category
+    const categoryColors = {
+        'WEB_APPLICATION': '#5865f2',
+        'API_SERVICE': '#00b0f4',
+        'UTILITY': '#3ba55c',
+        'COMING_SOON': '#faa61a'
+    };
+
+    // Category display labels
+    const categoryLabels = {
+        'WEB_APPLICATION': 'WEB APPLICATION',
+        'API_SERVICE': 'API SERVICE & BOT',
+        'UTILITY': 'DEVELOPER UTILITY',
+        'COMING_SOON': 'IN DEVELOPMENT'
+    };
+
+    // Base seed reactions for authentic Discord atmosphere
+    const defaultReactions = {
+        'Youth Times': { '❤️': 14, '🚀': 8, '⭐': 11 },
+        'Spotify Live Banner': { '❤️': 19, '🚀': 12, '⭐': 15 },
+        'Spotify Refresh Token Generator': { '❤️': 9, '🚀': 6, '⭐': 10 },
+        'Next-Gen AI & Data Science Pipeline': { '❤️': 24, '🚀': 30, '⭐': 27 }
+    };
+
+    // Get stored reaction status
+    function getReactionState(projectTitle, emoji) {
+        const key = `agy_proj_rx_${projectTitle}_${emoji}`;
+        return localStorage.getItem(key) === 'true';
+    }
+
+    // Toggle reaction
+    window.toggleProjectReaction = function(btn, projectTitle, emoji) {
+        const key = `agy_proj_rx_${projectTitle}_${emoji}`;
+        const isReacted = localStorage.getItem(key) === 'true';
+        const countSpan = btn.querySelector('.reaction-count');
+        let currentCount = parseInt(countSpan.textContent, 10) || 0;
+
+        if (isReacted) {
+            localStorage.removeItem(key);
+            btn.classList.remove('active');
+            countSpan.textContent = Math.max(0, currentCount - 1);
+        } else {
+            localStorage.setItem(key, 'true');
+            btn.classList.add('active');
+            countSpan.textContent = currentCount + 1;
+        }
+    };
+
+    // Update count badges
+    function updateCountBadges(projects) {
+        const countAll = document.getElementById('count-all');
+        const countWeb = document.getElementById('count-web-apps');
+        const countApi = document.getElementById('count-api-bots');
+        const countUtil = document.getElementById('count-utilities');
+
+        if (!countAll) return;
+
+        // +1 for permanent Coming Soon pipeline card
+        countAll.textContent = (projects.length + 1);
+        countWeb.textContent = projects.filter(p => p.category === 'WEB_APPLICATION').length;
+        countApi.textContent = projects.filter(p => p.category === 'API_SERVICE').length;
+        countUtil.textContent = projects.filter(p => p.category === 'UTILITY').length;
+    }
+
+    // Render Bot Embed cards
+    function renderFeed() {
+        projectsFeed.innerHTML = '';
+
+        // Filter projects based on category and search query
+        const filteredProjects = allProjects.filter(project => {
+            const matchesFilter = (currentFilter === 'all') || (project.category === currentFilter);
+            const matchesQuery = !currentQuery || 
+                project.title.toLowerCase().includes(currentQuery) ||
+                project.description.toLowerCase().includes(currentQuery) ||
+                (project.techStack && project.techStack.some(t => t.toLowerCase().includes(currentQuery)));
+            return matchesFilter && matchesQuery;
+        });
+
+        // 1. Render Active Coming Soon card if filter matches
+        const showComingSoon = (currentFilter === 'all' || currentFilter === 'COMING_SOON') &&
+            (!currentQuery || 'next-gen ai & data science pipeline python scikit-learn llms rag'.includes(currentQuery));
+
+        if (showComingSoon) {
+            const csCard = document.createElement('div');
+            csCard.className = 'discord-embed-card';
+            csCard.style.setProperty('--embed-color', '#faa61a');
             
-            const statusClass = project.status || 'active';
-            const statusText = {
-                'active': 'ACTIVE',
-                'paused': 'PAUSED',
-                'archived': 'ARCHIVED'
-            }[statusClass] || 'ACTIVE';
-            
-            const techStack = project.techStack.map(tech => `<span>${tech}</span>`).join('');
-            const linkClass = (project.status === 'paused' || project.status === 'archived') ? 'disabled' : '';
-            
-            // Adjust paths dynamically for subdirectories
-            const bannerImage = project.bannerImage && !project.bannerImage.startsWith('http') 
-                ? (isSubdir ? '../' + project.bannerImage : project.bannerImage)
-                : project.bannerImage;
-                
-            // Fallback to gradient & emoji if banner image is missing or empty
-            const bannerContent = bannerImage 
-                ? `<img src="${bannerImage}" alt="${project.title}" loading="lazy">`
-                : `<div class="project-banner-fallback" style="background: ${project.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)'}">${project.bannerEmoji || '🚀'}</div>`;
-            
-            card.innerHTML = `
-                <div class="project-banner">
-                    ${bannerContent}
+            const csReactions = defaultReactions['Next-Gen AI & Data Science Pipeline'];
+            const csTitle = 'Next-Gen AI & Data Science Pipeline';
+
+            csCard.innerHTML = `
+                <div class="embed-author">
+                    <span class="embed-author-icon">⚡</span> BOT EMBED • IN PROGRESS • 2026
                 </div>
-                <div class="project-header-bar" style="justify-content: flex-end;">
-                    <span class="project-year">${project.year}</span>
+                <a href="https://github.com/SahooShuvranshu" target="_blank" class="embed-title-link">
+                    Next-Gen AI & Data Science Pipeline ↗
+                </a>
+                <div class="embed-desc">
+                    Architecting high-performance end-to-end Machine Learning pipelines, interactive exploratory data analysis dashboards, and autonomous agentic workflows using Python, Pandas, and LLMs.
                 </div>
-                <div class="project-content">
-                    <div class="project-title-row">
-                        <div class="project-title">${project.title}</div>
-                        <span class="project-status ${statusClass}">
-                            <span class="status-dot ${statusClass}"></span>${statusText}
+                <div class="embed-fields-grid">
+                    <div class="embed-field">
+                        <span class="embed-field-label">Status</span>
+                        <span class="embed-field-value" style="color: #faa61a;">● IN DEVELOPMENT</span>
+                    </div>
+                    <div class="embed-field">
+                        <span class="embed-field-label">Tech Stack</span>
+                        <span class="embed-field-value">Python, Scikit-Learn, Pandas, LLMs</span>
+                    </div>
+                    <div class="embed-field">
+                        <span class="embed-field-label">Repository</span>
+                        <span class="embed-field-value">
+                            <a href="https://github.com/SahooShuvranshu" target="_blank" style="color: #00b0f4; text-decoration: none;">@SahooShuvranshu ↗</a>
                         </span>
                     </div>
-                    <div class="project-description">
-                        ${project.description}
-                    </div>
-                    <div class="project-links">
-                        <a href="${project.sourceCode}" target="_blank" class="project-link ${linkClass}">
-                            📂 Code
-                        </a>
-                        <a href="${project.liveDemo}" target="_blank" class="project-link demo ${linkClass}">
-                            🌐 Demo
+                </div>
+                <div class="embed-actions">
+                    <div class="embed-links">
+                        <a href="https://github.com/SahooShuvranshu" target="_blank" class="embed-link-btn github">
+                            📂 View GitHub Profile
                         </a>
                     </div>
-                    <div class="project-tech">
-                        ${techStack}
+                    <div class="discord-reactions-row">
+                        ${renderReactionButton(csTitle, '❤️', csReactions['❤️'])}
+                        ${renderReactionButton(csTitle, '🚀', csReactions['🚀'])}
+                        ${renderReactionButton(csTitle, '⭐', csReactions['⭐'])}
                     </div>
                 </div>
             `;
-            
-            // Card click listener for Preview modal
-            card.addEventListener('click', (e) => {
-                if (e.target.closest('.project-links') || e.target.closest('a')) {
-                    return;
-                }
-                openProjectPreview(project, bannerImage);
-            });
+            projectsFeed.appendChild(csCard);
+        }
 
-            projectsContainer.appendChild(card);
+        // 2. Render JSON Projects
+        if (filteredProjects.length === 0 && !showComingSoon) {
+            projectsFeed.innerHTML = `
+                <div style="background-color: #2f3136; border: 2px solid #40444b; padding: 24px; text-align: center; color: #8e9297; font-family: 'Courier New', monospace;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">🔍</div>
+                    <div style="color: #ffffff; font-weight: 700; margin-bottom: 4px;">NO MATCHING PROJECTS FOUND</div>
+                    <div>Try adjusting your search query or switching category filters.</div>
+                </div>
+            `;
+            return;
+        }
+
+        filteredProjects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = 'discord-embed-card';
+            const embedColor = categoryColors[project.category] || '#5865f2';
+            card.style.setProperty('--embed-color', embedColor);
+
+            const catLabel = categoryLabels[project.category] || project.category || 'SHOWCASE';
+            const techList = (project.techStack || []).join(', ');
+            const repoClean = project.sourceCode ? project.sourceCode.replace('https://github.com/', '') : 'GitHub';
+
+            const reactions = defaultReactions[project.title] || { '❤️': 5, '🚀': 5, '⭐': 5 };
+
+            card.innerHTML = `
+                <div class="embed-author">
+                    <span class="embed-author-icon">🤖</span> BOT EMBED • ${catLabel} • ${project.year || '2024'}
+                </div>
+                <a href="${project.liveDemo || project.sourceCode}" target="_blank" class="embed-title-link">
+                    ${project.title} ↗
+                </a>
+                <div class="embed-desc">
+                    ${project.description}
+                </div>
+                <div class="embed-fields-grid">
+                    <div class="embed-field">
+                        <span class="embed-field-label">Status</span>
+                        <span class="embed-field-value" style="color: #3ba55c;">● ONLINE & ACTIVE</span>
+                    </div>
+                    <div class="embed-field">
+                        <span class="embed-field-label">Tech Stack</span>
+                        <span class="embed-field-value">${techList}</span>
+                    </div>
+                    <div class="embed-field">
+                        <span class="embed-field-label">Repository</span>
+                        <span class="embed-field-value">
+                            <a href="${project.sourceCode}" target="_blank" style="color: #00b0f4; text-decoration: none;">${repoClean} ↗</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="embed-actions">
+                    <div class="embed-links">
+                        ${project.liveDemo ? `<a href="${project.liveDemo}" target="_blank" class="embed-link-btn primary">🌐 Live Demo</a>` : ''}
+                        ${project.sourceCode ? `<a href="${project.sourceCode}" target="_blank" class="embed-link-btn github">📂 Source Code</a>` : ''}
+                    </div>
+                    <div class="discord-reactions-row">
+                        ${renderReactionButton(project.title, '❤️', reactions['❤️'])}
+                        ${renderReactionButton(project.title, '🚀', reactions['🚀'])}
+                        ${renderReactionButton(project.title, '⭐', reactions['⭐'])}
+                    </div>
+                </div>
+            `;
+            projectsFeed.appendChild(card);
         });
     }
 
-    // Fetch projects
+    function renderReactionButton(title, emoji, baseCount) {
+        const isReacted = getReactionState(title, emoji);
+        const displayCount = isReacted ? (baseCount + 1) : baseCount;
+        const activeClass = isReacted ? 'active' : '';
+        const safeTitle = title.replace(/'/g, "\\'");
+
+        return `
+            <button class="discord-reaction-btn ${activeClass}" onclick="toggleProjectReaction(this, '${safeTitle}', '${emoji}')" title="React with ${emoji}">
+                <span>${emoji}</span>
+                <span class="reaction-count">${displayCount}</span>
+            </button>
+        `;
+    }
+
+    // Filter tag click listeners
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.getAttribute('data-filter');
+            renderFeed();
+        });
+    });
+
+    // Search input listener
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            currentQuery = e.target.value.trim().toLowerCase();
+            renderFeed();
+        });
+    }
+
+    // Fetch projects data
     fetch(jsonUrl)
         .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
+            if (!response.ok) throw new Error('Network error fetching projects');
             return response.json();
         })
         .then(data => {
             if (data.projects) {
-                renderProjects(data.projects);
+                allProjects = data.projects;
+                updateCountBadges(allProjects);
+                renderFeed();
             }
         })
-        .catch(error => {
-            console.error('Error fetching projects data:', error);
+        .catch(err => {
+            console.error('Projects fetch error:', err);
+            // Fallback rendering
+            renderFeed();
         });
-
-    // Lightbox modal preview function
-    window.openProjectPreview = function(project, resolvedBanner) {
-        const modal = document.getElementById('projectPreviewModal');
-        const modalTitle = document.getElementById('modalProjectTitle');
-        const modalDescription = document.getElementById('modalProjectDescription');
-        const modalYear = document.getElementById('modalProjectYear');
-        const modalStatus = document.getElementById('modalProjectStatus');
-        const modalSource = document.getElementById('modalProjectSource');
-        const modalLive = document.getElementById('modalProjectLive');
-        const modalTech = document.getElementById('modalProjectTech');
-        const modalBanner = document.getElementById('modalProjectBanner');
-
-        if (!modal) return;
-
-        modalTitle.textContent = project.title;
-        modalDescription.textContent = project.description;
-        modalYear.textContent = project.year;
-
-        // Render banner or fallback in modal
-        if (resolvedBanner) {
-            modalBanner.innerHTML = `<img src="${resolvedBanner}" alt="${project.title}">`;
-        } else {
-            modalBanner.innerHTML = `<div class="project-banner-fallback" style="background: ${project.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)'}">${project.bannerEmoji || '🚀'}</div>`;
-        }
-
-        // Render Status
-        const statusText = {
-            'active': 'ACTIVE',
-            'paused': 'PAUSED',
-            'archived': 'ARCHIVED'
-        }[project.status] || 'ACTIVE';
-        
-        modalStatus.className = `project-status ${project.status}`;
-        modalStatus.innerHTML = `<span class="status-dot ${project.status}"></span>${statusText}`;
-
-        // Render Tech tags
-        modalTech.innerHTML = project.techStack.map(tech => `<span>${tech}</span>`).join('');
-
-        // Link setups
-        const disabled = (project.status === 'paused' || project.status === 'archived');
-        modalSource.href = project.sourceCode;
-        if (disabled) {
-            modalSource.classList.add('disabled');
-        } else {
-            modalSource.classList.remove('disabled');
-        }
-
-        modalLive.href = project.liveDemo;
-        if (disabled) {
-            modalLive.classList.add('disabled');
-        } else {
-            modalLive.classList.remove('disabled');
-        }
-
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    };
-
-    window.closeProjectPreview = function() {
-        const modal = document.getElementById('projectPreviewModal');
-        if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    };
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            window.closeProjectPreview();
-        }
-    });
 })();
 </script>
 

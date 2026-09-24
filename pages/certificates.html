@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certificates | Shuvranshu Sekhar Sahoo</title>
+    <title>Shuvransu Sekhar Sahoo | Data Scientist - Certificates & Awards</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="View certificates and awards earned by Shuvranshu Sekhar Sahoo. Including certifications from Google Cloud, Deloitte, HackerRank, and more in cloud computing, cybersecurity, and programming.">
-    <meta name="keywords" content="Certificates, Awards, Google Cloud, Deloitte, HackerRank, Python Certification, Cloud Computing, Cybersecurity, Achievements">
-    <meta name="author" content="Shuvranshu Sekhar Sahoo">
+    <meta name="description" content="Verified professional certifications and honors earned by Shuvransu Sekhar Sahoo - Data Scientist and ML practitioner. Anthropic AI, CTTC MSME AI/ML, MongoDB, and Hack2skill.">
+    <meta name="keywords" content="Shuvransu Sekhar Sahoo, Data Scientist, Certificates, Awards, Anthropic Claude, AI ML, CTTC MSME, MongoDB, Hack2skill, Verified Credentials">
+    <meta name="author" content="Shuvransu Sekhar Sahoo">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/pages/certificates.html">
-    <meta property="og:title" content="Certificates & Awards | Shuvranshu Sekhar Sahoo">
-    <meta property="og:description" content="View certificates and awards earned by Shuvranshu Sekhar Sahoo. Including certifications from Google Cloud, Deloitte, HackerRank, and more.">
+    <meta property="og:title" content="Shuvransu Sekhar Sahoo | Data Scientist - Certificates & Awards">
+    <meta property="og:description" content="Verified credentials and honors in AI, Machine Learning, Data Analytics, and Cloud Computing.">
     <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -22,8 +22,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/pages/certificates.html">
-    <meta name="twitter:title" content="Certificates & Awards | Shuvranshu Sekhar Sahoo">
-    <meta name="twitter:description" content="Professional certificates from Google Cloud, Deloitte, HackerRank, and more.">
+    <meta name="twitter:title" content="Shuvransu Sekhar Sahoo | Data Scientist - Certificates & Awards">
+    <meta name="twitter:description" content="Verified credentials and honors in AI, Machine Learning, Data Analytics, and Cloud Computing.">
     <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
@@ -395,7 +395,7 @@
 
             <!-- Username -->
             <div class="discord-username">
-                Shuvranshu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
+                Shuvransu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
                 <div class="discord-verified-badge-animated" title="Verified Account">
                     <img src="../images/badges/Verified.svg"
                         alt="Verified" style="width: 100%; height: 100%; display: block;">
@@ -449,33 +449,44 @@
                 <a href="certificates.html" class="discord-tab active">Certificates</a>
             </div>
 
-            <!-- Content Container -->
+            <!-- Content Container (Discord Channel & Credentials Feed) -->
             <div class="discord-section" id="content-container">
-                <!-- ========================================
-                     🏆 AWARDS SECTION
-                     ======================================== -->
-                <div class="discord-about-card">
-                    <div class="card-header">
-                        <span class="header-icon">🏆</span>
-                        <span class="header-title">AWARDS & ACHIEVEMENTS</span>
-                    </div>
-                    <div class="card-content">
-                        <div id="awardsGrid" class="certificates-grid"></div>
+                <!-- Channel Header -->
+                <div class="discord-channel-header">
+                    <div class="channel-title">
+                        <span class="channel-hash">#</span>
+                        <span class="channel-name">verified-credentials</span>
+                        <span class="channel-divider"></span>
+                        <span class="channel-topic">Official verified credentials, industry certificates & competitive honors</span>
                     </div>
                 </div>
 
-                <!-- ========================================
-                     📜 CERTIFICATES SECTION
-                     ======================================== -->
-                <div class="discord-about-card">
-                    <div class="card-header">
-                        <span class="header-icon">📜</span>
-                        <span class="header-title">CERTIFICATES</span>
+                <!-- Controls Bar: Search & Category Filters -->
+                <div class="discord-controls-bar">
+                    <div class="discord-search-box">
+                        <span class="discord-search-icon">🔍</span>
+                        <input type="text" id="certSearchInput" class="discord-search-input" placeholder="Search certificates, skills, or issuers...">
                     </div>
-                    <div class="card-content">
-                        <div id="certificatesGrid" class="certificates-grid"></div>
+                    <div class="discord-filter-tags">
+                        <button class="discord-filter-tag active" data-filter="all"># all <span class="count-badge" id="count-all">0</span></button>
+                        <button class="discord-filter-tag" data-filter="ai-ml"># ai-ml <span class="count-badge" id="count-ai-ml">0</span></button>
+                        <button class="discord-filter-tag" data-filter="cloud-db"># cloud-db <span class="count-badge" id="count-cloud-db">0</span></button>
+                        <button class="discord-filter-tag" data-filter="professional"># professional <span class="count-badge" id="count-professional">0</span></button>
+                        <button class="discord-filter-tag" data-filter="honors"># honors <span class="count-badge" id="count-honors">0</span></button>
                     </div>
                 </div>
+
+                <!-- Golden Trophy Showcase Podium (for Honors & Awards) -->
+                <div id="trophyPodiumSection" class="trophy-showcase-podium">
+                    <div class="podium-header">
+                        <span style="font-size: 20px;">🏆</span>
+                        <span class="podium-title">Competitive Honors & Podium Achievements</span>
+                    </div>
+                    <div id="trophyGrid" class="trophy-grid"></div>
+                </div>
+
+                <!-- Verified Credentials Feed (Certificates) -->
+                <div id="credentialsFeed" class="credentials-feed-container"></div>
             </div>
 
             <!-- Discord Footer -->
@@ -548,7 +559,7 @@
                     </div>
                     <div id="modalCredentialUrlContainer" class="meta-item">
                         <span class="meta-label">Official Verification</span>
-                        <a id="modalCredentialUrl" href="" target="_blank" rel="noopener noreferrer" class="certificate-verify-btn">Verify Credential ↗</a>
+                        <a id="modalCredentialUrl" href="" target="_blank" rel="noopener noreferrer" class="credential-verify-btn">Verify Credential ↗</a>
                     </div>
                     <div id="modalDescriptionContainer" class="meta-item">
                         <span class="meta-label">Description & Skills</span>
@@ -560,173 +571,210 @@
     </div>
 </div>
 
-<!-- ========================================
-     📦 JAVASCRIPT - Auto-generates content
-     ======================================== -->
 <script>
 (function() {
-    const certificatesGrid = document.getElementById('certificatesGrid');
-    const awardsGrid = document.getElementById('awardsGrid');
-    
+    const trophyGrid = document.getElementById('trophyGrid');
+    const trophySection = document.getElementById('trophyPodiumSection');
+    const credentialsFeed = document.getElementById('credentialsFeed');
+    const searchInput = document.getElementById('certSearchInput');
+    const filterButtons = document.querySelectorAll('.discord-filter-tag');
+
+    let allCerts = [];
+    let allAwards = [];
+    let currentFilter = 'all';
+    let currentQuery = '';
+
     // Resilient path detection
     const isSubdir = window.location.pathname.includes('/pages/');
     const certJsonUrl = isSubdir ? '../media/certificates/certificates.json' : 'media/certificates/certificates.json';
     const awardsJsonUrl = isSubdir ? '../media/awards/awards.json' : 'media/awards/awards.json';
-        
-    // Fetch Certificates
-    fetch(certJsonUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (certificatesGrid && data.certificates) {
-                const isMobile = window.innerWidth <= 768;
-                
-                // Add the permanent empty placeholder card at the beginning
-                const placeholderCard = document.createElement('div');
-                placeholderCard.className = 'certificate-card placeholder-coming-soon';
-                placeholderCard.innerHTML = `
-                    <div class="certificate-content">
-                        <div class="certificate-title">More Certificates to Come</div>
-                        <div class="certificate-issuer">Continuous Learning & Professional Development</div>
-                        <div class="certificate-footer">
-                            <div class="certificate-date">📅 Ongoing</div>
-                        </div>
-                    </div>
-                `;
 
-                function createCertCard(cert) {
-                    const card = document.createElement('div');
-                    card.className = 'certificate-card';
-                    card.innerHTML = `
-                        <div class="certificate-content">
-                            <div class="certificate-title">${cert.title}</div>
-                            <div class="certificate-issuer">${cert.issuer}</div>
-                            <div class="certificate-footer">
-                                <div class="certificate-date">📅 ${cert.date}</div>
-                                ${cert.credentialId ? `<div class="certificate-id">ID: ${cert.credentialId}</div>` : ''}
-                                ${cert.verified ? '<div class="certificate-verified">✓ Verified Credential</div>' : ''}
-                                ${cert.credentialUrl ? `<a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="certificate-verify-btn" onclick="event.stopPropagation();">Verify Credential ↗</a>` : ''}
-                            </div>
-                        </div>
-                    `;
-                    card.addEventListener('click', () => {
-                        openPreview(cert.title, cert.issuer, cert.date, cert.credentialId, cert.verified, cert.description, cert.credentialUrl);
-                    });
-                    return card;
-                }
+    // Helper: Determine category of a certificate
+    function categorizeCert(cert) {
+        const text = ((cert.title || '') + ' ' + (cert.issuer || '') + ' ' + (cert.description || '')).toLowerCase();
+        if (text.includes('mongodb') || text.includes('database') || text.includes('sql') || text.includes('cloud') || text.includes('serverless')) {
+            return 'cloud-db';
+        }
+        if (text.includes('ai') || text.includes('ml') || text.includes('claude') || text.includes('anthropic') || text.includes('machine learning') || text.includes('nlp') || text.includes('vision') || text.includes('agent')) {
+            return 'ai-ml';
+        }
+        return 'professional';
+    }
 
-                if (isMobile) {
-                    certificatesGrid.appendChild(placeholderCard);
-                    data.certificates.forEach(cert => {
-                        certificatesGrid.appendChild(createCertCard(cert));
-                    });
-                } else {
-                    const col1 = document.createElement('div');
-                    col1.className = 'masonry-col';
-                    const col2 = document.createElement('div');
-                    col2.className = 'masonry-col';
-                    
-                    certificatesGrid.appendChild(col1);
-                    certificatesGrid.appendChild(col2);
-                    
-                    col1.appendChild(placeholderCard);
-                    
-                    data.certificates.forEach((cert, index) => {
-                        // Interleave columns to keep years ordered horizontally (top of page first)
-                        if (index % 2 === 0) {
-                            col2.appendChild(createCertCard(cert));
-                        } else {
-                            col1.appendChild(createCertCard(cert));
-                        }
-                    });
-                }
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching certificates data:', error);
+    // Helper: Determine role pill metadata for an issuer
+    function getIssuerRoleMeta(issuer, title) {
+        const text = (issuer + ' ' + title).toLowerCase();
+        if (text.includes('anthropic') || text.includes('claude')) {
+            return { name: '@Anthropic AI Certified', color: '#7289da' };
+        }
+        if (text.includes('cttc') || text.includes('msme') || text.includes('government of india')) {
+            return { name: '@MSME Govt of India', color: '#3ba55c' };
+        }
+        if (text.includes('mongodb')) {
+            return { name: '@MongoDB Certified', color: '#00ed64' };
+        }
+        if (text.includes('hack2skill') || text.includes('google')) {
+            return { name: '@Google / Hack2skill', color: '#4285f4' };
+        }
+        if (text.includes('geeksforgeeks')) {
+            return { name: '@GeeksforGeeks', color: '#2f8d46' };
+        }
+        return { name: '@Verified Specialist', color: '#5865f2' };
+    }
+
+    // Update count badges
+    function updateCounts() {
+        const countAll = document.getElementById('count-all');
+        const countAi = document.getElementById('count-ai-ml');
+        const countCloud = document.getElementById('count-cloud-db');
+        const countProf = document.getElementById('count-professional');
+        const countHonors = document.getElementById('count-honors');
+
+        if (!countAll) return;
+
+        countAll.textContent = allCerts.length + allAwards.length;
+        countAi.textContent = allCerts.filter(c => categorizeCert(c) === 'ai-ml').length;
+        countCloud.textContent = allCerts.filter(c => categorizeCert(c) === 'cloud-db').length;
+        countProf.textContent = allCerts.filter(c => categorizeCert(c) === 'professional').length;
+        countHonors.textContent = allAwards.length;
+    }
+
+    // Render Golden Trophy Podium (Awards)
+    function renderTrophies() {
+        if (!trophyGrid) return;
+        trophyGrid.innerHTML = '';
+
+        const showPodium = (currentFilter === 'all' || currentFilter === 'honors');
+        const matchingAwards = allAwards.filter(award => {
+            if (!currentQuery) return true;
+            const text = ((award.title || '') + ' ' + (award.issuer || '') + ' ' + (award.description || '')).toLowerCase();
+            return text.includes(currentQuery);
         });
 
-    // Fetch Awards
-    fetch(awardsJsonUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (awardsGrid && data.awards) {
-                const isMobile = window.innerWidth <= 768;
-                
-                // Add the permanent empty placeholder card at the beginning
-                const placeholderAwardCard = document.createElement('div');
-                placeholderAwardCard.className = 'certificate-card placeholder-coming-soon';
-                placeholderAwardCard.innerHTML = `
-                    <div class="certificate-content">
-                        <div class="certificate-title">Coming Soon</div>
-                        <div class="certificate-issuer">More achievements and awards will be listed here soon.</div>
-                        <div class="certificate-footer">
-                            <div class="certificate-date">📅 Ongoing</div>
-                        </div>
+        if (!showPodium || matchingAwards.length === 0) {
+            trophySection.style.display = 'none';
+            return;
+        }
+
+        trophySection.style.display = 'block';
+
+        matchingAwards.forEach((award, idx) => {
+            const card = document.createElement('div');
+            card.className = 'discord-trophy-card';
+            
+            const rankLabel = (award.title.includes('1st Prize') || award.title.includes('Debate'))
+                ? '🥇 1ST PLACE WINNER'
+                : '🎖️ NCC GRADE B CERTIFICATE';
+
+            card.innerHTML = `
+                <div>
+                    <div class="trophy-rank-badge">
+                        ${rankLabel}
                     </div>
-                `;
+                    <div class="trophy-title">${award.title}</div>
+                    <div class="trophy-issuer">🏛️ ${award.issuer} • ${award.date}</div>
+                    <div class="trophy-desc">${(award.description || '').replace(/\\n/g, '<br>')}</div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(250, 166, 26, 0.3); padding-top: 8px; margin-top: 8px;">
+                    <span class="verified-shield">🛡️ Official Honor</span>
+                    <button class="credential-verify-btn" style="background-color: #202225; border-color: #faa61a; color: #faa61a; font-size: 11px; padding: 4px 10px;" onclick="openPreview('${award.title.replace(/'/g, "\\'")}', '${award.issuer.replace(/'/g, "\\'")}', '${award.date}', null, true, '${(award.description || '').replace(/'/g, "\\'").replace(/\\n/g, ' ')}', null)">
+                        View Details ↗
+                    </button>
+                </div>
+            `;
+            trophyGrid.appendChild(card);
+        });
+    }
 
-                function createAwardCard(award) {
-                    const card = document.createElement('div');
-                    card.className = 'certificate-card';
-                    card.innerHTML = `
-                        <div class="certificate-content">
-                            <div class="certificate-title">${award.title}</div>
-                            <div class="certificate-issuer">${award.issuer}</div>
-                            <div class="certificate-footer">
-                                <div class="certificate-date">📅 ${award.date}</div>
-                                ${award.verified ? '<div class="certificate-verified">✓ Verified Award</div>' : ''}
-                                ${award.credentialUrl ? `<a href="${award.credentialUrl}" target="_blank" rel="noopener noreferrer" class="certificate-verify-btn" onclick="event.stopPropagation();">Verify Credential ↗</a>` : ''}
-                            </div>
-                        </div>
-                    `;
-                    card.addEventListener('click', () => {
-                        openPreview(award.title, award.issuer, award.date, null, award.verified, award.description, award.credentialUrl);
-                    });
-                    return card;
-                }
+    // Render Credentials Feed (Certificates)
+    function renderCredentials() {
+        if (!credentialsFeed) return;
+        credentialsFeed.innerHTML = '';
 
-                if (isMobile) {
-                    awardsGrid.appendChild(placeholderAwardCard);
-                    data.awards.forEach(award => {
-                        awardsGrid.appendChild(createAwardCard(award));
-                    });
-                } else {
-                    const col1 = document.createElement('div');
-                    col1.className = 'masonry-col';
-                    const col2 = document.createElement('div');
-                    col2.className = 'masonry-col';
-                    
-                    awardsGrid.appendChild(col1);
-                    awardsGrid.appendChild(col2);
-                    
-                    col1.appendChild(placeholderAwardCard);
-                    
-                    data.awards.forEach((award, index) => {
-                        // Interleave columns to keep years ordered horizontally (top of page first)
-                        if (index % 2 === 0) {
-                            col2.appendChild(createAwardCard(award));
-                        } else {
-                            col1.appendChild(createAwardCard(award));
-                        }
-                    });
-                }
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching awards data:', error);
+        if (currentFilter === 'honors') {
+            return;
+        }
+
+        const filteredCerts = allCerts.filter(cert => {
+            const cat = categorizeCert(cert);
+            const matchesFilter = (currentFilter === 'all') || (cat === currentFilter);
+            const text = ((cert.title || '') + ' ' + (cert.issuer || '') + ' ' + (cert.description || '') + ' ' + (cert.credentialId || '')).toLowerCase();
+            const matchesQuery = !currentQuery || text.includes(currentQuery);
+            return matchesFilter && matchesQuery;
         });
 
-    // Preview functions exposed to window object for onclick handler
+        if (filteredCerts.length === 0 && currentFilter !== 'honors') {
+            credentialsFeed.innerHTML = `
+                <div style="background-color: #2f3136; border: 2px solid #40444b; padding: 24px; text-align: center; color: #8e9297; font-family: 'Courier New', monospace;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">🔍</div>
+                    <div style="color: #ffffff; font-weight: 700; margin-bottom: 4px;">NO MATCHING CERTIFICATES FOUND</div>
+                    <div>Try adjusting your search query or choosing another category filter tag.</div>
+                </div>
+            `;
+            return;
+        }
+
+        filteredCerts.forEach(cert => {
+            const card = document.createElement('div');
+            card.className = 'credential-card';
+            const roleMeta = getIssuerRoleMeta(cert.issuer, cert.title);
+            card.style.setProperty('--cred-color', roleMeta.color);
+
+            card.innerHTML = `
+                <div class="credential-info">
+                    <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px;">
+                        <span class="discord-role-pill" style="--role-color: ${roleMeta.color}">
+                            <span class="role-dot" style="--role-color: ${roleMeta.color}"></span>${roleMeta.name}
+                        </span>
+                        <span style="color: #8e9297; font-size: 11px; font-family: 'Courier New', monospace;">📅 ${cert.date}</span>
+                    </div>
+                    <div style="color: #ffffff; font-size: 15px; font-weight: 700; margin-bottom: 4px;">
+                        ${cert.title}
+                    </div>
+                    <div style="color: #b9bbbe; font-size: 12.5px;">
+                        🏛️ ${cert.issuer}
+                    </div>
+                    <div class="credential-meta">
+                        ${cert.credentialId ? `<span class="credential-id font-mono">ID: ${cert.credentialId}</span>` : ''}
+                        ${cert.verified ? `<span class="verified-shield">🛡️ Verified</span>` : ''}
+                    </div>
+                </div>
+                <div class="credential-actions">
+                    ${cert.credentialUrl ? `<a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="credential-verify-btn" onclick="event.stopPropagation();">Verify Credential ↗</a>` : `<span class="credential-id" style="color: #43b581; border-color: #43b581;">✓ Verified Certificate</span>`}
+                    <button class="embed-link-btn" style="padding: 5px 10px; font-size: 11px;" onclick="openPreview('${cert.title.replace(/'/g, "\\'")}', '${cert.issuer.replace(/'/g, "\\'")}', '${cert.date}', '${cert.credentialId || ''}', ${cert.verified}, '${(cert.description || '').replace(/'/g, "\\'").replace(/\\n/g, ' ')}', '${cert.credentialUrl || ''}')">
+                        Details ℹ️
+                    </button>
+                </div>
+            `;
+            credentialsFeed.appendChild(card);
+        });
+    }
+
+    // Master render
+    function renderAll() {
+        renderTrophies();
+        renderCredentials();
+    }
+
+    // Filter Buttons
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentFilter = btn.getAttribute('data-filter');
+            renderAll();
+        });
+    });
+
+    // Search input
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            currentQuery = e.target.value.trim().toLowerCase();
+            renderAll();
+        });
+    }
+
+    // Modal preview function
     window.openPreview = function(title, issuer, date, id, verified, description, credentialUrl) {
         const modal = document.getElementById('previewModal');
         const modalTitle = document.getElementById('modalTitle');
@@ -737,7 +785,6 @@
         const modalIdContainer = document.getElementById('modalIdContainer');
         const modalCredentialUrl = document.getElementById('modalCredentialUrl');
         const modalCredentialUrlContainer = document.getElementById('modalCredentialUrlContainer');
-        const modalVerified = document.getElementById('modalVerified');
         const modalVerifiedContainer = document.getElementById('modalVerifiedContainer');
         const modalDescription = document.getElementById('modalDescription');
         const modalDescriptionContainer = document.getElementById('modalDescriptionContainer');
@@ -793,11 +840,26 @@
         }
     };
 
-    // Close modal on Escape key
+    // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             window.closePreview();
         }
+    });
+
+    // Fetch both datasets concurrently
+    Promise.all([
+        fetch(certJsonUrl).then(r => r.ok ? r.json() : { certificates: [] }),
+        fetch(awardsJsonUrl).then(r => r.ok ? r.json() : { awards: [] })
+    ])
+    .then(([certData, awardData]) => {
+        allCerts = certData.certificates || [];
+        allAwards = awardData.awards || [];
+        updateCounts();
+        renderAll();
+    })
+    .catch(err => {
+        console.error('Data fetch error:', err);
     });
 })();
 </script>
