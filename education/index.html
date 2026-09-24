@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education & Experience | Shuvransu Sekhar Sahoo</title>
+    <title>Education & Experience - Shuvransu Sekhar Sahoo | Data Scientist</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Education and professional experience of Shuvransu Sekhar Sahoo - Data Scientist, ML practitioner, and developer. B.Tech in Computer Science, Diploma from Nilachala Polytechnic, internships at Deloitte, CTTC, and OKCL.">
-    <meta name="keywords" content="Shuvransu Sekhar Sahoo, Data Scientist, Education, Experience, Internships, Deloitte, Computer Science, Diploma, B.Tech, Python Intern">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Education & Experience - Shuvransu Sekhar Sahoo | Data Scientist">
+    <meta name="description" content="Academic background and industry internships of Shuvransu Sekhar Sahoo - Data Scientist and ML practitioner. Computer Science B.Tech, Diploma, Deloitte, CTTC, and OKCL experience.">
+    <meta name="keywords" content="Shuvransu Sekhar Sahoo, Shuvranshu Sekhar Sahoo, Data Scientist, Education, Experience, Internships, Deloitte, Computer Science, Diploma, B.Tech, Python Intern">
     <meta name="author" content="Shuvransu Sekhar Sahoo">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://sahooshuvranshu.is-a.dev/education/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/pages/education.html">
-    <meta property="og:title" content="Education & Experience | Shuvransu Sekhar Sahoo">
-    <meta property="og:description" content="Education and professional experience including B.Tech in Computer Science, Diploma from Nilachala Polytechnic, and internships at Deloitte, CTTC, and OKCL.">
+    <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/education/">
+    <meta property="og:title" content="Education & Experience - Shuvransu Sekhar Sahoo | Data Scientist">
+    <meta property="og:description" content="Education and professional experience including B.Tech in Computer Science, Diploma, and internships at Deloitte, CTTC, and OKCL.">
+    <meta property="og:site_name" content="Shuvransu Sekhar Sahoo | Portfolio">
     <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/pages/education.html">
-    <meta name="twitter:title" content="Education & Experience | Shuvransu Sekhar Sahoo">
+    <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/education/">
+    <meta name="twitter:title" content="Education & Experience - Shuvransu Sekhar Sahoo | Data Scientist">
     <meta name="twitter:description" content="Computer Science education and professional internships at Deloitte, CTTC, and OKCL.">
     <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     
@@ -76,7 +81,7 @@
             box-shadow: 0 0 8px rgba(59, 165, 92, 0.4);
         }
 
-        /* Timeline Content Card Styles (Project Card-like, but without banner) */
+        /* Timeline Content Card Styles */
         .timeline-content-card {
             background-color: #40444b;
             border: 2px solid #202225;
@@ -176,11 +181,6 @@
             height: 20px;
             object-fit: contain;
             border-radius: 4px;
-        }
-
-        /* Hidden Description */
-        .project-description {
-            display: none;
         }
 
         /* Project Status Badges */
@@ -351,7 +351,7 @@
         }
 
         .modal-details-pane {
-            padding: 40px 24px 24px 24px; /* extra top padding for floating logo */
+            padding: 40px 24px 24px 24px;
             overflow-y: auto;
         }
 
@@ -453,8 +453,8 @@
         <div class="discord-profile">
             <div class="discord-buttons-container">
                 <a href="../socials/" class="discord-social-tree-btn" title="My Socials">Socials</a>
-                <a href="https://sahooshuvranshu.is-a.dev/blog" class="discord-blog-btn" title="View Blog">Blog</a>
-                <a href="../contact.html" class="discord-contact-btn" title="Contact Me">Contact</a>
+                <a href="https://sahooshuvranshu.is-a.dev/blog/" class="discord-blog-btn" title="View Blog">Blog</a>
+                <a href="../contact/" class="discord-contact-btn" title="Contact Me">Contact</a>
             </div>
 
             <!-- Avatar -->
@@ -509,11 +509,11 @@
 
             <!-- Navigation Tabs -->
             <div class="discord-tabs">
-                <a href="../index.html" class="discord-tab">About</a>
-                <a href="skills.html" class="discord-tab">Skills</a>
-                <a href="education.html" class="discord-tab active">Education</a>
-                <a href="projects.html" class="discord-tab">Projects</a>
-                <a href="certificates.html" class="discord-tab">Certificates</a>
+                <a href="../" class="discord-tab">About</a>
+                <a href="../skills/" class="discord-tab">Skills</a>
+                <a href="../education/" class="discord-tab active">Education</a>
+                <a href="../projects/" class="discord-tab">Projects</a>
+                <a href="../certificates/" class="discord-tab">Certificates</a>
             </div>
 
             <!-- Content Container -->
@@ -601,26 +601,27 @@
             <button class="modal-close" onclick="closeEducationPreview()">×</button>
             <div class="modal-content-wrapper">
                 <div class="modal-banner-pane" id="modalEduBanner">
-                    <div id="modalEduBannerContent" class="modal-project-banner-container">
-                        <!-- Dynamically injected gradient fallback banner with emoji -->
-                    </div>
                     <div class="modal-logo-circle">
-                        <img id="modalEduLogo" src="" alt="Logo">
+                        <img id="modalEduLogo" src="" alt="Organization Logo">
+                    </div>
+                    <div id="modalEduBannerContent" class="modal-project-banner-container">
+                        🎓
                     </div>
                 </div>
                 <div class="modal-details-pane">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <span id="modalEduDate" class="project-year">Date</span>
-                    </div>
                     <h3 id="modalEduTitle">Title</h3>
                     <div class="modal-meta-section">
                         <div class="meta-item">
-                            <span class="meta-label" id="modalEduTypeLabel">Institution</span>
-                            <span id="modalEduSubtitle" class="meta-value">Name & Link</span>
+                            <span class="meta-label" id="modalEduTypeLabel">Organization</span>
+                            <span id="modalEduSubtitle" class="meta-value">Subtitle</span>
                         </div>
                         <div class="meta-item">
-                            <span class="meta-label">Details & Highlights</span>
-                            <span id="modalEduDescription" class="meta-value">Description text</span>
+                            <span class="meta-label">Timeline</span>
+                            <span id="modalEduDate" class="meta-value">Date</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Details</span>
+                            <span id="modalEduDescription" class="meta-value">Description</span>
                         </div>
                     </div>
                 </div>
@@ -638,8 +639,7 @@
             return;
         }
 
-        const isSubdir = window.location.pathname.includes('/pages/');
-        const jsonUrl = isSubdir ? '../media/education/education.json' : 'media/education/education.json';
+        const jsonUrl = '../media/education/education.json';
 
         function renderTimeline(items, container, isEducation) {
             container.innerHTML = '';
@@ -652,9 +652,8 @@
                 const statusClass = item.status || 'completed';
                 const statusText = statusClass.toUpperCase();
 
-                // Handle local vs absolute logo paths
                 const logoSrc = item.logo && !item.logo.startsWith('http')
-                    ? (isSubdir ? '../' + item.logo : item.logo)
+                    ? '../' + item.logo
                     : item.logo;
 
                 const card = document.createElement('div');
@@ -678,7 +677,6 @@
                     </div>
                 `;
 
-                // Click listener for preview
                 card.addEventListener('click', (e) => {
                     if (e.target.closest('a')) {
                         return;
@@ -687,7 +685,7 @@
                     
                     let bannerSource = item.bannerImage || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)';
                     if (bannerSource && !bannerSource.startsWith('http') && (bannerSource.startsWith('/') || bannerSource.startsWith('media/'))) {
-                        bannerSource = isSubdir ? '../' + bannerSource : bannerSource;
+                        bannerSource = '../' + bannerSource;
                     }
 
                     openEduPreview(
@@ -702,7 +700,6 @@
                 });
 
                 itemElement.appendChild(card);
-                // Prepend the marker before the card in timeline-item
                 const marker = document.createElement('div');
                 marker.className = `timeline-marker ${markerClass}`;
                 itemElement.insertBefore(marker, card);
@@ -755,11 +752,10 @@
             modalLogo.style.display = 'none';
         }
         
-        // Inject dynamic banner content (gradient or image) only on preview
         const isUrl = (str) => {
             if (!str) return false;
             const cleanStr = str.trim();
-            return cleanStr.startsWith('http://') || cleanStr.startsWith('https://') || cleanStr.startsWith('/') || cleanStr.startsWith('media/');
+            return cleanStr.startsWith('http://') || cleanStr.startsWith('https://') || cleanStr.startsWith('/') || cleanStr.startsWith('media/') || cleanStr.startsWith('../media/');
         };
 
         if (isUrl(bannerImage)) {
@@ -786,7 +782,6 @@
         }
     }
     
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeEducationPreview();

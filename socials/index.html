@@ -6,19 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Socials - Shuvransu Sekhar Sahoo | Data Scientist</title>
-    <meta name="title" content="Socials - Shuvransu Sekhar Sahoo | Data Scientist">
+    <title>Socials - Shuvranshu Sekhar Sahoo | Data Scientist</title>
+    <meta name="title" content="Socials - Shuvranshu Sekhar Sahoo | Data Scientist">
     <meta name="description"
-        content="Connect with Shuvransu Sekhar Sahoo across the web. Access my portfolio, technical blog, GitHub, LinkedIn, and social profiles.">
-    <meta name="author" content="Shuvransu Sekhar Sahoo">
+        content="Connect with Shuvranshu Sekhar Sahoo across the web. Access my portfolio, technical blog, GitHub, LinkedIn, and social profiles.">
+    <meta name="keywords"
+        content="Shuvranshu Sekhar Sahoo, Shuvransu Sekhar Sahoo, Data Scientist, Machine Learning, Portfolio, Socials, GitHub, LinkedIn, Discord, Connect">
+    <meta name="author" content="Shuvranshu Sekhar Sahoo">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
+    <link rel="canonical" href="https://sahooshuvranshu.is-a.dev/socials/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/socials/">
-    <meta property="og:title" content="Socials - Shuvransu Sekhar Sahoo | Data Scientist">
-    <meta property="og:description" content="Connect with Shuvransu Sekhar Sahoo across the web. Access my portfolio, technical blog, GitHub, LinkedIn, and social profiles.">
+    <meta property="og:title" content="Socials - Shuvranshu Sekhar Sahoo | Data Scientist">
+    <meta property="og:description" content="Connect with Shuvranshu Sekhar Sahoo across the web. Access my portfolio, technical blog, GitHub, LinkedIn, and social profiles.">
     <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -26,8 +29,8 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/socials/">
-    <meta name="twitter:title" content="Socials - Shuvransu Sekhar Sahoo | Data Scientist">
-    <meta name="twitter:description" content="Connect with Shuvransu Sekhar Sahoo across the web.">
+    <meta name="twitter:title" content="Socials - Shuvranshu Sekhar Sahoo | Data Scientist">
+    <meta name="twitter:description" content="Connect with Shuvranshu Sekhar Sahoo across the web. Access my portfolio, technical blog, GitHub, LinkedIn, and social profiles.">
     <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
 
     <!-- Favicon -->
@@ -98,6 +101,7 @@
             background-position: center;
             position: relative;
             border-radius: 0;
+            border-bottom: 3px solid #18191c;
         }
 
         @media (max-width: 480px) {
@@ -110,7 +114,7 @@
             padding: 16px;
             background-color: #2f3136;
             position: relative;
-            margin-top: -40px;
+            margin-top: 0;
             border-radius: 0;
         }
 
@@ -129,7 +133,7 @@
                 width: 85px;
                 height: 85px;
                 border-width: 4px;
-                margin-top: -10px;
+                margin-top: 0;
             }
         }
 
@@ -291,43 +295,37 @@
             visibility: visible;
         }
 
-        /* Status box */
-        .status-box {
+        /* Header Bar (Matching Blog Header) */
+        .socials-header {
             background-color: #202225;
-            border-radius: 0;
-            padding: 10px 12px;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #18191c;
+            font-family: 'Courier New', monospace;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #00b0f4;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .header-right {
             display: flex;
             align-items: center;
             gap: 8px;
-            border: 2px solid #40444b;
-            box-shadow: 2px 2px 0 #18191c;
-            margin-top: 12px;
         }
 
-        .status-emoji {
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-
-        .status-text {
-            color: #b9bbbe;
-            font-size: 13px;
-            line-height: 1.4;
-        }
-
-        /* Buttons Container & Navigation Styles */
-        .discord-buttons-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            position: absolute;
-            top: 16px;
-            right: 16px;
-        }
-
-        .discord-home-btn {
+        .back-btn {
             background-color: #3ba55c;
-            color: white;
+            color: white !important;
             border: 2px solid #2d7d46;
             border-radius: 0;
             padding: 8px 12px;
@@ -335,24 +333,24 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.15s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             box-shadow: 2px 2px 0 #18191c;
             font-family: 'Courier New', Courier, monospace;
             letter-spacing: 0.5px;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
 
-        .discord-home-btn:hover {
+        .back-btn:hover {
             background-color: #2d7d46;
             transform: translate(-1px, -1px);
             box-shadow: 3px 3px 0 #18191c;
         }
 
-        .discord-blog-btn {
+        .blog-btn {
             background-color: #5865f2;
-            color: white;
+            color: white !important;
             border: 2px solid #4752c4;
             border-radius: 0;
             padding: 8px 12px;
@@ -360,66 +358,63 @@
             font-weight: 500;
             cursor: pointer;
             transition: all 0.15s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             box-shadow: 2px 2px 0 #18191c;
             font-family: 'Courier New', Courier, monospace;
             letter-spacing: 0.5px;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
         }
 
-        .discord-blog-btn:hover {
+        .blog-btn:hover {
             background-color: #4752c4;
             transform: translate(-1px, -1px);
             box-shadow: 3px 3px 0 #18191c;
         }
 
         @media (max-width: 768px) {
-            .discord-profile {
-                position: relative;
-                padding-top: 70px;
-            }
-
-            .discord-buttons-container {
-                position: absolute;
-                top: 16px;
-                right: 16px;
-                display: flex;
+            .socials-header {
                 flex-wrap: wrap;
-                gap: 4px;
-                justify-content: flex-end;
+                gap: 10px;
             }
 
-            .discord-home-btn,
-            .discord-blog-btn {
-                position: static !important;
-                font-size: 12px;
-                padding: 8px 12px;
-                width: auto;
-                flex: 0 1 auto;
-                display: flex;
-                margin: 2px;
+            .header-left {
+                font-size: 11px;
+            }
+
+            .back-btn,
+            .blog-btn {
+                font-size: 11px;
+                padding: 6px 10px;
             }
         }
 
         @media (max-width: 480px) {
-            .discord-profile {
-                padding-top: 70px;
+            .socials-header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 8px;
+                padding: 10px 12px;
             }
 
-            .discord-buttons-container {
-                gap: 4px;
+            .socials-header .header-left {
+                font-size: 10px;
+                justify-content: center;
+            }
+
+            .socials-header .header-right {
+                width: 100%;
+                gap: 6px;
                 flex-wrap: wrap;
-                justify-content: flex-end;
+                justify-content: center;
             }
 
-            .discord-blog-btn,
-            .discord-home-btn {
+            .blog-btn,
+            .back-btn {
                 font-size: 11px;
                 padding: 7px 10px;
-                flex: 0 1 auto;
-                width: auto;
+                flex: 1 1 calc(50% - 4px);
                 justify-content: center;
             }
         }
@@ -427,45 +422,8 @@
         .badge-divider {
             height: 2px;
             background-color: #40444b;
-            margin: 12px 16px;
+            margin: 14px 0;
             box-shadow: 0 1px 0 #18191c;
-        }
-
-        /* Content Card Section */
-        .discord-about-card {
-            background-color: #2f3136;
-            border-radius: 0;
-            margin-bottom: 16px;
-            border: 2px solid #40444b;
-            box-shadow: 4px 4px 0 #18191c;
-            overflow: hidden;
-        }
-
-        .card-header {
-            background-color: #202225;
-            padding: 10px 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 2px solid #18191c;
-            font-family: 'Courier New', monospace;
-            letter-spacing: 1px;
-        }
-
-        .header-icon {
-            font-size: 16px;
-        }
-
-        .header-title {
-            color: #8e9297;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .card-content {
-            padding: 16px;
         }
 
         /* Link items styling */
@@ -625,26 +583,34 @@
         <!-- Banner -->
         <div class="discord-banner"></div>
 
-        <!-- Profile Section -->
-        <div class="discord-profile">
-            <div class="discord-buttons-container">
-                <a href="https://sahooshuvranshu.is-a.dev/blog/" class="discord-blog-btn" title="View Blog">
+        <!-- Header Bar (Matching Blog Header) -->
+        <div class="socials-header">
+            <div class="header-left">
+                <span>🔗</span>
+                <span>CONNECT WITH ME</span>
+            </div>
+            <div class="header-right">
+                <a href="https://sahooshuvranshu.is-a.dev/blog/" class="blog-btn" title="View Blog">
                     Blog
                 </a>
-                <a href="../index.html" class="discord-home-btn" title="Return to Home">
-                    ← Home
+                <a href="../" class="back-btn" title="Return to Home">
+                    Return To Home
                 </a>
             </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="discord-profile">
 
             <!-- Avatar -->
             <img src="https://avatars.githubusercontent.com/u/70892515?v=4" alt="Profile Avatar" class="discord-avatar">
 
             <!-- Username -->
             <div class="discord-username">
-                Shuvransu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
+                Shuvranshu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
                 <div class="discord-verified-badge-animated" title="Verified Account">
                     <img src="../images/badges/Verified.svg"
-                        alt="Verified" style="width: 100%; height: 100%; display: block;">
+                        alt="Verified" width="22" height="22" style="width: 100%; height: 100%; display: block;">
                 </div>
             </div>
 
@@ -652,69 +618,59 @@
             <div class="discord-badges">
                 <!-- Discord Nitro Badge -->
                 <div class="discord-badge" title="Discord Nitro">
-                    <img src="../images/badges/discordnitro.svg"
+                    <img src="../images/badges/discordnitro.svg" width="22" height="22"
                         alt="Nitro">
                 </div>
 
                 <!-- HypeSquad Balance Badge -->
                 <div class="discord-badge" title="HypeSquad Balance">
-                    <img src="../images/badges/hypesquadbalance.svg"
+                    <img src="../images/badges/hypesquadbalance.svg" width="22" height="22"
                         alt="HypeSquad Balance">
                 </div>
 
                 <!-- Active Developer Badge -->
                 <div class="discord-badge" title="Active Developer">
-                    <img src="../images/badges/activedeveloper.svg"
+                    <img src="../images/badges/activedeveloper.svg" width="22" height="22"
                         alt="Active Developer">
                 </div>
 
                 <!-- Early Supporter Badge -->
                 <div class="discord-badge" title="Early Supporter">
-                    <img src="../images/badges/discordearlysupporter.svg"
+                    <img src="../images/badges/discordearlysupporter.svg" width="22" height="22"
                         alt="Early Supporter">
                 </div>
 
                 <!-- Bug Hunter Tier 1 Badge -->
                 <div class="discord-badge" title="Discord Bug Hunter (Tier 1)">
-                    <img src="../images/badges/discordbughunter1.svg"
+                    <img src="../images/badges/discordbughunter1.svg" width="22" height="22"
                         alt="Bug Hunter">
                 </div>
 
                 <!-- Completed a Quest Badge -->
                 <div class="discord-badge" title="Completed a Quest">
-                    <img src="../images/badges/quest.png"
+                    <img src="../images/badges/quest.png" width="22" height="22"
                         alt="Quest">
                 </div>
 
                 <!-- Orbs Apprentice Badge -->
                 <div class="discord-badge" title="Orbs Apprentice">
-                    <img src="../images/badges/orb.svg"
+                    <img src="../images/badges/orb.svg" width="22" height="22"
                         alt="Orbs">
                 </div>
             </div>
 
             <div class="badge-divider"></div>
 
-            <div class="discord-section" style="padding: 16px; margin: 0;">
-                <div class="discord-about-card">
-                    <div class="card-header">
-                        <span class="header-icon">🔗</span>
-                        <span class="header-title">CONNECT WITH ME</span>
-                    </div>
-                    <div class="card-content">
-                        <!-- Links Container -->
-                        <div class="links-container" id="links-list">
-                            <!-- Dynamically loaded from links.json -->
-                        </div>
-                    </div>
-                </div>
+            <!-- Social Links Feed -->
+            <div class="links-container" id="links-list">
+                <!-- Dynamically loaded from links.json -->
             </div>
 
             <!-- Footer -->
             <div class="discord-footer">
                 <div class="discord-footer-content">
                     <div class="discord-footer-text">
-                        Made with 💜 and ☕ by <span class="discord-footer-highlight">Shuvransu Sekhar Sahoo</span>
+                        Made with 💜 and ☕ by <span class="discord-footer-highlight">Shuvranshu Sekhar Sahoo</span>
                     </div>
                     <div class="discord-footer-links">
                         <a href="https://github.com/SahooShuvranshu/SahooShuvranshu.github.io" target="_blank"
@@ -749,61 +705,56 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                // Load links from JSON
-                const linksList = document.getElementById('links-list');
-                if (linksList) {
-                    fetch('links.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            linksList.innerHTML = '';
-                            data.forEach(link => {
-                                const isMail = link.url.startsWith('mailto:');
-                                const targetAttr = isMail ? '' : 'target="_blank" rel="noopener noreferrer"';
-                                const renderIcon = link.icon.startsWith('http')
-                                    ? `<img src="${link.icon}" style="width: 15px; height: 15px; display: block;" alt="icon">`
-                                    : `<i class="${link.icon}"></i>`;
-                                const linkHtml = `<a href="${link.url}" class="social-link-item" style="--brand-color: ${link.color || '#5865f2'};" ${targetAttr}>
-                                    <div class="link-left">
-                                        <div class="link-icon-container">
-                                            ${renderIcon}
-                                        </div>
-                                        <div class="link-details">
-                                            <span class="link-title">${link.title}</span>
-                                            <span class="link-desc">${link.desc}</span>
-                                        </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Load links from JSON
+            const linksList = document.getElementById('links-list');
+            if (linksList) {
+                fetch('links.json')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const itemsHtml = data.map(link => {
+                            const isMail = link.url.startsWith('mailto:');
+                            const targetAttr = isMail ? '' : 'target="_blank" rel="noopener noreferrer"';
+                            const renderIcon = link.icon.startsWith('http')
+                                ? `<img src="${link.icon}" style="width: 15px; height: 15px; display: block;" alt="icon">`
+                                : `<i class="${link.icon}"></i>`;
+                            return `<a href="${link.url}" class="social-link-item" style="--brand-color: ${link.color || '#5865f2'};" ${targetAttr}>
+                                <div class="link-left">
+                                    <div class="link-icon-container">
+                                        ${renderIcon}
                                     </div>
-                                    <div class="link-arrow">
-                                        <i class="fa-solid fa-chevron-right"></i>
+                                    <div class="link-details">
+                                        <span class="link-title">${link.title}</span>
+                                        <span class="link-desc">${link.desc}</span>
                                     </div>
-                                </a>`;
-                                linksList.innerHTML += linkHtml;
-                            });
-                        })
-                        .catch(error => console.error('Error loading links:', error));
-                }
-
-                // Blog button
-                const blogBtn = document.querySelector('.discord-blog-btn');
-                if (blogBtn) {
-                    blogBtn.addEventListener('click', function () {
-                        window.open('https://sahooshuvranshu.is-a.dev/blog/', '_self');
+                                </div>
+                                <div class="link-arrow">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </a>`;
+                        }).join('');
+                        linksList.innerHTML = itemsHtml;
+                    })
+                    .catch(error => {
+                        console.error('Error loading links:', error);
+                        linksList.innerHTML = `
+                            <div style="text-align: center; padding: 24px; color: #b9bbbe; font-family: 'Courier New', monospace; font-size: 13px; background-color: #202225; border: 2px dashed #40444b;">
+                                <p style="margin-bottom: 8px; color: #faa61a;">⚠️ Unable to dynamically load channels.</p>
+                                <p>Connect directly via <a href="https://github.com/SahooShuvranshu" style="color: #00b0f4; text-decoration: underline;" target="_blank">GitHub</a> or <a href="mailto:sahooshuvranshusekhar@gmail.com" style="color: #00b0f4; text-decoration: underline;">Email</a>.</p>
+                            </div>
+                        `;
                     });
-                }
-
-
-
-                // Home button
-                const homeBtn = document.querySelector('.discord-home-btn');
-                if (homeBtn) {
-                    homeBtn.addEventListener('click', function () {
-                        window.open('https://sahooshuvranshu.is-a.dev/', '_self');
-                    });
-                }
-            });
-        </script>
+            }
+        });
+    </script>
 </body>
 
 </html>

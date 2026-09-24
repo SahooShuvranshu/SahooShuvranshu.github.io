@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuvransu Sekhar Sahoo | Data Scientist - Contact</title>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://sahooshuvranshu.is-a.dev/contact/">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Get in touch with Shuvransu Sekhar Sahoo - Data Scientist, Machine Learning practitioner, and developer. Contact via email, LinkedIn, Discord, and Matrix.">
+    <meta name="keywords" content="Shuvransu Sekhar Sahoo, Data Scientist, Contact, LinkedIn, Discord, Email, Matrix, Machine Learning, Portfolio">
+    <meta name="author" content="Shuvransu Sekhar Sahoo">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/contact/">
+    <meta property="og:title" content="Shuvransu Sekhar Sahoo | Data Scientist - Contact">
+    <meta property="og:description" content="Get in touch with Shuvransu Sekhar Sahoo - Data Scientist, Machine Learning practitioner, and developer.">
+    <meta property="og:site_name" content="Shuvransu Sekhar Sahoo | Portfolio">
+    <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/contact/">
+    <meta name="twitter:title" content="Shuvransu Sekhar Sahoo | Data Scientist - Contact">
+    <meta name="twitter:description" content="Get in touch with Shuvransu Sekhar Sahoo - Data Scientist, Machine Learning practitioner, and developer.">
+    <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
+
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
+    <link rel="stylesheet" href="../css/discord-retro.css">
+    <style>
+        /* Contact Page Specific Styles */
+        .contact-content {
+            padding: 20px 16px;
+            text-align: center;
+        }
+
+        .contact-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .contact-description {
+            color: #b9bbbe;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 450px;
+            margin: 0 auto 16px;
+        }
+
+        .contact-method-btn {
+            background-color: #202225;
+            color: #ffffff;
+            border: 2px solid #40444b;
+            border-radius: 0;
+            padding: 14px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 3px 3px 0 #18191c;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            width: 100%;
+        }
+
+        .contact-method-btn:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 5px 5px 0 #18191c;
+            background-color: #2f3136;
+        }
+
+        .contact-method-btn.email {
+            border-left: 4px solid #ea4335;
+        }
+        .contact-method-btn.email:hover {
+            border-color: #ea4335;
+        }
+
+        .contact-method-btn.discord {
+            border-left: 4px solid #5865f2;
+        }
+        .contact-method-btn.discord:hover {
+            border-color: #5865f2;
+        }
+
+        .contact-method-btn.matrix {
+            border-left: 4px solid #0dbd8b;
+        }
+        .contact-method-btn.matrix:hover {
+            border-color: #0dbd8b;
+        }
+
+        .contact-method-btn.linkedin {
+            border-left: 4px solid #0077b5;
+        }
+        .contact-method-btn.linkedin:hover {
+            border-color: #0077b5;
+        }
+
+        .method-icon-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: #b9bbbe;
+            transition: color 0.2s ease;
+        }
+
+        .contact-method-btn.email:hover .method-icon-wrapper {
+            color: #ea4335;
+        }
+        .contact-method-btn.discord:hover .method-icon-wrapper {
+            color: #5865f2;
+        }
+        .contact-method-btn.matrix:hover .method-icon-wrapper {
+            color: #0dbd8b;
+        }
+        .contact-method-btn.linkedin:hover .method-icon-wrapper {
+            color: #0077b5;
+        }
+
+        .method-details {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            flex-grow: 1;
+            text-align: left;
+        }
+
+        .method-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+        }
+
+        .method-desc {
+            font-size: 11px;
+            color: #b9bbbe;
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .method-arrow {
+            font-size: 16px;
+            color: #72767d;
+            transition: transform 0.2s ease, color 0.2s ease;
+            font-weight: bold;
+        }
+
+        .contact-method-btn:hover .method-arrow {
+            transform: translateX(4px);
+            color: #ffffff;
+        }
+
+        .back-btn {
+            background-color: #3ba55c;
+            color: #ffffff;
+            border: 2px solid #2d7d46;
+            border-radius: 0;
+            padding: 8px 12px;
+            font-size: 12px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 2px 2px 0 #18191c;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .back-btn:hover {
+            background-color: #2d7d46;
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0 #18191c;
+            color: #ffffff;
+        }
+
+        .badge-divider {
+            height: 2px;
+            background-color: #40444b;
+            margin: 12px 0;
+            box-shadow: 0 1px 0 #18191c;
+        }
+
+        .discord-buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .discord-profile {
+                position: relative;
+                padding-top: 70px;
+            }
+            
+            .discord-buttons-container {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 4px;
+                justify-content: flex-end;
+            }
+            
+            .discord-social-tree-btn,
+            .discord-blog-btn,
+            .back-btn {
+                font-size: 12px;
+                padding: 8px 12px;
+                width: auto;
+                flex: 0 1 auto;
+                display: flex;
+                margin: 2px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .discord-profile {
+                padding-top: 70px;
+            }
+            
+            .discord-buttons-container {
+                gap: 4px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+            
+            .discord-social-tree-btn,
+            .discord-blog-btn,
+            .back-btn {
+                font-size: 11px;
+                padding: 7px 10px;
+                flex: 0 1 auto;
+                width: auto;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body class="discord-main-body">
+    <!-- Discord UI Portfolio -->
+    <div class="discord-container">
+        <!-- Banner -->
+        <div class="discord-banner"></div>
+        
+        <!-- Profile Section -->
+        <div class="discord-profile">
+            <div class="discord-buttons-container">
+                <a href="../socials/" class="discord-social-tree-btn" title="My Socials">Socials</a>
+                <a href="https://sahooshuvranshu.is-a.dev/blog" class="discord-blog-btn" title="View Blog">Blog</a>
+                <a href="../" class="back-btn" title="Back to Home">← Home</a>
+            </div>
+            
+            <!-- Avatar -->
+            <img src="https://avatars.githubusercontent.com/u/70892515?v=4" alt="Profile Avatar" class="discord-avatar">
+            
+            <!-- Username -->
+            <div class="discord-username">
+                Shuvransu Sekhar Sahoo<span class="discord-discriminator">#2801</span>
+                <div class="discord-verified-badge-animated" title="Verified Account">
+                    <img src="../images/badges/Verified.svg" alt="Verified" style="width: 100%; height: 100%; display: block;">
+                </div>
+            </div>
+            
+            <!-- Badges -->
+            <div class="discord-badges">
+                <!-- Discord Nitro Badge -->
+                <div class="discord-badge discord-badge-nitro" title="Discord Nitro">
+                    <img src="../images/badges/discordnitro.svg" width="22" height="22" alt="Nitro">
+                </div>
+                
+                <!-- HypeSquad Balance Badge -->
+                <div class="discord-badge discord-badge-hypesquad" title="HypeSquad Balance">
+                    <img src="../images/badges/hypesquadbalance.svg" width="22" height="22" alt="HypeSquad Balance">
+                </div>
+                
+                <!-- Active Developer Badge -->
+                <div class="discord-badge discord-badge-active-dev" title="Active Developer">
+                    <img src="../images/badges/activedeveloper.svg" width="22" height="22" alt="Active Developer">
+                </div>
+                
+                <!-- Early Supporter Badge -->
+                <div class="discord-badge discord-badge-early-supporter" title="Early Supporter">
+                    <img src="../images/badges/discordearlysupporter.svg" width="22" height="22" alt="Early Supporter">
+                </div>
+                
+                <!-- Bug Hunter Tier 1 Badge -->
+                <div class="discord-badge discord-badge-bug-hunter" title="Discord Bug Hunter (Tier 1)">
+                    <img src="../images/badges/discordbughunter1.svg" width="22" height="22" alt="Bug Hunter Tier 1">
+                </div>
+                
+                <!-- Completed a Quest Badge -->
+                <div class="discord-badge discord-badge-quest" title="Completed a Quest">
+                    <img src="../images/badges/quest.png" width="22" height="22" alt="Completed a Quest">
+                </div>
+                
+                <!-- Orbs Apprentice Badge -->
+                <div class="discord-badge discord-badge-orbs" title="Orbs Apprentice">
+                    <img src="../images/badges/orb.svg" width="22" height="22" alt="Orbs Apprentice">
+                </div>
+            </div>
+            
+            <!-- Divider under badges -->
+            <div class="badge-divider"></div>
+            
+            <!-- Contact Content -->
+            <div class="contact-content">
+                <h1 class="contact-title">📬 GET IN TOUCH</h1>
+                <p class="contact-description">
+                    I'm always open to discussing new machine learning projects, data analytics collaborations, research initiatives, or freelance opportunities. Feel free to reach out directly through any of the channels below!
+                </p>
+                
+                <div class="contact-buttons">
+                    <a href="mailto:sahooshuvranshusekhar@gmail.com?subject=Hello%20Shuvranshu!&body=Hi%20Shuvranshu,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.%0D%0A%0D%0A[Your%20message%20here]%0D%0A%0D%0ABest%20regards" class="contact-method-btn email">
+                        <div class="method-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-title">Email</span>
+                            <span class="method-desc">Inquiries, collaboration proposals & direct email</span>
+                        </div>
+                        <span class="method-arrow">→</span>
+                    </a>
+
+                    <a href="https://discord.com/users/879695880528216075" target="_blank" rel="noopener noreferrer" class="contact-method-btn discord">
+                        <div class="method-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 127.14 96.36" fill="currentColor">
+                                <path d="M107.7,8.07A105.15,105.15,0,0,0,81.47,0a72.06,72.06,0,0,0-3.36,6.83A97.68,97.68,0,0,0,49,6.83,72.37,72.37,0,0,0,45.64,0,105.89,105.89,0,0,0,19.39,8.09C2.79,32.65-1.71,56.6.54,80.21h0A105.73,105.73,0,0,0,32.71,96.36,77.7,77.7,0,0,0,39.6,85.25a68.42,68.42,0,0,1-10.85-5.18c.91-.66,1.8-1.34,2.66-2a75.57,75.57,0,0,0,64.32,0c.87.71,1.76,1.39,2.66,2a68.68,68.68,0,0,1-10.87,5.19,77,77,0,0,0,6.89,11.1A105.25,105.25,0,0,0,126.6,80.22h0C129.24,52.84,122.09,29.11,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53s5-12.74,11.43-12.74S54,46,53.89,53,48.84,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.25,60,73.25,53s5-12.74,11.44-12.74S96.23,46,96.12,53,91.08,65.69,84.69,65.69Z"/>
+                            </svg>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-title">Discord</span>
+                            <span class="method-desc">Direct messages, communities & real-time chat</span>
+                        </div>
+                        <span class="method-arrow">→</span>
+                    </a>
+                    
+                    <a href="https://matrix.to/#/@sahooshuvransu:matrix.org" target="_blank" rel="noopener noreferrer" class="contact-method-btn matrix">
+                        <div class="method-icon-wrapper">
+                            <img src="https://cdn.simpleicons.org/matrix/ffffff" style="width: 24px; height: 24px; display: block;" alt="Matrix">
+                        </div>
+                        <div class="method-details">
+                            <span class="method-title">Matrix</span>
+                            <span class="method-desc">Secure, decentralized encrypted messaging</span>
+                        </div>
+                        <span class="method-arrow">→</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/shuvranshu-sekhar-sahoo-931396207" target="_blank" rel="noopener noreferrer" class="contact-method-btn linkedin">
+                        <div class="method-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </div>
+                        <div class="method-details">
+                            <span class="method-title">LinkedIn</span>
+                            <span class="method-desc">Professional networking & career connections</span>
+                        </div>
+                        <span class="method-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="discord-footer">
+                <div class="discord-footer-content">
+                    <div class="discord-footer-text">
+                        Made with 💜 and ☕ by <span class="discord-footer-highlight">Shuvransu Sekhar Sahoo</span>
+                    </div>
+                    <div class="discord-footer-links">
+                        <a href="https://github.com/SahooShuvranshu/SahooShuvranshu.github.io" target="_blank" class="discord-footer-link" title="View Source Code">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            Source Code
+                        </a>
+                        <span class="discord-footer-divider">•</span>
+                        <a href="https://github.com/SahooShuvranshu" target="_blank" class="discord-footer-link" title="GitHub Profile">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 0H4v24h16V0zM6 21v-2h2v2H6zm0-5v-2h2v2H6zm0-5V9h2v2H6zm0-5V4h2v2H6zm5 15v-5h2v5h-2zm0-7V9h2v2h-2zm0-5V4h2v2h-2zm7 12v-2h-2v2h2zm0-5v-2h-2v2h2zm0-5V9h-2v2h2zm0-5V4h-2v2h2z"/>
+                            </svg>
+                            Projects
+                        </a>
+                        <span class="discord-footer-divider">•</span>
+                        <a href="mailto:sahooshuvranshusekhar@gmail.com" class="discord-footer-link" title="Email Me">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            Contact
+                        </a>
+                    </div>
+                    <div class="discord-footer-tagline">
+                        © 2026 All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

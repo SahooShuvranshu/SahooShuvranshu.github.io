@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shuvransu Sekhar Sahoo | Data Scientist - Skills & Services</title>
+    <title>Skills & Tech Stack - Shuvransu Sekhar Sahoo | Data Scientist</title>
     
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Technical skills and freelance services offered by Shuvransu Sekhar Sahoo - Data Scientist, Machine Learning practitioner, and developer. Python, ML, Data Analytics, web apps, and bots.">
-    <meta name="keywords" content="Shuvransu Sekhar Sahoo, Data Scientist, Machine Learning, Python, Data Analytics, Pandas, NumPy, Scikit-Learn, React, Bot Development, Freelance">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Skills & Tech Stack - Shuvransu Sekhar Sahoo | Data Scientist">
+    <meta name="description" content="Technical skills, GitHub analytics, and freelance services offered by Shuvransu Sekhar Sahoo - Data Scientist, ML practitioner, and developer. Python, ML pipelines, Pandas, Scikit-Learn, bots, and full-stack web.">
+    <meta name="keywords" content="Shuvransu Sekhar Sahoo, Shuvranshu Sekhar Sahoo, Data Scientist, Machine Learning, Python, Data Analytics, Pandas, NumPy, Scikit-Learn, React, Bot Development, Freelance">
     <meta name="author" content="Shuvransu Sekhar Sahoo">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://sahooshuvranshu.is-a.dev/skills/">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/pages/skills.html">
-    <meta property="og:title" content="Shuvransu Sekhar Sahoo | Data Scientist - Skills & Services">
-    <meta property="og:description" content="Explore technical skills and freelance services in Data Science, Machine Learning, Analytics, and Full-Stack Development.">
+    <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/skills/">
+    <meta property="og:title" content="Skills & Tech Stack - Shuvransu Sekhar Sahoo | Data Scientist">
+    <meta property="og:description" content="Explore technical skills, analytics, and freelance services in Data Science, Machine Learning, Analytics, and Full-Stack Development.">
+    <meta property="og:site_name" content="Shuvransu Sekhar Sahoo | Portfolio">
     <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/pages/skills.html">
-    <meta name="twitter:title" content="Shuvransu Sekhar Sahoo | Data Scientist - Skills & Services">
-    <meta name="twitter:description" content="Technical skills and freelance services in Data Science, Machine Learning, Analytics, and Full-Stack Development.">
+    <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/skills/">
+    <meta name="twitter:title" content="Skills & Tech Stack - Shuvransu Sekhar Sahoo | Data Scientist">
+    <meta name="twitter:description" content="Technical skills, GitHub analytics, and freelance services in Data Science, Machine Learning, Analytics, and Full-Stack Development.">
     <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
     
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
@@ -32,35 +37,38 @@
         /* GitHub Stats Section */
         .github-stats-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 16px;
         }
 
         .discord-stats-card {
-            background-color: #40444b;
+            background-color: #2f3136;
             border-radius: 0;
             overflow: hidden;
             border: 2px solid #202225;
             box-shadow: 2px 2px 0 #18191c;
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
         }
 
         .discord-stats-card:hover {
             transform: translate(-2px, -2px);
             box-shadow: 4px 4px 0 #18191c;
+            border-color: #5865f2;
         }
 
         .stats-header {
             background-color: #202225;
-            padding: 10px 12px;
+            padding: 8px 12px;
             display: flex;
             align-items: center;
             gap: 8px;
-            border-bottom: 2px solid #202225;
+            border-bottom: 2px solid #18191c;
         }
 
         .stats-icon {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .stats-title {
@@ -73,16 +81,28 @@
         }
 
         .stats-content {
-            padding: 16px;
+            padding: 14px;
             display: flex;
             justify-content: center;
             align-items: center;
+            flex: 1;
+            background-color: #2f3136;
+            min-height: 160px;
         }
 
         .stats-content img {
             width: 100%;
+            max-width: 320px;
+            max-height: 165px;
             height: auto;
+            object-fit: contain;
             display: block;
+            margin: 0 auto;
+            transition: transform 0.2s ease;
+        }
+
+        .stats-content img:hover {
+            transform: scale(1.02);
         }
 
         /* Skills Wrapper */
@@ -150,7 +170,7 @@
             background-color: #40444b;
             border-radius: 0;
             padding: 20px;
-            border: 2px solid #5865f2; /* Discord Blurple */
+            border: 2px solid #5865f2;
             margin-bottom: 20px;
             box-shadow: 2px 2px 0 #18191c;
         }
@@ -260,7 +280,6 @@
             box-shadow: 2px 2px 0 #18191c;
         }
 
-        /* Color variations for tags */
         .service-tags .tag:nth-child(1) { background-color: rgba(88, 101, 242, 0.15); color: #5865f2; border-color: #5865f2; }
         .service-tags .tag:nth-child(2) { background-color: rgba(59, 165, 92, 0.15); color: #3ba55c; border-color: #3ba55c; }
         .service-tags .tag:nth-child(3) { background-color: rgba(250, 166, 26, 0.15); color: #faa61a; border-color: #faa61a; }
@@ -268,7 +287,6 @@
         .service-tags .tag:nth-child(5) { background-color: rgba(0, 176, 244, 0.15); color: #00b0f4; border-color: #00b0f4; }
         .service-tags .tag:nth-child(6) { background-color: rgba(114, 137, 218, 0.15); color: #7289da; border-color: #7289da; }
 
-        /* Commission CTA */
         .commission-cta {
             background-color: #202225;
             border-radius: 4px;
@@ -448,7 +466,6 @@
             text-decoration: underline;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             body:not(.discord-main-body) {
                 padding: 30px 15px;
@@ -491,8 +508,8 @@
         <div class="discord-profile">
             <div class="discord-buttons-container">
                 <a href="../socials/" class="discord-social-tree-btn" title="My Socials">Socials</a>
-                <a href="https://sahooshuvranshu.is-a.dev/blog" class="discord-blog-btn" title="View Blog">Blog</a>
-                <a href="../contact.html" class="discord-contact-btn" title="Contact Me">Contact</a>
+                <a href="https://sahooshuvranshu.is-a.dev/blog/" class="discord-blog-btn" title="View Blog">Blog</a>
+                <a href="../contact/" class="discord-contact-btn" title="Contact Me">Contact</a>
             </div>
 
             <!-- Avatar -->
@@ -547,11 +564,11 @@
 
             <!-- Navigation Tabs -->
             <div class="discord-tabs">
-                <a href="../index.html" class="discord-tab">About</a>
-                <a href="skills.html" class="discord-tab active">Skills</a>
-                <a href="education.html" class="discord-tab">Education</a>
-                <a href="projects.html" class="discord-tab">Projects</a>
-                <a href="certificates.html" class="discord-tab">Certificates</a>
+                <a href="../" class="discord-tab">About</a>
+                <a href="../skills/" class="discord-tab active">Skills</a>
+                <a href="../education/" class="discord-tab">Education</a>
+                <a href="../projects/" class="discord-tab">Projects</a>
+                <a href="../certificates/" class="discord-tab">Certificates</a>
             </div>
 
             <!-- Content Container -->
@@ -583,7 +600,7 @@
                             <span class="stats-title">Most Used Languages</span>
                         </div>
                         <div class="stats-content">
-                            <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=SahooShuvranshu&layout=compact&langs_count=8&theme=discord_old_blurple&hide_border=true&bg_color=2f3136&title_color=7289da&text_color=dcddde" alt="Language Stats" loading="lazy" onerror="this.onerror=null; this.src='https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=SahooShuvranshu&layout=compact&langs_count=8&theme=discord_old_blurple&hide_border=true&bg_color=2f3136&title_color=7289da&text_color=dcddde';" />
+                            <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=SahooShuvranshu&layout=compact&langs_count=6&theme=discord_old_blurple&hide_border=true&bg_color=2f3136&title_color=7289da&text_color=dcddde" alt="Language Stats" loading="lazy" onerror="this.onerror=null; this.src='https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=SahooShuvranshu&layout=compact&langs_count=6&theme=discord_old_blurple&hide_border=true&bg_color=2f3136&title_color=7289da&text_color=dcddde';" />
                         </div>
                     </div>
 
@@ -1004,7 +1021,6 @@
         modalDeliverables.innerHTML = deliverables;
         modalBanner.style.background = bannerGradient;
         
-        // Dynamically build tech tags inside the modal
         let tagsHtml = '';
         tagsArray.forEach(tag => {
             tagsHtml += `<span class="tag" style="background-color: rgba(255,255,255,0.05); color: #dcddde; border-color: #40444b;">${tag}</span>`;
@@ -1023,7 +1039,6 @@
         }
     }
     
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             closeServicePreview();

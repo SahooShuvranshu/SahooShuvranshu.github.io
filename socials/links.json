@@ -11,7 +11,7 @@
     "desc": "Browse my code repositories, scripts, and open-source contributions.",
     "url": "https://github.com/SahooShuvranshu",
     "icon": "fa-brands fa-github",
-    "color": "#171515"
+    "color": "#f0f6fc"
   },
   {
     "title": "Codeberg",
@@ -46,7 +46,7 @@
     "desc": "Get quick updates, developer tweets, and tech insights.",
     "url": "https://x.com/Its_Shuvranshu",
     "icon": "fa-brands fa-x-twitter",
-    "color": "#000000"
+    "color": "#f2f3f5"
   },
   {
     "title": "Bluesky",
@@ -58,9 +58,9 @@
   {
     "title": "Threads",
     "desc": "Join the conversation and check out my latest text updates.",
-    "url": "https://www.threads.com/@its_shuvranshu.alive",
+    "url": "https://www.threads.net/@its_shuvranshu.alive",
     "icon": "fa-brands fa-threads",
-    "color": "#000000"
+    "color": "#f2f3f5"
   },
   {
     "title": "Reddit",
