@@ -1,744 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Education & Experience | Shuvranshu Sekhar Sahoo</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Education and professional experience of Shuvranshu Sekhar Sahoo. B.Tech in Computer Science, Diploma from Nilachala Polytechnic, internships at Deloitte, CTTC, and OKCL.">
-    <meta name="keywords" content="Education, Experience, Internships, Deloitte, Computer Science, Diploma, B.Tech, Software Engineering, Cybersecurity, Python Intern">
-    <meta name="author" content="Shuvranshu Sekhar Sahoo">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/pages/education.html">
-    <meta property="og:title" content="Education & Experience | Shuvranshu Sekhar Sahoo">
-    <meta property="og:description" content="Education and professional experience including B.Tech in Computer Science, Diploma from Nilachala Polytechnic, and internships at Deloitte, CTTC, and OKCL.">
-    <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/pages/education.html">
-    <meta name="twitter:title" content="Education & Experience | Shuvranshu Sekhar Sahoo">
-    <meta name="twitter:description" content="Computer Science education and professional internships at Deloitte, CTTC, and OKCL.">
-    <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
-    
+    <meta name="description"
+        content="Academic education and industry internship history of Shuvranshu Sekhar Sahoo at Nilachala Polytechnic, CTTC (MSME), GeeksforGeeks, and Deloitte.">
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        body {
-            background-color: #36393f;
-            background-image: url('https://i.pinimg.com/originals/c1/fc/9d/c1fc9d7f6ae08d56f2b84e81799790a5.gif');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Discord About Card Box Grouping */
-        .discord-about-card {
-            background-color: #2f3136;
-            border-radius: 4px;
-            margin-bottom: 24px;
-            border: 2px solid #40444b;
-            overflow: hidden;
-            box-shadow: 4px 4px 0 #18191c;
-        }
-
-        .card-header {
-            background-color: #202225;
-            padding: 10px 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            border-bottom: 2px solid #18191c;
-            font-family: 'Courier New', monospace;
-            letter-spacing: 1px;
-        }
-
-        .header-icon {
-            font-size: 16px;
-        }
-
-        .header-title {
-            color: #8e9297;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .card-content {
-            padding: 20px 16px;
-        }
-
-        /* Vertical Timeline Elements */
-        .timeline-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-left: 40px;
-            padding-bottom: 20px;
-        }
-
-        .timeline-item:last-child {
-            padding-bottom: 0;
-        }
-
-        .timeline-item:not(:last-child)::before {
-            content: '';
-            position: absolute;
-            left: 16px;
-            top: 26px;
-            bottom: -6px;
-            width: 2px;
-            background: linear-gradient(to bottom, #40444b 0%, #202225 100%);
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 10px;
-            top: 8px;
-            width: 14px;
-            height: 14px;
-            border-radius: 50%;
-            border: 3px solid #2f3136;
-            z-index: 1;
-        }
-
-        .education-marker {
-            background-color: #5865f2;
-            box-shadow: 0 0 8px rgba(88, 101, 242, 0.4);
-        }
-
-        .work-marker {
-            background-color: #3ba55c;
-            box-shadow: 0 0 8px rgba(59, 165, 92, 0.4);
-        }
-
-        /* Timeline Content Card Styles (Project Card-like, but without banner) */
-        .timeline-content-card {
-            background-color: #40444b;
-            border: 2px solid #202225;
-            border-radius: 0;
-            overflow: hidden;
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
-            box-shadow: 2px 2px 0 #18191c;
-            position: relative;
-            cursor: pointer;
-        }
-
-        .timeline-content-card:hover {
-            transform: translateX(4px);
-            box-shadow: 4px 4px 0 #18191c;
-            background-color: #4f545c;
-        }
-
-        .timeline-content-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: repeating-linear-gradient(
-                90deg,
-                #202225 0px,
-                #202225 4px,
-                transparent 4px,
-                transparent 8px
-            );
-        }
-
-        /* Header Bar */
-        .project-header-bar {
-            background-color: #202225;
-            padding: 6px 12px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            border-bottom: 2px solid #18191c;
-            font-family: 'Courier New', monospace;
-        }
-
-        .project-year {
-            color: #8e9297;
-            font-size: 10px;
-            background-color: #18191c;
-            padding: 2px 6px;
-            border: 1px solid #40444b;
-        }
-
-        /* Content */
-        .project-content {
-            padding: 12px 14px;
-        }
-
-        .project-title-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            gap: 10px;
-        }
-
-        .project-title {
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: 700;
-            line-height: 1.3;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Subtitle / Company / School */
-        .project-subtitle {
-            color: #b9bbbe;
-            font-size: 12px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            min-height: 24px;
-        }
-        
-        .project-subtitle a {
-            color: #00b0f4;
-            text-decoration: none;
-        }
-        
-        .project-subtitle a:hover {
-            text-decoration: underline;
-        }
-        
-        .project-subtitle img {
-            width: 20px;
-            height: 20px;
-            object-fit: contain;
-            border-radius: 4px;
-        }
-
-        /* Hidden Description */
-        .project-description {
-            display: none;
-        }
-
-        /* Project Status Badges */
-        .project-status {
-            display: inline-flex;
-            align-items: center;
-            padding: 3px 6px;
-            font-size: 8px;
-            font-weight: 700;
-            white-space: nowrap;
-            flex-shrink: 0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-family: 'Courier New', monospace;
-            border: 1.5px solid;
-            border-radius: 3px;
-            background-color: rgba(32, 34, 37, 0.5);
-            line-height: 1;
-        }
-
-        .project-status.completed {
-            border-color: #3ba55c;
-            color: #3ba55c;
-        }
-
-        .project-status.ongoing {
-            border-color: #5865f2;
-            color: #5865f2;
-        }
-
-        /* Status Dot */
-        .status-dot {
-            display: inline-block;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            margin-right: 4px;
-        }
-
-        .status-dot.completed {
-            background-color: #3ba55c;
-        }
-
-        .status-dot.ongoing {
-            background-color: #5865f2;
-            box-shadow: 0 0 6px #5865f2;
-            animation: pulseStatus 2s infinite;
-        }
-
-        @keyframes pulseStatus {
-            0% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0.7); }
-            70% { box-shadow: 0 0 0 5px rgba(88, 101, 242, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(88, 101, 242, 0); }
-        }
-
-        /* Preview Modal Styles */
-        .preview-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.25s ease;
-        }
-
-        .preview-modal.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .modal-overlay {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(4px);
-        }
-
-        .modal-container {
-            position: relative;
-            width: 90%;
-            max-width: 650px;
-            background-color: #2f3136;
-            border: 2px solid #40444b;
-            box-shadow: 8px 8px 0 #18191c;
-            z-index: 10001;
-            overflow: hidden;
-            animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-
-        @keyframes modalScale {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 12px;
-            right: 16px;
-            background: none;
-            border: none;
-            color: #b9bbbe;
-            font-size: 32px;
-            cursor: pointer;
-            z-index: 10002;
-            line-height: 1;
-            transition: color 0.2s ease;
-        }
-
-        .modal-close:hover {
-            color: #ffffff;
-        }
-
-        .modal-content-wrapper {
-            display: flex;
-            flex-direction: column;
-            max-height: 90vh;
-        }
-
-        .modal-banner-pane {
-            width: 100%;
-            height: 160px;
-            background-color: #202225;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-bottom: 2px solid #40444b;
-        }
-
-        .modal-project-banner-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 56px;
-            color: #ffffff;
-        }
-
-        .modal-logo-circle {
-            position: absolute;
-            bottom: -24px;
-            left: 24px;
-            width: 64px;
-            height: 64px;
-            background-color: #2f3136;
-            border: 3px solid #40444b;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 2;
-        }
-
-        .modal-logo-circle img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-
-        .modal-details-pane {
-            padding: 40px 24px 24px 24px; /* extra top padding for floating logo */
-            overflow-y: auto;
-        }
-
-        .modal-details-pane h3 {
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            line-height: 1.3;
-            border-bottom: 2px solid #40444b;
-            padding-bottom: 12px;
-        }
-
-        .modal-meta-section {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .meta-item {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .meta-label {
-            color: #b9bbbe;
-            font-size: 11px;
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .meta-value {
-            color: #ffffff;
-            font-size: 14px;
-            line-height: 1.5;
-            white-space: pre-wrap;
-        }
-        
-        .meta-value a {
-            color: #00b0f4;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
-        .meta-value a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 30px 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 20px 10px;
-            }
-
-            .modal-banner-pane {
-                height: 120px;
-            }
-            
-            .modal-logo-circle {
-                width: 50px;
-                height: 50px;
-                bottom: -20px;
-                left: 16px;
-            }
-            
-            .modal-details-pane {
-                padding: 32px 16px 16px 16px;
-            }
-
-            .timeline-item {
-                padding-left: 30px;
-            }
-
-            .timeline-marker {
-                left: 5px;
-            }
-
-            .timeline-item:not(:last-child)::before {
-                left: 11px;
-            }
-        }
-    </style>
+    <!-- Centralized Modern Discord Stylesheets -->
+    <link rel="stylesheet" href="/css/discord-theme.css">
+    <link rel="stylesheet" href="/css/components.css">
 </head>
+
 <body>
-    <div class="container">
-        
-        <!-- ========================================
-             💼 EXPERIENCE CONTAINER BOX (First)
-             ======================================== -->
-        <div class="discord-about-card">
-            <div class="card-header">
-                <span class="header-icon">💼</span>
-                <span class="header-title">Work Experience</span>
-            </div>
-            <div class="card-content">
-                <div class="timeline-container" id="work-timeline-container">
-                    <!-- Data is fetched dynamically from media/education/education.json -->
-                </div>
-            </div>
+    <div class="discord-profile-card">
+        <!-- Banner -->
+        <div class="discord-banner">
+            <div class="discord-banner-overlay"></div>
         </div>
 
-        <!-- ========================================
-             🎓 EDUCATION CONTAINER BOX (Second)
-             ======================================== -->
-        <div class="discord-about-card" style="margin-top: 24px;">
-            <div class="card-header">
-                <span class="header-icon">🎓</span>
-                <span class="header-title">Education</span>
-            </div>
-            <div class="card-content">
-                <div class="timeline-container" id="education-timeline-container">
-                    <!-- Data is fetched dynamically from media/education/education.json -->
+        <!-- Header Section -->
+        <div class="discord-profile-header">
+            <div class="discord-avatar-row">
+                <div class="discord-avatar-wrapper">
+                    <div class="discord-avatar-decoration"></div>
+                    <div class="discord-avatar-container">
+                        <img class="discord-avatar" src="https://avatars.githubusercontent.com/u/70892515?v=4" alt="Shuvranshu Sekhar Sahoo">
+                        <div class="discord-status-cutout" title="Online">
+                            <div class="discord-status-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discord-badges-rack">
+                    <div class="discord-badge-item" data-tooltip="Verified Account">
+                        <img src="/images/badges/verified.svg" alt="Verified">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Discord Nitro">
+                        <img src="/images/badges/discord-nitro.svg" alt="Nitro">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="HypeSquad Balance">
+                        <img src="/images/badges/hype-squad-balance.svg" alt="HypeSquad Balance">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Active Developer">
+                        <img src="/images/badges/active-developer.svg" alt="Active Developer">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Early Supporter">
+                        <img src="/images/badges/discord-early-supporter.svg" alt="Early Supporter">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Bug Hunter">
+                        <img src="/images/badges/discord-bug-hunter.svg" alt="Bug Hunter">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Completed a Quest">
+                        <img src="/images/badges/quest.png" alt="Quest">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Orbs Apprentice">
+                        <img src="/images/badges/orb.svg" alt="Orbs Apprentice">
+                    </div>
                 </div>
             </div>
+
+            <div class="discord-user-info">
+                <div class="discord-display-name">
+                    Shuvranshu Sekhar Sahoo
+                    <span class="discord-verified-icon" title="Verified Creator">
+                        <img src="/images/badges/verified.svg" alt="Verified" width="18" height="18">
+                    </span>
+                </div>
+                <div class="discord-handle-row">
+                    <span class="discord-handle">@sahooshuvranshu</span>
+                    <span class="discord-pronouns-chip">he/him</span>
+                </div>
+                <div class="discord-status-bubble">
+                    <span class="status-emoji">⚡</span>
+                    <span class="status-text">Building Scalable Web Apps & Agentic AI Systems</span>
+                </div>
+            </div>
+
+            <div class="discord-action-buttons">
+                <a href="/contact.html" class="discord-btn discord-btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                </a>
+                <a href="/socials/" class="discord-btn discord-btn-secondary">
+                    <i class="fa-solid fa-link"></i> Socials
+                </a>
+                <a href="/blog/" class="discord-btn discord-btn-secondary">
+                    <i class="fa-solid fa-newspaper"></i> Blog
+                </a>
+                <a href="/slot/" class="discord-btn discord-btn-secondary">
+                    <i class="fa-solid fa-calendar-check"></i> Book a Call
+                </a>
+            </div>
+
+            <nav class="discord-tabs-bar">
+                <a href="/" class="discord-tab">
+                    <i class="fa-solid fa-user"></i> About Me
+                </a>
+                <a href="/pages/skills.html" class="discord-tab">
+                    <i class="fa-solid fa-code"></i> Skills
+                </a>
+                <a href="/pages/projects.html" class="discord-tab">
+                    <i class="fa-solid fa-laptop-code"></i> Projects
+                </a>
+                <a href="/pages/certificates.html" class="discord-tab">
+                    <i class="fa-solid fa-certificate"></i> Certifications
+                </a>
+                <a href="/pages/education.html" class="discord-tab active">
+                    <i class="fa-solid fa-graduation-cap"></i> Education
+                </a>
+                <a href="/socials/" class="discord-tab">
+                    <i class="fa-solid fa-share-nodes"></i> Socials
+                </a>
+                <a href="/contact.html" class="discord-tab">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </a>
+            </nav>
         </div>
 
+        <!-- Education Content Area -->
+        <main class="discord-body-container">
+            <!-- Academic Milestones -->
+            <div class="card-header-row">
+                <div class="card-section-title">
+                    <i class="fa-solid fa-graduation-cap" style="color: var(--blurple);"></i> Academic Education
+                </div>
+            </div>
+
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-institution">Nilachala Polytechnic College of Engineering</div>
+                    <div class="education-degree">B.Tech in Computer Science (Lateral Entry)</div>
+                    <div class="education-date"><i class="fa-regular fa-calendar"></i> August 2026 – Present • Bhubaneswar, Odisha</div>
+                    <div class="education-details">
+                        Advanced software engineering, database management systems, data structures, operating systems, and distributed computer architecture.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-institution">Nilachala Polytechnic</div>
+                    <div class="education-degree">Diploma in Computer Science & Engineering</div>
+                    <div class="education-date"><i class="fa-regular fa-calendar"></i> 2022 – 2026 • Bhubaneswar, Odisha</div>
+                    <div class="education-details">
+                        Comprehensive curriculum in object-oriented programming (C, C++, Java, Python), database administration, web development technologies, and hardware engineering.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Industry Experience & Internships -->
+            <div class="card-header-row" style="margin-top: 28px;">
+                <div class="card-section-title">
+                    <i class="fa-solid fa-briefcase" style="color: var(--status-online);"></i> Industry Experience & Roles
+                </div>
+            </div>
+
+            <div class="education-timeline">
+                <div class="education-item">
+                    <div class="education-institution">Central Tool Room & Training Centre (CTTC)</div>
+                    <div class="education-degree">Artificial Intelligence & Machine Learning Intern</div>
+                    <div class="education-date"><i class="fa-regular fa-calendar"></i> June 2026 • Ministry of MSME, Govt of India</div>
+                    <div class="education-details">
+                        Developed production-grade computer vision systems using Python and Keras. Engineered automated face recognition attendance pipelines and evaluated supervised deep neural network architectures.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-institution">GeeksforGeeks</div>
+                    <div class="education-degree">Campus Mantri (Campus Representative)</div>
+                    <div class="education-date"><i class="fa-regular fa-calendar"></i> January 2026 – June 2026</div>
+                    <div class="education-details">
+                        Led campus technical advocacy, organized coding hackathons, managed student developer communities, and promoted competitive programming initiatives.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-institution">Deloitte Australia</div>
+                    <div class="education-degree">Technology Consulting & Cyber Simulation Participant</div>
+                    <div class="education-date"><i class="fa-regular fa-calendar"></i> October 2025 – January 2026</div>
+                    <div class="education-details">
+                        Conducted enterprise log auditing, incident containment simulations, and security risk assessment analysis through the Forage enterprise platform.
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="education-institution">Odisha Knowledge Corporation Limited (OKCL)</div>
+                    <div class="education-degree">Python & Data Engineering Intern</div>
+                    <div class="education-date"><i class="fa-regular fa-calendar"></i> June 2025 – July 2025</div>
+                    <div class="education-details">
+                        Architected automated web scrapers for Youth Times using Python and BeautifulSoup, extracting and structuring unstructured news datasets into searchable databases.
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="discord-footer">
+            <div class="discord-footer-left">
+                Crafted with 💜 by <span class="discord-footer-highlight">Shuvranshu Sekhar Sahoo</span>
+            </div>
+            <div class="discord-footer-links">
+                <a href="https://github.com/SahooShuvranshu/SahooShuvranshu.github.io" target="_blank" rel="noopener noreferrer" class="discord-footer-link">
+                    <i class="fa-brands fa-github"></i> Source
+                </a>
+                <a href="/socials/" class="discord-footer-link">
+                    <i class="fa-solid fa-share-nodes"></i> Links
+                </a>
+                <a href="/contact.html" class="discord-footer-link">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </a>
+            </div>
+        </footer>
     </div>
-
-    <!-- ========================================
-         🔍 EDUCATION & EXPERIENCE PREVIEW MODAL
-         ======================================== -->
-    <div id="educationPreviewModal" class="preview-modal">
-        <div class="modal-overlay" onclick="closeEducationPreview()"></div>
-        <div class="modal-container">
-            <button class="modal-close" onclick="closeEducationPreview()">×</button>
-            <div class="modal-content-wrapper">
-                <div class="modal-banner-pane" id="modalEduBanner">
-                    <div id="modalEduBannerContent" class="modal-project-banner-container">
-                        <!-- Dynamically injected gradient fallback banner with emoji -->
-                    </div>
-                    <div class="modal-logo-circle">
-                        <img id="modalEduLogo" src="" alt="Logo">
-                    </div>
-                </div>
-                <div class="modal-details-pane">
-                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <span id="modalEduDate" class="project-year">Date</span>
-                    </div>
-                    <h3 id="modalEduTitle">Title</h3>
-                    <div class="modal-meta-section">
-                        <div class="meta-item">
-                            <span class="meta-label" id="modalEduTypeLabel">Institution</span>
-                            <span id="modalEduSubtitle" class="meta-value">Name & Link</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">Details & Highlights</span>
-                            <span id="modalEduDescription" class="meta-value">Description text</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    (function() {
-        const workContainer = document.getElementById('work-timeline-container');
-        const eduContainer = document.getElementById('education-timeline-container');
-        
-        if (!workContainer || !eduContainer) {
-            console.error('Work or Education container not found');
-            return;
-        }
-
-        const isSubdir = window.location.pathname.includes('/pages/');
-        const jsonUrl = isSubdir ? '../media/education/education.json' : 'media/education/education.json';
-
-        function renderTimeline(items, container, isEducation) {
-            container.innerHTML = '';
-            const markerClass = isEducation ? 'education-marker' : 'work-marker';
-
-            items.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.className = 'timeline-item';
-
-                const statusClass = item.status || 'completed';
-                const statusText = statusClass.toUpperCase();
-
-                // Handle local vs absolute logo paths
-                const logoSrc = item.logo && !item.logo.startsWith('http')
-                    ? (isSubdir ? '../' + item.logo : item.logo)
-                    : item.logo;
-
-                const card = document.createElement('div');
-                card.className = 'timeline-content-card';
-                
-                card.innerHTML = `
-                    <div class="project-header-bar">
-                        <span class="project-year">${item.dateRange}</span>
-                    </div>
-                    <div class="project-content">
-                        <div class="project-title-row">
-                            <div class="project-title">${item.title}</div>
-                            <span class="project-status ${statusClass}">
-                                <span class="status-dot ${statusClass}"></span>${statusText}
-                            </span>
-                        </div>
-                        <div class="project-subtitle">
-                            ${logoSrc ? `<img src="${logoSrc}" alt="${item.label} Logo">` : ''}
-                            <a href="${item.link}" target="_blank" rel="noopener noreferrer">${item.label}</a>
-                        </div>
-                    </div>
-                `;
-
-                // Click listener for preview
-                card.addEventListener('click', (e) => {
-                    if (e.target.closest('a')) {
-                        return;
-                    }
-                    const modalSubtitleHtml = `<a href="${item.link}" target="_blank">${item.organization}</a>`;
-                    
-                    let bannerSource = item.bannerImage || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)';
-                    if (bannerSource && !bannerSource.startsWith('http') && (bannerSource.startsWith('/') || bannerSource.startsWith('media/'))) {
-                        bannerSource = isSubdir ? '../' + bannerSource : bannerSource;
-                    }
-
-                    openEduPreview(
-                        item.title,
-                        modalSubtitleHtml,
-                        item.fullDate,
-                        item.description,
-                        logoSrc,
-                        bannerSource,
-                        isEducation
-                    );
-                });
-
-                itemElement.appendChild(card);
-                // Prepend the marker before the card in timeline-item
-                const marker = document.createElement('div');
-                marker.className = `timeline-marker ${markerClass}`;
-                itemElement.insertBefore(marker, card);
-
-                container.appendChild(itemElement);
-            });
-        }
-
-        fetch(jsonUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.work) {
-                    renderTimeline(data.work, workContainer, false);
-                }
-                if (data.education) {
-                    renderTimeline(data.education, eduContainer, true);
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching education/experience data:', error);
-            });
-    })();
-
-    function openEduPreview(title, subtitleHtml, date, descHtml, logoSrc, bannerImage, isEducation) {
-        const modal = document.getElementById('educationPreviewModal');
-        const modalTitle = document.getElementById('modalEduTitle');
-        const modalSubtitle = document.getElementById('modalEduSubtitle');
-        const modalDate = document.getElementById('modalEduDate');
-        const modalDesc = document.getElementById('modalEduDescription');
-        const modalLogo = document.getElementById('modalEduLogo');
-        const bannerContent = document.getElementById('modalEduBannerContent');
-        const typeLabel = document.getElementById('modalEduTypeLabel');
-        
-        if (!modal) return;
-        
-        modalTitle.textContent = title;
-        modalSubtitle.innerHTML = subtitleHtml;
-        modalDate.textContent = date;
-        modalDesc.innerHTML = descHtml;
-        
-        if (logoSrc) {
-            modalLogo.src = logoSrc;
-            modalLogo.style.display = 'block';
-        } else {
-            modalLogo.style.display = 'none';
-        }
-        
-        // Inject dynamic banner content (gradient or image) only on preview
-        const isUrl = (str) => {
-            if (!str) return false;
-            const cleanStr = str.trim();
-            return cleanStr.startsWith('http://') || cleanStr.startsWith('https://') || cleanStr.startsWith('/') || cleanStr.startsWith('media/');
-        };
-
-        if (isUrl(bannerImage)) {
-            bannerContent.innerHTML = `<img src="${bannerImage.trim()}" alt="${title}" style="width: 100%; height: 100%; object-fit: cover;">`;
-        } else {
-            bannerContent.innerHTML = `<div class="project-banner-fallback" style="background: ${bannerImage}"></div>`;
-        }
-        
-        if (isEducation) {
-            typeLabel.textContent = 'Institution';
-        } else {
-            typeLabel.textContent = 'Organization';
-        }
-        
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeEducationPreview() {
-        const modal = document.getElementById('educationPreviewModal');
-        if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
-    
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            closeEducationPreview();
-        }
-    });
-    </script>
 </body>
+
 </html>

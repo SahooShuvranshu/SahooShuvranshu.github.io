@@ -1,0 +1,671 @@
+/* ==========================================================================
+   🧩 MODERN DISCORD COMPONENTS (2024–2026 UI STANDARDS)
+   Cards, Badges, Credential Cards, Activity, Projects, Skills & Forms
+   Author: Shuvranshu Sekhar Sahoo
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. General Discord Card
+   -------------------------------------------------------------------------- */
+.discord-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discord-card:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.card-header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.card-section-title {
+    color: var(--text-white);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-body-text {
+    color: var(--text-normal);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card-body-text p {
+    margin-bottom: 10px;
+}
+
+.card-body-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   2. Rich Presence Activity Widget (VS Code / Developer Status)
+   -------------------------------------------------------------------------- */
+.discord-activity-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 16px;
+    margin-bottom: 16px;
+}
+
+.activity-header {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.activity-content {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.activity-icon-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: rgba(0, 122, 204, 0.12);
+    border: 1px solid rgba(0, 122, 204, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.activity-icon-container img,
+.activity-icon-container svg {
+    width: 36px;
+    height: 36px;
+    display: block;
+}
+
+.activity-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.activity-title {
+    color: var(--text-white);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activity-subtitle {
+    color: var(--text-normal);
+    font-size: 13px;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.activity-state {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.activity-time {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-family: var(--font-mono);
+    margin-top: 4px;
+}
+
+.activity-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.activity-btn {
+    flex: 1;
+    text-align: center;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.activity-btn-primary {
+    background-color: var(--blurple);
+    color: #ffffff;
+}
+
+.activity-btn-primary:hover {
+    background-color: var(--blurple-hover);
+}
+
+.activity-btn-secondary {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-white);
+    border: 1px solid var(--border-subtle);
+}
+
+.activity-btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
+/* --------------------------------------------------------------------------
+   3. Connected Accounts Grid
+   -------------------------------------------------------------------------- */
+.connected-accounts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.connected-account-chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--bg-inner);
+    border: 1px solid var(--border-card);
+    border-radius: 8px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: var(--text-normal);
+    transition: all 0.2s ease;
+}
+
+.connected-account-chip:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--blurple);
+    color: var(--text-white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.account-icon {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.connected-account-chip:hover .account-icon {
+    color: var(--text-white);
+}
+
+.account-info {
+    min-width: 0;
+}
+
+.account-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-white);
+    line-height: 1.2;
+}
+
+.account-handle {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   4. Secure Verified Credential Cards (NO RAW IMAGE SCANS)
+   -------------------------------------------------------------------------- */
+.credentials-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.credential-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 18px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.credential-card:hover {
+    border-color: rgba(88, 101, 242, 0.4);
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.credential-top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.credential-title-area {
+    flex: 1;
+}
+
+.credential-title {
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin-bottom: 4px;
+}
+
+.credential-issuer {
+    color: #b5bac1;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.credential-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(35, 165, 90, 0.15);
+    color: var(--status-online);
+    border: 1px solid rgba(35, 165, 90, 0.3);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+}
+
+.credential-meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+    font-size: 12px;
+}
+
+.credential-date {
+    color: var(--text-muted);
+}
+
+.credential-id-tag {
+    font-family: var(--font-mono);
+    background: var(--bg-inner);
+    border: 1px solid var(--border-card);
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.credential-description {
+    color: var(--text-normal);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 10px;
+    border-top: 1px solid var(--border-card);
+    padding-top: 12px;
+    white-space: pre-line;
+}
+
+.credential-action-row {
+    margin-top: 14px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.credential-verify-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--blurple);
+    color: #ffffff;
+    padding: 7px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.credential-verify-link:hover {
+    background-color: var(--blurple-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(88, 101, 242, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   5. Skills Component
+   -------------------------------------------------------------------------- */
+.skills-category-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+.skills-category-title {
+    color: var(--text-white);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skills-chip-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-chip {
+    background: var(--bg-inner);
+    border: 1px solid var(--border-card);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: var(--text-normal);
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    transition: all 0.2s ease;
+}
+
+.skill-chip:hover {
+    border-color: var(--blurple);
+    color: var(--text-white);
+    background: rgba(88, 101, 242, 0.1);
+    transform: translateY(-1px);
+}
+
+.skill-chip i {
+    font-size: 14px;
+}
+
+/* --------------------------------------------------------------------------
+   6. Projects Component
+   -------------------------------------------------------------------------- */
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 18px;
+    transition: all 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-card);
+    transform: translateY(-2px);
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.project-title {
+    color: var(--text-white);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 10px 0 14px 0;
+}
+
+.project-tag {
+    background: var(--bg-inner);
+    border: 1px solid var(--border-card);
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.project-description {
+    color: var(--text-normal);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.project-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.project-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+/* --------------------------------------------------------------------------
+   7. Education Component
+   -------------------------------------------------------------------------- */
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.education-item {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 18px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.education-item:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.education-institution {
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.education-degree {
+    color: var(--blurple);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 4px 0;
+}
+
+.education-date {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.education-details {
+    color: var(--text-normal);
+    font-size: 13px;
+    line-height: 1.6;
+    border-top: 1px solid var(--border-card);
+    padding-top: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   8. Socials Link Component (/socials/)
+   -------------------------------------------------------------------------- */
+.socials-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-link-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-card);
+    padding: 12px 16px;
+    text-decoration: none;
+    color: var(--text-normal);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: var(--brand-color, var(--blurple));
+    opacity: 0.8;
+}
+
+.social-link-item:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--brand-color, var(--blurple));
+    transform: translateX(4px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    color: var(--text-white);
+}
+
+.social-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-icon-wrapper {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--bg-inner);
+    border: 1px solid var(--border-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--brand-color, var(--text-white));
+    flex-shrink: 0;
+}
+
+.social-info {
+    min-width: 0;
+}
+
+.social-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-white);
+    line-height: 1.2;
+}
+
+.social-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.social-arrow {
+    color: var(--text-muted);
+    font-size: 14px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-link-item:hover .social-arrow {
+    transform: translateX(3px);
+    color: var(--text-white);
+}
+
+/* --------------------------------------------------------------------------
+   9. Modern Discord Contact Form
+   -------------------------------------------------------------------------- */
+.discord-form-group {
+    margin-bottom: 16px;
+}
+
+.discord-label {
+    display: block;
+    color: var(--text-white);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.discord-input,
+.discord-textarea {
+    width: 100%;
+    background-color: var(--bg-input);
+    border: 1px solid var(--border-card);
+    border-radius: 6px;
+    padding: 10px 14px;
+    color: var(--text-white);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discord-input:focus,
+.discord-textarea:focus {
+    border-color: var(--blurple);
+    box-shadow: 0 0 0 2px rgba(88, 101, 242, 0.25);
+}
+
+.discord-textarea {
+    min-height: 110px;
+    resize: vertical;
+}

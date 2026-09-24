@@ -1,895 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Shuvranshu Sekhar Sahoo</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Explore projects by Shuvranshu Sekhar Sahoo including Youth Times newspaper platform, Spotify Live Banner, and various web applications built with Flask, Python, and JavaScript.">
-    <meta name="keywords" content="Projects, Web Development, Youth Times, Spotify API, Flask Projects, Python Projects, Web Applications, Portfolio Projects">
-    <meta name="author" content="Shuvranshu Sekhar Sahoo">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/pages/projects.html">
-    <meta property="og:title" content="Projects | Shuvranshu Sekhar Sahoo">
-    <meta property="og:description" content="Explore projects including Youth Times newspaper platform, Spotify Live Banner, and various web applications built with Flask, Python, and JavaScript.">
-    <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/pages/projects.html">
-    <meta name="twitter:title" content="Projects | Shuvranshu Sekhar Sahoo">
-    <meta name="twitter:description" content="Web applications and tools including Youth Times, Spotify Live Banner, and more.">
-    <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
-    
+
+    <title>Featured Projects | Shuvranshu Sekhar Sahoo</title>
+    <meta name="description"
+        content="Explore featured open-source software, full-stack web applications, and developer tools built by Shuvranshu Sekhar Sahoo.">
     <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        body {
-            background-color: #36393f;
-            background-image: url('https://i.pinimg.com/originals/c1/fc/9d/c1fc9d7f6ae08d56f2b84e81799790a5.gif');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            padding: 40px 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            body {
-                padding: 30px 15px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 20px 10px;
-            }
-        }
-    </style>
+    <!-- Centralized Modern Discord Stylesheets -->
+    <link rel="stylesheet" href="/css/discord-theme.css">
+    <link rel="stylesheet" href="/css/components.css">
 </head>
+
 <body>
-    <div class="container">
-<!-- Data is fetched dynamically from media/projects/projects.json -->
-
-<!-- ========================================
-     🎨 STYLES & DISPLAY CODE BELOW
-     ======================================== -->
-<style>
-    /* Retro Header */
-    .retro-header {
-        background-color: #202225;
-        border: 2px solid #40444b;
-        border-radius: 4px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 0 #18191c;
-    }
-
-    .retro-header-top {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 14px;
-        background: linear-gradient(to bottom, #2f3136 0%, #202225 100%);
-        border-bottom: 1px solid #40444b;
-    }
-
-    .retro-icon {
-        font-size: 18px;
-    }
-
-    .retro-title {
-        color: #00b0f4;
-        font-size: 13px;
-        font-weight: 700;
-        font-family: 'Courier New', monospace;
-        letter-spacing: 1px;
-        flex: 1;
-    }
-
-    .retro-version {
-        color: #8e9297;
-        font-size: 10px;
-        font-family: 'Courier New', monospace;
-        background-color: #18191c;
-        padding: 2px 6px;
-        border-radius: 2px;
-        border: 1px solid #40444b;
-    }
-
-    .retro-header-line {
-        height: 4px;
-        background: repeating-linear-gradient(
-            90deg,
-            #5865f2 0px,
-            #5865f2 10px,
-            #3ba55c 10px,
-            #3ba55c 20px,
-            #faa61a 20px,
-            #faa61a 30px,
-            #ed4245 30px,
-            #ed4245 40px
-        );
-    }
-
-    /* Projects Grid */
-    .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-        gap: 16px;
-        margin-top: 20px;
-    }
-
-    /* Retro Project Card */
-    .project-card {
-        background-color: #2f3136;
-        border: 2px solid #40444b;
-        border-radius: 0;
-        overflow: hidden;
-        transition: transform 0.15s ease, box-shadow 0.15s ease;
-        box-shadow: 4px 4px 0 #18191c;
-        position: relative;
-    }
-
-    .project-card:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 6px 6px 0 #18191c;
-    }
-
-    .project-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: repeating-linear-gradient(
-            90deg,
-            #40444b 0px,
-            #40444b 4px,
-            transparent 4px,
-            transparent 8px
-        );
-    }
-
-    /* Retro Banner */
-    .project-banner {
-        width: 100%;
-        height: 140px;
-        background: #2f3136;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        border-bottom: 3px solid #18191c;
-        overflow: hidden;
-    }
-
-    .project-banner img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    .project-banner::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: repeating-linear-gradient(
-            90deg,
-            #ffffff20 0px,
-            #ffffff20 2px,
-            transparent 2px,
-            transparent 4px
-        );
-    }
-
-    /* Project Header Bar */
-    .project-header-bar {
-        background-color: #202225;
-        padding: 8px 12px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-        border-bottom: 2px solid #18191c;
-        font-family: 'Courier New', monospace;
-    }
-
-    .project-category {
-        color: #00b0f4;
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-    }
-
-    .project-year {
-        color: #8e9297;
-        font-size: 10px;
-        background-color: #18191c;
-        padding: 2px 6px;
-        border: 1px solid #40444b;
-    }
-
-    /* Content */
-    .project-content {
-        padding: 14px;
-    }
-
-    .project-title-row {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 10px;
-        gap: 10px;
-    }
-
-    .project-title {
-        color: #ffffff;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 1.3;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .project-status {
-        padding: 4px 8px;
-        font-size: 9px;
-        font-weight: 700;
-        white-space: nowrap;
-        flex-shrink: 0;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-family: 'Courier New', monospace;
-        border: 2px solid;
-    }
-
-    .project-status.active {
-        background-color: #3ba55c;
-        border-color: #2d7d46;
-        color: #ffffff;
-    }
-
-    .project-status.paused {
-        background-color: #faa61a;
-        border-color: #c77d0a;
-        color: #ffffff;
-    }
-
-    .project-status.archived {
-        background-color: #ed4245;
-        border-color: #a12d2f;
-        color: #ffffff;
-    }
-
-    .project-description {
-        color: #dcddde;
-        font-size: 13px;
-        line-height: 1.6;
-        margin-bottom: 14px;
-        border-left: 3px solid #40444b;
-        padding-left: 10px;
-    }
-
-    .project-links {
-        display: flex;
-        gap: 8px;
-        margin-bottom: 14px;
-        flex-wrap: wrap;
-    }
-
-    .project-link {
-        background-color: #40444b;
-        color: #ffffff;
-        padding: 8px 12px;
-        text-decoration: none;
-        font-size: 11px;
-        font-weight: 700;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.15s;
-        border: 2px solid #202225;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-family: 'Courier New', monospace;
-        box-shadow: 2px 2px 0 #18191c;
-    }
-
-    .project-link:hover {
-        background-color: #4f545c;
-        transform: translate(-1px, -1px);
-        box-shadow: 3px 3px 0 #18191c;
-    }
-
-    .project-link.demo {
-        background-color: #5865f2;
-        border-color: #4752c4;
-    }
-
-    .project-link.demo:hover {
-        background-color: #4752c4;
-    }
-
-    .project-link.disabled {
-        background-color: #2f3136;
-        color: #72767d;
-        cursor: not-allowed;
-        pointer-events: none;
-        border-color: #202225;
-        box-shadow: 1px 1px 0 #18191c;
-    }
-
-    .project-tech {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 6px;
-        padding-top: 10px;
-        border-top: 2px dashed #40444b;
-    }
-
-    .project-tech span {
-        background-color: #202225;
-        color: #b9bbbe;
-        padding: 4px 8px;
-        font-size: 10px;
-        font-weight: 600;
-        border: 1px solid #40444b;
-        font-family: 'Courier New', monospace;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-    }
-
-    /* Status dot & pulsing animation */
-    .status-dot {
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        margin-right: 6px;
-    }
-
-    .status-dot.active {
-        background-color: #43b581;
-        box-shadow: 0 0 8px #43b581;
-        animation: pulseStatus 2s infinite;
-    }
-
-    .status-dot.paused {
-        background-color: #faa61a;
-    }
-
-    .status-dot.archived {
-        background-color: #f04747;
-    }
-
-    @keyframes pulseStatus {
-        0% { box-shadow: 0 0 0 0 rgba(67, 181, 129, 0.7); }
-        70% { box-shadow: 0 0 0 6px rgba(67, 181, 129, 0); }
-        100% { box-shadow: 0 0 0 0 rgba(67, 181, 129, 0); }
-    }
-
-    .project-card {
-        cursor: pointer;
-    }
-
-    .project-card.placeholder-coming-soon {
-        cursor: default !important;
-    }
-
-    .project-card.placeholder-coming-soon:hover {
-        transform: none !important;
-        box-shadow: 4px 4px 0 #18191c !important;
-    }
-
-    /* Fallback banner layout */
-    .project-banner-fallback {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 48px;
-        color: #ffffff;
-    }
-
-    /* Preview Modal Styles */
-    .preview-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.25s ease;
-    }
-
-    .preview-modal.active {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .modal-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(4px);
-    }
-
-    .modal-container {
-        position: relative;
-        width: 90%;
-        max-width: 650px;
-        background-color: #2f3136;
-        border: 2px solid #40444b;
-        box-shadow: 8px 8px 0 #18191c;
-        z-index: 10001;
-        overflow: hidden;
-        animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    @keyframes modalScale {
-        from { transform: scale(0.9); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
-
-    .modal-close {
-        position: absolute;
-        top: 12px;
-        right: 16px;
-        background: none;
-        border: none;
-        color: #b9bbbe;
-        font-size: 32px;
-        cursor: pointer;
-        z-index: 10002;
-        line-height: 1;
-        transition: color 0.2s ease;
-    }
-
-    .modal-close:hover {
-        color: #ffffff;
-    }
-
-    .modal-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        max-height: 90vh;
-    }
-
-    .modal-image-pane {
-        width: 100%;
-        height: 250px;
-        background-color: #18191c;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 2px solid #40444b;
-    }
-
-    .modal-project-banner-container {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background-color: #202225;
-    }
-
-    .modal-project-banner-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .modal-details-pane {
-        padding: 24px;
-        overflow-y: auto;
-    }
-
-    .modal-details-pane h3 {
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 16px;
-        line-height: 1.3;
-        border-bottom: 2px solid #40444b;
-        padding-bottom: 12px;
-    }
-
-    .modal-meta-section {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .meta-item {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .meta-label {
-        color: #b9bbbe;
-        font-size: 11px;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-    }
-
-    .meta-value {
-        color: #ffffff;
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    @media (max-width: 480px) {
-        .modal-image-pane {
-            height: 180px;
-        }
-        .modal-details-pane {
-            padding: 16px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .projects-grid {
-            grid-template-columns: 1fr;
-            gap: 16px;
-        }
-
-        .project-banner {
-            height: 120px;
-            font-size: 40px;
-        }
-
-        .project-content {
-            padding: 12px;
-        }
-
-        .project-title {
-            font-size: 15px;
-        }
-
-        .retro-title {
-            font-size: 11px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .project-card {
-            box-shadow: 3px 3px 0 #18191c;
-        }
-
-        .project-card:hover {
-            transform: translate(-1px, -1px);
-            box-shadow: 4px 4px 0 #18191c;
-        }
-
-        .project-banner {
-            height: 100px;
-            font-size: 36px;
-        }
-
-        .project-content {
-            padding: 10px;
-        }
-
-        .project-title {
-            font-size: 14px;
-        }
-
-        .project-description {
-            font-size: 12px;
-        }
-        
-        .project-link {
-            font-size: 10px;
-            padding: 6px 10px;
-        }
-
-        .retro-header-top {
-            padding: 8px 10px;
-        }
-
-        .retro-title {
-            font-size: 10px;
-        }
-    }
-</style>
-
-<!-- Projects Grid Container -->
-<div class="projects-grid" id="projects-container"></div>
-
-<!-- ========================================
-     🔍 PROJECT PREVIEW MODAL
-     ======================================== -->
-<div id="projectPreviewModal" class="preview-modal">
-    <div class="modal-overlay" onclick="closeProjectPreview()"></div>
-    <div class="modal-container">
-        <button class="modal-close" onclick="closeProjectPreview()">×</button>
-        <div class="modal-content-wrapper">
-            <div class="modal-image-pane">
-                <div id="modalProjectBanner" class="modal-project-banner-container">
-                    <!-- Dynamically injected banner -->
-                </div>
-            </div>
-            <div class="modal-details-pane">
-                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                    <span id="modalProjectYear" class="project-year">Year</span>
-                </div>
-                <h3 id="modalProjectTitle">Project Title</h3>
-                <div class="modal-meta-section">
-                    <div class="meta-item">
-                        <span class="meta-label">Status</span>
-                        <span id="modalProjectStatus" class="project-status">Status</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Description</span>
-                        <span id="modalProjectDescription" class="meta-value">Description text</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Links</span>
-                        <div class="project-links" style="margin-bottom: 0;">
-                            <a id="modalProjectSource" href="#" target="_blank" class="project-link">📂 Code</a>
-                            <a id="modalProjectLive" href="#" target="_blank" class="project-link demo">🌐 Demo</a>
-                        </div>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">Tech Stack</span>
-                        <div id="modalProjectTech" class="project-tech" style="border-top: none; padding-top: 0;">
-                            <!-- Tech tags -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="discord-profile-card">
+        <!-- Banner -->
+        <div class="discord-banner">
+            <div class="discord-banner-overlay"></div>
         </div>
-    </div>
-</div>
 
-<script>
-(function() {
-    const projectsContainer = document.getElementById('projects-container');
-    if (!projectsContainer) {
-        console.error('Projects container not found');
-        return;
-    }
-    
-    // Resilient path detection
-    const isSubdir = window.location.pathname.includes('/pages/');
-    const jsonUrl = isSubdir ? '../media/projects/projects.json' : 'media/projects/projects.json';
-    const basePath = isSubdir ? '../' : '';
-    
-    // Render projects list
-    function renderProjects(projects) {
-        projectsContainer.innerHTML = '';
-        
-        // 1. Add permanent Coming Soon placeholder card first
-        const placeholderCard = document.createElement('div');
-        placeholderCard.className = 'project-card placeholder-coming-soon';
-        placeholderCard.innerHTML = `
-            <div class="project-banner">
-                <img src="${basePath}media/projects/placeholder.svg" alt="Coming Soon" loading="lazy">
+        <!-- Header Section -->
+        <div class="discord-profile-header">
+            <div class="discord-avatar-row">
+                <div class="discord-avatar-wrapper">
+                    <div class="discord-avatar-decoration"></div>
+                    <div class="discord-avatar-container">
+                        <img class="discord-avatar" src="https://avatars.githubusercontent.com/u/70892515?v=4" alt="Shuvranshu Sekhar Sahoo">
+                        <div class="discord-status-cutout" title="Online">
+                            <div class="discord-status-dot"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="discord-badges-rack">
+                    <div class="discord-badge-item" data-tooltip="Verified Account">
+                        <img src="/images/badges/verified.svg" alt="Verified">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Discord Nitro">
+                        <img src="/images/badges/discord-nitro.svg" alt="Nitro">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="HypeSquad Balance">
+                        <img src="/images/badges/hype-squad-balance.svg" alt="HypeSquad Balance">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Active Developer">
+                        <img src="/images/badges/active-developer.svg" alt="Active Developer">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Early Supporter">
+                        <img src="/images/badges/discord-early-supporter.svg" alt="Early Supporter">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Bug Hunter">
+                        <img src="/images/badges/discord-bug-hunter.svg" alt="Bug Hunter">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Completed a Quest">
+                        <img src="/images/badges/quest.png" alt="Quest">
+                    </div>
+                    <div class="discord-badge-item" data-tooltip="Orbs Apprentice">
+                        <img src="/images/badges/orb.svg" alt="Orbs Apprentice">
+                    </div>
+                </div>
             </div>
-            <div class="project-header-bar" style="justify-content: flex-end;">
-                <span class="project-year">2026</span>
-            </div>
-            <div class="project-content">
-                <div class="project-title-row">
-                    <div class="project-title">Coming Soon...</div>
-                    <span class="project-status active">
-                        <span class="status-dot active"></span>ONGOING
+
+            <div class="discord-user-info">
+                <div class="discord-display-name">
+                    Shuvranshu Sekhar Sahoo
+                    <span class="discord-verified-icon" title="Verified Creator">
+                        <img src="/images/badges/verified.svg" alt="Verified" width="18" height="18">
                     </span>
                 </div>
-                <div class="project-description">
-                    Currently working on exciting new applications, developer utilities, and open source projects. Check back soon for updates!
+                <div class="discord-handle-row">
+                    <span class="discord-handle">@sahooshuvranshu</span>
+                    <span class="discord-pronouns-chip">he/him</span>
                 </div>
-                <div class="project-links">
-                    <a href="#" class="project-link disabled" onclick="return false;">
-                        📂 Code
-                    </a>
-                    <a href="#" class="project-link demo disabled" onclick="return false;">
-                        🌐 Demo
-                    </a>
-                </div>
-                <div class="project-tech">
-                    <span>AI</span><span>Fullstack</span><span>Web3</span>
+                <div class="discord-status-bubble">
+                    <span class="status-emoji">⚡</span>
+                    <span class="status-text">Building Scalable Web Apps & Agentic AI Systems</span>
                 </div>
             </div>
-        `;
-        projectsContainer.appendChild(placeholderCard);
 
-        // 2. Render JSON Projects
-        projects.forEach(project => {
-            const card = document.createElement('div');
-            card.className = 'project-card';
-            
-            const statusClass = project.status || 'active';
-            const statusText = {
-                'active': 'ACTIVE',
-                'paused': 'PAUSED',
-                'archived': 'ARCHIVED'
-            }[statusClass] || 'ACTIVE';
-            
-            const techStack = project.techStack.map(tech => `<span>${tech}</span>`).join('');
-            const linkClass = (project.status === 'paused' || project.status === 'archived') ? 'disabled' : '';
-            
-            // Adjust paths dynamically for subdirectories
-            const bannerImage = project.bannerImage && !project.bannerImage.startsWith('http') 
-                ? (isSubdir ? '../' + project.bannerImage : project.bannerImage)
-                : project.bannerImage;
-                
-            // Fallback to gradient & emoji if banner image is missing or empty
-            const bannerContent = bannerImage 
-                ? `<img src="${bannerImage}" alt="${project.title}" loading="lazy">`
-                : `<div class="project-banner-fallback" style="background: ${project.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)'}">${project.bannerEmoji || '🚀'}</div>`;
-            
-            card.innerHTML = `
-                <div class="project-banner">
-                    ${bannerContent}
-                </div>
-                <div class="project-header-bar" style="justify-content: flex-end;">
-                    <span class="project-year">${project.year}</span>
-                </div>
-                <div class="project-content">
-                    <div class="project-title-row">
-                        <div class="project-title">${project.title}</div>
-                        <span class="project-status ${statusClass}">
-                            <span class="status-dot ${statusClass}"></span>${statusText}
+            <div class="discord-action-buttons">
+                <a href="/contact.html" class="discord-btn discord-btn-primary">
+                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                </a>
+                <a href="/socials/" class="discord-btn discord-btn-secondary">
+                    <i class="fa-solid fa-link"></i> Socials
+                </a>
+                <a href="/blog/" class="discord-btn discord-btn-secondary">
+                    <i class="fa-solid fa-newspaper"></i> Blog
+                </a>
+                <a href="/slot/" class="discord-btn discord-btn-secondary">
+                    <i class="fa-solid fa-calendar-check"></i> Book a Call
+                </a>
+            </div>
+
+            <nav class="discord-tabs-bar">
+                <a href="/" class="discord-tab">
+                    <i class="fa-solid fa-user"></i> About Me
+                </a>
+                <a href="/pages/skills.html" class="discord-tab">
+                    <i class="fa-solid fa-code"></i> Skills
+                </a>
+                <a href="/pages/projects.html" class="discord-tab active">
+                    <i class="fa-solid fa-laptop-code"></i> Projects
+                </a>
+                <a href="/pages/certificates.html" class="discord-tab">
+                    <i class="fa-solid fa-certificate"></i> Certifications
+                </a>
+                <a href="/pages/education.html" class="discord-tab">
+                    <i class="fa-solid fa-graduation-cap"></i> Education
+                </a>
+                <a href="/socials/" class="discord-tab">
+                    <i class="fa-solid fa-share-nodes"></i> Socials
+                </a>
+                <a href="/contact.html" class="discord-tab">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </a>
+            </nav>
+        </div>
+
+        <!-- Projects Content Area -->
+        <main class="discord-body-container">
+            <div class="projects-grid">
+                <!-- Youth Times -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">Youth Times</div>
+                        <span class="credential-verified-badge" style="background: rgba(88, 101, 242, 0.15); color: var(--blurple); border-color: rgba(88, 101, 242, 0.3);">
+                            Web App
                         </span>
                     </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">HTML5/CSS3</span>
+                        <span class="project-tag">SQL</span>
+                    </div>
                     <div class="project-description">
-                        ${project.description}
+                        Youth Times is a student-led digital publication platform empowering young writers to share verified campus journalism, op-eds, and student initiatives with an intuitive publishing engine.
                     </div>
-                    <div class="project-links">
-                        <a href="${project.sourceCode}" target="_blank" class="project-link ${linkClass}">
-                            📂 Code
+                    <div class="project-actions">
+                        <a href="https://github.com/SahooShuvranshu/Youth-Times-Website" target="_blank" rel="noopener noreferrer" class="project-action-btn activity-btn-primary">
+                            <i class="fa-brands fa-github"></i> Repository
                         </a>
-                        <a href="${project.liveDemo}" target="_blank" class="project-link demo ${linkClass}">
-                            🌐 Demo
+                        <a href="https://youthtimes.social" target="_blank" rel="noopener noreferrer" class="project-action-btn activity-btn-secondary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
                         </a>
-                    </div>
-                    <div class="project-tech">
-                        ${techStack}
                     </div>
                 </div>
-            `;
-            
-            // Card click listener for Preview modal
-            card.addEventListener('click', (e) => {
-                if (e.target.closest('.project-links') || e.target.closest('a')) {
-                    return;
-                }
-                openProjectPreview(project, bannerImage);
-            });
 
-            projectsContainer.appendChild(card);
-        });
-    }
+                <!-- Spotify Live Banner -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">Spotify Live Banner</div>
+                        <span class="credential-verified-badge" style="background: rgba(30, 215, 96, 0.15); color: #1ed760; border-color: rgba(30, 215, 96, 0.3);">
+                            API Service
+                        </span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">Spotify API</span>
+                        <span class="project-tag">Vercel</span>
+                    </div>
+                    <div class="project-description">
+                        A real-time, customizable Python microservice that generates dynamic SVG banners rendering your currently playing Spotify track, album art, and progress bar for GitHub READMEs.
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/SahooShuvranshu/Spotify-Live-Banner" target="_blank" rel="noopener noreferrer" class="project-action-btn activity-btn-primary">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href="https://spotify-live-banner.vercel.app/?scan=true" target="_blank" rel="noopener noreferrer" class="project-action-btn activity-btn-secondary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Service
+                        </a>
+                    </div>
+                </div>
 
-    // Fetch projects
-    fetch(jsonUrl)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            if (data.projects) {
-                renderProjects(data.projects);
-            }
-        })
-        .catch(error => {
-            console.error('Error fetching projects data:', error);
-        });
+                <!-- Spotify Refresh Token Generator -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">Spotify Refresh Token Generator</div>
+                        <span class="credential-verified-badge">
+                            Utility Tool
+                        </span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Flask</span>
+                        <span class="project-tag">OAuth 2.0</span>
+                        <span class="project-tag">Render</span>
+                    </div>
+                    <div class="project-description">
+                        A self-hostable Flask authorization utility that simplifies the Spotify OAuth 2.0 PKCE flow, extracting persistent refresh tokens for developer bots and backend scripts.
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/SahooShuvranshu/Spotify-Refresh-Token-Generator" target="_blank" rel="noopener noreferrer" class="project-action-btn activity-btn-primary">
+                            <i class="fa-brands fa-github"></i> Repository
+                        </a>
+                        <a href="https://spotify-refresh-token-generator.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-action-btn activity-btn-secondary">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Web App
+                        </a>
+                    </div>
+                </div>
 
-    // Lightbox modal preview function
-    window.openProjectPreview = function(project, resolvedBanner) {
-        const modal = document.getElementById('projectPreviewModal');
-        const modalTitle = document.getElementById('modalProjectTitle');
-        const modalDescription = document.getElementById('modalProjectDescription');
-        const modalYear = document.getElementById('modalProjectYear');
-        const modalStatus = document.getElementById('modalProjectStatus');
-        const modalSource = document.getElementById('modalProjectSource');
-        const modalLive = document.getElementById('modalProjectLive');
-        const modalTech = document.getElementById('modalProjectTech');
-        const modalBanner = document.getElementById('modalProjectBanner');
+                <!-- KrishiSetu AI -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-title">KrishiSetu AI</div>
+                        <span class="credential-verified-badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border-color: rgba(245, 158, 11, 0.3);">
+                            AI Hackathon
+                        </span>
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Agentic AI</span>
+                        <span class="project-tag">FastAPI</span>
+                        <span class="project-tag">Gemini API</span>
+                        <span class="project-tag">IoT Agri-Tech</span>
+                    </div>
+                    <div class="project-description">
+                        An AI-assisted agronomy advisor providing localized disease diagnosis, market price insights, and multilingual voice-first advisories for rural farmers.
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://github.com/SahooShuvranshu" target="_blank" rel="noopener noreferrer" class="project-action-btn activity-btn-primary">
+                            <i class="fa-brands fa-github"></i> View Architecture
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
 
-        if (!modal) return;
-
-        modalTitle.textContent = project.title;
-        modalDescription.textContent = project.description;
-        modalYear.textContent = project.year;
-
-        // Render banner or fallback in modal
-        if (resolvedBanner) {
-            modalBanner.innerHTML = `<img src="${resolvedBanner}" alt="${project.title}">`;
-        } else {
-            modalBanner.innerHTML = `<div class="project-banner-fallback" style="background: ${project.bannerGradient || 'linear-gradient(135deg, #5865f2 0%, #2f3136 100%)'}">${project.bannerEmoji || '🚀'}</div>`;
-        }
-
-        // Render Status
-        const statusText = {
-            'active': 'ACTIVE',
-            'paused': 'PAUSED',
-            'archived': 'ARCHIVED'
-        }[project.status] || 'ACTIVE';
-        
-        modalStatus.className = `project-status ${project.status}`;
-        modalStatus.innerHTML = `<span class="status-dot ${project.status}"></span>${statusText}`;
-
-        // Render Tech tags
-        modalTech.innerHTML = project.techStack.map(tech => `<span>${tech}</span>`).join('');
-
-        // Link setups
-        const disabled = (project.status === 'paused' || project.status === 'archived');
-        modalSource.href = project.sourceCode;
-        if (disabled) {
-            modalSource.classList.add('disabled');
-        } else {
-            modalSource.classList.remove('disabled');
-        }
-
-        modalLive.href = project.liveDemo;
-        if (disabled) {
-            modalLive.classList.add('disabled');
-        } else {
-            modalLive.classList.remove('disabled');
-        }
-
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    };
-
-    window.closeProjectPreview = function() {
-        const modal = document.getElementById('projectPreviewModal');
-        if (modal) {
-            modal.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    };
-
-    // Close on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            window.closeProjectPreview();
-        }
-    });
-})();
-</script>
-
+        <!-- Footer -->
+        <footer class="discord-footer">
+            <div class="discord-footer-left">
+                Crafted with 💜 by <span class="discord-footer-highlight">Shuvranshu Sekhar Sahoo</span>
+            </div>
+            <div class="discord-footer-links">
+                <a href="https://github.com/SahooShuvranshu/SahooShuvranshu.github.io" target="_blank" rel="noopener noreferrer" class="discord-footer-link">
+                    <i class="fa-brands fa-github"></i> Source
+                </a>
+                <a href="/socials/" class="discord-footer-link">
+                    <i class="fa-solid fa-share-nodes"></i> Links
+                </a>
+                <a href="/contact.html" class="discord-footer-link">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </a>
+            </div>
+        </footer>
     </div>
 </body>
+
 </html>
