@@ -1,407 +1,813 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Verified Certifications & Credentials | Shuvranshu Sekhar Sahoo</title>
-    <meta name="description"
-        content="Verified professional certifications, technical training, and credentials earned by Shuvranshu Sekhar Sahoo from Anthropic, Google Cloud, MongoDB, HackerRank, MSME, and more.">
-    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
+    <title>Certificates | Shuvranshu Sekhar Sahoo</title>
     
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="View certificates and awards earned by Shuvranshu Sekhar Sahoo. Including certifications from Google Cloud, Deloitte, HackerRank, and more in cloud computing, cybersecurity, and programming.">
+    <meta name="keywords" content="Certificates, Awards, Google Cloud, Deloitte, HackerRank, Python Certification, Cloud Computing, Cybersecurity, Achievements">
+    <meta name="author" content="Shuvranshu Sekhar Sahoo">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sahooshuvranshu.is-a.dev/pages/certificates.html">
+    <meta property="og:title" content="Certificates & Awards | Shuvranshu Sekhar Sahoo">
+    <meta property="og:description" content="View certificates and awards earned by Shuvranshu Sekhar Sahoo. Including certifications from Google Cloud, Deloitte, HackerRank, and more.">
+    <meta property="og:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://sahooshuvranshu.is-a.dev/pages/certificates.html">
+    <meta name="twitter:title" content="Certificates & Awards | Shuvranshu Sekhar Sahoo">
+    <meta name="twitter:description" content="Professional certificates from Google Cloud, Deloitte, HackerRank, and more.">
+    <meta name="twitter:image" content="https://sahooshuvranshu.is-a.dev/images/social-preview.png">
+    
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/70892515?v=4">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Centralized Modern Discord Stylesheets -->
-    <link rel="stylesheet" href="/css/discord-theme.css">
-    <link rel="stylesheet" href="/css/components.css">
+        body {
+            background-color: #36393f;
+            background-image: url('https://i.pinimg.com/originals/c1/fc/9d/c1fc9d7f6ae08d56f2b84e81799790a5.gif');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: 'Whitney', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 10px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <div class="discord-profile-card">
-        <!-- Banner -->
-        <div class="discord-banner">
-            <div class="discord-banner-overlay"></div>
+    <div class="container">
+<!-- Data is fetched dynamically from media/certificates/certificates.json -->
+
+<!-- ========================================
+     🎨 STYLES & DISPLAY CODE BELOW
+     ======================================== -->
+<style>
+    /* Discord Retro Theme - Certificates Section */
+    .discord-about-card {
+        background-color: #2f3136;
+        border-radius: 0;
+        margin-bottom: 16px;
+        border: 2px solid #40444b;
+        overflow: hidden;
+        box-shadow: 4px 4px 0 #18191c;
+    }
+
+    .card-header {
+        background-color: #202225;
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border-bottom: 2px solid #18191c;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 1px;
+    }
+
+    .header-icon {
+        font-size: 16px;
+    }
+
+    .header-title {
+        color: #8e9297;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+
+    .certificates-grid {
+        display: flex;
+        gap: 16px;
+    }
+
+    .masonry-col {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .certificate-card {
+        width: 100%;
+        background-color: #40444b;
+        border-radius: 0;
+        border: 2px solid #202225;
+        box-shadow: 2px 2px 0 #18191c;
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+    }
+
+    .certificate-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .placeholder-coming-soon {
+        cursor: default !important;
+    }
+
+    .placeholder-coming-soon:hover {
+        transform: none !important;
+        box-shadow: 2px 2px 0 #18191c !important;
+    }
+
+    .certificate-banner {
+        width: 100%;
+        height: auto;
+        display: block;
+        background-color: #202225;
+        border-bottom: 2px solid #202225;
+    }
+
+    .certificate-content {
+        padding: 14px;
+    }
+
+    .certificate-title {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        line-height: 1.3;
+    }
+
+    .certificate-issuer {
+        color: #b9bbbe;
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .certificate-date {
+        color: #8e9297;
+        font-size: 11px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .certificate-verified {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 10px;
+        color: #3ba55c;
+        margin-top: 6px;
+        font-weight: 600;
+    }
+
+    .certificate-footer {
+        margin-top: auto;
+    }
+
+    /* Awards styles are unified with certificate cards */
+
+    @media (max-width: 768px) {
+        .certificates-grid {
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .certificate-content {
+            padding: 12px;
+        }
+
+        .certificate-title {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .certificate-content {
+            padding: 10px;
+        }
+
+        .certificate-title {
+            font-size: 12px;
+        }
+
+        .certificate-issuer {
+            font-size: 11px;
+        }
+
+        .certificate-date {
+            font-size: 10px;
+        }
+    }
+
+    .certificate-id {
+        color: #8e9297;
+        font-size: 11px;
+        margin-top: 6px;
+        font-family: monospace;
+        background-color: #202225;
+        padding: 2px 6px;
+        border-radius: 4px;
+        width: fit-content;
+        border: 1px solid #18191c;
+    }
+
+    /* Preview Modal Styles */
+    .preview-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+    }
+
+    .preview-modal.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .modal-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(4px);
+    }
+
+    .modal-container {
+        position: relative;
+        width: 90%;
+        max-width: 900px;
+        background-color: #2f3136;
+        border: 2px solid #40444b;
+        box-shadow: 8px 8px 0 #18191c;
+        z-index: 10001;
+        overflow: hidden;
+        animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    @keyframes modalScale {
+        from { transform: scale(0.9); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #b9bbbe;
+        font-size: 32px;
+        cursor: pointer;
+        z-index: 10002;
+        line-height: 1;
+        transition: color 0.2s ease;
+    }
+
+    .modal-close:hover {
+        color: #ffffff;
+    }
+
+    .modal-content-wrapper {
+        display: flex;
+        flex-direction: row;
+        max-height: 80vh;
+    }
+
+    .modal-image-pane {
+        flex: 1.4;
+        background-color: #18191c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        border-right: 2px solid #40444b;
+    }
+
+    .modal-image-pane img {
+        max-width: 100%;
+        max-height: 60vh;
+        object-fit: contain;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-details-pane {
+        flex: 1;
+        padding: 32px 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+
+    .modal-details-pane h3 {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 24px;
+        line-height: 1.3;
+        border-bottom: 2px solid #40444b;
+        padding-bottom: 12px;
+    }
+
+    .modal-meta-section {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .meta-label {
+        color: #b9bbbe;
+        font-size: 11px;
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .meta-value {
+        color: #ffffff;
+        font-size: 14px;
+        white-space: pre-wrap;
+    }
+
+    .font-mono {
+        font-family: monospace;
+        background-color: #202225;
+        padding: 4px 8px;
+        border-radius: 4px;
+        border: 1px solid #40444b;
+        display: inline-block;
+        width: fit-content;
+    }
+
+    .text-green {
+        color: #3ba55d;
+        font-weight: 600;
+    }
+
+    .meta-value-link {
+        color: #00b0f4;
+        font-size: 11px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        background-color: rgba(0, 176, 244, 0.08);
+        border: 1px solid rgba(0, 176, 244, 0.25);
+        padding: 5px 10px;
+        border-radius: 12px;
+        width: fit-content;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-top: 2px;
+    }
+    .meta-value-link:hover {
+        background-color: #00b0f4;
+        color: #ffffff;
+        border-color: #00b0f4;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 176, 244, 0.2);
+    }
+    .meta-value-link:active {
+        transform: translateY(0);
+    }
+
+    /* Responsive preview modal */
+    @media (max-width: 768px) {
+        .modal-content-wrapper {
+            flex-direction: column;
+            max-height: 90vh;
+        }
+
+        .modal-image-pane {
+            border-right: none;
+            border-bottom: 2px solid #40444b;
+            padding: 16px;
+        }
+
+        .modal-image-pane img {
+            max-height: 35vh;
+        }
+
+        .modal-details-pane {
+            padding: 20px;
+        }
+
+        .modal-details-pane h3 {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+    }
+</style>
+
+<!-- ========================================
+     🏆 AWARDS SECTION
+     ======================================== -->
+<div class="discord-about-card">
+    <div class="card-header">
+        <span class="header-icon">🏆</span>
+        <span class="header-title">AWARDS & ACHIEVEMENTS</span>
+    </div>
+    <div class="card-content">
+        <div id="awardsGrid" class="certificates-grid"></div>
+    </div>
+</div>
+
+<!-- ========================================
+     📜 CERTIFICATES SECTION
+     ======================================== -->
+<div class="discord-about-card">
+    <div class="card-header">
+        <span class="header-icon">📜</span>
+        <span class="header-title">CERTIFICATES</span>
+    </div>
+    <div class="card-content">
+        <div id="certificatesGrid" class="certificates-grid"></div>
+    </div>
+</div>
+
+<!-- ========================================
+     🔍 LIGHTBOX PREVIEW MODAL
+     ======================================== -->
+<div id="previewModal" class="preview-modal">
+    <div class="modal-overlay" onclick="closePreview()"></div>
+    <div class="modal-container">
+        <button class="modal-close" onclick="closePreview()">×</button>
+        <div class="modal-content-wrapper">
+            <div class="modal-image-pane">
+                <img id="modalImage" src="" alt="Preview">
+            </div>
+            <div class="modal-details-pane">
+                <h3 id="modalTitle">Certificate Title</h3>
+                <div class="modal-meta-section">
+                    <div id="modalIssuerContainer" class="meta-item">
+                        <span class="meta-label">Issued By</span>
+                        <span id="modalIssuer" class="meta-value">Issuer Name</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">Date</span>
+                        <span id="modalDate" class="meta-value">Date</span>
+                    </div>
+                    <div id="modalIdContainer" class="meta-item">
+                        <span class="meta-label">Credential ID</span>
+                        <span id="modalId" class="meta-value font-mono">ID</span>
+                    </div>
+                    <div id="modalCredentialUrlContainer" class="meta-item">
+                        <span class="meta-label">Verification Link</span>
+                        <a id="modalCredentialUrl" href="" target="_blank" class="meta-value-link">Verify Credential ↗</a>
+                    </div>
+                    <div id="modalVerifiedContainer" class="meta-item">
+                        <span class="meta-label">Status</span>
+                        <span id="modalVerified" class="meta-value text-green">✓ Verified</span>
+                    </div>
+                    <div id="modalDescriptionContainer" class="meta-item">
+                        <span class="meta-label">Description</span>
+                        <span id="modalDescription" class="meta-value">Description text</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
 
-        <!-- Header Section -->
-        <div class="discord-profile-header">
-            <div class="discord-avatar-row">
-                <div class="discord-avatar-wrapper">
-                    <div class="discord-avatar-decoration"></div>
-                    <div class="discord-avatar-container">
-                        <img class="discord-avatar" src="https://avatars.githubusercontent.com/u/70892515?v=4" alt="Shuvranshu Sekhar Sahoo">
-                        <div class="discord-status-cutout" title="Online">
-                            <div class="discord-status-dot"></div>
+<!-- ========================================
+     📦 JAVASCRIPT - Auto-generates content
+     ======================================== -->
+<script>
+(function() {
+    const certificatesGrid = document.getElementById('certificatesGrid');
+    const awardsGrid = document.getElementById('awardsGrid');
+    
+    // Resilient path detection
+    const isSubdir = window.location.pathname.includes('/pages/');
+    const certJsonUrl = isSubdir ? '../media/certificates/certificates.json' : 'media/certificates/certificates.json';
+    const awardsJsonUrl = isSubdir ? '../media/awards/awards.json' : 'media/awards/awards.json';
+    const basePath = isSubdir ? '../' : '';
+        
+    // Fetch Certificates
+    fetch(certJsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (certificatesGrid && data.certificates) {
+                const isMobile = window.innerWidth <= 768;
+                
+                // Add the permanent empty placeholder card at the beginning
+                const placeholderCard = document.createElement('div');
+                placeholderCard.className = 'certificate-card placeholder-coming-soon';
+                placeholderCard.innerHTML = `
+                    <img src="${basePath}media/certificates/placeholder.svg" alt="More certificates to come" class="certificate-banner" loading="lazy">
+                    <div class="certificate-content">
+                        <div class="certificate-title">More Certificates to Come</div>
+                        <div class="certificate-issuer">Continuous Learning</div>
+                        <div class="certificate-footer">
+                            <div class="certificate-date">📅 Ongoing</div>
                         </div>
                     </div>
-                </div>
+                `;
 
-                <div class="discord-badges-rack">
-                    <div class="discord-badge-item" data-tooltip="Verified Account">
-                        <img src="/images/badges/verified.svg" alt="Verified">
-                    </div>
-                    <div class="discord-badge-item" data-tooltip="Discord Nitro">
-                        <img src="/images/badges/discord-nitro.svg" alt="Nitro">
-                    </div>
-                    <div class="discord-badge-item" data-tooltip="HypeSquad Balance">
-                        <img src="/images/badges/hype-squad-balance.svg" alt="HypeSquad Balance">
-                    </div>
-                    <div class="discord-badge-item" data-tooltip="Active Developer">
-                        <img src="/images/badges/active-developer.svg" alt="Active Developer">
-                    </div>
-                    <div class="discord-badge-item" data-tooltip="Early Supporter">
-                        <img src="/images/badges/discord-early-supporter.svg" alt="Early Supporter">
-                    </div>
-                    <div class="discord-badge-item" data-tooltip="Bug Hunter">
-                        <img src="/images/badges/discord-bug-hunter.svg" alt="Bug Hunter">
-                    </div>
-                    <div class="discord-badge-item" data-tooltip="Completed a Quest">
-                        <img src="/images/badges/quest.png" alt="Quest">
-                    </div>
-                    <div class="discord-badge-item" data-tooltip="Orbs Apprentice">
-                        <img src="/images/badges/orb.svg" alt="Orbs Apprentice">
-                    </div>
-                </div>
-            </div>
-
-            <div class="discord-user-info">
-                <div class="discord-display-name">
-                    Shuvranshu Sekhar Sahoo
-                    <span class="discord-verified-icon" title="Verified Creator">
-                        <img src="/images/badges/verified.svg" alt="Verified" width="18" height="18">
-                    </span>
-                </div>
-                <div class="discord-handle-row">
-                    <span class="discord-handle">@sahooshuvranshu</span>
-                    <span class="discord-pronouns-chip">he/him</span>
-                </div>
-                <div class="discord-status-bubble">
-                    <span class="status-emoji">⚡</span>
-                    <span class="status-text">Building Scalable Web Apps & Agentic AI Systems</span>
-                </div>
-            </div>
-
-            <div class="discord-action-buttons">
-                <a href="/contact.html" class="discord-btn discord-btn-primary">
-                    <i class="fa-solid fa-paper-plane"></i> Send Message
-                </a>
-                <a href="/socials/" class="discord-btn discord-btn-secondary">
-                    <i class="fa-solid fa-link"></i> Socials
-                </a>
-                <a href="/blog/" class="discord-btn discord-btn-secondary">
-                    <i class="fa-solid fa-newspaper"></i> Blog
-                </a>
-                <a href="/slot/" class="discord-btn discord-btn-secondary">
-                    <i class="fa-solid fa-calendar-check"></i> Book a Call
-                </a>
-            </div>
-
-            <nav class="discord-tabs-bar">
-                <a href="/" class="discord-tab">
-                    <i class="fa-solid fa-user"></i> About Me
-                </a>
-                <a href="/pages/skills.html" class="discord-tab">
-                    <i class="fa-solid fa-code"></i> Skills
-                </a>
-                <a href="/pages/projects.html" class="discord-tab">
-                    <i class="fa-solid fa-laptop-code"></i> Projects
-                </a>
-                <a href="/pages/certificates.html" class="discord-tab active">
-                    <i class="fa-solid fa-certificate"></i> Certifications
-                </a>
-                <a href="/pages/education.html" class="discord-tab">
-                    <i class="fa-solid fa-graduation-cap"></i> Education
-                </a>
-                <a href="/socials/" class="discord-tab">
-                    <i class="fa-solid fa-share-nodes"></i> Socials
-                </a>
-                <a href="/contact.html" class="discord-tab">
-                    <i class="fa-solid fa-envelope"></i> Contact
-                </a>
-            </nav>
-        </div>
-
-        <!-- Certifications Content Area -->
-        <main class="discord-body-container">
-            <!-- Security & Verification Policy Notice -->
-            <div class="discord-card" style="border-left: 4px solid var(--status-online);">
-                <div class="card-header-row">
-                    <div class="card-section-title" style="color: var(--status-online);">
-                        <i class="fa-solid fa-shield-halved"></i> Verified Credential Directory
-                    </div>
-                </div>
-                <div class="card-body-text" style="font-size: 13px;">
-                    In accordance with modern security standards and credential privacy best practices, certifications are presented via verified metadata, unique Credential IDs, and direct 1-click links to official issuer verification portals. Raw certificate scans are excluded to protect identity integrity and prevent image forgery.
-                </div>
-            </div>
-
-            <div class="credentials-container">
-                <!-- Anthropic AI Fluency -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">AI Fluency — Framework & Foundations</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> Anthropic</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> 2026</span>
-                        <span class="credential-id-tag">ID: 3sqyzdofezat</span>
-                    </div>
-                    <div class="credential-description">
-                        Core architectures of Large Language Models (LLMs), practical prompt engineering frameworks, AI safety baseline mitigations, and responsible model deployment standards.
-                    </div>
-                    <div class="credential-action-row">
-                        <a href="https://verify.skilljar.com/c/3sqyzdofezat" target="_blank" rel="noopener noreferrer" class="credential-verify-link">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on Skilljar
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Anthropic Claude 101 -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">Claude 101: Foundation in AI Systems</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> Anthropic</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> 2026</span>
-                        <span class="credential-id-tag">ID: nin9i7gamstp</span>
-                    </div>
-                    <div class="credential-description">
-                        Advanced prompt design (system prompts, XML tagging, role prompting), structuring large context payloads, multi-turn AI workflows, and safety alignment.
-                    </div>
-                    <div class="credential-action-row">
-                        <a href="https://verify.skilljar.com/c/nin9i7gamstp" target="_blank" rel="noopener noreferrer" class="credential-verify-link">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on Skilljar
-                        </a>
-                    </div>
-                </div>
-
-                <!-- MongoDB Overview -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">MongoDB Overview: Core Concepts & Architecture</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> MongoDB, Inc.</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> March 2026</span>
-                        <span class="credential-id-tag">ID: MDB54mk12xtt0</span>
-                    </div>
-                    <div class="credential-description">
-                        NoSQL document data modeling, replica set architectures, horizontal sharding strategies, indexing optimizations, and query aggregation pipelines.
-                    </div>
-                    <div class="credential-action-row">
-                        <a href="https://learn.mongodb.com/c/5X9s-QPGR7-nozSxa4JZiQ" target="_blank" rel="noopener noreferrer" class="credential-verify-link">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on MongoDB
-                        </a>
-                    </div>
-                </div>
-
-                <!-- HackerRank Python -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">Python (Basic) Certification</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> HackerRank</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> January 2026</span>
-                        <span class="credential-id-tag">ID: 3789193a153a</span>
-                    </div>
-                    <div class="credential-description">
-                        Validation of core algorithmic problem solving, Python data structures, list comprehensions, functional paradigms, and error handling.
-                    </div>
-                    <div class="credential-action-row">
-                        <a href="https://www.hackerrank.com/certificates/3789193a153a" target="_blank" rel="noopener noreferrer" class="credential-verify-link">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on HackerRank
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Google Workspace with Gemini -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">Introduction to Google Workspace with Gemini</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> Google Cloud</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> 2025</span>
-                        <span class="credential-id-tag">ID: 20666525</span>
-                    </div>
-                    <div class="credential-description">
-                        Enterprise AI integration across Google Cloud Workspace, Gemini multimodal prompting, document automation, and collaborative intelligence workflows.
-                    </div>
-                    <div class="credential-action-row">
-                        <a href="https://www.skills.google/public_profiles/383381bf-a1ff-4ab7-8948-8a447f9ad5c3/badges/20666525" target="_blank" rel="noopener noreferrer" class="credential-verify-link">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on Google Cloud
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Deloitte Cyber Job Simulation -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">Cyber Job Simulation</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> Deloitte Australia</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> January 2026</span>
-                        <span class="credential-id-tag">ID: mS8m8MLJ4gJQmAhgR</span>
-                    </div>
-                    <div class="credential-description">
-                        Practical threat assessment, forensic log auditing, security architecture hardening, and incidence response simulation.
-                    </div>
-                    <div class="credential-action-row">
-                        <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_68ef74ab66fc511ffd85cc33_1767281557941_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="credential-verify-link">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on Forage
-                        </a>
-                    </div>
-                </div>
-
-                <!-- CTTC AI & ML Industrial Internship -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">Industrial Internship in Artificial Intelligence & Machine Learning</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> Central Tool Room & Training Centre (Ministry of MSME, Govt of India)</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> June 2026</span>
-                        <span class="credential-id-tag">ID: 4444756</span>
-                    </div>
-                    <div class="credential-description">
-                        Completed one-month industrial software development training covering Deep Learning with Keras, Computer Vision, Facial Recognition Attendance systems, and practical ML deployment in engineering production environments.
-                    </div>
-                </div>
-
-                <!-- Hack2skill Gen AI Academy 2.0 Graduate -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">Gen AI Academy 2.0 — Graduate</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> Hack2skill</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> June 2026</span>
-                        <span class="credential-id-tag">ID: 2025H2S10GENAI-C300374</span>
-                    </div>
-                    <div class="credential-description">
-                        Comprehensive expertise in designing and deploying scalable AI solutions using Vertex AI, Gemini APIs, BigQuery ML, and autonomous agents across DevOps, Networking, Security, and Serverless tracks.
-                    </div>
-                </div>
-
-                <!-- GeeksforGeeks Soft Skills -->
-                <div class="credential-card">
-                    <div class="credential-top-row">
-                        <div class="credential-title-area">
-                            <div class="credential-title">Soft Skills & Professional Development Training</div>
-                            <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> GeeksforGeeks</div>
-                        </div>
-                        <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Verified</span>
-                    </div>
-                    <div class="credential-meta-row">
-                        <span class="credential-date"><i class="fa-regular fa-calendar"></i> 2026</span>
-                        <span class="credential-id-tag">ID: f313df43a0653e8f89436f8d562d5c3e</span>
-                    </div>
-                    <div class="credential-description">
-                        Communication leadership, active listening, cross-functional engineering cooperation, conflict resolution, and career presentation mastery.
-                    </div>
-                    <div class="credential-action-row">
-                        <a href="https://media.geeksforgeeks.org/courses/certificates/f313df43a0653e8f89436f8d562d5c3e.pdf" target="_blank" rel="noopener noreferrer" class="credential-verify-link">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Verify on GfG
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Honors & Competitive Awards Section -->
-            <div class="discord-card" style="margin-top: 24px;">
-                <div class="card-header-row">
-                    <div class="card-section-title">
-                        <i class="fa-solid fa-award" style="color: #faa61a;"></i> Honors & Competitions
-                    </div>
-                </div>
-                <div class="credentials-container">
-                    <div class="credential-card">
-                        <div class="credential-top-row">
-                            <div class="credential-title-area">
-                                <div class="credential-title">1st Prize — Debate Competition</div>
-                                <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> Nilachala Polytechnic College of Engineering</div>
+                if (isMobile) {
+                    certificatesGrid.appendChild(placeholderCard);
+                    data.certificates.forEach(cert => {
+                        const certCard = document.createElement('div');
+                        certCard.className = 'certificate-card';
+                        
+                        const certImage = isSubdir && !cert.image.startsWith('http') ? '../' + cert.image : cert.image;
+                        
+                        certCard.innerHTML = `
+                            <img src="${certImage}" alt="${cert.title}" class="certificate-banner" loading="lazy">
+                            <div class="certificate-content">
+                                <div class="certificate-title">${cert.title}</div>
+                                <div class="certificate-issuer">${cert.issuer}</div>
+                                <div class="certificate-footer">
+                                    <div class="certificate-date">📅 ${cert.date}</div>
+                                    ${cert.credentialId ? `<div class="certificate-id">ID: ${cert.credentialId}</div>` : ''}
+                                    ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                                </div>
                             </div>
-                            <span class="credential-verified-badge" style="background: rgba(250, 166, 26, 0.15); color: #faa61a; border-color: rgba(250, 166, 26, 0.3);">
-                                1st Place
-                            </span>
-                        </div>
-                        <div class="credential-meta-row">
-                            <span class="credential-date"><i class="fa-regular fa-calendar"></i> 2026</span>
-                        </div>
-                        <div class="credential-description">
-                            Awarded 1st Prize in the Annual Fest Debate Competition, demonstrating structured argumentation, rapid critical rebuttal, and confident public rhetoric.
-                        </div>
-                    </div>
-
-                    <div class="credential-card">
-                        <div class="credential-top-row">
-                            <div class="credential-title-area">
-                                <div class="credential-title">NCC 'A' Certificate (Grade 'B')</div>
-                                <div class="credential-issuer"><i class="fa-solid fa-building" style="color: var(--text-muted);"></i> Ministry of Defence, Government of India</div>
+                        `;
+                        
+                        certCard.addEventListener('click', () => {
+                            openPreview(cert.title, cert.issuer, cert.date, certImage, cert.credentialId, cert.verified, cert.description, cert.credentialUrl);
+                        });
+                        
+                        certificatesGrid.appendChild(certCard);
+                    });
+                } else {
+                    const col1 = document.createElement('div');
+                    col1.className = 'masonry-col';
+                    const col2 = document.createElement('div');
+                    col2.className = 'masonry-col';
+                    
+                    certificatesGrid.appendChild(col1);
+                    certificatesGrid.appendChild(col2);
+                    
+                    col1.appendChild(placeholderCard);
+                    
+                    data.certificates.forEach((cert, index) => {
+                        const certCard = document.createElement('div');
+                        certCard.className = 'certificate-card';
+                        
+                        const certImage = isSubdir && !cert.image.startsWith('http') ? '../' + cert.image : cert.image;
+                        
+                        certCard.innerHTML = `
+                            <img src="${certImage}" alt="${cert.title}" class="certificate-banner" loading="lazy">
+                            <div class="certificate-content">
+                                <div class="certificate-title">${cert.title}</div>
+                                <div class="certificate-issuer">${cert.issuer}</div>
+                                <div class="certificate-footer">
+                                    <div class="certificate-date">📅 ${cert.date}</div>
+                                    ${cert.credentialId ? `<div class="certificate-id">ID: ${cert.credentialId}</div>` : ''}
+                                    ${cert.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                                </div>
                             </div>
-                            <span class="credential-verified-badge"><i class="fa-solid fa-circle-check"></i> Certified</span>
-                        </div>
-                        <div class="credential-meta-row">
-                            <span class="credential-date"><i class="fa-regular fa-calendar"></i> 2026</span>
-                            <span class="credential-id-tag">Unit: 9 (O) BN NCC, Rourkela</span>
-                        </div>
-                        <div class="credential-description">
-                            Rigorous national cadet military drill training, discipline, leadership under pressure, and successful passing of written and physical examinations under the Directorate of NCC, Odisha.
+                        `;
+                        
+                        certCard.addEventListener('click', () => {
+                            openPreview(cert.title, cert.issuer, cert.date, certImage, cert.credentialId, cert.verified, cert.description, cert.credentialUrl);
+                        });
+                        
+                        // Interleave columns to keep years ordered horizontally (top of page first)
+                        if (index % 2 === 0) {
+                            col2.appendChild(certCard);
+                        } else {
+                            col1.appendChild(certCard);
+                        }
+                    });
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching certificates data:', error);
+        });
+
+    // Fetch Awards
+    fetch(awardsJsonUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (awardsGrid && data.awards) {
+                const isMobile = window.innerWidth <= 768;
+                
+                // Add the permanent empty placeholder card at the beginning
+                const placeholderAwardCard = document.createElement('div');
+                placeholderAwardCard.className = 'certificate-card placeholder-coming-soon';
+                placeholderAwardCard.innerHTML = `
+                    <img src="${basePath}media/awards/placeholder.svg" alt="More awards to come" class="certificate-banner" loading="lazy">
+                    <div class="certificate-content">
+                        <div class="certificate-title">Coming Soon</div>
+                        <div class="certificate-issuer">More achievements and awards will be listed here soon.</div>
+                        <div class="certificate-footer">
+                            <div class="certificate-date">📅 Ongoing</div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </main>
+                `;
 
-        <!-- Footer -->
-        <footer class="discord-footer">
-            <div class="discord-footer-left">
-                Crafted with 💜 by <span class="discord-footer-highlight">Shuvranshu Sekhar Sahoo</span>
-            </div>
-            <div class="discord-footer-links">
-                <a href="https://github.com/SahooShuvranshu/SahooShuvranshu.github.io" target="_blank" rel="noopener noreferrer" class="discord-footer-link">
-                    <i class="fa-brands fa-github"></i> Source
-                </a>
-                <a href="/socials/" class="discord-footer-link">
-                    <i class="fa-solid fa-share-nodes"></i> Links
-                </a>
-                <a href="/contact.html" class="discord-footer-link">
-                    <i class="fa-solid fa-envelope"></i> Contact
-                </a>
-            </div>
-        </footer>
+                if (isMobile) {
+                    awardsGrid.appendChild(placeholderAwardCard);
+                    data.awards.forEach(award => {
+                        const awardCard = document.createElement('div');
+                        awardCard.className = 'certificate-card';
+                        
+                        const awardImage = isSubdir && !award.image.startsWith('http') ? '../' + award.image : award.image;
+                        
+                        awardCard.innerHTML = `
+                            <img src="${awardImage}" alt="${award.title}" class="certificate-banner" loading="lazy">
+                            <div class="certificate-content">
+                                <div class="certificate-title">${award.title}</div>
+                                <div class="certificate-issuer">${award.issuer}</div>
+                                <div class="certificate-footer">
+                                    <div class="certificate-date">📅 ${award.date}</div>
+                                    ${award.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        awardCard.addEventListener('click', () => {
+                            openPreview(award.title, award.issuer, award.date, awardImage, null, award.verified, award.description, award.credentialUrl);
+                        });
+                        
+                        awardsGrid.appendChild(awardCard);
+                    });
+                } else {
+                    const col1 = document.createElement('div');
+                    col1.className = 'masonry-col';
+                    const col2 = document.createElement('div');
+                    col2.className = 'masonry-col';
+                    
+                    awardsGrid.appendChild(col1);
+                    awardsGrid.appendChild(col2);
+                    
+                    col1.appendChild(placeholderAwardCard);
+                    
+                    data.awards.forEach((award, index) => {
+                        const awardCard = document.createElement('div');
+                        awardCard.className = 'certificate-card';
+                        
+                        const awardImage = isSubdir && !award.image.startsWith('http') ? '../' + award.image : award.image;
+                        
+                        awardCard.innerHTML = `
+                            <img src="${awardImage}" alt="${award.title}" class="certificate-banner" loading="lazy">
+                            <div class="certificate-content">
+                                <div class="certificate-title">${award.title}</div>
+                                <div class="certificate-issuer">${award.issuer}</div>
+                                <div class="certificate-footer">
+                                    <div class="certificate-date">📅 ${award.date}</div>
+                                    ${award.verified ? '<div class="certificate-verified">✓ Verified</div>' : ''}
+                                </div>
+                            </div>
+                        `;
+                        
+                        awardCard.addEventListener('click', () => {
+                            openPreview(award.title, award.issuer, award.date, awardImage, null, award.verified, award.description, award.credentialUrl);
+                        });
+                        
+                        // Interleave columns to keep years ordered horizontally (top of page first)
+                        if (index % 2 === 0) {
+                            col2.appendChild(awardCard);
+                        } else {
+                            col1.appendChild(awardCard);
+                        }
+                    });
+                }
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching awards data:', error);
+        });
+
+    // Preview functions exposed to window object for onclick handler
+    window.openPreview = function(title, issuer, date, image, id, verified, description, credentialUrl) {
+        const modal = document.getElementById('previewModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalIssuer = document.getElementById('modalIssuer');
+        const modalIssuerContainer = document.getElementById('modalIssuerContainer');
+        const modalDate = document.getElementById('modalDate');
+        const modalImage = document.getElementById('modalImage');
+        const modalId = document.getElementById('modalId');
+        const modalIdContainer = document.getElementById('modalIdContainer');
+        const modalCredentialUrl = document.getElementById('modalCredentialUrl');
+        const modalCredentialUrlContainer = document.getElementById('modalCredentialUrlContainer');
+        const modalVerified = document.getElementById('modalVerified');
+        const modalVerifiedContainer = document.getElementById('modalVerifiedContainer');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalDescriptionContainer = document.getElementById('modalDescriptionContainer');
+        
+        if (!modal) return;
+        
+        modalTitle.textContent = title;
+        modalDate.textContent = date;
+        modalImage.src = image;
+        
+        if (issuer) {
+            modalIssuer.textContent = issuer;
+            modalIssuerContainer.style.display = 'flex';
+        } else {
+            modalIssuerContainer.style.display = 'none';
+        }
+        
+        if (id) {
+            modalId.textContent = id;
+            modalIdContainer.style.display = 'flex';
+        } else {
+            modalIdContainer.style.display = 'none';
+        }
+
+        if (credentialUrl) {
+            modalCredentialUrl.href = credentialUrl;
+            modalCredentialUrlContainer.style.display = 'flex';
+        } else {
+            modalCredentialUrlContainer.style.display = 'none';
+        }
+        
+        if (verified === true || verified === 'true' || verified) {
+            modalVerifiedContainer.style.display = 'flex';
+        } else {
+            modalVerifiedContainer.style.display = 'none';
+        }
+        
+        if (description) {
+            modalDescription.textContent = description;
+            modalDescriptionContainer.style.display = 'flex';
+        } else {
+            modalDescriptionContainer.style.display = 'none';
+        }
+        
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    };
+    
+    window.closePreview = function() {
+        const modal = document.getElementById('previewModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            window.closePreview();
+        }
+    });
+})();
+</script>
+
     </div>
 </body>
-
 </html>
