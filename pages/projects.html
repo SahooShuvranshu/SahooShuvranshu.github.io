@@ -523,16 +523,6 @@
 
             <!-- Content Container (Forum & Bot Embeds Design) -->
             <div class="discord-section" id="content-container">
-                <!-- Channel Header -->
-                <div class="discord-channel-header">
-                    <div class="channel-title">
-                        <span class="channel-hash">#</span>
-                        <span class="channel-name">showcase-projects</span>
-                        <span class="channel-divider"></span>
-                        <span class="channel-topic">Curated repository showcase • Live web apps, bot backends & data services</span>
-                    </div>
-                </div>
-
                 <!-- Controls Bar: Search & Category Filters -->
                 <div class="discord-controls-bar">
                     <div class="discord-search-box">
@@ -755,10 +745,19 @@
             const statusColor = isInProgress ? '#faa61a' : '#3ba55c';
             const statusText = isInProgress ? 'IN DEVELOPMENT' : 'ONLINE & ACTIVE';
 
+            let bannerSrc = project.bannerImage;
+            if (bannerSrc && !bannerSrc.startsWith('http') && bannerSrc.startsWith('media/')) {
+                bannerSrc = isSubdir ? '../' + bannerSrc : bannerSrc;
+            }
+
             card.innerHTML = `
                 <div class="embed-author">
                     <span class="embed-author-icon">🤖</span> BOT EMBED • ${catLabel} • ${project.year || '2024'}
                 </div>
+                ${bannerSrc ? `
+                <div class="embed-image-banner">
+                    <img src="${bannerSrc}" alt="${project.title}" onerror="this.onerror=null; this.parentElement.style.display='none';">
+                </div>` : ''}
                 <div class="embed-title-link" style="display: flex; align-items: center; justify-content: space-between;">
                     <span>${project.title}</span>
                     <span style="font-size: 13px; color: #8e9297; font-weight: normal; font-family: 'Courier New', monospace;">Click for Preview ↗</span>
