@@ -32,6 +32,17 @@
       "sourceCode": "https://github.com/SahooShuvranshu/Spotify-Refresh-Token-Generator",
       "liveDemo": "https://spotify-refresh-token-generator.onrender.com/",
       "techStack": ["Python", "Flask", "OAuth", "Spotify API"]
+    },
+    {
+      "title": "Next-Gen AI & Data Science Pipeline",
+      "description": "Architecting high-performance end-to-end Machine Learning pipelines, interactive exploratory data analysis dashboards, and autonomous agentic workflows using Python, Pandas, and LLMs.",
+      "category": "API_SERVICE",
+      "bannerImage": "media/projects/placeholder.svg",
+      "status": "in_progress",
+      "year": "2026",
+      "sourceCode": "https://github.com/SahooShuvranshu",
+      "liveDemo": "",
+      "techStack": ["Python", "Scikit-Learn", "Pandas", "LLMs", "RAG"]
     }
   ]
 }

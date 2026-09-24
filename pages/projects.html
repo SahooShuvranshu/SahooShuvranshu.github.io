@@ -374,147 +374,12 @@
         color: #ffffff;
     }
 
-    /* Preview Modal Styles */
-    .preview-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 10000;
+    /* Preview Modal Helpers (shared modal styles defined in discord-retro.css) */
+    .modal-logo-circle {
         display: flex;
         align-items: center;
         justify-content: center;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.25s ease;
-    }
-
-    .preview-modal.active {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    .modal-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.85);
-        backdrop-filter: blur(4px);
-    }
-
-    .modal-container {
-        position: relative;
-        width: 90%;
-        max-width: 650px;
-        background-color: #2f3136;
-        border: 2px solid #40444b;
-        box-shadow: 8px 8px 0 #18191c;
-        z-index: 10001;
-        overflow: hidden;
-        animation: modalScale 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-
-    @keyframes modalScale {
-        from { transform: scale(0.9); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
-
-    .modal-close {
-        position: absolute;
-        top: 12px;
-        right: 16px;
-        background: none;
-        border: none;
-        color: #b9bbbe;
-        font-size: 32px;
-        cursor: pointer;
-        z-index: 10002;
-        line-height: 1;
-        transition: color 0.2s ease;
-    }
-
-    .modal-close:hover {
-        color: #ffffff;
-    }
-
-    .modal-content-wrapper {
-        display: flex;
-        flex-direction: column;
-        max-height: 90vh;
-    }
-
-    .modal-image-pane {
-        width: 100%;
-        height: 250px;
-        background-color: #18191c;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-bottom: 2px solid #40444b;
-    }
-
-    .modal-project-banner-container {
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        background-color: #202225;
-    }
-
-    .modal-project-banner-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .modal-details-pane {
-        padding: 24px;
-        overflow-y: auto;
-    }
-
-    .modal-details-pane h3 {
-        color: #ffffff;
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 16px;
-        line-height: 1.3;
-        border-bottom: 2px solid #40444b;
-        padding-bottom: 12px;
-    }
-
-    .modal-meta-section {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .meta-item {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    .meta-label {
-        color: #b9bbbe;
-        font-size: 11px;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-    }
-
-    .meta-value {
-        color: #ffffff;
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-    @media (max-width: 480px) {
-        .modal-image-pane {
-            height: 180px;
-        }
-        .modal-details-pane {
-            padding: 16px;
-        }
+        font-size: 28px;
     }
 
     @media (max-width: 768px) {
@@ -690,7 +555,7 @@
             <div class="discord-footer">
                 <div class="discord-footer-content">
                     <div class="discord-footer-text">
-                        Designed with Retro Discord Aesthetic
+                        Made with 💜 and ☕ by <span class="discord-footer-highlight">Shuvransu Sekhar Sahoo</span>
                     </div>
                     <div class="discord-footer-links">
                         <a href="https://github.com/SahooShuvranshu/SahooShuvranshu.github.io" target="_blank"
@@ -721,6 +586,51 @@
                     </div>
                     <div class="discord-footer-tagline">
                         © 2026 All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================
+         🔍 PROJECT PREVIEW MODAL (Education Style)
+         ======================================== -->
+    <div id="projectPreviewModal" class="preview-modal">
+        <div class="modal-overlay" onclick="closeProjectPreview()"></div>
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeProjectPreview()">×</button>
+            <div class="modal-content-wrapper">
+                <div class="modal-banner-pane" id="modalProjectBanner">
+                    <div id="modalProjectBannerContent" class="modal-project-banner-container">
+                        <!-- Dynamically injected banner image or retro gradient fallback -->
+                    </div>
+                    <div class="modal-logo-circle">
+                        <span id="modalProjectEmoji">🚀</span>
+                    </div>
+                </div>
+                <div class="modal-details-pane">
+                    <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; flex-wrap: wrap;">
+                        <span id="modalProjectYear" class="project-year">2026</span>
+                        <span id="modalProjectStatus" class="project-status active">ONLINE & ACTIVE</span>
+                    </div>
+                    <h3 id="modalProjectTitle">Project Title</h3>
+                    <div class="modal-meta-section">
+                        <div class="meta-item">
+                            <span class="meta-label">Category</span>
+                            <span id="modalProjectCategory" class="meta-value">WEB APPLICATION</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Description & Architecture</span>
+                            <span id="modalProjectDesc" class="meta-value">Description text</span>
+                        </div>
+                        <div class="meta-item" id="modalTechStackContainer">
+                            <span class="meta-label">Technologies Used</span>
+                            <div id="modalProjectTechStack" style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;"></div>
+                        </div>
+                        <div class="meta-item" id="modalProjectLinksContainer">
+                            <span class="meta-label">Deployment & Source</span>
+                            <div id="modalProjectLinks" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px;"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -791,7 +701,7 @@
         }
     };
 
-    // Update count badges
+    // Update count badges dynamically from loaded dataset
     function updateCountBadges(projects) {
         const countAll = document.getElementById('count-all');
         const countWeb = document.getElementById('count-web-apps');
@@ -800,14 +710,13 @@
 
         if (!countAll) return;
 
-        // +1 for permanent Coming Soon pipeline card
-        countAll.textContent = (projects.length + 1);
+        countAll.textContent = projects.length;
         countWeb.textContent = projects.filter(p => p.category === 'WEB_APPLICATION').length;
         countApi.textContent = projects.filter(p => p.category === 'API_SERVICE').length;
         countUtil.textContent = projects.filter(p => p.category === 'UTILITY').length;
     }
 
-    // Render Bot Embed cards
+    // Render Bot Embed cards purely from JSON data
     function renderFeed() {
         projectsFeed.innerHTML = '';
 
@@ -815,62 +724,13 @@
         const filteredProjects = allProjects.filter(project => {
             const matchesFilter = (currentFilter === 'all') || (project.category === currentFilter);
             const matchesQuery = !currentQuery || 
-                project.title.toLowerCase().includes(currentQuery) ||
-                project.description.toLowerCase().includes(currentQuery) ||
+                (project.title && project.title.toLowerCase().includes(currentQuery)) ||
+                (project.description && project.description.toLowerCase().includes(currentQuery)) ||
                 (project.techStack && project.techStack.some(t => t.toLowerCase().includes(currentQuery)));
             return matchesFilter && matchesQuery;
         });
 
-        // 1. Render Active Coming Soon card if filter matches
-        const showComingSoon = (currentFilter === 'all' || currentFilter === 'COMING_SOON') &&
-            (!currentQuery || 'next-gen ai & data science pipeline python scikit-learn llms rag'.includes(currentQuery));
-
-        if (showComingSoon) {
-            const csCard = document.createElement('div');
-            csCard.className = 'discord-embed-card';
-            csCard.style.setProperty('--embed-color', '#faa61a');
-            
-            const csReactions = defaultReactions['Next-Gen AI & Data Science Pipeline'];
-            const csTitle = 'Next-Gen AI & Data Science Pipeline';
-
-            csCard.innerHTML = `
-                <div class="embed-author">
-                    <span class="embed-author-icon">⚡</span> BOT EMBED • IN PROGRESS • 2026
-                </div>
-                <a href="https://github.com/SahooShuvranshu" target="_blank" class="embed-title-link">
-                    Next-Gen AI & Data Science Pipeline ↗
-                </a>
-                <div class="embed-desc">
-                    Architecting high-performance end-to-end Machine Learning pipelines, interactive exploratory data analysis dashboards, and autonomous agentic workflows using Python, Pandas, and LLMs.
-                </div>
-                <div class="embed-fields-grid">
-                    <div class="embed-field">
-                        <span class="embed-field-label">Status</span>
-                        <span class="embed-field-value" style="color: #faa61a;">● IN DEVELOPMENT</span>
-                    </div>
-                    <div class="embed-field">
-                        <span class="embed-field-label">Tech Stack</span>
-                        <span class="embed-field-value">Python, Scikit-Learn, Pandas, LLMs</span>
-                    </div>
-                </div>
-                <div class="embed-actions">
-                    <div class="embed-links">
-                        <a href="https://github.com/SahooShuvranshu" target="_blank" class="embed-link-btn github">
-                            📂 Source Code
-                        </a>
-                    </div>
-                    <div class="discord-reactions-row">
-                        ${renderReactionButton(csTitle, '❤️', csReactions['❤️'])}
-                        ${renderReactionButton(csTitle, '🚀', csReactions['🚀'])}
-                        ${renderReactionButton(csTitle, '⭐', csReactions['⭐'])}
-                    </div>
-                </div>
-            `;
-            projectsFeed.appendChild(csCard);
-        }
-
-        // 2. Render JSON Projects
-        if (filteredProjects.length === 0 && !showComingSoon) {
+        if (filteredProjects.length === 0) {
             projectsFeed.innerHTML = `
                 <div style="background-color: #2f3136; border: 2px solid #40444b; padding: 24px; text-align: center; color: #8e9297; font-family: 'Courier New', monospace;">
                     <div style="font-size: 28px; margin-bottom: 8px;">🔍</div>
@@ -881,7 +741,7 @@
             return;
         }
 
-        filteredProjects.forEach(project => {
+        filteredProjects.forEach((project, idx) => {
             const card = document.createElement('div');
             card.className = 'discord-embed-card';
             const embedColor = categoryColors[project.category] || '#5865f2';
@@ -889,23 +749,27 @@
 
             const catLabel = categoryLabels[project.category] || project.category || 'SHOWCASE';
             const techList = (project.techStack || []).join(', ');
-
             const reactions = defaultReactions[project.title] || { '❤️': 5, '🚀': 5, '⭐': 5 };
+
+            const isInProgress = (project.status === 'in_progress');
+            const statusColor = isInProgress ? '#faa61a' : '#3ba55c';
+            const statusText = isInProgress ? 'IN DEVELOPMENT' : 'ONLINE & ACTIVE';
 
             card.innerHTML = `
                 <div class="embed-author">
                     <span class="embed-author-icon">🤖</span> BOT EMBED • ${catLabel} • ${project.year || '2024'}
                 </div>
-                <a href="${project.liveDemo || project.sourceCode}" target="_blank" class="embed-title-link">
-                    ${project.title} ↗
-                </a>
+                <div class="embed-title-link" style="display: flex; align-items: center; justify-content: space-between;">
+                    <span>${project.title}</span>
+                    <span style="font-size: 13px; color: #8e9297; font-weight: normal; font-family: 'Courier New', monospace;">Click for Preview ↗</span>
+                </div>
                 <div class="embed-desc">
                     ${project.description}
                 </div>
                 <div class="embed-fields-grid">
                     <div class="embed-field">
                         <span class="embed-field-label">Status</span>
-                        <span class="embed-field-value" style="color: #3ba55c;">● ONLINE & ACTIVE</span>
+                        <span class="embed-field-value" style="color: ${statusColor};">● ${statusText}</span>
                     </div>
                     <div class="embed-field">
                         <span class="embed-field-label">Tech Stack</span>
@@ -914,16 +778,26 @@
                 </div>
                 <div class="embed-actions">
                     <div class="embed-links">
-                        ${project.liveDemo ? `<a href="${project.liveDemo}" target="_blank" class="embed-link-btn primary">🌐 Live Demo</a>` : ''}
-                        ${project.sourceCode ? `<a href="${project.sourceCode}" target="_blank" class="embed-link-btn github">📂 Source Code</a>` : ''}
+                        ${project.liveDemo ? `<a href="${project.liveDemo}" target="_blank" rel="noopener noreferrer" class="embed-link-btn primary" onclick="event.stopPropagation();">🌐 Live Demo</a>` : ''}
+                        ${project.sourceCode ? `<a href="${project.sourceCode}" target="_blank" rel="noopener noreferrer" class="embed-link-btn github" onclick="event.stopPropagation();">📂 Source Code</a>` : ''}
+                        <button class="embed-link-btn" style="padding: 5px 10px; font-size: 11px;" onclick="event.stopPropagation(); window.openProjectModal('${project.title.replace(/'/g, "\\'")}');">Details ℹ️</button>
                     </div>
-                    <div class="discord-reactions-row">
+                    <div class="discord-reactions-row" onclick="event.stopPropagation();">
                         ${renderReactionButton(project.title, '❤️', reactions['❤️'])}
                         ${renderReactionButton(project.title, '🚀', reactions['🚀'])}
                         ${renderReactionButton(project.title, '⭐', reactions['⭐'])}
                     </div>
                 </div>
             `;
+
+            // Open education-style preview modal on card click
+            card.addEventListener('click', (e) => {
+                if (e.target.closest('a') || e.target.closest('button')) {
+                    return;
+                }
+                openProjectPreview(project);
+            });
+
             projectsFeed.appendChild(card);
         });
     }
@@ -941,6 +815,105 @@
             </button>
         `;
     }
+
+    // Modal preview implementation (matches Education modal UX)
+    function openProjectPreview(project) {
+        const modal = document.getElementById('projectPreviewModal');
+        if (!modal) return;
+
+        const modalTitle = document.getElementById('modalProjectTitle');
+        const modalYear = document.getElementById('modalProjectYear');
+        const modalStatus = document.getElementById('modalProjectStatus');
+        const modalCategory = document.getElementById('modalProjectCategory');
+        const modalDesc = document.getElementById('modalProjectDesc');
+        const modalTechStack = document.getElementById('modalProjectTechStack');
+        const modalLinks = document.getElementById('modalProjectLinks');
+        const bannerContent = document.getElementById('modalProjectBannerContent');
+        const emojiSpan = document.getElementById('modalProjectEmoji');
+
+        modalTitle.textContent = project.title;
+        modalYear.textContent = project.year || '2024';
+
+        const isInProgress = (project.status === 'in_progress');
+        if (isInProgress) {
+            modalStatus.className = 'project-status paused';
+            modalStatus.textContent = 'IN DEVELOPMENT';
+        } else {
+            modalStatus.className = 'project-status active';
+            modalStatus.textContent = 'ONLINE & ACTIVE';
+        }
+
+        modalCategory.textContent = categoryLabels[project.category] || project.category || 'PROJECT SHOWCASE';
+        modalDesc.textContent = project.description;
+
+        // Tech stack tags
+        if (project.techStack && project.techStack.length > 0) {
+            modalTechStack.innerHTML = project.techStack.map(t => 
+                `<span style="background-color: #202225; color: #dcddde; border: 1px solid #40444b; padding: 3px 8px; font-size: 11.5px; font-family: 'Courier New', monospace;">${t}</span>`
+            ).join('');
+        } else {
+            modalTechStack.innerHTML = `<span style="color: #8e9297; font-size: 12px;">Not specified</span>`;
+        }
+
+        // Action buttons
+        let actionsHtml = '';
+        if (project.liveDemo) {
+            actionsHtml += `<a href="${project.liveDemo}" target="_blank" rel="noopener noreferrer" class="embed-link-btn primary" style="padding: 7px 14px; font-size: 12.5px;">🌐 Live Demo ↗</a>`;
+        }
+        if (project.sourceCode) {
+            actionsHtml += `<a href="${project.sourceCode}" target="_blank" rel="noopener noreferrer" class="embed-link-btn github" style="padding: 7px 14px; font-size: 12.5px;">📂 Source Code ↗</a>`;
+        }
+        modalLinks.innerHTML = actionsHtml || '<span style="color: #8e9297; font-size: 12px;">Repository information coming soon</span>';
+
+        // Category Emojis
+        const categoryEmojis = {
+            'WEB_APPLICATION': '🌐',
+            'API_SERVICE': '🤖',
+            'UTILITY': '⚙️',
+            'COMING_SOON': '⚡'
+        };
+        const emoji = categoryEmojis[project.category] || '🚀';
+        if (emojiSpan) emojiSpan.textContent = emoji;
+
+        // Banner Image or Fallback Retro Gradient
+        let bannerSrc = project.bannerImage;
+        if (bannerSrc && !bannerSrc.startsWith('http') && bannerSrc.startsWith('media/')) {
+            bannerSrc = isSubdir ? '../' + bannerSrc : bannerSrc;
+        }
+
+        if (bannerSrc && (bannerSrc.endsWith('.svg') || bannerSrc.endsWith('.png') || bannerSrc.endsWith('.jpg') || bannerSrc.endsWith('.jpeg') || bannerSrc.startsWith('http'))) {
+            const fallbackGrad = `linear-gradient(135deg, ${categoryColors[project.category] || '#5865f2'} 0%, #202225 100%)`;
+            bannerContent.innerHTML = `<img src="${bannerSrc}" alt="${project.title}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.parentElement.innerHTML='<div style=\\'width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:${fallbackGrad};font-size:52px;\\'>${emoji}</div>';">`;
+        } else {
+            const bgGrad = bannerSrc || `linear-gradient(135deg, ${categoryColors[project.category] || '#5865f2'} 0%, #202225 100%)`;
+            bannerContent.innerHTML = `<div style="width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:${bgGrad}; font-size:52px;">${emoji}</div>`;
+        }
+
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    window.openProjectModal = function(title) {
+        const found = allProjects.find(p => p.title === title);
+        if (found) {
+            openProjectPreview(found);
+        }
+    };
+
+    window.closeProjectPreview = function() {
+        const modal = document.getElementById('projectPreviewModal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    };
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            window.closeProjectPreview();
+        }
+    });
 
     // Filter tag click listeners
     filterButtons.forEach(btn => {
@@ -960,7 +933,7 @@
         });
     }
 
-    // Fetch projects data
+    // Fetch projects data - 100% data-driven from projects.json
     fetch(jsonUrl)
         .then(response => {
             if (!response.ok) throw new Error('Network error fetching projects');
@@ -975,7 +948,6 @@
         })
         .catch(err => {
             console.error('Projects fetch error:', err);
-            // Fallback rendering
             renderFeed();
         });
 })();
